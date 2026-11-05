@@ -1,0 +1,990 @@
+{
+  "$comment": "EIS (SIP) config and contribution table. Act 800 is the Employment Insurance System Act 2017, renamed the Employment Insurance System and Employment Services Act 2017 from 1 Oct 2026 (Act A1796 ss.3, 17(1)). Table: Second Schedule para 2 as amended by Act A1725 (in force 1 Oct 2024). Assumed monthly wages: Third Schedule para 8 (as amended by Act A1725). Amounts in sen (integer) to avoid floating-point error. Bands: a wage W falls in a band when wageExceedsRm < W <= wageNotExceedsRm (item 1: 0 < W <= 30; item 65: W > 6000). W is total EIS wages from one employer for all wage periods ending in the contribution month, looked up once. Generated from the Act text and cross-checked row-by-row against PERKESO's published table (151124-Rate Contribution ACT 800.pdf); re-verified independently in the 2026-11-05 deep pass. The file name is historic: it covers 2025, 2026 and the 2027 template. See docs/research/eis.md.",
+  "scheme": "EIS",
+  "act": "Act 800",
+  "actDisplayName": [
+    {
+      "from": "2018-01-01",
+      "to": "2026-09-30",
+      "name": "Employment Insurance System Act 2017"
+    },
+    {
+      "from": "2026-10-01",
+      "to": null,
+      "name": "Employment Insurance System and Employment Services Act 2017"
+    }
+  ],
+  "schedule": "Second Schedule, paragraph 2 (contributions) + Third Schedule, paragraph 8 (assumed monthly wages)",
+  "tableId": "eis-act800-sched2-2024-10",
+  "effectiveFrom": "2024-10-01",
+  "effectiveTo": null,
+  "legalBasis": [
+    "Act 800 Second Schedule (as at 1 Sep 2022 reprint, items 1-54)",
+    "Act A1725 s.3 (items 55-65, replacing old item 55)",
+    "Act A1725 s.4 (Third Schedule items 55-65)",
+    "P.U.(B) 382/2024 (dated 27 Sep 2024, gazetted 30 Sep 2024): appoints 1 Oct 2024 as commencement of Act A1725",
+    "PERKESO Employers' Circular No. 3/2024 (PERKESO.600-2/4/1(31)/(32), 1 Oct 2024), para 1, para 3.3 and Lampiran 1 (items 57-65)",
+    "Act A1796 (Royal Assent 30 Aug 2026, gazetted 15 Sep 2026; P.U.(B) 391/2026) does not amend s.16, s.18 or the First, Second or Fourth Schedule"
+  ],
+  "appliesToFinancialYears": [
+    2025,
+    2026
+  ],
+  "carriedForwardUnconfirmedYears": [
+    2027
+  ],
+  "wageCeilingRm": 6000,
+  "insuredWageAtCeilingRm": 5950,
+  "nominalRate": {
+    "employer": 0.002,
+    "employee": 0.002
+  },
+  "verifiedAt": "2026-11-05",
+  "periodSelection": {
+    "contributions": "Choose the table and eligibility by contribution month (YYYY-MM), the month in which the wage period ends (Second Schedule para 1). Not by payment date. Statutory reading; see eis.md section 3.3.",
+    "benefits": "Choose benefit parameters by the date of loss of employment, not by payment or application date (PERKESO FAQ 1 Oct 2026 Q1; PERKESO Employment Insurance page)."
+  },
+  "years": {
+    "2025": {
+      "status": "confirmed",
+      "periods": [
+        {
+          "from": "2025-01-01",
+          "to": "2025-12-31",
+          "tableId": "eis-act800-sched2-2024-10",
+          "eligibility": "eis-elig-v1",
+          "notes": [
+            "No-penalty employer transition for the RM6,000 ceiling ran 1 Oct 2024 to 31 Mar 2025 (PERKESO ceiling FAQ Q6-Q7). The amounts did not differ during it."
+          ],
+          "benefits": "eis-benefits-2018"
+        }
+      ]
+    },
+    "2026": {
+      "status": "confirmed",
+      "periods": [
+        {
+          "from": "2026-01-01",
+          "to": "2026-09-30",
+          "tableId": "eis-act800-sched2-2024-10",
+          "eligibility": "eis-elig-v1",
+          "benefits": "eis-benefits-2018"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-12-31",
+          "tableId": "eis-act800-sched2-2024-10",
+          "eligibility": "eis-elig-v1",
+          "notes": [
+            "Contribution lookup identical to the previous period. Split is for legal metadata only: Act renamed; s.20(1A)/(1B) in force (Act A1796 s.6). Benefit parameters key on job-loss date, not this period."
+          ],
+          "benefits": "eis-benefits-2026-10"
+        }
+      ]
+    },
+    "2027": {
+      "status": "unconfirmed-carried-forward",
+      "periods": [
+        {
+          "from": "2027-01-01",
+          "to": null,
+          "tableId": "eis-act800-sched2-2024-10",
+          "eligibility": "eis-elig-v1",
+          "notes": [
+            "Nothing announced changes contributions as of 2026-11-05; Budget 2027 speech has no EIS measure.",
+            "A1796 s.11 (ss.45A-45H, vacancy notification) from 2 Jan 2027 has no payroll effect.",
+            "Re-check: s.18(3) rate revision; s.84 First Schedule order; s.83 exemption order; Act 753 s.4(2) retirement age (s.20(2) follows it but First Schedule para 8 hard-codes 60); PERKESO gig-worker feasibility study."
+          ],
+          "benefits": "eis-benefits-2026-10"
+        }
+      ]
+    }
+  },
+  "eligibilityRules": {
+    "eis-elig-v1": {
+      "minAgeInclusive": 18,
+      "maxAgeExclusive": 60,
+      "lateEntryAge": 57,
+      "ageBasis": "completed-years",
+      "ageBoundaryBasis": "unconfirmed",
+      "firstScheduleLastAmendedBy": "P.U.(A) 249/2021",
+      "verifiedAsAt": "2026-11-04",
+      "coveredEmployment": [
+        "private-employee",
+        "domestic-worker"
+      ],
+      "coveredResidency": [
+        "citizen",
+        "permanent-resident",
+        "mykas-resident"
+      ],
+      "exemptions": [
+        {
+          "id": "domestic-close-relative",
+          "rule": "Domestic employee employed by an employer who is a close relative: exempt from the whole Act, 0/0.",
+          "basis": "P.U.(A) 250/2021 para 2(1)(a), para 2(3)(c)",
+          "effectiveFrom": "2021-06-01",
+          "closeRelative": [
+            "spouse",
+            "child (including adopted and step)",
+            "parent, sibling or grandparent (including adopted and step)",
+            "parent-in-law, son-in-law or daughter-in-law (including adopted and step)",
+            "sibling-in-law"
+          ]
+        },
+        {
+          "id": "no-contract-of-service",
+          "rule": "Director paid fees only, sole proprietor, partner: not an 'employee' under s.3, 0/0.",
+          "basis": "Act 800 s.3 'employee' (inference; no PERKESO ruling on directors)",
+          "confidence": "medium"
+        }
+      ],
+      "notes": [
+        "P.U.(A) 250/2021 para 2(1)(b)-(c) concern foreign domestic employees, who are already excluded by First Schedule para 10.",
+        "Statutory-body and local-authority staff: 0/0 for every employee (para 7). Do not derive SOCSO from the same flag: P.U.(B) 239/2013 exempts only New Scheme staff from Act 4."
+      ]
+    }
+  },
+  "benefitParams": {
+    "eis-benefits-2018": {
+      "usedForDeductions": false,
+      "appliesToLossOfEmployment": {
+        "before": "2026-10-01"
+      },
+      "jobSearchAllowancePctByMonth": [
+        0.8,
+        0.5,
+        0.4,
+        0.4,
+        0.3,
+        0.3
+      ],
+      "earlyReemploymentPctOfUnpaidJsa": 0.25,
+      "trainingAllowance": {
+        "kind": "pct-of-assumed-daily",
+        "pct": 0.25,
+        "minRmPerDay": 10,
+        "maxRmPerDay": 20
+      },
+      "trainingFeeMaxRm": 4000,
+      "mobilityAllowanceRm": null,
+      "assumedWageCapRm": 5950,
+      "firstClaimQualifying": {
+        "monthsContributed": 12,
+        "eligibilityPeriodMonths": 24,
+        "includesMonthOfLoss": true
+      }
+    },
+    "eis-benefits-2026-10": {
+      "usedForDeductions": false,
+      "appliesToLossOfEmployment": {
+        "onOrAfter": "2026-10-01"
+      },
+      "jobSearchAllowancePctByMonth": [
+        0.8,
+        0.5,
+        0.4,
+        0.4,
+        0.3,
+        0.3
+      ],
+      "earlyReemploymentPctOfUnpaidJsa": 0.5,
+      "trainingAllowance": {
+        "kind": "flat",
+        "rmPerDay": 30
+      },
+      "trainingFeeMaxRm": 7000,
+      "mobilityAllowanceRm": 1000,
+      "mobilityConditions": {
+        "distance": "PERKESO condition, not in the Act or P.U.(A) 346/2026 (s.37A leaves terms to the Organization). FAQ of 1 Oct 2026: not less than 100 km, measured with Google Maps. English EI page: more than 100 km. Exactly 100 km is unsettled.",
+        "reportForDutyWithinMonths": 12,
+        "applyWithinDaysOfReporting": 60,
+        "withinMalaysiaOnly": true,
+        "notForReducedIncomeAllowanceRecipients": true
+      },
+      "assumedWageCapRm": 5950,
+      "firstClaimQualifying": {
+        "monthsContributed": 12,
+        "eligibilityPeriodMonths": 24,
+        "includesMonthOfLoss": true
+      },
+      "notes": [
+        "A1796 s.17(3) applies amended claim provisions to s.27 claims pending on 1 Oct 2026. Whether that reaches the rates for a pre-October job loss is unresolved; PERKESO's published reading is job loss from 1 Oct 2026 only."
+      ]
+    }
+  },
+  "wageComponents": {
+    "$comment": "EIS wage classification (eis.md section 2.1). Year-independent as far as published law shows. 'statutory' = Act text; 'perkeso' = PERKESO guidance; 'inference' = reading with no source stating it. No PERKESO item-level ruling or Malaysian decision exists for most non-annual bonus, travel, notice-pay and leave-encashment items.",
+    "items": [
+      {
+        "id": "basic",
+        "label": "Basic salary",
+        "eis": "counted",
+        "confidence": "high",
+        "basis": "statutory"
+      },
+      {
+        "id": "overtime",
+        "label": "Overtime and extra work on holidays",
+        "eis": "counted",
+        "confidence": "high",
+        "basis": "statutory"
+      },
+      {
+        "id": "commission",
+        "label": "Commission",
+        "eis": "counted",
+        "confidence": "high",
+        "basis": "perkeso"
+      },
+      {
+        "id": "service-charge",
+        "label": "Service charge paid by the employer",
+        "eis": "counted",
+        "confidence": "high",
+        "basis": "perkeso"
+      },
+      {
+        "id": "leave-pay",
+        "label": "Paid leave and holiday pay",
+        "eis": "counted",
+        "confidence": "high",
+        "basis": "statutory"
+      },
+      {
+        "id": "allowances-non-travel",
+        "label": "Meal, housing, shift, cost-of-living, incentive allowances, fixed or variable",
+        "eis": "counted",
+        "confidence": "high",
+        "basis": "perkeso"
+      },
+      {
+        "id": "non-annual-bonus",
+        "label": "Quarterly, half-yearly or monthly bonus or incentive",
+        "eis": "counted",
+        "confidence": "medium-high",
+        "basis": "inference"
+      },
+      {
+        "id": "leave-encashment",
+        "label": "Leave encashment on resignation",
+        "eis": "counted",
+        "confidence": "medium",
+        "basis": "inference"
+      },
+      {
+        "id": "phone-allowance",
+        "label": "Fixed phone allowance",
+        "eis": "counted",
+        "confidence": "medium",
+        "basis": "inference"
+      },
+      {
+        "id": "sign-on-bonus",
+        "label": "Sign-on bonus",
+        "eis": "counted",
+        "confidence": "low",
+        "basis": "inference"
+      },
+      {
+        "id": "annual-bonus",
+        "label": "Annual bonus, including annual performance bonus",
+        "eis": "excluded",
+        "confidence": "high",
+        "basis": "statutory"
+      },
+      {
+        "id": "aws-13th-month",
+        "label": "13th-month or AWS paid once a year",
+        "eis": "excluded",
+        "confidence": "medium-low",
+        "basis": "inference"
+      },
+      {
+        "id": "festive-bonus",
+        "label": "Festive bonus paid once a year",
+        "eis": "excluded",
+        "confidence": "low-medium",
+        "basis": "inference"
+      },
+      {
+        "id": "travel-claims",
+        "label": "Trip, mileage, toll and parking claims",
+        "eis": "excluded",
+        "confidence": "high",
+        "basis": "statutory"
+      },
+      {
+        "id": "reimbursements",
+        "label": "Reimbursement of special expenses",
+        "eis": "excluded",
+        "confidence": "high",
+        "basis": "statutory"
+      },
+      {
+        "id": "employer-statutory-shares",
+        "label": "Employer shares to EPF, SOCSO, EIS",
+        "eis": "excluded",
+        "confidence": "high",
+        "basis": "statutory"
+      },
+      {
+        "id": "gratuity",
+        "label": "Gratuity on discharge or retirement",
+        "eis": "excluded",
+        "confidence": "high",
+        "basis": "statutory"
+      },
+      {
+        "id": "retrenchment-termination",
+        "label": "Retrenchment or termination payments",
+        "eis": "excluded",
+        "confidence": "medium",
+        "basis": "perkeso"
+      },
+      {
+        "id": "pay-in-lieu",
+        "label": "Payment in lieu of notice",
+        "eis": "excluded",
+        "confidence": "medium",
+        "basis": "inference"
+      },
+      {
+        "id": "perkeso-benefits",
+        "label": "Benefits under other laws PERKESO administers",
+        "eis": "excluded",
+        "confidence": "high",
+        "basis": "statutory"
+      },
+      {
+        "id": "direct-tips",
+        "label": "Tips paid directly by customers",
+        "eis": "excluded",
+        "confidence": "medium",
+        "basis": "inference"
+      },
+      {
+        "id": "benefits-in-kind",
+        "label": "Benefits in kind, including company car",
+        "eis": "excluded",
+        "confidence": "high",
+        "basis": "statutory"
+      },
+      {
+        "id": "fixed-travel",
+        "label": "Fixed monthly travel, transport, petrol, toll, car or parking allowance",
+        "eis": "pending-owner-decision",
+        "confidence": "medium",
+        "basis": "Act s.3(b) and Pekeliling 3/2017 point to excluded; PERKESO Threads post 7 Feb 2026 and some payrolls count it. See eis.md Questions for the owner."
+      },
+      {
+        "id": "ex-gratia",
+        "label": "Ex-gratia payment",
+        "eis": "unresolved",
+        "confidence": "low",
+        "basis": "no source for Act 800"
+      },
+      {
+        "id": "once-a-year-incentive",
+        "label": "Incentive paid once a year",
+        "eis": "unresolved",
+        "confidence": "low",
+        "basis": "no source"
+      },
+      {
+        "id": "annual-bonus-instalment",
+        "label": "Half-year instalment of one annual bonus",
+        "eis": "unresolved",
+        "confidence": "low",
+        "basis": "no source"
+      }
+    ]
+  },
+  "bands": [
+    {
+      "item": 1,
+      "wageExceedsRm": 0,
+      "wageNotExceedsRm": 30,
+      "employerSen": 5,
+      "employeeSen": 5,
+      "totalSen": 10,
+      "assumedMonthlyWageRm": 20
+    },
+    {
+      "item": 2,
+      "wageExceedsRm": 30,
+      "wageNotExceedsRm": 50,
+      "employerSen": 10,
+      "employeeSen": 10,
+      "totalSen": 20,
+      "assumedMonthlyWageRm": 40
+    },
+    {
+      "item": 3,
+      "wageExceedsRm": 50,
+      "wageNotExceedsRm": 70,
+      "employerSen": 15,
+      "employeeSen": 15,
+      "totalSen": 30,
+      "assumedMonthlyWageRm": 60
+    },
+    {
+      "item": 4,
+      "wageExceedsRm": 70,
+      "wageNotExceedsRm": 100,
+      "employerSen": 20,
+      "employeeSen": 20,
+      "totalSen": 40,
+      "assumedMonthlyWageRm": 85
+    },
+    {
+      "item": 5,
+      "wageExceedsRm": 100,
+      "wageNotExceedsRm": 140,
+      "employerSen": 25,
+      "employeeSen": 25,
+      "totalSen": 50,
+      "assumedMonthlyWageRm": 120
+    },
+    {
+      "item": 6,
+      "wageExceedsRm": 140,
+      "wageNotExceedsRm": 200,
+      "employerSen": 35,
+      "employeeSen": 35,
+      "totalSen": 70,
+      "assumedMonthlyWageRm": 170
+    },
+    {
+      "item": 7,
+      "wageExceedsRm": 200,
+      "wageNotExceedsRm": 300,
+      "employerSen": 50,
+      "employeeSen": 50,
+      "totalSen": 100,
+      "assumedMonthlyWageRm": 250
+    },
+    {
+      "item": 8,
+      "wageExceedsRm": 300,
+      "wageNotExceedsRm": 400,
+      "employerSen": 70,
+      "employeeSen": 70,
+      "totalSen": 140,
+      "assumedMonthlyWageRm": 350
+    },
+    {
+      "item": 9,
+      "wageExceedsRm": 400,
+      "wageNotExceedsRm": 500,
+      "employerSen": 90,
+      "employeeSen": 90,
+      "totalSen": 180,
+      "assumedMonthlyWageRm": 450
+    },
+    {
+      "item": 10,
+      "wageExceedsRm": 500,
+      "wageNotExceedsRm": 600,
+      "employerSen": 110,
+      "employeeSen": 110,
+      "totalSen": 220,
+      "assumedMonthlyWageRm": 550
+    },
+    {
+      "item": 11,
+      "wageExceedsRm": 600,
+      "wageNotExceedsRm": 700,
+      "employerSen": 130,
+      "employeeSen": 130,
+      "totalSen": 260,
+      "assumedMonthlyWageRm": 650
+    },
+    {
+      "item": 12,
+      "wageExceedsRm": 700,
+      "wageNotExceedsRm": 800,
+      "employerSen": 150,
+      "employeeSen": 150,
+      "totalSen": 300,
+      "assumedMonthlyWageRm": 750
+    },
+    {
+      "item": 13,
+      "wageExceedsRm": 800,
+      "wageNotExceedsRm": 900,
+      "employerSen": 170,
+      "employeeSen": 170,
+      "totalSen": 340,
+      "assumedMonthlyWageRm": 850
+    },
+    {
+      "item": 14,
+      "wageExceedsRm": 900,
+      "wageNotExceedsRm": 1000,
+      "employerSen": 190,
+      "employeeSen": 190,
+      "totalSen": 380,
+      "assumedMonthlyWageRm": 950
+    },
+    {
+      "item": 15,
+      "wageExceedsRm": 1000,
+      "wageNotExceedsRm": 1100,
+      "employerSen": 210,
+      "employeeSen": 210,
+      "totalSen": 420,
+      "assumedMonthlyWageRm": 1050
+    },
+    {
+      "item": 16,
+      "wageExceedsRm": 1100,
+      "wageNotExceedsRm": 1200,
+      "employerSen": 230,
+      "employeeSen": 230,
+      "totalSen": 460,
+      "assumedMonthlyWageRm": 1150
+    },
+    {
+      "item": 17,
+      "wageExceedsRm": 1200,
+      "wageNotExceedsRm": 1300,
+      "employerSen": 250,
+      "employeeSen": 250,
+      "totalSen": 500,
+      "assumedMonthlyWageRm": 1250
+    },
+    {
+      "item": 18,
+      "wageExceedsRm": 1300,
+      "wageNotExceedsRm": 1400,
+      "employerSen": 270,
+      "employeeSen": 270,
+      "totalSen": 540,
+      "assumedMonthlyWageRm": 1350
+    },
+    {
+      "item": 19,
+      "wageExceedsRm": 1400,
+      "wageNotExceedsRm": 1500,
+      "employerSen": 290,
+      "employeeSen": 290,
+      "totalSen": 580,
+      "assumedMonthlyWageRm": 1450
+    },
+    {
+      "item": 20,
+      "wageExceedsRm": 1500,
+      "wageNotExceedsRm": 1600,
+      "employerSen": 310,
+      "employeeSen": 310,
+      "totalSen": 620,
+      "assumedMonthlyWageRm": 1550
+    },
+    {
+      "item": 21,
+      "wageExceedsRm": 1600,
+      "wageNotExceedsRm": 1700,
+      "employerSen": 330,
+      "employeeSen": 330,
+      "totalSen": 660,
+      "assumedMonthlyWageRm": 1650
+    },
+    {
+      "item": 22,
+      "wageExceedsRm": 1700,
+      "wageNotExceedsRm": 1800,
+      "employerSen": 350,
+      "employeeSen": 350,
+      "totalSen": 700,
+      "assumedMonthlyWageRm": 1750
+    },
+    {
+      "item": 23,
+      "wageExceedsRm": 1800,
+      "wageNotExceedsRm": 1900,
+      "employerSen": 370,
+      "employeeSen": 370,
+      "totalSen": 740,
+      "assumedMonthlyWageRm": 1850
+    },
+    {
+      "item": 24,
+      "wageExceedsRm": 1900,
+      "wageNotExceedsRm": 2000,
+      "employerSen": 390,
+      "employeeSen": 390,
+      "totalSen": 780,
+      "assumedMonthlyWageRm": 1950
+    },
+    {
+      "item": 25,
+      "wageExceedsRm": 2000,
+      "wageNotExceedsRm": 2100,
+      "employerSen": 410,
+      "employeeSen": 410,
+      "totalSen": 820,
+      "assumedMonthlyWageRm": 2050
+    },
+    {
+      "item": 26,
+      "wageExceedsRm": 2100,
+      "wageNotExceedsRm": 2200,
+      "employerSen": 430,
+      "employeeSen": 430,
+      "totalSen": 860,
+      "assumedMonthlyWageRm": 2150
+    },
+    {
+      "item": 27,
+      "wageExceedsRm": 2200,
+      "wageNotExceedsRm": 2300,
+      "employerSen": 450,
+      "employeeSen": 450,
+      "totalSen": 900,
+      "assumedMonthlyWageRm": 2250
+    },
+    {
+      "item": 28,
+      "wageExceedsRm": 2300,
+      "wageNotExceedsRm": 2400,
+      "employerSen": 470,
+      "employeeSen": 470,
+      "totalSen": 940,
+      "assumedMonthlyWageRm": 2350
+    },
+    {
+      "item": 29,
+      "wageExceedsRm": 2400,
+      "wageNotExceedsRm": 2500,
+      "employerSen": 490,
+      "employeeSen": 490,
+      "totalSen": 980,
+      "assumedMonthlyWageRm": 2450
+    },
+    {
+      "item": 30,
+      "wageExceedsRm": 2500,
+      "wageNotExceedsRm": 2600,
+      "employerSen": 510,
+      "employeeSen": 510,
+      "totalSen": 1020,
+      "assumedMonthlyWageRm": 2550
+    },
+    {
+      "item": 31,
+      "wageExceedsRm": 2600,
+      "wageNotExceedsRm": 2700,
+      "employerSen": 530,
+      "employeeSen": 530,
+      "totalSen": 1060,
+      "assumedMonthlyWageRm": 2650
+    },
+    {
+      "item": 32,
+      "wageExceedsRm": 2700,
+      "wageNotExceedsRm": 2800,
+      "employerSen": 550,
+      "employeeSen": 550,
+      "totalSen": 1100,
+      "assumedMonthlyWageRm": 2750
+    },
+    {
+      "item": 33,
+      "wageExceedsRm": 2800,
+      "wageNotExceedsRm": 2900,
+      "employerSen": 570,
+      "employeeSen": 570,
+      "totalSen": 1140,
+      "assumedMonthlyWageRm": 2850
+    },
+    {
+      "item": 34,
+      "wageExceedsRm": 2900,
+      "wageNotExceedsRm": 3000,
+      "employerSen": 590,
+      "employeeSen": 590,
+      "totalSen": 1180,
+      "assumedMonthlyWageRm": 2950
+    },
+    {
+      "item": 35,
+      "wageExceedsRm": 3000,
+      "wageNotExceedsRm": 3100,
+      "employerSen": 610,
+      "employeeSen": 610,
+      "totalSen": 1220,
+      "assumedMonthlyWageRm": 3050
+    },
+    {
+      "item": 36,
+      "wageExceedsRm": 3100,
+      "wageNotExceedsRm": 3200,
+      "employerSen": 630,
+      "employeeSen": 630,
+      "totalSen": 1260,
+      "assumedMonthlyWageRm": 3150
+    },
+    {
+      "item": 37,
+      "wageExceedsRm": 3200,
+      "wageNotExceedsRm": 3300,
+      "employerSen": 650,
+      "employeeSen": 650,
+      "totalSen": 1300,
+      "assumedMonthlyWageRm": 3250
+    },
+    {
+      "item": 38,
+      "wageExceedsRm": 3300,
+      "wageNotExceedsRm": 3400,
+      "employerSen": 670,
+      "employeeSen": 670,
+      "totalSen": 1340,
+      "assumedMonthlyWageRm": 3350
+    },
+    {
+      "item": 39,
+      "wageExceedsRm": 3400,
+      "wageNotExceedsRm": 3500,
+      "employerSen": 690,
+      "employeeSen": 690,
+      "totalSen": 1380,
+      "assumedMonthlyWageRm": 3450
+    },
+    {
+      "item": 40,
+      "wageExceedsRm": 3500,
+      "wageNotExceedsRm": 3600,
+      "employerSen": 710,
+      "employeeSen": 710,
+      "totalSen": 1420,
+      "assumedMonthlyWageRm": 3550
+    },
+    {
+      "item": 41,
+      "wageExceedsRm": 3600,
+      "wageNotExceedsRm": 3700,
+      "employerSen": 730,
+      "employeeSen": 730,
+      "totalSen": 1460,
+      "assumedMonthlyWageRm": 3650
+    },
+    {
+      "item": 42,
+      "wageExceedsRm": 3700,
+      "wageNotExceedsRm": 3800,
+      "employerSen": 750,
+      "employeeSen": 750,
+      "totalSen": 1500,
+      "assumedMonthlyWageRm": 3750
+    },
+    {
+      "item": 43,
+      "wageExceedsRm": 3800,
+      "wageNotExceedsRm": 3900,
+      "employerSen": 770,
+      "employeeSen": 770,
+      "totalSen": 1540,
+      "assumedMonthlyWageRm": 3850
+    },
+    {
+      "item": 44,
+      "wageExceedsRm": 3900,
+      "wageNotExceedsRm": 4000,
+      "employerSen": 790,
+      "employeeSen": 790,
+      "totalSen": 1580,
+      "assumedMonthlyWageRm": 3950
+    },
+    {
+      "item": 45,
+      "wageExceedsRm": 4000,
+      "wageNotExceedsRm": 4100,
+      "employerSen": 810,
+      "employeeSen": 810,
+      "totalSen": 1620,
+      "assumedMonthlyWageRm": 4050
+    },
+    {
+      "item": 46,
+      "wageExceedsRm": 4100,
+      "wageNotExceedsRm": 4200,
+      "employerSen": 830,
+      "employeeSen": 830,
+      "totalSen": 1660,
+      "assumedMonthlyWageRm": 4150
+    },
+    {
+      "item": 47,
+      "wageExceedsRm": 4200,
+      "wageNotExceedsRm": 4300,
+      "employerSen": 850,
+      "employeeSen": 850,
+      "totalSen": 1700,
+      "assumedMonthlyWageRm": 4250
+    },
+    {
+      "item": 48,
+      "wageExceedsRm": 4300,
+      "wageNotExceedsRm": 4400,
+      "employerSen": 870,
+      "employeeSen": 870,
+      "totalSen": 1740,
+      "assumedMonthlyWageRm": 4350
+    },
+    {
+      "item": 49,
+      "wageExceedsRm": 4400,
+      "wageNotExceedsRm": 4500,
+      "employerSen": 890,
+      "employeeSen": 890,
+      "totalSen": 1780,
+      "assumedMonthlyWageRm": 4450
+    },
+    {
+      "item": 50,
+      "wageExceedsRm": 4500,
+      "wageNotExceedsRm": 4600,
+      "employerSen": 910,
+      "employeeSen": 910,
+      "totalSen": 1820,
+      "assumedMonthlyWageRm": 4550
+    },
+    {
+      "item": 51,
+      "wageExceedsRm": 4600,
+      "wageNotExceedsRm": 4700,
+      "employerSen": 930,
+      "employeeSen": 930,
+      "totalSen": 1860,
+      "assumedMonthlyWageRm": 4650
+    },
+    {
+      "item": 52,
+      "wageExceedsRm": 4700,
+      "wageNotExceedsRm": 4800,
+      "employerSen": 950,
+      "employeeSen": 950,
+      "totalSen": 1900,
+      "assumedMonthlyWageRm": 4750
+    },
+    {
+      "item": 53,
+      "wageExceedsRm": 4800,
+      "wageNotExceedsRm": 4900,
+      "employerSen": 970,
+      "employeeSen": 970,
+      "totalSen": 1940,
+      "assumedMonthlyWageRm": 4850
+    },
+    {
+      "item": 54,
+      "wageExceedsRm": 4900,
+      "wageNotExceedsRm": 5000,
+      "employerSen": 990,
+      "employeeSen": 990,
+      "totalSen": 1980,
+      "assumedMonthlyWageRm": 4950
+    },
+    {
+      "item": 55,
+      "wageExceedsRm": 5000,
+      "wageNotExceedsRm": 5100,
+      "employerSen": 1010,
+      "employeeSen": 1010,
+      "totalSen": 2020,
+      "assumedMonthlyWageRm": 5050
+    },
+    {
+      "item": 56,
+      "wageExceedsRm": 5100,
+      "wageNotExceedsRm": 5200,
+      "employerSen": 1030,
+      "employeeSen": 1030,
+      "totalSen": 2060,
+      "assumedMonthlyWageRm": 5150
+    },
+    {
+      "item": 57,
+      "wageExceedsRm": 5200,
+      "wageNotExceedsRm": 5300,
+      "employerSen": 1050,
+      "employeeSen": 1050,
+      "totalSen": 2100,
+      "assumedMonthlyWageRm": 5250
+    },
+    {
+      "item": 58,
+      "wageExceedsRm": 5300,
+      "wageNotExceedsRm": 5400,
+      "employerSen": 1070,
+      "employeeSen": 1070,
+      "totalSen": 2140,
+      "assumedMonthlyWageRm": 5350
+    },
+    {
+      "item": 59,
+      "wageExceedsRm": 5400,
+      "wageNotExceedsRm": 5500,
+      "employerSen": 1090,
+      "employeeSen": 1090,
+      "totalSen": 2180,
+      "assumedMonthlyWageRm": 5450
+    },
+    {
+      "item": 60,
+      "wageExceedsRm": 5500,
+      "wageNotExceedsRm": 5600,
+      "employerSen": 1110,
+      "employeeSen": 1110,
+      "totalSen": 2220,
+      "assumedMonthlyWageRm": 5550
+    },
+    {
+      "item": 61,
+      "wageExceedsRm": 5600,
+      "wageNotExceedsRm": 5700,
+      "employerSen": 1130,
+      "employeeSen": 1130,
+      "totalSen": 2260,
+      "assumedMonthlyWageRm": 5650
+    },
+    {
+      "item": 62,
+      "wageExceedsRm": 5700,
+      "wageNotExceedsRm": 5800,
+      "employerSen": 1150,
+      "employeeSen": 1150,
+      "totalSen": 2300,
+      "assumedMonthlyWageRm": 5750
+    },
+    {
+      "item": 63,
+      "wageExceedsRm": 5800,
+      "wageNotExceedsRm": 5900,
+      "employerSen": 1170,
+      "employeeSen": 1170,
+      "totalSen": 2340,
+      "assumedMonthlyWageRm": 5850
+    },
+    {
+      "item": 64,
+      "wageExceedsRm": 5900,
+      "wageNotExceedsRm": 6000,
+      "employerSen": 1190,
+      "employeeSen": 1190,
+      "totalSen": 2380,
+      "assumedMonthlyWageRm": 5950
+    },
+    {
+      "item": 65,
+      "wageExceedsRm": 6000,
+      "wageNotExceedsRm": null,
+      "employerSen": 1190,
+      "employeeSen": 1190,
+      "totalSen": 2380,
+      "assumedMonthlyWageRm": 5950
+    }
+  ]
+}

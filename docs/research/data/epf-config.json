@@ -1,0 +1,219 @@
+{
+  "scheme": "EPF (KWSP)",
+  "what": "Year-keyed statutory config for the EPF calculation. Periods are wage months, inclusive, not payment dates. The report docs/research/epf.md explains each rule and its evidence.",
+  "accessed": "2026-11-05",
+  "shared": {
+    "nilAtOrBelow": 10,
+    "nilNote": "Liability test on actual wages (KWSP employer FAQ Q18, Q25). Applied before the floor by inference. Parts A to E print a NIL row; Part F does not, so for Part F this rests on the general FAQ.",
+    "bands": [
+      { "upTo": 20, "width": 10 },
+      { "upTo": 5000, "width": 20 },
+      { "upTo": 20000, "width": 100 }
+    ],
+    "rateSwitchWage": 5000,
+    "tableCeiling": 20000,
+    "contributionMonth": "Wage month + 1. Payment is due by the 15th of the contribution month.",
+    "parts": {
+      "A": { "kind": "banded", "table": "epf-third-schedule-2025-10-partA.json", "employerUpTo5000": 0.13, "employerAbove5000": 0.12, "employee": 0.11, "bonusNote": true },
+      "C": { "kind": "banded", "table": "epf-third-schedule-2025-10-partC.json", "employerUpTo5000": 0.065, "employerAbove5000": 0.06, "employee": 0.055, "bonusNote": true },
+      "E": { "kind": "banded", "table": "epf-third-schedule-2025-10-partE.json", "employerUpTo5000": 0.04, "employerAbove5000": 0.04, "employee": 0, "bonusNote": false },
+      "B": { "kind": "flatEmployer", "table": "epf-third-schedule-2022-07-partB.json", "employerFlat": 5, "employee": 0.11, "eeSameAs": "A", "confidence": "high" },
+      "D": { "kind": "flatEmployer", "table": "epf-third-schedule-2022-07-partD.json", "employerFlat": 5, "employee": 0.055, "eeSameAs": "C", "confidence": "high" },
+      "F": {
+        "kind": "percent",
+        "employer": 0.02,
+        "employee": 0.02,
+        "wageCap": null,
+        "wageCapNote": "Part F para 3 lets the Board prescribe a limit. KWSP's page shows 'No limit'. Keep the field.",
+        "rounding": "ceilPerShare",
+        "roundingAlternative": "ceilTotal",
+        "roundingStatus": "sourcesConflict",
+        "roundingEvidence": {
+          "perShare": "KWSP non-Malaysian FAQ, Employer Q23 and Employee Q24 (captures 2025-10-03 to 2026-10-20): RM1,751 gives RM36 + RM36 = RM72.",
+          "total": "KWSP mandatory-contribution page, Example 2.4 (captures 2026-01-06 and 2026-08-10): RM6,710 gives RM268.40, rounded to RM269; the split is not stated.",
+          "statute": "Part F para 2: 'The total contribution which includes cents shall be rounded to the next ringgit.'"
+        },
+        "ageMin": 14,
+        "ageMaxExclusive": 75,
+        "ageSplitAt60": false,
+        "bonusNote": false,
+        "alsoStops": "Two months before a work pass expires with no extension (s.70G; KWSP employer FAQ Q27).",
+        "excludes": "Domestic servants (mandatory contribution). They may elect."
+      }
+    },
+    "above20000": {
+      "rounding": "ceilTotal",
+      "roundingAlternative": "ceilPerShare",
+      "confidence": "medium",
+      "provisionalSplit": "employee = ceil(wage x employee rate); employer = total - employee",
+      "splitStatus": "KWSP does not state the split; RM1 uncertainty until its calculator is run."
+    },
+    "bonusNote": {
+      "trigger": "bonus only",
+      "test": "wagesExclBonus + currentAdjustments <= 5000 and wage > 5000",
+      "employer": "ceil(wage x employerUpTo5000) on actual wages",
+      "employee": "table on total wages at or below RM20,000; exact rate above",
+      "above20000": "Note still applies to the whole month (recommended reading, unverified)",
+      "confidence": { "employerRule": "high", "employeeShare": "medium-high", "commissionExcluded": "medium", "above20000": "low-medium" }
+    },
+    "ageBoundaries": {
+      "rateSwitchAge": 60,
+      "stopAge": 75,
+      "rateSwitchTiming": "monthAfterBirthMonth",
+      "stopTiming": "monthAfterBirthMonth",
+      "timingOptions": ["monthAfterBirthMonth", "birthdayMonth"],
+      "confidence": { "cutOffs": "high", "rateSwitchTiming": "medium", "stopTiming": "low" },
+      "basis": "KWSP calculator getAge (cached 2022-07-04 and 2026-04-09) treats the birth month as still the old age. Server logic not seen and no written KWSP rule found. Two uncited blogs say the same for age 60. Nothing names a month for age 75.",
+      "statute": "Third Schedule 'attain the age of sixty years'; Act 452 First Schedule para (13); s.50(2B)(a)."
+    },
+    "accountSplit": {
+      "from": "2024-05-11",
+      "under55": { "persaraan": 0.75, "sejahtera": 0.15, "fleksibel": 0.1 },
+      "from55": { "emas": 1 },
+      "nonMalaysian": "Same structure (restructuring FAQ Q7, Q8). The percentages for non-Malaysians are inferred, medium-high."
+    },
+    "topUp": {
+      "name": "i-Topup",
+      "formerName": "Voluntary Excess, renamed from January 2026",
+      "input": ["percent", "ringgit"],
+      "calculatorLimits": "Percentage up to 100%; amount up to total wages.",
+      "method": "tablePlusWholeRinggit",
+      "methodAlternative": "combinedRateOnActualWage",
+      "methodStatus": "sourcesConflict",
+      "methodEvidence": {
+        "tablePlusWholeRinggit": "Act 452 s.43(3) ('by one ringgit or a multiple of one ringgit'); KWSP 2022 page under-60 rows.",
+        "combinedRateOnActualWage": "KWSP i-Topup pages, captures 2026-01-09 and 2026-10-23. Internally inconsistent: unchanged share uses the table in some rows and exact 12% in one."
+      }
+    },
+    "reducedRateElection": null,
+    "reducedRateNote": "None in 2025 or 2026. The last reductions ended with June 2022 wages (P.U.(A) 467/2021)."
+  },
+  "minimumWageFloor": {
+    "law": "Act 452 s.43(1A), as quoted on KWSP pages",
+    "appliesTo": "Every employee and employer subject to a Minimum Wages Order, on the applicable Part. Not domestic servants. Apprentices only from 2025-08 wages (inference).",
+    "use": "base = max(epfWage, floor), then look up the band or percentage. Compute the floor in sen and do not round it to a band first.",
+    "formula": {
+      "monthlyFullMonth": "monthly rate",
+      "monthlyPartMonth": "monthly rate x daysEligible / daysInWagePeriod (Employment Act s.18A divisor proposed; KWSP gives none)",
+      "daily": "daily rate for the employee's days per week x days worked",
+      "hourly": "hourly rate x hours worked",
+      "noBasicPieceOrCommission": "pieceRateMonthly, flat"
+    },
+    "confidence": { "fullMonth": "high", "smallEmployerPeriod": "medium-high", "hourlyDaily": "medium", "partMonthDivisor": "medium", "2027": "low" },
+    "periods": [
+      { "from": "2025-01", "to": "2025-01", "status": "confirmed", "instrument": "P.U.(A) 140/2022", "monthly": 1500, "hourly": 7.21, "daily": { "6": 57.69, "5": 69.23, "4": 86.54 }, "pieceRateMonthly": 1500 },
+      {
+        "from": "2025-02",
+        "to": "2025-07",
+        "status": "confirmed",
+        "instrument": "P.U.(A) 376/2024 paras 3 and 4",
+        "standard": { "monthly": 1700, "hourly": 8.72, "daily": { "6": 65.38, "5": 78.46, "4": 98.08 }, "pieceRateMonthly": 1700 },
+        "smallEmployer": { "appliesWhen": "Fewer than 5 employees and not a MASCO professional activity", "monthly": 1500, "hourly": 7.21, "daily": { "6": 57.69, "5": 69.23, "4": 86.54 }, "pieceRateMonthly": 1500 },
+        "note": "That the small-employer rate also defers the EPF floor is a statutory reading; no KWSP statement found."
+      },
+      { "from": "2025-08", "to": "2027-05", "status": "confirmed to 2026-12; carried forward after that", "instrument": "P.U.(A) 376/2024 paras 3 and 5", "monthly": 1700, "hourly": 8.72, "daily": { "6": 65.38, "5": 78.46, "4": 98.08 }, "pieceRateMonthly": 1700 },
+      {
+        "from": "2027-06",
+        "to": null,
+        "status": "announced, not gazetted as of 2026-11-05",
+        "instrument": "Budget 2027 speech, 9 Oct 2026",
+        "monthly": 2000,
+        "hourly": null,
+        "daily": null,
+        "pieceRateMonthly": null,
+        "exemptMsmeBelowRm50mSales": { "monthly": 1700, "basis": "Assumed. Reports call the exemption temporary; what exempt firms pay is not stated." },
+        "note": "Day in June and exemption period unconfirmed. Do not ship the derived RM10.26/hour as a rate. The RM2,500 semi-skilled and graduate minimum has no instrument and is not a floor."
+      }
+    ]
+  },
+  "voluntary": {
+    "annualCap": 100000,
+    "capFrom": "2023-06-01",
+    "capFromSource": "Deputy Finance Minister in the Dewan Rakyat, via an MOF press clipping of a Bernama report (single source; no KWSP notice found).",
+    "listsByPeriod": {
+      "2025": ["selfContribution", "iSaraan", "iSuri", "akaunPersaraanTopUp"],
+      "2026productPages": ["iSimpan", "iSaraan", "iSaraanPlus", "iSuri", "akaunPersaraanTopUp"],
+      "2026TermsS3_2": ["iSimpan", "iTopup", "iSaraan", "iSuri", "akaunPersaraanTopUp"]
+    },
+    "iTopup": { "countsTowardCap": "conflicting", "behaviour": "warnOnly" }
+  },
+  "matchSchemes": {
+    "note": "Voluntary and outside payroll. No effect on salaried take-home. A member gets only one of i-Saraan or i-Saraan Plus in a year.",
+    "iSaraan": { "matchRate": 0.2, "annualCap": 500, "lifetimeCap": 5000, "maxAgeExclusive": 60, "rateFrom": "2025-01-01", "lifetimeCountsFrom": 2024, "citizensOnly": true },
+    "iSaraanPlus": { "matchRate": 0.2, "annualCap": 600, "lifetimeCap": 6000, "maxAgeExclusive": 60, "from": "2026-01-01", "lifetimeCountsFrom": 2024, "condition": "Contributions made through the e-hailing or p-hailing service provider." },
+    "iSuri": { "matchRate": 0.5, "annualCap": 300, "lifetimeCap": 3000, "maxAgeExclusive": { "2025": 55, "2026": 60 }, "condition": "Incentive requires eKasih registration." }
+  },
+  "dividends": {
+    "note": "Not re-checked in the deep pass. Projections only.",
+    "2023": { "conventional": 5.5, "syariah": 5.4 },
+    "2024": { "conventional": 6.3, "syariah": 6.3 },
+    "2025": { "conventional": 6.15, "syariah": 6.15 }
+  },
+  "government": {
+    "note": "EPF follows appointment status, not sector. No separate government rate exists in the sources found.",
+    "categories": {
+      "govContract": { "label": "Contract, including federal interim contracts from 2024-02-01", "epf": true, "parts": "A or E; C for PR; B/D then F for non-citizens", "confidence": "medium-high", "option": "retireeOptOut: rehired citizen pensioners aged 55+ may choose not to contribute (UP.1.1.1 para 64; KWSP FAQ Q22(h) lists them as liable, unreconciled)" },
+      "govEpfOption": { "label": "Permanent officer who chose the s.6A EPF scheme", "epf": true, "parts": "A or E", "confidence": "medium-high" },
+      "govPensionPrePTB": { "label": "Permanent, on the pension track, before pension status is granted", "epf": true, "parts": "A or E", "confidence": "medium" },
+      "govPensionable": { "label": "Pension status granted", "epf": false, "confidence": "high" }
+    },
+    "notModelled": "KWAP 17.5% (employer-only) and contract gratuity. Neither affects monthly take-home.",
+    "template2027": { "govContributoryPermanent": { "status": "not-in-force", "rates": null, "note": "First interim contracts end around 2027-01-31. Keep govContract as default until a circular or Act amendment appears." } }
+  },
+  "years": {
+    "2025": {
+      "status": "confirmed",
+      "periods": [
+        {
+          "from": "2025-01",
+          "to": "2025-09",
+          "status": "confirmed",
+          "parts": ["A", "B", "C", "D", "E"],
+          "selection": {
+            "citizen": { "under60": "A", "from60": "E", "from75": null },
+            "permanentResident": { "under60": "A", "from60": "C", "from75": null },
+            "nonCitizenElectedBefore1998": { "under60": "A", "from60": "C", "from75": null },
+            "nonCitizenElectedFrom1998": { "under60": "B", "from60": "D", "from75": null },
+            "foreignWorkerNotElected": null
+          },
+          "source": "KWSP Third Schedule, 'Effective 1 July 2022 to 30 September 2025'"
+        },
+        {
+          "from": "2025-10",
+          "to": "2025-12",
+          "status": "confirmed",
+          "parts": ["A", "C", "E", "F"],
+          "selection": {
+            "citizen": { "under60": "A", "from60": "E", "from75": null },
+            "permanentResident": { "under60": "A", "from60": "C", "from75": null },
+            "nonCitizenElectedBefore1998": { "under60": "A", "from60": "C", "from75": null },
+            "nonCitizenOther": { "under60": "F", "from60": "F", "from75": null }
+          },
+          "source": "KWSP Third Schedule, 'Effective 1 October 2025'; Act A1760 ss.1(2), 10, 11; P.U.(B) 354/2025 (number from Skrine, gazette text not seen)"
+        }
+      ]
+    },
+    "2026": {
+      "status": "confirmed to the newest capture (2026-10-24 to 26); no change found",
+      "periods": [
+        {
+          "from": "2026-01",
+          "to": "2026-12",
+          "status": "confirmed",
+          "parts": ["A", "C", "E", "F"],
+          "selection": "same as 2025-10",
+          "source": "KWSP Third Schedule, 'Effective 1 October 2025'; KWSP employer page captured 2026-08-10"
+        }
+      ]
+    },
+    "2027": {
+      "status": "template",
+      "periods": [
+        { "from": "2027-01", "to": "2027-05", "status": "template", "parts": ["A", "C", "E", "F"], "selection": "same as 2025-10", "source": "Carried forward. Budget 2027 announces no contribution-rate change." },
+        { "from": "2027-06", "to": "2027-12", "status": "template", "parts": ["A", "C", "E", "F"], "selection": "same as 2025-10", "changes": "Minimum-wage floor period only (see minimumWageFloor). Not gazetted.", "source": "Budget 2027 speech" }
+      ],
+      "matchSchemesUnconfirmed": "Keep i-Saraan RM500/RM5,000, i-Suri RM300/RM3,000 and i-Saraan Plus RM600/RM6,000. The Budget 2027 annex groups all three under 'up to RM600 / RM6,000', which conflicts with the speech and with KWSP's i-Saraan page of 2026-10-23.",
+      "watch": "MOF said in Oct 2026 that the 2% foreign-worker rate is relatively low. KWSP says it is subject to revision. No change announced."
+    }
+  }
+}

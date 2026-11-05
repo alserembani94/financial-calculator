@@ -1,0 +1,713 @@
+{
+  "$comment": "Zakat config for Wilayah Persekutuan (PPZ-MAIWP). Researched 2026-11-04, revised after the deep verification pass on 2026-11-05. See docs/research/zakat.md for the derivation, confidence levels and sources. Values come from the live zakat2u.com.my calculator (app.js?v=20260326, /nisab-list, /nisab-value), the zakat.com.my 'Arkib Nisab Tahunan' page, gazetted WP fatwas, ITA 1967 s.6A and the LHDN MTD specs. Nothing here is extrapolated. Unknown values are null. Each structural rule carries its provenance, and anything PPZ does not publish is marked as such.",
+  "jurisdiction": "WP",
+  "authority": "Pusat Pungutan Zakat-MAIWP (PPZ-MAIWP)",
+  "retrievedOn": "2026-11-04",
+  "years": {
+    "2025": {
+      "status": "final",
+      "hijriYearsSpanned": [
+        "1446H",
+        "1447H"
+      ],
+      "nisab": {
+        "basis": {
+          "goldGrams": 85,
+          "goldPricePerGramRM": 349.88
+        },
+        "periods": [
+          {
+            "from": "2025-01-01",
+            "to": "2025-12-31",
+            "amountRM": 29740.0,
+            "publishedOn": "2025-02-26",
+            "publishedOnNote": "Date the zakat.com.my archive page was updated. A Wayback snapshot on 2024-12-07 still showed 2024 values, and one on 2025-03-18 showed 29,740. PPZ applies one nisab to the whole Gregorian haul year.",
+            "source": "https://www.zakat.com.my/info-zakat/arkib-nisab-tahunan/"
+          }
+        ],
+        "silverNisabRM": 2466.0,
+        "silverPricePerGramRM": 4.14,
+        "silverNisabNote": "Published figures, reference only. 595 g x 4.14 = 2,463.30, which does not equal the published 2,466, so do not recompute."
+      },
+      "pendapatan": {
+        "rate": 0.025,
+        "methods": [
+          "TANPA_TOLAKAN",
+          "DENGAN_TOLAKAN"
+        ],
+        "deductions": {
+          "selfRM": 12000,
+          "perWifeRM": 5000,
+          "maxWives": 4,
+          "perChildUnder18RM": 2000,
+          "perChild18PlusStudyingRM": 5000,
+          "parentsSupport": "actual",
+          "selfEducationCapRM": 2000,
+          "epfEmployee": "actual"
+        },
+        "zakatPayingContributionOffsetRate": 0.025
+      },
+      "fitrah": {
+        "ratesRM": {
+          "base": 7,
+          "tier2": 15,
+          "tier3": 22
+        },
+        "tierLabels": {
+          "base": "local super rice (5% broken) and regular imported rice",
+          "tier2": "premium imported rice",
+          "tier3": "basmathi rice"
+        },
+        "higherTiersOptional": true,
+        "higherTiersOptionalNote": "Gazette para 3: the higher tiers are for those more able who choose to pay by the rice they eat.",
+        "rateCategoryMappingConfidence": "high",
+        "legalBasis": "P.U.(B) 523/2024, gazetted 2024-12-24, dated 2024-12-09",
+        "payerScope": "Muslims who live OR work in KL, Putrajaya or Labuan (gazette para 4). This differs from income zakat, which follows the workplace.",
+        "source": "https://efatwa.muftiwp.gov.my/fatwa/KADAR%20%7BENETAPAN%20ZAKAT%20FITRAH%20BAGI%20WILAYAH-WILAYAH%20PERSEKUTUAN%20UNTUK%20TAHUN%201446H2025M",
+        "corroboration": [
+          "https://berita.rtm.gov.my/?p=141579"
+        ]
+      },
+      "emas": {
+        "urufPakaiGrams": 800,
+        "urufSimpanGrams": 85,
+        "goldPricePerGramRM": 349.88
+      }
+    },
+    "2026": {
+      "status": "final",
+      "hijriYearsSpanned": [
+        "1447H",
+        "1448H"
+      ],
+      "nisab": {
+        "basis": {
+          "goldGrams": 85,
+          "goldPricePerGramRM": 399.95
+        },
+        "periods": [
+          {
+            "from": "2026-01-01",
+            "to": "2026-12-31",
+            "amountRM": 33996.0,
+            "publishedOn": "2026-02-26",
+            "publishedOnNote": "Date the zakat.com.my archive page was last modified. Snapshots on 2026-01-20 and 2026-02-18 still showed RM29,740 (labelled as the 2026 row on the archive page), and one on 2026-04-21 showed 33,996. The live page, API and calculator on 2026-11-05 still use 33,996 for haul 2026, with no mid-year revision. PPZ states no formal effective date; the application from 1 January is inferred from the year-only lookup.",
+            "source": "https://www.zakat.com.my/info-zakat/arkib-nisab-tahunan/"
+          }
+        ],
+        "silverNisabRM": 3278.0,
+        "silverPricePerGramRM": 5.51
+      },
+      "pendapatan": {
+        "rate": 0.025,
+        "methods": [
+          "TANPA_TOLAKAN",
+          "DENGAN_TOLAKAN"
+        ],
+        "deductions": {
+          "selfRM": 12000,
+          "perWifeRM": 5000,
+          "maxWives": 4,
+          "perChildUnder18RM": 2000,
+          "perChild18PlusStudyingRM": 5000,
+          "parentsSupport": "actual",
+          "selfEducationCapRM": 2000,
+          "epfEmployee": "actual"
+        },
+        "zakatPayingContributionOffsetRate": 0.025
+      },
+      "fitrah": {
+        "ratesRM": {
+          "base": 8,
+          "tier2": 15,
+          "tier3": 25
+        },
+        "tierLabels": {
+          "base": "local rice",
+          "tier2": "super imported rice",
+          "tier3": "basmati rice or equivalent"
+        },
+        "higherTiersOptional": true,
+        "higherTiersOptionalNote": "Inferred from the 2025 gazette. No 1447H/2026 gazette is listed on the e-Fatwa portal as of 2026-11-05, and RTM does not say so outright.",
+        "rateCategoryMappingConfidence": "high",
+        "legalBasis": null,
+        "payerScope": null,
+        "source": "https://berita.rtm.gov.my/?p=437858",
+        "corroboration": [
+          "https://zakat2u.com.my/kiraan/zakat/fitrah"
+        ]
+      },
+      "emas": {
+        "urufPakaiGrams": 800,
+        "urufSimpanGrams": 85,
+        "goldPricePerGramRM": 399.95
+      }
+    },
+    "2027": {
+      "status": "template",
+      "hijriYearsSpanned": [
+        "1448H",
+        "1449H"
+      ],
+      "nisab": {
+        "basis": {
+          "goldGrams": 85,
+          "goldPricePerGramRM": null
+        },
+        "periods": [
+          {
+            "from": "2027-01-01",
+            "to": "2027-12-31",
+            "amountRM": null,
+            "publishedOn": null,
+            "publishedOnNote": "Not announced as of 2026-11-05. Past archive-page dates were 2024-02-02, 2025-02-26 and 2026-02-26, so expect it in February 2027 but do not hard-code a date. The live endpoint /nisab-value?year=2026, which the official calculator calls for haul 2027, returns 33996. That is a placeholder row copied from 2026, not an announcement; /nisab-value?year=2027 returns {}.",
+            "source": null
+          }
+        ],
+        "silverNisabRM": null,
+        "silverPricePerGramRM": null
+      },
+      "pendapatan": {
+        "rate": 0.025,
+        "methods": [
+          "TANPA_TOLAKAN",
+          "DENGAN_TOLAKAN"
+        ],
+        "deductions": {
+          "selfRM": null,
+          "perWifeRM": null,
+          "maxWives": 4,
+          "perChildUnder18RM": null,
+          "perChild18PlusStudyingRM": null,
+          "parentsSupport": "actual",
+          "selfEducationCapRM": null,
+          "epfEmployee": "actual"
+        },
+        "zakatPayingContributionOffsetRate": 0.025,
+        "$comment": "Deduction amounts have been unchanged since haul 2018 (the calculator's `default` branch, which any later year falls into). Re-verify against zakat2u.com.my Pendapatan.vue setValues() before filling them in. The structural rules below carry over as provisional until LHDN's 2027 MTD spec and PPZ's 2027 figures are out."
+      },
+      "fitrah": {
+        "ratesRM": null,
+        "tierLabels": null,
+        "higherTiersOptional": null,
+        "legalBasis": null,
+        "payerScope": null,
+        "source": null
+      },
+      "emas": {
+        "urufPakaiGrams": 800,
+        "urufSimpanGrams": 85,
+        "goldPricePerGramRM": null
+      }
+    }
+  },
+  "structuralRules": {
+    "$comment": "The same in 2025, 2026 and, provisionally, the 2027 template. None of these needs an effective-date period.",
+    "appliesToYears": [
+      2025,
+      2026,
+      2027
+    ],
+    "applicability": {
+      "religion": "muslim",
+      "jurisdictionBasis": "workplace",
+      "territories": [
+        "KUL",
+        "PJY",
+        "LBN"
+      ],
+      "collector": "PPZ-MAIWP",
+      "citizenshipTest": false,
+      "legalBasis": [
+        {
+          "ref": "P.U.(B) 316/2021",
+          "topic": "income zakat is paid in the state where the payer works",
+          "decided": "2018-07-31",
+          "dated": "2021-05-28",
+          "gazetted": "2021-06-01",
+          "act": "Act 505 s.34",
+          "source": "https://efatwa.muftiwp.gov.my/fatwa/PUB316%20%20WARTA%202021%20-%20FATWA%20BERKENAAN%20KEWAJIPAN%20MEMBAYAR%20ZAKAT%20PENDAPATAN%20DI%20TEMPAT%20BEKERJA"
+        },
+        {
+          "ref": "P.U.(B) 152/1999",
+          "topic": "zakat penggajian: upah, gaji, elaun, imbuhan dan bonus",
+          "dated": "1999-04-09",
+          "gazetted": "1999-04-29",
+          "source": "https://efatwa.muftiwp.gov.my/fatwa/WARTA%20-%20FATWA%20BERKENAAN%20ZAKAT%20PENGGAJIAN"
+        }
+      ],
+      "openCases": {
+        "remoteOrHybrid": "No published rule. 'Negeri tempat dia bekerja' is undefined.",
+        "selangorResidentWorkingInWP": "The fatwa's own example says pay WP, but Act 505 s.34(3) binds FT residents, and a 2001 Selangor fatwa (secondary sources only) reportedly claims anyone living or working in Selangor."
+      }
+    },
+    "assessment": {
+      "assessmentBasis": "ACTUAL_GREGORIAN_YEAR",
+      "assessmentBasisProvenance": "inferred, no published PPZ rule",
+      "nisabProrated": false,
+      "fixedDeductionsProrated": false,
+      "proratingProvenance": "inferred from the absence of any pro-rating in the calculator, booklet or forms",
+      "bonusCombinedWithIncome": true,
+      "bonusProvenance": "PPZ FAQ (Wayback 2016-12-10), calculator 'Pendapatan Lain', P.U.(B) 152/1999",
+      "nisabComparison": "gte",
+      "nisabComparisonNote": "Calculator code uses >=. The infographic says 'melebihi', but PPZ's savings and gold pages say 'menyamai atau melebihi'."
+    },
+    "dependants": {
+      "ageTestDate": null,
+      "iptDefinition": null,
+      "unpublishedNote": "PPZ publishes neither. Keep user-entered counts; a child sits in one category for the whole year, with no apportionment.",
+      "child18PlusNotStudyingRM": 0,
+      "wifeWorkingCondition": null,
+      "wifeWorkingNote": "No published restriction on a husband entering a working wife (medium confidence).",
+      "sharedChildRule": null,
+      "sharedChildNote": "No WP rule. Pahang's FAQ (not binding) treats each child as claimed once.",
+      "genderGate": false
+    },
+    "income": {
+      "$comment": "What goes into gross income. Confidence is per entry.",
+      "included": [
+        {
+          "item": "salary, wages, bonus, overtime",
+          "confidence": "high",
+          "source": "calculator modal; P.U.(B) 152/1999"
+        },
+        {
+          "item": "fixed allowances, tax-exempt or not",
+          "confidence": "high",
+          "source": "P.U.(B) 152/1999 'elaun'; PPZ FAQ 14 May 2014; tax-exempt part inferred"
+        },
+        {
+          "item": "gifts, awards, incentives, ESOS, cash perquisites",
+          "confidence": "high",
+          "source": "calculator modal; infographic. ESOS valuation date is not defined"
+        },
+        {
+          "item": "gratuity, compensation, severance, pension",
+          "confidence": "high",
+          "source": "calculator modal; infographic. Treat as other income in the year received"
+        },
+        {
+          "item": "freelance and consultancy fees, contractor payments or profits, commissions, residual income, royalties",
+          "confidence": "high",
+          "source": "calculator modal; infographic"
+        },
+        {
+          "item": "rent from houses, buildings, vehicles, premises, equipment; livestock produce such as milk, eggs and honey",
+          "confidence": "high",
+          "source": "calculator modal; infographic"
+        }
+      ],
+      "excluded": [
+        {
+          "item": "reimbursement claims: lodging, overseas, entertainment, mileage, other claims",
+          "confidence": "high",
+          "source": "calculator modal; infographic"
+        },
+        {
+          "item": "employer EPF share when contributed",
+          "confidence": "high",
+          "source": "PPZ KWSP page; 120th meeting fatwa"
+        },
+        {
+          "item": "employer SOCSO and EIS",
+          "confidence": "medium",
+          "source": "inferred, no PPZ text"
+        }
+      ],
+      "unresolved": [
+        {
+          "item": "non-cash benefits-in-kind",
+          "defaultTreatment": "out, with a user override into other income",
+          "confidence": "low",
+          "source": "no WP rule found"
+        }
+      ]
+    },
+    "taxRebate": {
+      "legalBasis": "ITA 1967 s.6A(1), (3), (4); PR 3/2023 paras 5.3, 5.6",
+      "source": "https://www.hasil.gov.my/wp-content/uploads/Income-Tax-Act-1967-online-version-as-at-1-January-2026.pdf",
+      "lastAmended": "Act 823, YA2019; not touched by Act 862 (YA2025) or Act 874 (YA2026)",
+      "eligibleResidence": "resident",
+      "recipient": "religious authority established under Malaysian written law, with a receipt",
+      "capRule": "aggregate: s.6A(2) self/spouse + s.6A(2A) departure levy + s.6A(3) zakat <= tax charged before rebates",
+      "refundable": false,
+      "carryForwardYears": 0,
+      "basis": "paid in the basis (calendar) year; keyed by payment date, not haul year",
+      "paidBy": "the assessed individual only. No exception for a non-working spouse (PR 3/2023 para 5.6.5).",
+      "formulas": {
+        "taxPayable": "max(0, taxCharged - selfSpouse - levy - zakat)",
+        "zakatRebateUsed": "min(zakat, max(0, taxCharged - selfSpouse - levy))",
+        "zakatRealCost": "zakat - zakatRebateUsed"
+      }
+    },
+    "mtdInteraction": {
+      "$comment": "Identical in the 2025 and 2026 LHDN specs. Re-check against the 2027 spec when it is issued.",
+      "formula": "MTD = [(P - M) x R + B - (Z + X)] / (n + 1)",
+      "mtdBeforeZakatUnder10": "treated as 0",
+      "netMtdFormula": "net = mtdCurrent - zakatAndLevyThisMonth, not floored yet",
+      "netMtdAfterZakatUnder10": "still deducted",
+      "mtdAdditionalUnder10": "treated as 0",
+      "mtdPayable": "max(0, net + mtdAdditional)",
+      "zUpdate": "Z += the FULL zakat and levy of the month, not just any excess over MTD",
+      "xUpdate": "X += the MTD actually paid",
+      "zResets": "each January",
+      "tp1": "Zakat paid directly and claimed on TP1 counts as zakat for the month claimed, and is not on the payslip or EA form",
+      "nonResident": "MTD is 30% of taxable remuneration with no Z or current-month zakat. Zakat is purely additional."
+    },
+    "rounding": {
+      "decimals": 2,
+      "semantics": "JS Number.prototype.toFixed(2), not decimal half-up",
+      "monthlyDefault": "sen",
+      "monthlyOptions": [
+        "sen",
+        "ceil-10sen",
+        "user-amount"
+      ],
+      "monthlyProvenance": "No PPZ rounding rule. The payer sets the PZB amount (form PPZ 052, guide item 3). The default is a proposal pending the owner's decision.",
+      "zakatableIsRounded": false
+    },
+    "workerCategories": {
+      "private_employee": {
+        "retirementLine": "EPF employee share",
+        "pzb": true,
+        "pcbOffset": true
+      },
+      "government_pensionable": {
+        "retirementLine": "0",
+        "pzb": true,
+        "pcbOffset": true,
+        "confidence": "medium-high"
+      },
+      "armed_forces_ltat": {
+        "retirementLine": null,
+        "retirementLineNote": "Open: LTAT 10% contribution is real, and PPZ is silent. Owner decision.",
+        "pzb": true,
+        "pcbOffset": true
+      },
+      "government_epf": {
+        "retirementLine": "EPF employee share",
+        "pzb": true,
+        "pcbOffset": true
+      },
+      "self_employed": {
+        "retirementLine": "actual voluntary EPF if any",
+        "pzb": false,
+        "pcbOffset": false,
+        "rebateRoute": "Form B, s.6A(3), not s.44(11A)"
+      },
+      "retiree": {
+        "retirementLine": "0",
+        "pzb": false,
+        "pcbOffset": false,
+        "note": "Government pension is often tax-exempt, so the rebate may have no tax to offset."
+      },
+      "non_resident": {
+        "pcbOffset": false,
+        "rebate": false,
+        "note": "Zakat is purely additional."
+      }
+    }
+  },
+  "testVectors": {
+    "$comment": "All recomputed on 2026-11-05 with toFixed semantics. EPF is 11% of salary unless stated. Nisab 33,996 unless stated.",
+    "income": [
+      {
+        "case": "PPZ infographic, haul 2018, nisab 14772",
+        "gross": 48000,
+        "deductions": 32480,
+        "zakatable": 15520,
+        "annualZakat": 358.0,
+        "monthlySen": 29.83,
+        "monthlyPublished": 29.9
+      },
+      {
+        "case": "PPZ 2025 BM booklet, nisab 2026",
+        "gross": 100000,
+        "deductions": 38200,
+        "zakatable": 61800,
+        "annualZakat": 1515.0,
+        "monthlySen": 126.25,
+        "monthlyPublished": 126.25
+      },
+      {
+        "case": "PPZ 2025 EN booklet, arithmetic only: 26,200 is below the 2025 and 2026 nisab, so run with nisab 14772. The booklet prints deductions as 32,800, but its items sum to 33,800 and its own C line needs 33,800.",
+        "gross": 60000,
+        "deductions": 33800,
+        "zakatable": 26200,
+        "annualZakat": 625.0,
+        "monthlySen": 52.08,
+        "monthlyPublished": 52.1
+      },
+      {
+        "case": "RM4,300/mo plus RM100 bonus, Kaedah 2",
+        "gross": 51700,
+        "deductions": 17676,
+        "zakatable": 34024,
+        "annualZakat": 850.6
+      },
+      {
+        "case": "RM4,310/mo with EPF Third Schedule RM476/mo",
+        "gross": 51720,
+        "deductions": 17712,
+        "zakatable": 34008,
+        "annualZakat": 850.2
+      },
+      {
+        "case": "RM4,500/mo single",
+        "gross": 54000,
+        "deductions": 17940,
+        "zakatable": 36060,
+        "annualZakat": 901.5
+      },
+      {
+        "case": "RM4,500/mo plus wife",
+        "gross": 54000,
+        "deductions": 22940,
+        "zakatable": 0,
+        "annualZakat": 0
+      },
+      {
+        "case": "RM4,500/mo plus child under 18",
+        "gross": 54000,
+        "deductions": 19940,
+        "zakatable": 34060,
+        "annualZakat": 851.5
+      },
+      {
+        "case": "RM4,500/mo plus child 18+ studying",
+        "gross": 54000,
+        "deductions": 22940,
+        "zakatable": 0,
+        "annualZakat": 0
+      },
+      {
+        "case": "RM5,000 x 6 months, actual income, Kaedah 2",
+        "gross": 30000,
+        "deductions": 15300,
+        "zakatable": 0,
+        "annualZakat": 0
+      },
+      {
+        "case": "RM5,000 x 6 months, actual income, Kaedah 1, haul 2025 (nisab 29740)",
+        "gross": 30000,
+        "zakatable": 30000,
+        "annualZakat": 750.0
+      },
+      {
+        "case": "RM5,000 x 11 months, actual income, Kaedah 2",
+        "gross": 55000,
+        "deductions": 18050,
+        "zakatable": 36950,
+        "annualZakat": 923.75
+      },
+      {
+        "case": "RM5,000/mo pensionable, no retirement line, Kaedah 2",
+        "gross": 60000,
+        "deductions": 12000,
+        "zakatable": 48000,
+        "annualZakat": 1200.0
+      },
+      {
+        "case": "RM5,000/mo LTAT 10%, Kaedah 2, flagged not PPZ-confirmed",
+        "gross": 60000,
+        "deductions": 18000,
+        "zakatable": 42000,
+        "annualZakat": 1050.0
+      }
+    ],
+    "toFixed": [
+      {
+        "expr": "34030.60 * 2.5 / 100",
+        "toFixed2": "850.76",
+        "halfUp": "850.77"
+      },
+      {
+        "expr": "36060.60 * 2.5 / 100",
+        "toFixed2": "901.51",
+        "halfUp": "901.52"
+      },
+      {
+        "expr": "1000.02 / 12",
+        "toFixed2": "83.33",
+        "halfUp": "83.34"
+      },
+      {
+        "expr": "1035.06 / 12",
+        "toFixed2": "86.25",
+        "halfUp": "86.26"
+      }
+    ],
+    "mtdTable5": {
+      "source": "LHDN MTD spec 2025 and 2026, Terms E.5",
+      "noBonus": [
+        {
+          "mtd": 8.0,
+          "zakat": 5.0,
+          "net": 0.0,
+          "zAdded": 5.0
+        },
+        {
+          "mtd": 15.0,
+          "zakat": 20.0,
+          "net": 0.0,
+          "zAdded": 20.0
+        },
+        {
+          "mtd": 15.0,
+          "zakat": 8.0,
+          "net": 7.0,
+          "zAdded": 8.0
+        },
+        {
+          "mtd": 120.0,
+          "zakat": 100.0,
+          "net": 20.0,
+          "zAdded": 100.0
+        }
+      ],
+      "withBonus": [
+        {
+          "mtd": 8.0,
+          "zakat": 5.0,
+          "mtdAdditional": 9.0,
+          "payable": 0.0,
+          "zAdded": 5.0
+        },
+        {
+          "mtd": 8.0,
+          "zakat": 5.0,
+          "mtdAdditional": 25.0,
+          "payable": 20.0,
+          "zAdded": 5.0
+        },
+        {
+          "mtd": 15.0,
+          "zakat": 20.0,
+          "mtdAdditional": 32.55,
+          "payable": 27.55,
+          "zAdded": 20.0
+        },
+        {
+          "mtd": 15.0,
+          "zakat": 8.0,
+          "mtdAdditional": 127.3,
+          "payable": 134.3,
+          "zAdded": 8.0
+        },
+        {
+          "mtd": 120.0,
+          "zakat": 100.0,
+          "mtdAdditional": 392.25,
+          "payable": 412.25,
+          "zAdded": 100.0
+        }
+      ]
+    },
+    "rebate": [
+      {
+        "case": "PR 3/2023 Example 7",
+        "taxCharged": 570,
+        "selfSpouseRebate": 800,
+        "zakat": 825,
+        "taxPayable": 0,
+        "zakatRebateUsed": 0,
+        "zakatRealCost": 825,
+        "pooledExcessLost": 1055
+      },
+      {
+        "case": "Single, chargeable income RM34,000",
+        "taxCharged": 570,
+        "selfSpouseRebate": 400,
+        "zakat": 300,
+        "taxPayable": 0,
+        "zakatRebateUsed": 170,
+        "zakatRealCost": 130
+      }
+    ]
+  },
+  "historicalDeductionTiers": {
+    "$comment": "From setValues() in the official calculator, keyed by haul year. Included only to show that 2025 and 2026 fall in the `default` (2018+) branch. Haul 2017 also had a published note that a dependent child aged 18 who was not studying got RM2,000; PPZ dropped it in the March 2018 infographic, so it does not apply to 2025 or 2026.",
+    "2018+": {
+      "selfRM": 12000,
+      "perWifeRM": 5000,
+      "perChildUnder18RM": 2000,
+      "perChild18PlusStudyingRM": 5000
+    },
+    "2017": {
+      "selfRM": 9000,
+      "perWifeRM": 4000,
+      "perChildUnder18RM": 2000,
+      "perChild18PlusStudyingRM": 8000
+    },
+    "2011-2016": {
+      "selfRM": 9000,
+      "perWifeRM": 3000,
+      "perChildUnder18RM": 1000,
+      "perChild18PlusStudyingRM": 0
+    }
+  },
+  "historicalNisabRM": {
+    "$comment": "Per haul year, from the zakat.com.my archive and /nisab-list tahun_nisab, checked 2026-11-05. PPZ's rounding of 85 g x price is inconsistent: 2021, 2023, 2025 and 2026 go to the nearest ringgit, while 2022 and 2024 are truncated. Store the published amount.",
+    "2015": 11308,
+    "2016": 12335,
+    "2017": 14083,
+    "2018": 14772,
+    "2019": 13968,
+    "2020": 15762,
+    "2021": 20299,
+    "2022": 20361,
+    "2023": 21626,
+    "2024": 24198,
+    "2025": 29740,
+    "2026": 33996
+  },
+  "zakatPayingAgencies": {
+    "$comment": "The 'Caruman Berzakat' list in the official calculator (Senarai Agensi modal, app.js?v=20260326; 43 entries checked against the live bundle on 2026-11-05). These bodies pay zakat on their members' savings. For haul 2018 onward, 2.5% of the user's annual contribution to them is subtracted from income zakat, under both methods, once the base meets the nisab. This list is a snapshot, so re-check it each year. An August 2026 public dispute over Tabung Haji's zakat has not changed the calculator.",
+    "list": [
+      "Bank Kerjasama Rakyat Malaysia Berhad",
+      "Koperasi Anggota Keselamatan Dan Pegawai-Pegawai Rendah UM Berhad",
+      "Koperasi Angkatan Tentera Malaysia Berhad",
+      "Koperasi Bank Persatuan Malaysia Berhad",
+      "Koperasi Bumira Berhad",
+      "Koperasi Dana Usahawan Global Berhad",
+      "Koperasi Dewan Bahasa Dan Pustaka Berhad",
+      "Koperasi Gabungan Kolej Komuniti Malaysia Berhad",
+      "Koperasi Hannan Berhad",
+      "Koperasi Hospital Pusrawi Kuala Lumpur Berhad",
+      "Koperasi Island & Peninsular Berhad",
+      "Koperasi Jabatan Kastam Malaysia Berhad",
+      "Koperasi Jabatan Ukur Dan Pemetaan Malaysia Berhad",
+      "Koperasi Kakitangan Bank Rakyat Berhad",
+      "Koperasi Kakitangan FELCRA (M) Berhad",
+      "Koperasi Kakitangan FELDA Berhad",
+      "Koperasi Kakitangan Majuikan Berhad",
+      "Koperasi Kakitangan Petronas Berhad",
+      "Koperasi Kesatuan Guru-Guru Melayu Malaysia Barat Berhad",
+      "Koperasi KOGUMA Berhad",
+      "Koperasi KOSPETA Semenanjung Malaysia",
+      "Koperasi Ladang Pekebun-Pekebun Kecil Malaysia Berhad",
+      "Koperasi Niaga Pegawai-Pegawai LPP Berhad",
+      "Koperasi NSTP Berhad",
+      "Koperasi Pegawai Dewan Bandaraya Kuala Lumpur",
+      "Koperasi Pegawai Melayu Jabatan Pertanian Berhad",
+      "Koperasi Pekerja-Pekerja JPM (M) Berhad",
+      "Koperasi Pengangkutan Putrajaya & Cyberjaya Berhad",
+      "Koperasi Perkhidmatan Pendidikan nasional Berhad",
+      "Koperasi Permodalan FELDA Berhad",
+      "Koperasi Perumahan Angkatan Tentera Berhad",
+      "Koperasi Pusat Perubatan Universiti Malaysia Berhad",
+      "Koperasi SAGEMAL Berhad",
+      "Koperasi Sek Men Keb. Seri Gombak Berhad",
+      "Koperasi Serbaguna Pekerja FELDA Berhad",
+      "Koperasi Serbaguna Selangor Berhad",
+      "Koperasi SM Pendidikan Khas Setapak Kuala Lumpur Berhad",
+      "Koperasi SMK Labuan",
+      "Koperasi SMK Putrajaya Presint 9(1) Berhad",
+      "Koperasi Tabung Haji Berhad",
+      "Koperasi Tenaga Nasional Berhad",
+      "Koperasi Usaha Bersama Berhad (KOSAMA)",
+      "Lembaga Tabung Haji"
+    ]
+  },
+  "revisedOn": "2026-11-05"
+}

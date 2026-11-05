@@ -1,0 +1,702 @@
+{
+  "$comment": "TEMPLATE - YA2027 is NOT law. Built from the Budget 2027 speech annex and MOF English tax measures (tabled 9 Oct 2026). No Finance Bill on Parliament's list as of 2026-11-05; no LHDN 2027 spec or TP1. Items not mentioned in Budget 2027 are carried forward from YA2026 and are unconfirmed.",
+  "yearOfAssessment": 2027,
+  "status": "unconfirmed-template",
+  "residentBrackets": [
+    {
+      "fromExclusive": 0,
+      "to": 5000,
+      "rate": 0.0,
+      "taxAtLowerBound": 0
+    },
+    {
+      "fromExclusive": 5000,
+      "to": 20000,
+      "rate": 0.01,
+      "taxAtLowerBound": 0
+    },
+    {
+      "fromExclusive": 20000,
+      "to": 35000,
+      "rate": 0.03,
+      "taxAtLowerBound": 150
+    },
+    {
+      "fromExclusive": 35000,
+      "to": 50000,
+      "rate": 0.06,
+      "taxAtLowerBound": 600
+    },
+    {
+      "fromExclusive": 50000,
+      "to": 70000,
+      "rate": 0.11,
+      "taxAtLowerBound": 1500
+    },
+    {
+      "fromExclusive": 70000,
+      "to": 100000,
+      "rate": 0.18,
+      "taxAtLowerBound": 3700
+    },
+    {
+      "fromExclusive": 100000,
+      "to": 150000,
+      "rate": 0.24,
+      "taxAtLowerBound": 9100
+    },
+    {
+      "fromExclusive": 150000,
+      "to": 400000,
+      "rate": 0.25,
+      "taxAtLowerBound": 21100
+    },
+    {
+      "fromExclusive": 400000,
+      "to": 600000,
+      "rate": 0.26,
+      "taxAtLowerBound": 83600
+    },
+    {
+      "fromExclusive": 600000,
+      "to": 1000000,
+      "rate": 0.28,
+      "taxAtLowerBound": 135600
+    },
+    {
+      "fromExclusive": 1000000,
+      "to": null,
+      "rate": 0.3,
+      "taxAtLowerBound": 247600
+    }
+  ],
+  "bracketsSource": [
+    "https://belanjawan.mof.gov.my/pdf/belanjawan2027/ucapan/ub27.pdf Lampiran 1",
+    "https://belanjawan.mof.gov.my/pdf/belanjawan2027/ucapan/tax-measures.pdf Appendix 1"
+  ],
+  "bracketsNote": "Rates/bands from Lampiran 1. taxAtLowerBound values computed by us from those rates (not published by MOF/LHDN).",
+  "rebates": {
+    "individual": {
+      "amountRm": 400,
+      "condition": "chargeable income <= 35,000",
+      "legalRef": "ITA s.6A(2)(a); requires the s.46(1)(a) deduction",
+      "mtd": "built into B (Category 1 & 3: B reduced by 400)"
+    },
+    "spouse": {
+      "amountRm": 400,
+      "condition": "chargeable income <= 35,000 AND a deduction allowed under s.47(1) or (2) (includes alimony), or under s.45A for a wife",
+      "legalRef": "ITA s.6A(2)(b)/(c)",
+      "mtd": "built into B for Category 2 only (B reduced by 800 in total). A rebate earned through alimony is not in B, so it shows only in annual tax."
+    },
+    "chargeableIncomeThresholdRm": 35000,
+    "zakatFitrah": {
+      "amountRm": "actual paid",
+      "cap": "see totalCap: pooled with the other rebates under s.6A(4), not capped on its own. Excess is lost.",
+      "legalRef": "ITA s.6A(3), (4); PR 3/2023",
+      "mtd": "Current-month zakat is subtracted from MTD. Without additional remuneration, net = max(0, MTD - zakat). In a bonus month, net is not floored: payable = max(0, (MTD - zakat) + MTD_additional). The full zakat of each month is added to Z. Zakat paid outside payroll is declared on TP1 D1(a) and treated as current-month zakat."
+    },
+    "departureLevyUmrah": {
+      "amountRm": "departure levy actually paid for own travel",
+      "cap": "not more than 2 times; not hajj; own travel by air; pooled under totalCap",
+      "legalRef": "ITA s.6A(2A) (amount), s.6A(2B)(a) (2-time limit), s.6A(2B)(b) (hajj exclusion)",
+      "mtd": "TP1 D1(b): treated like current-month zakat and carried into Z (spec section E note 5)",
+      "ratesRm": {
+        "economyAsean": 8,
+        "economyNonAsean": 20,
+        "otherClassAsean": 50,
+        "otherClassNonAsean": 150
+      },
+      "ratesSource": "PR 3/2023 para 5.5.3"
+    },
+    "$comment": "Budget 2027 does not mention rebates; carried forward (unconfirmed).",
+    "totalCap": {
+      "base": "taxChargedBeforeRebates",
+      "appliesTo": [
+        "individual",
+        "spouse",
+        "departureLevyUmrah",
+        "zakatFitrah"
+      ],
+      "formula": "rebatesUsed = min(taxCharged, self + spouse + levy + zakat); taxPayable = taxCharged - rebatesUsed",
+      "excess": "lost: not refunded, not set against this or a later year's tax",
+      "ordering": "none: one pooled cap, so the order of the rebates does not change tax payable",
+      "appliedBefore": [
+        "s.110 set-off",
+        "s.132/133 credit"
+      ],
+      "legalRef": "ITA s.6A(1), (4); PR 3/2023 paras 4.2, 4.3, 5.3"
+    },
+    "rebateCliff": {
+      "category1And3Rm": 400,
+      "category2Rm": 600,
+      "note": "Payable tax jump just above RM35,000 chargeable income. Category 2 jumps by about RM600, not RM800, because rebate above the RM600 tax charged was already lost under s.6A(4)."
+    }
+  },
+  "nonResident": {
+    "rate": 0.3,
+    "reliefsAllowed": false,
+    "rebatesAllowed": false,
+    "legalRef": "ITA Sch.1 Part I para 1A",
+    "mtd": "MTD = 30% x (remuneration + BIK + VOLA + additional remuneration), exempt allowances excluded, then the general rules: truncate to 2 dp, MTD < RM10 -> 0 (before rounding), round up to next 5 sen. No reliefs, rebates or categories.",
+    "$comment": "Not mentioned in Budget 2027; carried forward (unconfirmed).",
+    "shortStayExemption": "Sch.6 para 21 (subject to para 22): employment income of a non-resident for periods of 60 days or less is exempt.",
+    "zakat": "No zakat or levy rebate and no MTD offset: s.6A(1) rebates tax only for a resident individual, and the spec puts zakat terms only in the resident formulas. Take-home falls by the full zakat. A foreign employee on a contract of 182 days or more runs the resident MTD path, so netting happens during the year."
+  },
+  "reliefs": [
+    {
+      "id": "self",
+      "label": "Individual and dependent relatives",
+      "capRm": 12000,
+      "mtd": {
+        "treatment": "automatic",
+        "variable": "D",
+        "tp1Item": null
+      },
+      "legalRef": "ITA s.46(1)(a)",
+      "status": "PROPOSED Budget 2027 Lampiran 2 (from YA2027)",
+      "subCaps": []
+    },
+    {
+      "id": "disabledSelf",
+      "label": "Disabled individual (additional)",
+      "capRm": 7000,
+      "mtd": {
+        "treatment": "mandatoryAdditional",
+        "variable": "Du",
+        "tp1Item": null
+      },
+      "legalRef": "ITA s.46(1)(e)",
+      "note": "Must be registered with JKM. Was 6,000 up to YA2024.",
+      "subCaps": [],
+      "status": "carried forward from YA2026 (unconfirmed)"
+    },
+    {
+      "id": "spouse",
+      "label": "Husband / wife (no income or joint assessment) or alimony to former wife",
+      "capRm": 4000,
+      "mtd": {
+        "treatment": "category2",
+        "variable": "S",
+        "tp1Item": "C10 (alimony only)"
+      },
+      "legalRef": "ITA s.45A(1)-(2) (husband); s.47(1)(a), (2)-(6) (wife, alimony)",
+      "note": "Not allowed if the spouse is assessed separately (s.47(4)), or if a non-disabled spouse has foreign-source gross income above RM4,000 (s.45A(2), s.47(5)). Spouse relief + alimony share the 4,000 cap (s.47(3)).",
+      "subCaps": [],
+      "status": "carried forward from YA2026 (unconfirmed)"
+    },
+    {
+      "id": "disabledSpouse",
+      "label": "Disabled husband / wife (additional)",
+      "capRm": 6000,
+      "mtd": {
+        "treatment": "mandatoryAdditional",
+        "variable": "Su",
+        "tp1Item": null
+      },
+      "legalRef": "ITA s.45A(1) (husband); s.47(1)(b) (wife)",
+      "note": "Was 5,000 up to YA2024. Not free-standing: available only where the spouse deduction conditions are met, so Su = 0 in Category 3 (spouse assessed separately) and for single, divorced or widowed employees. Sits outside the s.47(3) cap.",
+      "subCaps": [],
+      "status": "carried forward from YA2026 (unconfirmed)",
+      "availableInCategories": [
+        2
+      ]
+    },
+    {
+      "id": "children",
+      "label": "Child relief",
+      "capRm": null,
+      "mtd": {
+        "treatment": "childUnits",
+        "variable": "Q x C",
+        "tp1Item": null
+      },
+      "childUnits": {
+        "Q_rmPerUnit": 2000,
+        "under18": {
+          "units": 1,
+          "annualRm": 2000
+        },
+        "age18PlusPreTertiary": {
+          "units": 1,
+          "annualRm": 2000,
+          "note": "A-Level, certificate, matriculation or preparatory courses"
+        },
+        "age18PlusDiplomaOrDegree": {
+          "units": 4,
+          "annualRm": 8000,
+          "note": "diploma+ in Malaysia, degree+ outside Malaysia, or serving under articles or indentures to qualify in a trade or profession (s.48(3)(a)); approved institution"
+        },
+        "disabled": {
+          "units": 4,
+          "annualRm": 8000
+        },
+        "disabledAge18PlusStudyingDiplomaOrDegree": {
+          "units": 8,
+          "annualRm": 16000,
+          "note": "includes a disabled child serving under articles or indentures"
+        }
+      },
+      "legalRef": "ITA s.48",
+      "note": "Category 1 forces C = 0. Where two or more people are each entitled to claim the same child (for example divorced parents), each gets 50% under s.48(4), so C can be fractional: 0.5, 2 or 4 units instead of 1, 4 or 8. A husband and wife living together choose: a wife assessed separately may elect the whole deduction (s.48(1) proviso; PR 7/2025 Example 49 still gives her 50% if a third person is entitled). No relief for a child whose own total income exceeds the deduction (s.48(5)). Under-18 is tested at any time in the basis year. Spouses may each claim different children. The MTD spec has no half-unit rule, so fractional C is confirmed by the Act and the calculator for an under-18 child only.",
+      "subCaps": [],
+      "status": "carried forward from YA2026 (unconfirmed)",
+      "subRefs": {
+        "under18": "s.48(1)(a), (2)(a)",
+        "age18PlusPreTertiary": "s.48(1)(b)/(c), (2)(a)",
+        "age18PlusDiplomaOrDegree": "s.48(3)(a)(i), (3)(b)",
+        "disabled": "s.48(1)(d), (2)(b)",
+        "disabledAge18PlusStudyingDiplomaOrDegree": "s.48(3)(a)(ii)"
+      },
+      "halfShareUnits": {
+        "under18": 0.5,
+        "age18PlusPreTertiary": 0.5,
+        "age18PlusDiplomaOrDegree": 2,
+        "disabled": 2,
+        "disabledAge18PlusStudyingDiplomaOrDegree": 4
+      }
+    },
+    {
+      "id": "epf",
+      "label": "EPF / approved scheme (mandatory or voluntary EPF)",
+      "capRm": 4000,
+      "mtd": {
+        "treatment": "epfK",
+        "variable": "K, K1, K2, Kt (voluntary EPF on TP1 C11a -> LP1)",
+        "tp1Item": "C11(a)"
+      },
+      "legalRef": "ITA s.49(1)(b)",
+      "subCaps": [],
+      "status": "carried forward from YA2026 (unconfirmed)",
+      "section49Rule": {
+        "formula": "s49b = min(4000, compulsory + voluntaryEpf); voluntaryLeft = voluntaryEpf - max(0, s49b - compulsory); s49a = min(3000, lifeInsurance + voluntaryLeft); total = min(7000, s49b + s49a)",
+        "note": "The 7,000 needs voluntary EPF of at least 4,000 when there is no mandatory EPF. Life insurance alone never exceeds 3,000. Checks (e-BE YA2025 notes G17): Saiful 3,000; Sally 7,000; Charlene 7,000; Manaf 7,000.",
+        "legalRef": "ITA s.49(1)(a), (b), (1A)(a), (1A)(aa)"
+      }
+    },
+    {
+      "id": "lifeInsurance",
+      "label": "Life insurance / family takaful premiums or additional voluntary EPF",
+      "capRm": 3000,
+      "mtd": {
+        "treatment": "tp1",
+        "variable": "LP1",
+        "tp1Item": "C11(b)"
+      },
+      "legalRef": "ITA s.49(1)(a)",
+      "note": "Self, spouse and children (from YA2026; child criteria: <18 unmarried, 18+ unmarried in tertiary education, or unmarried disabled any age). 49(1)(a)+(b) combined cap 7,000.",
+      "subCaps": [],
+      "status": "carried forward from YA2026 (unconfirmed)"
+    },
+    {
+      "id": "prsDeferredAnnuity",
+      "label": "Private Retirement Scheme and deferred annuity",
+      "capRm": 3000,
+      "mtd": {
+        "treatment": "tp1",
+        "variable": "LP1",
+        "tp1Item": "C12"
+      },
+      "legalRef": "ITA s.49(1D)/(1E)",
+      "validUntilYa": 2030,
+      "subCaps": [],
+      "status": "carried forward from YA2026 (unconfirmed)"
+    },
+    {
+      "id": "educationMedicalInsurance",
+      "label": "Education or medical insurance premiums (self, spouse, child)",
+      "capRm": 4000,
+      "mtd": {
+        "treatment": "tp1",
+        "variable": "LP1",
+        "tp1Item": "C13"
+      },
+      "legalRef": "ITA s.49(1B)",
+      "note": "Was 3,000 up to YA2024.",
+      "subCaps": [],
+      "status": "carried forward from YA2026 (unconfirmed)"
+    },
+    {
+      "id": "socsoEis",
+      "label": "SOCSO (Act 4) + EIS (Act 800) employee contributions",
+      "capRm": 350,
+      "mtd": {
+        "treatment": "tp1",
+        "variable": "LP1",
+        "tp1Item": "C14"
+      },
+      "legalRef": "ITA s.46(1)(n)",
+      "note": "Optional TP1 deduction. Do not read capRm 350 as the total. Malay Mail and Bernama attach the 150 to mandatory LINDUNG KENDIRI; MOF Appendix 9 and the speech say voluntary, and the MOF text is used.",
+      "subCaps": [],
+      "status": "PROPOSED Budget 2027 Lampiran 9",
+      "scopeAdds": [
+        {
+          "id": "lindungKendiriMandatory",
+          "label": "Mandatory LINDUNG KENDIRI (3 sectors: passenger transport, goods or food transport, hawkers), inside the 350"
+        }
+      ],
+      "additionalCaps": [
+        {
+          "id": "voluntaryLindung",
+          "capRm": 150,
+          "appliesTo": [
+            "lindung24Voluntary",
+            "lindungKendiriNonMandatory"
+          ],
+          "note": "On top of the 350, so the proposed maximum is 500. Lampiran 9 says \"caruman sukarela\"."
+        }
+      ],
+      "poolingRule": "separate",
+      "poolingRuleStatus": "unconfirmed until the Finance Bill text is read. Separate buckets fit the annex wording better; pooling would change wages below about RM5,000. Foreign workers' mandatory SKBBK is outside the voluntary 150 on the text.",
+      "maxTotalRm": 500
+    },
+    {
+      "id": "parentsMedical",
+      "label": "Medical treatment, special needs and carer expenses for parents / grandparents",
+      "capRm": 8000,
+      "subCaps": [
+        {
+          "id": "parentsFullCheckupVaccination",
+          "capRm": 1000,
+          "label": "Full medical examination incl. vaccination"
+        }
+      ],
+      "mtd": {
+        "treatment": "tp1",
+        "variable": "LP1",
+        "tp1Item": "C1"
+      },
+      "legalRef": "ITA s.46(1)(c)",
+      "note": "Grandparents and parents' vaccination added from YA2025. Vaccines: all NPRA-registered (YA2026).",
+      "status": "PROPOSED change: all care expenses at home/day-care/residential care; carer certificate or work permit + receipt, no doctor certification (Lampiran 3)"
+    },
+    {
+      "id": "supportingEquipment",
+      "label": "Basic supporting equipment for disabled self/spouse/child/parent",
+      "capRm": 6000,
+      "mtd": {
+        "treatment": "tp1",
+        "variable": "LP1",
+        "tp1Item": "C2"
+      },
+      "legalRef": "ITA s.46(1)(d)",
+      "subCaps": [],
+      "status": "carried forward from YA2026 (unconfirmed)"
+    },
+    {
+      "id": "educationSelf",
+      "label": "Education fees & skills training (renamed)",
+      "capRm": 7000,
+      "subCaps": [
+        {
+          "id": "recognisedCourse",
+          "capRm": null,
+          "label": "Certificate to PhD, any field, recognised institution (self)"
+        },
+        {
+          "id": "tvet",
+          "capRm": 3000,
+          "label": "TVET up-skilling recognised by DG Skills Development (self or spouse)"
+        },
+        {
+          "id": "nonWorkOrChildTuition",
+          "capRm": 2000,
+          "label": "Non-work-related courses (self/spouse) or STEM/arts/language/religion classes or tuition for children"
+        }
+      ],
+      "mtd": {
+        "treatment": "tp1",
+        "variable": "LP1",
+        "tp1Item": "C3"
+      },
+      "legalRef": "ITA s.46(1)(f)",
+      "status": "PROPOSED Budget 2027 Lampiran 5; cap stays 7,000; lifestyle course-fee item merged here"
+    },
+    {
+      "id": "medical",
+      "label": "Health & well-being (renamed from medical expenses)",
+      "capRm": 10000,
+      "subCaps": [
+        {
+          "id": "seriousDisease",
+          "capRm": null,
+          "label": "Serious diseases (self/spouse/child)"
+        },
+        {
+          "id": "fertility",
+          "capRm": null,
+          "label": "Fertility treatment (self/spouse; must be married)"
+        },
+        {
+          "id": "vaccination",
+          "capRm": 1000,
+          "label": "Vaccination (all NPRA-registered vaccines)"
+        },
+        {
+          "id": "dental",
+          "capRm": 1000,
+          "label": "Dental examination and treatment"
+        },
+        {
+          "id": "checkupMentalHealthTests",
+          "capRm": 1000,
+          "label": "Full medical exam, mental-health exam/consultation, disease-detection tests, self-test kits and self-monitoring equipment"
+        },
+        {
+          "id": "learningDisabilityChild",
+          "capRm": 10000,
+          "label": "Diagnosis / early intervention / rehabilitation for child <=18 with learning disability"
+        },
+        {
+          "id": "postnatalCare",
+          "capRm": 3000,
+          "label": "Post-natal (confinement) care services"
+        },
+        {
+          "id": "breastfeedingEquipment",
+          "capRm": 1000,
+          "label": "Breastfeeding equipment for child <= 2, paid by self or spouse (merged from separate relief)"
+        }
+      ],
+      "mtd": {
+        "treatment": "tp1",
+        "variable": "LP1",
+        "tp1Item": "C4"
+      },
+      "legalRef": "ITA s.46(1)(g), (h), (ha)",
+      "status": "PROPOSED Budget 2027 Lampiran 4; cap stays 10,000"
+    },
+    {
+      "id": "lifestyle",
+      "label": "Lifestyle: books, PC/smartphone/tablet, internet, AI software/app subscriptions, pet adoption & vet vaccination/sterilisation",
+      "capRm": 2500,
+      "mtd": {
+        "treatment": "tp1",
+        "variable": "LP1",
+        "tp1Item": "C5"
+      },
+      "legalRef": "ITA s.46(1)(p)",
+      "subCaps": [],
+      "status": "PROPOSED Budget 2027 Lampiran 6; cap stays 2,500 (course fees move to education relief)"
+    },
+    {
+      "id": "sports",
+      "label": "Sports equipment, facility fees, competition fees, gym/training (self, spouse, child, parents)",
+      "capRm": 1000,
+      "mtd": {
+        "treatment": "tp1",
+        "variable": "LP1",
+        "tp1Item": "C6"
+      },
+      "legalRef": "ITA s.46(1)(u)",
+      "subCaps": [
+        {
+          "id": "sportsShoes",
+          "capRm": 300,
+          "label": "Sports shoes"
+        }
+      ],
+      "status": "PROPOSED Budget 2027 Lampiran 7; cap stays 1,000"
+    },
+    {
+      "id": "breastfeeding",
+      "label": "Breastfeeding equipment (child <= 2), once every 2 YAs",
+      "capRm": null,
+      "mtd": {
+        "treatment": "tp1",
+        "variable": "LP1",
+        "tp1Item": "C7"
+      },
+      "legalRef": null,
+      "note": "Proposed to end as a separate relief: claim it only through medical.breastfeedingEquipment, or it can be claimed twice. s.46(1)(q) stands until amended; the new paragraph is unknown until the Finance Bill. Whether the once-every-2-YAs condition survives is unconfirmed.",
+      "subCaps": [],
+      "status": "PROPOSED to be merged into health & well-being (Lampiran 4)",
+      "mergedInto": "medical",
+      "excludeFromClaim": true
+    },
+    {
+      "id": "childcare",
+      "label": "Child care / kindergarten fees",
+      "capRm": 3000,
+      "mtd": {
+        "treatment": "tp1",
+        "variable": "LP1",
+        "tp1Item": "C8"
+      },
+      "legalRef": "ITA s.46(1)(r)",
+      "note": "3,000 permanent. Age limit depends on premises (s.46(1)(r), substituted by Act 874 s.6(a)(iv) with effect from YA2026 and subsequent years).",
+      "subCaps": [],
+      "status": "enacted from YA2026 onward (Act 874), unless amended. Not a Budget 2027 measure.",
+      "eligibility": [
+        {
+          "premises": "TASKA (Act 308) or TADIKA (Act 550)",
+          "childAgeMax": 6
+        },
+        {
+          "premises": "Care centre under the Care Centres Act 1993 (Act 506), including JKM day-care and after-school transit centres",
+          "childAgeMax": 12
+        }
+      ]
+    },
+    {
+      "id": "sspn",
+      "label": "SSPN net deposit",
+      "capRm": 8000,
+      "mtd": {
+        "treatment": "tp1",
+        "variable": "LP1",
+        "tp1Item": "C9"
+      },
+      "legalRef": "ITA s.46(1)(k)",
+      "validUntilYa": 2027,
+      "note": "Net = deposits minus withdrawals in the year; either parent.",
+      "subCaps": [],
+      "status": "carried forward from YA2026 (unconfirmed)"
+    },
+    {
+      "id": "evChargingCompost",
+      "label": "EV charging facilities; household food-waste composting machine; food-waste grinder & home CCTV",
+      "capRm": 2500,
+      "mtd": {
+        "treatment": "tp1",
+        "variable": "LP1",
+        "tp1Item": "C15"
+      },
+      "legalRef": "ITA s.46(1)(v), (1A)",
+      "note": "EV: YA2022-2027. Composting: YA2025-2027, once per 3 YAs. Grinder/CCTV: YA2026-2027, once per 2 YAs.",
+      "subCaps": [],
+      "status": "carried forward from YA2026 (unconfirmed)"
+    },
+    {
+      "id": "firstHomeLoanInterest",
+      "label": "Housing loan interest, first residential home",
+      "capRm": 7000,
+      "subCaps": [
+        {
+          "id": "homeUpTo500k",
+          "capRm": 7000,
+          "label": "House price up to RM500,000"
+        },
+        {
+          "id": "home500kTo750k",
+          "capRm": 5000,
+          "label": "House price RM500,001 - RM750,000"
+        }
+      ],
+      "mtd": {
+        "treatment": "tp1",
+        "variable": "LP1",
+        "tp1Item": "C16"
+      },
+      "legalRef": "ITA s.46B",
+      "note": "SPA completed 1 Jan 2025 - 31 Dec 2027; 3 consecutive YAs from first interest payment; house not income-producing.",
+      "status": "carried forward from YA2026 (unconfirmed)",
+      "legalRefNote": "TP1 2026 notes say \"Seksyen 46C\"; the Act has no s.46C and PR 7/2025 para 6.16 uses s.46B. Act wins."
+    },
+    {
+      "id": "tourismAdmission",
+      "label": "Admission fees to tourist attractions and cultural/arts programmes",
+      "capRm": 1000,
+      "mtd": {
+        "treatment": "tp1",
+        "variable": "LP1",
+        "tp1Item": "C17"
+      },
+      "legalRef": "ITA s.46(1)(sa), limited to YA2026 by Act 874, so YA2027 needs new law",
+      "note": "Enacted for YA2026 only. Budget 2027 Appendix 8 proposes one more year.",
+      "subCaps": [],
+      "status": "PROPOSED extension for YA2027 only (Lampiran 8)",
+      "validUntilYa": 2027
+    }
+  ],
+  "giftDeductions": {
+    "$comment": "Moved out of reliefs: a gift deduction applies between aggregate income and total income, before reliefs. Same for YA2025, YA2026 and the YA2027 template.",
+    "stage": "aggregateToTotalIncome",
+    "sharedCap": {
+      "rateOfAggregateIncome": 0.1,
+      "appliesTo": [
+        "s.44(6) approved institution or fund",
+        "s.44(11B) approved sports activity",
+        "s.44(11C) approved national-interest project",
+        "s.44(11D) wakaf or endowment"
+      ],
+      "effectiveFromYa": 2020,
+      "legalRef": "Act 823 s.8; PR 7/2025 para 5.2"
+    },
+    "uncapped": [
+      "s.44(6) money to Government, State Government or local authority",
+      "s.44(6A) artefacts, manuscripts, paintings to Government (value as determined)",
+      "s.44(9) facilities for disabled persons",
+      "s.44(11) paintings to art galleries (value as determined)"
+    ],
+    "fixedCapsRm": {
+      "s.44(8) library facilities": 20000,
+      "s.44(10) healthcare facility or medical equipment": 20000
+    },
+    "baseNote": "Base is aggregate income (BE item B6), before reliefs and not reduced by EPF. A gift lowers chargeable income, so it can bring someone under the RM35,000 rebate limit.",
+    "mtd": "annualOnly: not on TP1 and not in the MTD spec. Only counts if a return is filed.",
+    "carryForward": "none found (reading of the provisions, not an express statement)",
+    "status": "carried forward (unconfirmed). Budget 2027 Lampiran 10 widens the scope of school funds under s.44(6) and restates 10%."
+  },
+  "terminationPayments": {
+    "$comment": "Exempt share of termination and retirement payments. Only the taxable excess enters Yt. Kt = 0 on these items.",
+    "compensationForLossOfEmployment": {
+      "legalRef": "ITA s.13(1)(e); Sch.6 para 15; PR 1/2012",
+      "perCompletedYearRm": 10000,
+      "completedYearsOnly": true,
+      "groupServiceCounts": true,
+      "illHealthFullyExempt": "para 15(1)(a), Director General must be satisfied",
+      "excludes": [
+        "controlled company paying a director who is not a whole-time service director",
+        "separation scheme that provides for re-employment (para 15(3))"
+      ],
+      "history": "A further RM10,000 per year applied only to cessations from 1 Jan 2020 to 31 Dec 2021. Not a live value."
+    },
+    "gratuity": {
+      "legalRef": "ITA s.13(1)(a), s.25(1); Sch.6 paras 14, 25, 25A, 25B, 25D, 30A; PR 9/2016",
+      "fullyExemptIf": [
+        "ill-health retirement, Director General satisfied (para 25(1)(a))",
+        "retirement at 55 or over, or at a statutory compulsory age, with 10 years with the same employer or group (para 25(1)(b))",
+        "retirement at a compulsory age set by contract or collective agreement, aged 50 to under 55, with 10 years with the same employer or group (para 25(1)(c))",
+        "public funds on retirement under written law (para 25A) or on contract end, less employer EPF and interest (para 25B)",
+        "death gratuity (para 14)"
+      ],
+      "partialPerCompletedYearRm": 1000,
+      "partialLegalRef": "Sch.6 para 25D, YA2016 onward",
+      "partialGroupServiceCounts": false,
+      "whileStillEmployed": "no exemption (PR 9/2016 para 7.3)"
+    },
+    "pension": {
+      "head": "s.4(e), not employment income",
+      "fullyExemptIf": "para 30: age 55, statutory compulsory age or accepted ill-health; written-law or approved scheme",
+      "onlyHighestPensionExempt": true,
+      "inMtd": false
+    },
+    "epfLiable": {
+      "gratuity": false,
+      "retirementBenefit": false,
+      "retrenchmentOrTermination": false,
+      "payInLieuOfNotice": false,
+      "unusedLeave": true
+    },
+    "mtdRule": "Yt = max(0, gross - exemption for that head). A firm reading of spec Terms note 9 and Practice Note 1/2021; LHDN has no worked example of a part-exempt payment in Yt.",
+    "clearanceWarning": "Payout may be held for tax clearance (CP22A, 90 days). The clearance letter, not the formula, can set the final amount.",
+    "status": "carried forward (unconfirmed): no change found in the Budget 2027 annex by keyword search"
+  },
+  "taxStatus": "proposed",
+  "taxStatusStages": [
+    "proposed",
+    "bill-tabled",
+    "enacted"
+  ],
+  "otherRatesNotInMtd": [
+    {
+      "id": "llpPartnerProfitDistribution",
+      "rate": 0.02,
+      "appliesTo": "individual partner: chargeable income from LLP profit distributions above RM100,000 a year",
+      "effectiveFromYa": 2026,
+      "legalRef": "Finance Act 2025 (Act 874) s.17, Sch.1 Part XXIII",
+      "status": "enacted from YA2026 onward; not a Budget 2027 item",
+      "mtd": "none"
+    }
+  ]
+}
