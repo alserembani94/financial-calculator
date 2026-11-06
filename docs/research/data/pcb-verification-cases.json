@@ -1,0 +1,2649 @@
+{
+  "$comment": "PCB verification, rebuilt 2026-11-05 after the deep pass. Model: .research-cache/scripts/pcb_ref_official.py (table row on floor(P), RM10 tested before rounding, one round-up on the final amount, unrounded Step 1[E], unfloored net in a bonus month). 'official' = LHDN published results. 'lhdnCalculator2024' = output of LHDN's Kalkulator PCB, year 2024 page only, run over plain HTTP on 2026-11-05: YA2025/26 by proxy, same Table 1 and spec wording. 'computed' = our model, not LHDN output. EPF in computed cases comes from docs/research/data/epf-third-schedule-2025-10-partA.json unless the case name says part E or part C.",
+  "regression": {
+    "official17": {
+      "matched": 17,
+      "of": 17,
+      "cases": "Spec Exhibit 5 Jan-Apr (4), slides p18 (1), slides p20 Jan-Dec (12)"
+    },
+    "calculatorFittingSet": {
+      "matched": 60,
+      "of": 60
+    },
+    "calculatorHeldOut": {
+      "matched": 50,
+      "of": 50
+    },
+    "oldModelPcbRefPy": {
+      "official17": 17,
+      "calculatorFittingSetMisses": 16,
+      "calculatorHeldOutMisses": 11,
+      "note": "pcb_ref.py matches the published examples but not the calculator. Do not use it."
+    }
+  },
+  "official": [
+    {
+      "id": "spec-exhibit5",
+      "source": "MTD spec 2026 Exhibit 5 (labelled Jan-Apr 2025); spec 2025 Exhibit 5 has identical numbers (labelled Jan-Apr 2024)",
+      "inputs": {
+        "category": 3,
+        "children": 3,
+        "Y1": 5500,
+        "K1": 605,
+        "march_LP1": 300,
+        "april_LP1": 300,
+        "april_bonus": 8250,
+        "april_bonus_epf": 908,
+        "note": "Kt 908 is LHDN published input. The Third Schedule gives 913 (1,518 on 13,750 minus 605); April payable is 833.70 either way because the RM4,000 cap is already reached."
+      },
+      "expected": {
+        "jan": 110.0,
+        "feb": 110.0,
+        "mar": 108.2,
+        "apr_normal": 106.2,
+        "apr_additional": 727.5,
+        "apr_total": 833.7
+      },
+      "reproduced": {
+        "jan": 110.0,
+        "feb": 110.0,
+        "mar": 108.2,
+        "apr_normal": 106.2,
+        "apr_additional": 727.5,
+        "apr_total": 833.7
+      },
+      "match": true
+    },
+    {
+      "id": "lhdn-slides-2024-kalkulator",
+      "source": "LHDN PCB briefing slides 2024 p18-19 (Kalkulator PCB output)",
+      "inputs": {
+        "category": 1,
+        "Y1": 4000,
+        "K1": 0
+      },
+      "expected": {
+        "everyMonth": 70.0,
+        "year": 840.0
+      },
+      "reproduced": {
+        "everyMonth": 70.0,
+        "year": 840.0
+      },
+      "match": true
+    },
+    {
+      "id": "lhdn-slides-2023-actual",
+      "source": "LHDN PCB briefing slides 2024 p20 ('sebenar' 2023, same tax table as YA2025/26)",
+      "inputs": {
+        "category": 1,
+        "K1": 0,
+        "Y1": "3,500 Jan-Oct; 4,000 Nov-Dec",
+        "octoberBonus": 10000
+      },
+      "expected": [
+        11.7,
+        11.7,
+        11.7,
+        11.65,
+        11.65,
+        11.65,
+        11.65,
+        11.7,
+        11.65,
+        951.65,
+        41.65,
+        41.65
+      ],
+      "expectedOctAdditional": 940.0,
+      "expectedYear": 1140.0,
+      "reproduced": [
+        11.7,
+        11.7,
+        11.7,
+        11.65,
+        11.65,
+        11.65,
+        11.65,
+        11.7,
+        11.65,
+        951.65,
+        41.65,
+        41.65
+      ],
+      "match": true
+    },
+    {
+      "id": "gpo-1-2024-contoh4",
+      "source": "GPO 1/2024 s7.2 Contoh 4, computerised method (uses YA2022 8% band)",
+      "inputs": {
+        "category": 3,
+        "children": 2,
+        "Y1": 4600,
+        "K1": 506,
+        "bonus": 9200,
+        "bonusEpf": 1012
+      },
+      "expected": {
+        "normal": 71.33,
+        "step1E": 855.96,
+        "annualTax": 1592.0,
+        "additional": 736.04,
+        "total": 807.37
+      },
+      "reproduced": {
+        "normal": 71.33,
+        "step1E": 855.96,
+        "annualTax": 1592.0,
+        "additional": 736.04,
+        "total": 807.37,
+        "payableAfterRoundUp": 807.4
+      },
+      "match": true,
+      "explanation": "Not part of the 17. Published figures stop before the 5-sen round-up; 807.40 is model-computed. GPO rounds K2 half-up (317.64), while the spec and calculator truncate (317.63); this does not change these figures. This example supports the unrounded Step 1[E]."
+    }
+  ],
+  "lhdnCalculator2024": {
+    "source": "http://calcpcb.hasil.gov.my/pcb_calc_2024.php, raw output in .research-cache/pcb/verify/calc/results.json",
+    "selected": [
+      {
+        "id": "c01",
+        "label": "Case 1 single 3,000",
+        "inputs": {
+          "Y1": 3000,
+          "K1": 330
+        },
+        "P": "23,040.00",
+        "M": "20,000.00",
+        "yearlyTax": "0.00",
+        "raw": "0.00",
+        "stepC": "0.00",
+        "netA": "0.00",
+        "mtdAdditional": null,
+        "payable": "0.00"
+      },
+      {
+        "id": "c02",
+        "label": "Case 2 single 5,000",
+        "inputs": {
+          "Y1": 5000,
+          "K1": 550
+        },
+        "P": "47,000.07",
+        "M": "35,000.00",
+        "yearlyTax": "1,320.00",
+        "raw": "110.00",
+        "stepC": "110.00",
+        "netA": "110.00",
+        "mtdAdditional": null,
+        "payable": "110.00"
+      },
+      {
+        "id": "c03",
+        "label": "Case 3 single 10,000",
+        "inputs": {
+          "Y1": 10000,
+          "K1": 1100
+        },
+        "P": "107,000.07",
+        "M": "100,000.00",
+        "yearlyTax": "11,150.01",
+        "raw": "929.16",
+        "stepC": "929.16",
+        "netA": "929.16",
+        "mtdAdditional": null,
+        "payable": "929.20"
+      },
+      {
+        "id": "c04",
+        "label": "Case 4 Cat 2, 2 children, 8,000",
+        "inputs": {
+          "Y1": 8000,
+          "K1": 880
+        },
+        "P": "75,000.07",
+        "M": "70,000.00",
+        "yearlyTax": "4,650.01",
+        "raw": "387.50",
+        "stepC": "387.50",
+        "netA": "387.50",
+        "mtdAdditional": null,
+        "payable": "387.50"
+      },
+      {
+        "id": "c05",
+        "label": "Case 5 Cat 3, 2 children, 8,000",
+        "inputs": {
+          "Y1": 8000,
+          "K1": 880
+        },
+        "P": "79,000.07",
+        "M": "70,000.00",
+        "yearlyTax": "5,410.01",
+        "raw": "450.83",
+        "stepC": "450.83",
+        "netA": "450.83",
+        "mtdAdditional": null,
+        "payable": "450.85"
+      },
+      {
+        "id": "c05b",
+        "label": "Case 5b Cat 3, no children, 8,000",
+        "inputs": {
+          "Y1": 8000,
+          "K1": 880
+        },
+        "P": "83,000.07",
+        "M": "70,000.00",
+        "yearlyTax": "6,170.01",
+        "raw": "514.16",
+        "stepC": "514.16",
+        "netA": "514.16",
+        "mtdAdditional": null,
+        "payable": "514.20"
+      },
+      {
+        "id": "c06a",
+        "label": "Case 6 zakat 50",
+        "inputs": {
+          "Y1": 5000,
+          "K1": 550,
+          "zakat": 50
+        },
+        "P": "47,000.07",
+        "M": "35,000.00",
+        "yearlyTax": "1,320.00",
+        "raw": "110.00",
+        "stepC": "110.00",
+        "netA": "60.00",
+        "mtdAdditional": null,
+        "payable": "60.00"
+      },
+      {
+        "id": "c06b",
+        "label": "Case 6 zakat 150",
+        "inputs": {
+          "Y1": 5000,
+          "K1": 550,
+          "zakat": 150
+        },
+        "P": "47,000.07",
+        "M": "35,000.00",
+        "yearlyTax": "1,320.00",
+        "raw": "110.00",
+        "stepC": "110.00",
+        "netA": "-40.00",
+        "mtdAdditional": null,
+        "payable": "0.00"
+      },
+      {
+        "id": "c07",
+        "label": "Case 7 EPF 0",
+        "inputs": {
+          "Y1": 5000,
+          "K1": 0
+        },
+        "P": "51,000.00",
+        "M": "50,000.00",
+        "yearlyTax": "1,610.00",
+        "raw": "134.16",
+        "stepC": "134.16",
+        "netA": "134.16",
+        "mtdAdditional": null,
+        "payable": "134.20"
+      },
+      {
+        "id": "c08",
+        "label": "Case 8 bonus 10,000",
+        "inputs": {
+          "Y1": 5000,
+          "K1": 550,
+          "Yt": 10000,
+          "Kt": 1100
+        },
+        "P": "47,000.07",
+        "M": "35,000.00",
+        "yearlyTax": "1,320.00",
+        "raw": "110.00",
+        "stepC": "110.00",
+        "netA": "110.00",
+        "mtdAdditional": "950.00",
+        "payable": "1,060.00"
+      },
+      {
+        "id": "c10",
+        "label": "Case 10 lifestyle 2,500",
+        "inputs": {
+          "Y1": 5000,
+          "K1": 550,
+          "LP1": 2500
+        },
+        "P": "44,500.07",
+        "M": "35,000.00",
+        "yearlyTax": "1,170.00",
+        "raw": "97.50",
+        "stepC": "97.50",
+        "netA": "97.50",
+        "mtdAdditional": null,
+        "payable": "97.50"
+      },
+      {
+        "id": "c11",
+        "label": "Case 11 LP1 3,000 (arithmetic only)",
+        "inputs": {
+          "Y1": 8000,
+          "K1": 880,
+          "LP1": 3000
+        },
+        "P": "76,000.07",
+        "M": "70,000.00",
+        "yearlyTax": "4,840.01",
+        "raw": "403.33",
+        "stepC": "403.33",
+        "netA": "403.33",
+        "mtdAdditional": null,
+        "payable": "403.35"
+      },
+      {
+        "id": "c12",
+        "label": "Case 12 single 4,000",
+        "inputs": {
+          "Y1": 4000,
+          "K1": 440
+        },
+        "P": "35,000.07",
+        "M": "20,000.00",
+        "yearlyTax": "200.00",
+        "raw": "16.66",
+        "stepC": "16.66",
+        "netA": "16.66",
+        "mtdAdditional": null,
+        "payable": "16.70"
+      },
+      {
+        "id": "t-s11-3777",
+        "label": "Threshold single, Part A",
+        "inputs": {
+          "Y1": 3777,
+          "K1": 416
+        },
+        "P": "32,324.09",
+        "M": "20,000.00",
+        "yearlyTax": "119.72",
+        "raw": "9.97",
+        "stepC": "0.00",
+        "netA": "0.00",
+        "mtdAdditional": null,
+        "payable": "0.00"
+      },
+      {
+        "id": "t-s11-3778",
+        "label": "Threshold single, Part A",
+        "inputs": {
+          "Y1": 3778,
+          "K1": 416
+        },
+        "P": "32,336.09",
+        "M": "20,000.00",
+        "yearlyTax": "120.08",
+        "raw": "10.00",
+        "stepC": "10.00",
+        "netA": "10.00",
+        "mtdAdditional": null,
+        "payable": "10.00"
+      },
+      {
+        "id": "t-s0-3444",
+        "label": "Threshold single, no EPF",
+        "inputs": {
+          "Y1": 3444,
+          "K1": 0
+        },
+        "P": "32,328.00",
+        "M": "20,000.00",
+        "yearlyTax": "119.84",
+        "raw": "9.98",
+        "stepC": "0.00",
+        "netA": "0.00",
+        "mtdAdditional": null,
+        "payable": "0.00"
+      },
+      {
+        "id": "t-s0-3445",
+        "label": "Threshold single, no EPF",
+        "inputs": {
+          "Y1": 3445,
+          "K1": 0
+        },
+        "P": "32,340.00",
+        "M": "20,000.00",
+        "yearlyTax": "120.20",
+        "raw": "10.01",
+        "stepC": "10.01",
+        "netA": "10.01",
+        "mtdAdditional": null,
+        "payable": "10.05"
+      },
+      {
+        "id": "t-c2-4334",
+        "label": "Threshold Cat 2, no children",
+        "inputs": {
+          "Y1": 4334
+        },
+        "P": "35,008.03",
+        "M": "35,000.00",
+        "yearlyTax": "600.48",
+        "raw": "50.04",
+        "stepC": "50.04",
+        "netA": "50.04",
+        "mtdAdditional": null,
+        "payable": "50.05"
+      },
+      {
+        "id": "t-c2k2-4667",
+        "label": "Threshold Cat 2, 2 children",
+        "inputs": {
+          "Y1": 4667
+        },
+        "P": "35,004.10",
+        "M": "35,000.00",
+        "yearlyTax": "600.24",
+        "raw": "50.02",
+        "stepC": "50.02",
+        "netA": "50.02",
+        "mtdAdditional": null,
+        "payable": "50.05"
+      },
+      {
+        "id": "e-P35000.99",
+        "label": "Row selection on floor(P)",
+        "inputs": {
+          "P": 35000.99
+        },
+        "P": "35,000.99",
+        "M": "20,000.00",
+        "yearlyTax": "200.02",
+        "raw": "16.66",
+        "stepC": "16.66",
+        "netA": "16.66",
+        "mtdAdditional": null,
+        "payable": "16.70"
+      },
+      {
+        "id": "e-P35001.00",
+        "label": "Row selection on floor(P)",
+        "inputs": {
+          "P": 35001.0
+        },
+        "P": "35,001.00",
+        "M": "35,000.00",
+        "yearlyTax": "600.06",
+        "raw": "50.00",
+        "stepC": "50.00",
+        "netA": "50.00",
+        "mtdAdditional": null,
+        "payable": "50.00"
+      },
+      {
+        "id": "z-110-z5033",
+        "label": "Zakat deducted before the 5-sen round-up",
+        "inputs": {
+          "MTD": 110,
+          "zakat": 50.33
+        },
+        "P": "47,000.07",
+        "M": "35,000.00",
+        "yearlyTax": "1,320.00",
+        "raw": "110.00",
+        "stepC": "110.00",
+        "netA": "59.67",
+        "mtdAdditional": null,
+        "payable": "59.70"
+      },
+      {
+        "id": "z-110-z150-b10000",
+        "label": "Bonus month: negative net offsets the bonus MTD",
+        "inputs": {
+          "MTD": 110,
+          "zakat": 150,
+          "Yt": 10000
+        },
+        "P": "47,000.07",
+        "M": "35,000.00",
+        "yearlyTax": "1,320.00",
+        "raw": "110.00",
+        "stepC": "110.00",
+        "netA": "-40.00",
+        "mtdAdditional": "950.00",
+        "payable": "910.00"
+      },
+      {
+        "id": "z-800-z5-b1000",
+        "label": "Raw below RM10 becomes 0 and feeds Step 1[E]",
+        "inputs": {
+          "raw": 8.0,
+          "zakat": 5,
+          "Yt": 1000
+        },
+        "P": "31,536.00",
+        "M": "20,000.00",
+        "yearlyTax": "96.08",
+        "raw": "8.00",
+        "stepC": "0.00",
+        "netA": "-5.00",
+        "mtdAdditional": "126.08",
+        "payable": "121.10"
+      },
+      {
+        "id": "feb-z150",
+        "label": "Z takes the full zakat",
+        "inputs": {
+          "month": 2,
+          "Z": 150
+        },
+        "P": "47,000.00",
+        "M": "35,000.00",
+        "yearlyTax": "1,320.00",
+        "raw": "106.36",
+        "stepC": "106.36",
+        "netA": "-43.64",
+        "mtdAdditional": null,
+        "payable": "0.00"
+      },
+      {
+        "id": "r-raw996",
+        "label": "RM10 tested before rounding: raw 9.96",
+        "inputs": {},
+        "P": "32,321.28",
+        "M": "20,000.00",
+        "yearlyTax": "119.63",
+        "raw": "9.96",
+        "stepC": "0.00",
+        "netA": "0.00",
+        "mtdAdditional": null,
+        "payable": "0.00"
+      },
+      {
+        "id": "b03r-s7777-b3333",
+        "label": "Round up once on the sum",
+        "inputs": {
+          "Y1": 7777,
+          "K1": 0,
+          "Yt": 3333
+        },
+        "P": "84,324.00",
+        "M": "70,000.00",
+        "yearlyTax": "6,421.56",
+        "raw": "535.13",
+        "stepC": "535.13",
+        "netA": "535.13",
+        "mtdAdditional": "633.27",
+        "payable": "1,168.40"
+      }
+    ]
+  },
+  "rulings": [
+    {
+      "source": "PR 3/2023 Example 5",
+      "taxCharged": 570,
+      "rebatesClaimed": 950,
+      "payable": 0,
+      "lost": 380
+    },
+    {
+      "source": "PR 3/2023 Example 7",
+      "taxCharged": 570,
+      "rebatesClaimed": 1625,
+      "payable": 0,
+      "lost": 1055
+    },
+    {
+      "source": "PR 3/2023 Example 8",
+      "taxCharged": 570,
+      "rebatesClaimed": 1800,
+      "payable": 0,
+      "note": "Zakat paid by the husband with no income is not claimable by the wife. YA2022 rates; same 570 on YA2026 brackets."
+    },
+    {
+      "source": "PR 7/2025 Example 2",
+      "aggregateIncome": 220000,
+      "giftsClaimed": 26000,
+      "giftsAllowed": 22000
+    }
+  ],
+  "computed": {
+    "ya2025_2026": {
+      "1_single_3000": {
+        "K1": 330.0,
+        "K2": 330.0,
+        "P": 23040.0,
+        "raw": -13.23,
+        "stepC": 0.0,
+        "netA": 0.0,
+        "payable": 0.0
+      },
+      "2_single_5000": {
+        "K1": 550.0,
+        "K2": 313.63,
+        "P": 47000.07,
+        "raw": 110.0,
+        "stepC": 110.0,
+        "netA": 110.0,
+        "payable": 110.0
+      },
+      "2_fullyear": {
+        "months": [
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0
+        ],
+        "totalMtd": 1320.0
+      },
+      "3_single_10000": {
+        "K1": 1100.0,
+        "K2": 263.63,
+        "P": 107000.07,
+        "raw": 929.16,
+        "stepC": 929.16,
+        "netA": 929.16,
+        "payable": 929.2
+      },
+      "3_fullyear": {
+        "months": [
+          929.2,
+          929.2,
+          929.2,
+          929.15,
+          929.15,
+          929.15,
+          929.15,
+          929.2,
+          929.15,
+          929.15,
+          929.15,
+          929.15
+        ],
+        "totalMtd": 11150.0
+      },
+      "4_cat2_2kids_8000": {
+        "K1": 880.0,
+        "K2": 283.63,
+        "P": 75000.07,
+        "raw": 387.5,
+        "stepC": 387.5,
+        "netA": 387.5,
+        "payable": 387.5
+      },
+      "4_fullyear": {
+        "months": [
+          387.5,
+          387.5,
+          387.5,
+          387.5,
+          387.5,
+          387.5,
+          387.5,
+          387.5,
+          387.5,
+          387.5,
+          387.5,
+          387.5
+        ],
+        "totalMtd": 4650.0
+      },
+      "5_cat3_2kids_8000": {
+        "K1": 880.0,
+        "K2": 283.63,
+        "P": 79000.07,
+        "raw": 450.83,
+        "stepC": 450.83,
+        "netA": 450.83,
+        "payable": 450.85
+      },
+      "5_fullyear": {
+        "months": [
+          450.85,
+          450.85,
+          450.85,
+          450.85,
+          450.85,
+          450.85,
+          450.85,
+          450.85,
+          450.8,
+          450.8,
+          450.8,
+          450.8
+        ],
+        "totalMtd": 5410.0
+      },
+      "5b_cat3_0kids_8000": {
+        "K1": 880.0,
+        "K2": 283.63,
+        "P": 83000.07,
+        "raw": 514.16,
+        "stepC": 514.16,
+        "netA": 514.16,
+        "payable": 514.2
+      },
+      "6a_zakat50": {
+        "K1": 550.0,
+        "K2": 313.63,
+        "P": 47000.07,
+        "raw": 110.0,
+        "stepC": 110.0,
+        "netA": 60.0,
+        "payable": 60.0
+      },
+      "6a_fullyear": {
+        "months": [
+          60.0,
+          60.0,
+          60.0,
+          60.0,
+          60.0,
+          60.0,
+          60.0,
+          60.0,
+          60.0,
+          60.0,
+          60.0,
+          60.0
+        ],
+        "totalMtd": 720.0
+      },
+      "6b_zakat150": {
+        "K1": 550.0,
+        "K2": 313.63,
+        "P": 47000.07,
+        "raw": 110.0,
+        "stepC": 110.0,
+        "netA": -40.0,
+        "payable": 0.0
+      },
+      "6b_fullyear": {
+        "months": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "totalMtd": 0.0
+      },
+      "6c_zakat150_bonus10000": {
+        "K1": 550.0,
+        "K2": 313.63,
+        "P": 47000.07,
+        "raw": 110.0,
+        "stepC": 110.0,
+        "netA": -40.0,
+        "totalMtdYear": 1320.0,
+        "P2": 57000.07,
+        "annualTaxWithBonus": 2270.0,
+        "mtdAdditional": 950.0,
+        "payable": 910.0
+      },
+      "7_partE_epf0": {
+        "K1": 0.0,
+        "K2": 0.0,
+        "P": 51000.0,
+        "raw": 134.16,
+        "stepC": 134.16,
+        "netA": 134.16,
+        "payable": 134.2
+      },
+      "7_fullyear": {
+        "months": [
+          134.2,
+          134.2,
+          134.2,
+          134.15,
+          134.15,
+          134.15,
+          134.15,
+          134.2,
+          134.15,
+          134.15,
+          134.15,
+          134.15
+        ],
+        "totalMtd": 1610.0
+      },
+      "7b_partC": {
+        "K1": 275.0,
+        "K2": 275.0,
+        "P": 47700.0,
+        "raw": 113.5,
+        "stepC": 113.5,
+        "netA": 113.5,
+        "payable": 113.5
+      },
+      "7b_fullyear": {
+        "months": [
+          113.5,
+          113.5,
+          113.5,
+          113.5,
+          113.5,
+          113.5,
+          113.5,
+          113.5,
+          113.5,
+          113.5,
+          113.5,
+          113.5
+        ],
+        "totalMtd": 1362.0
+      },
+      "8_bonus_jan": {
+        "K1": 550.0,
+        "K2": 313.63,
+        "P": 47000.07,
+        "raw": 110.0,
+        "stepC": 110.0,
+        "netA": 110.0,
+        "totalMtdYear": 1320.0,
+        "P2": 57000.07,
+        "annualTaxWithBonus": 2270.0,
+        "mtdAdditional": 950.0,
+        "payable": 1060.0
+      },
+      "8_fullyear_jan": {
+        "months": [
+          1060.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0
+        ],
+        "totalMtd": 2270.0
+      },
+      "8_fullyear_dec": {
+        "months": [
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          1060.0
+        ],
+        "totalMtd": 2270.0
+      },
+      "10_lifestyle": {
+        "K1": 550.0,
+        "K2": 313.63,
+        "P": 44500.07,
+        "raw": 97.5,
+        "stepC": 97.5,
+        "netA": 97.5,
+        "payable": 97.5
+      },
+      "10_fullyear": {
+        "months": [
+          97.5,
+          97.5,
+          97.5,
+          97.5,
+          97.5,
+          97.5,
+          97.5,
+          97.5,
+          97.5,
+          97.5,
+          97.5,
+          97.5
+        ],
+        "totalMtd": 1170.0
+      },
+      "11_childcare": {
+        "K1": 880.0,
+        "K2": 283.63,
+        "P": 76000.07,
+        "raw": 403.33,
+        "stepC": 403.33,
+        "netA": 403.33,
+        "payable": 403.35
+      },
+      "11_fullyear": {
+        "months": [
+          403.35,
+          403.35,
+          403.35,
+          403.35,
+          403.35,
+          403.35,
+          403.35,
+          403.35,
+          403.3,
+          403.3,
+          403.3,
+          403.3
+        ],
+        "totalMtd": 4840.0
+      },
+      "12_single_4000": {
+        "K1": 440.0,
+        "K2": 323.63,
+        "P": 35000.07,
+        "raw": 16.66,
+        "stepC": 16.66,
+        "netA": 16.66,
+        "payable": 16.7
+      },
+      "12_fullyear": {
+        "months": [
+          16.7,
+          16.7,
+          16.7,
+          16.65,
+          16.65,
+          16.65,
+          16.65,
+          16.7,
+          16.65,
+          16.65,
+          16.65,
+          16.65
+        ],
+        "totalMtd": 200.0
+      },
+      "12b_single_4001": {
+        "K1": 443.0,
+        "K2": 323.36,
+        "P": 35012.04,
+        "raw": 50.06,
+        "stepC": 50.06,
+        "netA": 50.06,
+        "payable": 50.1
+      },
+      "12b_fullyear": {
+        "months": [
+          50.1,
+          50.05,
+          50.05,
+          50.05,
+          50.05,
+          50.1,
+          50.05,
+          50.05,
+          50.05,
+          50.05,
+          50.1,
+          50.05
+        ],
+        "totalMtd": 600.75
+      },
+      "m_single_2500": {
+        "K1": 275.0,
+        "K2": 275.0,
+        "P": 17700.0,
+        "raw": -22.75,
+        "stepC": 0.0,
+        "netA": 0.0,
+        "payable": 0.0
+      },
+      "p_single_3500": {
+        "K1": 385.0,
+        "K2": 328.63,
+        "P": 29000.07,
+        "raw": 1.66,
+        "stepC": 0.0,
+        "netA": 0.0,
+        "payable": 0.0
+      },
+      "p_fullyear": {
+        "months": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          10.0,
+          10.0
+        ],
+        "totalMtd": 20.0
+      },
+      "q_single_3700": {
+        "K1": 407.0,
+        "K2": 326.63,
+        "P": 31400.07,
+        "raw": 7.66,
+        "stepC": 0.0,
+        "netA": 0.0,
+        "payable": 0.0
+      },
+      "q_fullyear": {
+        "months": [
+          0.0,
+          0.0,
+          0.0,
+          10.25,
+          10.25,
+          10.25,
+          10.2,
+          10.25,
+          10.2,
+          10.2,
+          10.2,
+          10.2
+        ],
+        "totalMtd": 92.0
+      },
+      "q2_single_3722": {
+        "months": [
+          0.0,
+          0.0,
+          0.0,
+          11.1,
+          11.1,
+          11.1,
+          11.1,
+          11.1,
+          11.1,
+          11.1,
+          11.15,
+          11.1
+        ],
+        "totalMtd": 99.95
+      },
+      "o_single_20000": {
+        "K1": 2200.0,
+        "K2": 163.63,
+        "P": 227000.07,
+        "raw": 3429.16,
+        "stepC": 3429.16,
+        "netA": 3429.16,
+        "payable": 3429.2
+      },
+      "b10000_bonus10000": {
+        "K1": 1100.0,
+        "K2": 263.63,
+        "P": 107000.07,
+        "raw": 929.16,
+        "stepC": 929.16,
+        "netA": 929.16,
+        "totalMtdYear": 11149.92,
+        "P2": 117000.07,
+        "annualTaxWithBonus": 13650.01,
+        "mtdAdditional": 2500.09,
+        "payable": 3429.25
+      },
+      "b7777_bonus3333": {
+        "K1": 0.0,
+        "K2": 0.0,
+        "P": 84324.0,
+        "raw": 535.13,
+        "stepC": 535.13,
+        "netA": 535.13,
+        "totalMtdYear": 6421.56,
+        "P2": 87657.0,
+        "annualTaxWithBonus": 7054.83,
+        "mtdAdditional": 633.27,
+        "payable": 1168.4
+      },
+      "b3700_bonus10000_lhdnInput": {
+        "K1": 407.0,
+        "K2": 326.63,
+        "P": 31400.07,
+        "raw": 7.66,
+        "stepC": 0.0,
+        "netA": 0.0,
+        "totalMtdYear": 0.0,
+        "P2": 41400.07,
+        "annualTaxWithBonus": 984.0,
+        "mtdAdditional": 984.0,
+        "payable": 984.0
+      },
+      "b3700_bonus10000_table": {
+        "K1": 407.0,
+        "K2": 326.63,
+        "P": 31400.07,
+        "raw": 7.66,
+        "stepC": 0.0,
+        "netA": 0.0,
+        "totalMtdYear": 0.0,
+        "P2": 41400.07,
+        "annualTaxWithBonus": 984.0,
+        "mtdAdditional": 984.0,
+        "payable": 984.0
+      }
+    },
+    "ya2027_proposed": {
+      "1_single_3000": {
+        "K1": 330.0,
+        "K2": 330.0,
+        "P": 20040.0,
+        "raw": -20.73,
+        "stepC": 0.0,
+        "netA": 0.0,
+        "payable": 0.0
+      },
+      "2_single_5000": {
+        "K1": 550.0,
+        "K2": 313.63,
+        "P": 44000.07,
+        "raw": 95.0,
+        "stepC": 95.0,
+        "netA": 95.0,
+        "payable": 95.0
+      },
+      "2_fullyear": {
+        "months": [
+          95.0,
+          95.0,
+          95.0,
+          95.0,
+          95.0,
+          95.0,
+          95.0,
+          95.0,
+          95.0,
+          95.0,
+          95.0,
+          95.0
+        ],
+        "totalMtd": 1140.0
+      },
+      "3_single_10000": {
+        "K1": 1100.0,
+        "K2": 263.63,
+        "P": 104000.07,
+        "raw": 838.33,
+        "stepC": 838.33,
+        "netA": 838.33,
+        "payable": 838.35
+      },
+      "3_fullyear": {
+        "months": [
+          838.35,
+          838.35,
+          838.35,
+          838.35,
+          838.35,
+          838.35,
+          838.35,
+          838.35,
+          838.3,
+          838.3,
+          838.3,
+          838.3
+        ],
+        "totalMtd": 10060.0
+      },
+      "4_cat2_2kids_8000": {
+        "K1": 880.0,
+        "K2": 283.63,
+        "P": 72000.07,
+        "raw": 338.33,
+        "stepC": 338.33,
+        "netA": 338.33,
+        "payable": 338.35
+      },
+      "4_fullyear": {
+        "months": [
+          338.35,
+          338.35,
+          338.35,
+          338.35,
+          338.35,
+          338.35,
+          338.35,
+          338.35,
+          338.3,
+          338.3,
+          338.3,
+          338.3
+        ],
+        "totalMtd": 4060.0
+      },
+      "5_cat3_2kids_8000": {
+        "K1": 880.0,
+        "K2": 283.63,
+        "P": 76000.07,
+        "raw": 398.33,
+        "stepC": 398.33,
+        "netA": 398.33,
+        "payable": 398.35
+      },
+      "5_fullyear": {
+        "months": [
+          398.35,
+          398.35,
+          398.35,
+          398.35,
+          398.35,
+          398.35,
+          398.35,
+          398.35,
+          398.3,
+          398.3,
+          398.3,
+          398.3
+        ],
+        "totalMtd": 4780.0
+      },
+      "5b_cat3_0kids_8000": {
+        "K1": 880.0,
+        "K2": 283.63,
+        "P": 80000.07,
+        "raw": 458.33,
+        "stepC": 458.33,
+        "netA": 458.33,
+        "payable": 458.35
+      },
+      "6a_zakat50": {
+        "K1": 550.0,
+        "K2": 313.63,
+        "P": 44000.07,
+        "raw": 95.0,
+        "stepC": 95.0,
+        "netA": 45.0,
+        "payable": 45.0
+      },
+      "6a_fullyear": {
+        "months": [
+          45.0,
+          45.0,
+          45.0,
+          45.0,
+          45.0,
+          45.0,
+          45.0,
+          45.0,
+          45.0,
+          45.0,
+          45.0,
+          45.0
+        ],
+        "totalMtd": 540.0
+      },
+      "6b_zakat150": {
+        "K1": 550.0,
+        "K2": 313.63,
+        "P": 44000.07,
+        "raw": 95.0,
+        "stepC": 95.0,
+        "netA": -55.0,
+        "payable": 0.0
+      },
+      "6b_fullyear": {
+        "months": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "totalMtd": 0.0
+      },
+      "6c_zakat150_bonus10000": {
+        "K1": 550.0,
+        "K2": 313.63,
+        "P": 44000.07,
+        "raw": 95.0,
+        "stepC": 95.0,
+        "netA": -55.0,
+        "totalMtdYear": 1140.0,
+        "P2": 54000.07,
+        "annualTaxWithBonus": 1940.0,
+        "mtdAdditional": 800.0,
+        "payable": 745.0
+      },
+      "7_partE_epf0": {
+        "K1": 0.0,
+        "K2": 0.0,
+        "P": 48000.0,
+        "raw": 115.0,
+        "stepC": 115.0,
+        "netA": 115.0,
+        "payable": 115.0
+      },
+      "7_fullyear": {
+        "months": [
+          115.0,
+          115.0,
+          115.0,
+          115.0,
+          115.0,
+          115.0,
+          115.0,
+          115.0,
+          115.0,
+          115.0,
+          115.0,
+          115.0
+        ],
+        "totalMtd": 1380.0
+      },
+      "7b_partC": {
+        "K1": 275.0,
+        "K2": 275.0,
+        "P": 44700.0,
+        "raw": 98.5,
+        "stepC": 98.5,
+        "netA": 98.5,
+        "payable": 98.5
+      },
+      "7b_fullyear": {
+        "months": [
+          98.5,
+          98.5,
+          98.5,
+          98.5,
+          98.5,
+          98.5,
+          98.5,
+          98.5,
+          98.5,
+          98.5,
+          98.5,
+          98.5
+        ],
+        "totalMtd": 1182.0
+      },
+      "8_bonus_jan": {
+        "K1": 550.0,
+        "K2": 313.63,
+        "P": 44000.07,
+        "raw": 95.0,
+        "stepC": 95.0,
+        "netA": 95.0,
+        "totalMtdYear": 1140.0,
+        "P2": 54000.07,
+        "annualTaxWithBonus": 1940.0,
+        "mtdAdditional": 800.0,
+        "payable": 895.0
+      },
+      "8_fullyear_jan": {
+        "months": [
+          895.0,
+          95.0,
+          95.0,
+          95.0,
+          95.0,
+          95.0,
+          95.0,
+          95.0,
+          95.0,
+          95.0,
+          95.0,
+          95.0
+        ],
+        "totalMtd": 1940.0
+      },
+      "8_fullyear_dec": {
+        "months": [
+          95.0,
+          95.0,
+          95.0,
+          95.0,
+          95.0,
+          95.0,
+          95.0,
+          95.0,
+          95.0,
+          95.0,
+          95.0,
+          895.0
+        ],
+        "totalMtd": 1940.0
+      },
+      "10_lifestyle": {
+        "K1": 550.0,
+        "K2": 313.63,
+        "P": 41500.07,
+        "raw": 82.5,
+        "stepC": 82.5,
+        "netA": 82.5,
+        "payable": 82.5
+      },
+      "10_fullyear": {
+        "months": [
+          82.5,
+          82.5,
+          82.5,
+          82.5,
+          82.5,
+          82.5,
+          82.5,
+          82.5,
+          82.5,
+          82.5,
+          82.5,
+          82.5
+        ],
+        "totalMtd": 990.0
+      },
+      "11_childcare": {
+        "K1": 880.0,
+        "K2": 283.63,
+        "P": 73000.07,
+        "raw": 353.33,
+        "stepC": 353.33,
+        "netA": 353.33,
+        "payable": 353.35
+      },
+      "11_fullyear": {
+        "months": [
+          353.35,
+          353.35,
+          353.35,
+          353.35,
+          353.35,
+          353.35,
+          353.35,
+          353.35,
+          353.3,
+          353.3,
+          353.3,
+          353.3
+        ],
+        "totalMtd": 4240.0
+      },
+      "12_single_4000": {
+        "K1": 440.0,
+        "K2": 323.63,
+        "P": 32000.07,
+        "raw": 9.16,
+        "stepC": 0.0,
+        "netA": 0.0,
+        "payable": 0.0
+      },
+      "12_fullyear": {
+        "months": [
+          0.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0
+        ],
+        "totalMtd": 110.0
+      },
+      "12b_single_4001": {
+        "K1": 443.0,
+        "K2": 323.36,
+        "P": 32012.04,
+        "raw": 9.19,
+        "stepC": 0.0,
+        "netA": 0.0,
+        "payable": 0.0
+      },
+      "12b_fullyear": {
+        "months": [
+          0.0,
+          10.05,
+          10.05,
+          10.05,
+          10.05,
+          10.05,
+          10.05,
+          10.05,
+          10.0,
+          10.0,
+          10.0,
+          10.05
+        ],
+        "totalMtd": 110.4
+      },
+      "m_single_2500": {
+        "K1": 275.0,
+        "K2": 275.0,
+        "P": 14700.0,
+        "raw": -25.25,
+        "stepC": 0.0,
+        "netA": 0.0,
+        "payable": 0.0
+      },
+      "p_single_3500": {
+        "K1": 385.0,
+        "K2": 328.63,
+        "P": 26000.07,
+        "raw": -5.83,
+        "stepC": 0.0,
+        "netA": 0.0,
+        "payable": 0.0
+      },
+      "p_fullyear": {
+        "months": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "totalMtd": 0.0
+      },
+      "q_single_3700": {
+        "K1": 407.0,
+        "K2": 326.63,
+        "P": 28400.07,
+        "raw": 0.16,
+        "stepC": 0.0,
+        "netA": 0.0,
+        "payable": 0.0
+      },
+      "q_fullyear": {
+        "months": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "totalMtd": 0.0
+      },
+      "q2_single_3722": {
+        "months": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "totalMtd": 0.0
+      },
+      "o_single_20000": {
+        "K1": 2200.0,
+        "K2": 163.63,
+        "P": 224000.07,
+        "raw": 3300.0,
+        "stepC": 3300.0,
+        "netA": 3300.0,
+        "payable": 3300.0
+      },
+      "b10000_bonus10000": {
+        "K1": 1100.0,
+        "K2": 263.63,
+        "P": 104000.07,
+        "raw": 838.33,
+        "stepC": 838.33,
+        "netA": 838.33,
+        "totalMtdYear": 10059.96,
+        "P2": 114000.07,
+        "annualTaxWithBonus": 12460.01,
+        "mtdAdditional": 2400.05,
+        "payable": 3238.4
+      },
+      "b7777_bonus3333": {
+        "K1": 0.0,
+        "K2": 0.0,
+        "P": 81324.0,
+        "raw": 478.19,
+        "stepC": 478.19,
+        "netA": 478.19,
+        "totalMtdYear": 5738.28,
+        "P2": 84657.0,
+        "annualTaxWithBonus": 6338.26,
+        "mtdAdditional": 599.98,
+        "payable": 1078.2
+      },
+      "b3700_bonus10000_lhdnInput": {
+        "K1": 407.0,
+        "K2": 326.63,
+        "P": 28400.07,
+        "raw": 0.16,
+        "stepC": 0.0,
+        "netA": 0.0,
+        "totalMtdYear": 0.0,
+        "P2": 38400.07,
+        "annualTaxWithBonus": 804.0,
+        "mtdAdditional": 804.0,
+        "payable": 804.0
+      },
+      "b3700_bonus10000_table": {
+        "K1": 407.0,
+        "K2": 326.63,
+        "P": 28400.07,
+        "raw": 0.16,
+        "stepC": 0.0,
+        "netA": 0.0,
+        "totalMtdYear": 0.0,
+        "P2": 38400.07,
+        "annualTaxWithBonus": 804.0,
+        "mtdAdditional": 804.0,
+        "payable": 804.0
+      }
+    },
+    "ya2027_proposed_note": "YA2027 uses the proposed Budget 2027 rates, B values we derived, and D = 12,000. Illustrative only.",
+    "nonResident_ya2025_2026": {
+      "Y1": 5000,
+      "mtd": 1500.0,
+      "rule": "30% x remuneration, then 2 dp, below RM10 -> 0, round up to next 5 sen"
+    },
+    "partF_note": "Resident foreign employee, Part F, RM5,000: EPF RM100 per the deep-pass to-do T5, medium confidence; no Part F data file existed when this was computed. P 49,800, tax 1,488, MTD 124.00."
+  },
+  "thresholds": {
+    "ya2025_2026": {
+      "A_single": {
+        "jan": [
+          3778,
+          "10",
+          "416.0"
+        ],
+        "any": [
+          3473,
+          12,
+          "10.3",
+          "10.3"
+        ]
+      },
+      "A_cat2_0": {
+        "jan": [
+          4334,
+          "50.05",
+          "478.0"
+        ],
+        "any": [
+          4334,
+          1,
+          "50.05",
+          "600.50"
+        ]
+      },
+      "A_cat2_2": {
+        "jan": [
+          4667,
+          "50.05",
+          "515.0"
+        ],
+        "any": [
+          4667,
+          1,
+          "50.05",
+          "600.25"
+        ]
+      },
+      "A_cat3_2": {
+        "jan": [
+          4112,
+          "10.05",
+          "454.0"
+        ],
+        "any": [
+          3806,
+          12,
+          "10.2",
+          "10.2"
+        ]
+      },
+      "E_single": {
+        "jan": [
+          3445,
+          "10.05",
+          "0.0"
+        ],
+        "any": [
+          3139,
+          12,
+          "10.05",
+          "10.05"
+        ]
+      },
+      "E_cat2_0": {
+        "jan": [
+          4001,
+          "50.1",
+          "0.0"
+        ],
+        "any": [
+          4001,
+          1,
+          "50.1",
+          "600.75"
+        ]
+      },
+      "E_cat2_2": {
+        "jan": [
+          4334,
+          "50.05",
+          "0.0"
+        ],
+        "any": [
+          4334,
+          1,
+          "50.05",
+          "600.50"
+        ]
+      },
+      "E_cat3_2": {
+        "jan": [
+          3778,
+          "10",
+          "0.0"
+        ],
+        "any": [
+          3473,
+          12,
+          "10.3",
+          "10.3"
+        ]
+      },
+      "C_single": {
+        "jan": [
+          3647,
+          "10.05",
+          "202.0"
+        ],
+        "any": [
+          3323,
+          12,
+          "10.05",
+          "10.05"
+        ]
+      },
+      "C_cat2_0": {
+        "jan": [
+          4235,
+          "50.1",
+          "234.0"
+        ],
+        "any": [
+          4235,
+          1,
+          "50.1",
+          "600.75"
+        ]
+      },
+      "C_cat2_2": {
+        "jan": [
+          4587,
+          "50.05",
+          "253.0"
+        ],
+        "any": [
+          4587,
+          1,
+          "50.05",
+          "600.50"
+        ]
+      },
+      "C_cat3_2": {
+        "jan": [
+          3998,
+          "10",
+          "220.0"
+        ],
+        "any": [
+          3676,
+          12,
+          "10.3",
+          "10.3"
+        ]
+      }
+    },
+    "ya2027_proposed": {
+      "A_single": {
+        "jan": [
+          4028,
+          "10",
+          "445.0"
+        ],
+        "any": [
+          3723,
+          12,
+          "10.3",
+          "10.3"
+        ]
+      },
+      "A_cat2_0": {
+        "jan": [
+          4584,
+          "50.05",
+          "506.0"
+        ],
+        "any": [
+          4584,
+          1,
+          "50.05",
+          "600.50"
+        ]
+      },
+      "A_cat2_2": {
+        "jan": [
+          4917,
+          "50.05",
+          "542.0"
+        ],
+        "any": [
+          4917,
+          1,
+          "50.05",
+          "600.25"
+        ]
+      },
+      "A_cat3_2": {
+        "jan": [
+          4362,
+          "10.05",
+          "482.0"
+        ],
+        "any": [
+          4056,
+          12,
+          "10.2",
+          "10.2"
+        ]
+      },
+      "E_single": {
+        "jan": [
+          3695,
+          "10.05",
+          "0.0"
+        ],
+        "any": [
+          3389,
+          12,
+          "10.05",
+          "10.05"
+        ]
+      },
+      "E_cat2_0": {
+        "jan": [
+          4251,
+          "50.1",
+          "0.0"
+        ],
+        "any": [
+          4251,
+          1,
+          "50.1",
+          "600.75"
+        ]
+      },
+      "E_cat2_2": {
+        "jan": [
+          4584,
+          "50.05",
+          "0.0"
+        ],
+        "any": [
+          4584,
+          1,
+          "50.05",
+          "600.50"
+        ]
+      },
+      "E_cat3_2": {
+        "jan": [
+          4028,
+          "10",
+          "0.0"
+        ],
+        "any": [
+          3723,
+          12,
+          "10.3",
+          "10.3"
+        ]
+      },
+      "C_single": {
+        "jan": [
+          3911,
+          "10.05",
+          "216.0"
+        ],
+        "any": [
+          3587,
+          12,
+          "10.05",
+          "10.05"
+        ]
+      },
+      "C_cat2_0": {
+        "jan": [
+          4499,
+          "50.1",
+          "248.0"
+        ],
+        "any": [
+          4499,
+          1,
+          "50.1",
+          "600.75"
+        ]
+      },
+      "C_cat2_2": {
+        "jan": [
+          4852,
+          "50.05",
+          "268.0"
+        ],
+        "any": [
+          4852,
+          1,
+          "50.05",
+          "600.50"
+        ]
+      },
+      "C_cat3_2": {
+        "jan": [
+          4264,
+          "10",
+          "236.0"
+        ],
+        "any": [
+          3940,
+          12,
+          "10.3",
+          "10.3"
+        ]
+      }
+    }
+  },
+  "thresholdsNote": "Each entry: jan = [first whole-ringgit salary with PCB in January, its PCB, its EPF]; any = [first salary with PCB in any month, the month, that month's PCB, year total]. Prefix A, E, C = Third Schedule part.",
+  "flatSalaryScan": {
+    "range": "single, whole-ringgit RM3,000-12,000, Part A",
+    "januaryZeroButLaterPcb": [
+      [
+        3473,
+        3777
+      ]
+    ],
+    "spreadOver5Sen": [
+      [
+        3473,
+        3779
+      ]
+    ],
+    "totalBelowAnnualTaxCount": 30,
+    "largestShortfall": [
+      3528,
+      "20.10",
+      "30.08"
+    ],
+    "totalOver5SenAboveAnnualTaxCount": 0
+  },
+  "socsoEis": {
+    "source": "socso-act4-2025.json, socso-act4-2026.json phase 1, socso-skbbk-2026.json, eis-2025.json; First Category, under 60",
+    "byWage": {
+      "2000": {
+        "socso": "9.75",
+        "eis": "3.9",
+        "nei": "14.65",
+        "monthly_noSKBBK": "13.65",
+        "monthly_withSKBBK": "28.30",
+        "ya2025": "163.80",
+        "ya2026_skbbk_jun_dec": "266.35",
+        "ya2026_june_only": "178.45",
+        "fullyear_skbbk": "339.60"
+      },
+      "2500": {
+        "socso": "12.25",
+        "eis": "4.9",
+        "nei": "18.35",
+        "monthly_noSKBBK": "17.15",
+        "monthly_withSKBBK": "35.50",
+        "ya2025": "205.80",
+        "ya2026_skbbk_jun_dec": "334.25",
+        "ya2026_june_only": "224.15",
+        "fullyear_skbbk": "426.00"
+      },
+      "3000": {
+        "socso": "14.75",
+        "eis": "5.9",
+        "nei": "22.15",
+        "monthly_noSKBBK": "20.65",
+        "monthly_withSKBBK": "42.80",
+        "ya2025": "247.80",
+        "ya2026_skbbk_jun_dec": "402.85",
+        "ya2026_june_only": "269.95",
+        "fullyear_skbbk": "513.60"
+      },
+      "3500": {
+        "socso": "17.25",
+        "eis": "6.9",
+        "nei": "25.85",
+        "monthly_noSKBBK": "24.15",
+        "monthly_withSKBBK": "50.00",
+        "ya2025": "289.80",
+        "ya2026_skbbk_jun_dec": "470.75",
+        "ya2026_june_only": "315.65",
+        "fullyear_skbbk": "600.00"
+      },
+      "4000": {
+        "socso": "19.75",
+        "eis": "7.9",
+        "nei": "29.65",
+        "monthly_noSKBBK": "27.65",
+        "monthly_withSKBBK": "57.30",
+        "ya2025": "331.80",
+        "ya2026_skbbk_jun_dec": "539.35",
+        "ya2026_june_only": "361.45",
+        "fullyear_skbbk": "687.60"
+      },
+      "4200": {
+        "socso": "20.75",
+        "eis": "8.3",
+        "nei": "31.15",
+        "monthly_noSKBBK": "29.05",
+        "monthly_withSKBBK": "60.20",
+        "ya2025": "348.60",
+        "ya2026_skbbk_jun_dec": "566.65",
+        "ya2026_june_only": "379.75",
+        "fullyear_skbbk": "722.40"
+      },
+      "4300": {
+        "socso": "21.25",
+        "eis": "8.5",
+        "nei": "31.85",
+        "monthly_noSKBBK": "29.75",
+        "monthly_withSKBBK": "61.60",
+        "ya2025": "357.00",
+        "ya2026_skbbk_jun_dec": "579.95",
+        "ya2026_june_only": "388.85",
+        "fullyear_skbbk": "739.20"
+      },
+      "5000": {
+        "socso": "24.75",
+        "eis": "9.9",
+        "nei": "37.15",
+        "monthly_noSKBBK": "34.65",
+        "monthly_withSKBBK": "71.80",
+        "ya2025": "415.80",
+        "ya2026_skbbk_jun_dec": "675.85",
+        "ya2026_june_only": "452.95",
+        "fullyear_skbbk": "861.60"
+      },
+      "6000": {
+        "socso": "29.75",
+        "eis": "11.9",
+        "nei": "44.65",
+        "monthly_noSKBBK": "41.65",
+        "monthly_withSKBBK": "86.30",
+        "ya2025": "499.80",
+        "ya2026_skbbk_jun_dec": "812.35",
+        "ya2026_june_only": "544.45",
+        "fullyear_skbbk": "1035.60"
+      },
+      "8000": {
+        "socso": "29.75",
+        "eis": "11.9",
+        "nei": "44.65",
+        "monthly_noSKBBK": "41.65",
+        "monthly_withSKBBK": "86.30",
+        "ya2025": "499.80",
+        "ya2026_skbbk_jun_dec": "812.35",
+        "ya2026_june_only": "544.45",
+        "fullyear_skbbk": "1035.60"
+      },
+      "10000": {
+        "socso": "29.75",
+        "eis": "11.9",
+        "nei": "44.65",
+        "monthly_noSKBBK": "41.65",
+        "monthly_withSKBBK": "86.30",
+        "ya2025": "499.80",
+        "ya2026_skbbk_jun_dec": "812.35",
+        "ya2026_june_only": "544.45",
+        "fullyear_skbbk": "1035.60"
+      }
+    },
+    "firstBandReaching350": {
+      "ya2025": [
+        4200,
+        4300,
+        "357.00"
+      ],
+      "ya2026skbbk": [
+        2600,
+        2700,
+        "361.55"
+      ],
+      "ya2026juneOnly": [
+        3800,
+        3900,
+        "352.25"
+      ]
+    }
+  },
+  "socsoEisReliefEffect": {
+    "5000_2025": {
+      "lpTotal": "350.00",
+      "with": [
+        "109.85",
+        "109.65",
+        "109.45",
+        "109.2",
+        "108.95",
+        "108.65",
+        "108.3",
+        "107.9",
+        "107.35",
+        "106.65",
+        "106.55",
+        "106.5"
+      ],
+      "withTotal": "1299.00",
+      "withoutTotal": "1320",
+      "annualTaxNoRelief": "1320.00",
+      "annualTaxWithRelief": "1299.0000"
+    },
+    "5000_2026": {
+      "lpTotal": "350.00",
+      "with": [
+        "109.85",
+        "109.65",
+        "109.45",
+        "109.2",
+        "108.95",
+        "108.35",
+        "107.6",
+        "107.2",
+        "107.2",
+        "107.2",
+        "107.2",
+        "107.15"
+      ],
+      "withTotal": "1299.00",
+      "withoutTotal": "1320",
+      "annualTaxNoRelief": "1320.00",
+      "annualTaxWithRelief": "1299.0000"
+    },
+    "10000_2025": {
+      "lpTotal": "350.00",
+      "with": [
+        "928.3",
+        "927.35",
+        "926.35",
+        "925.15",
+        "923.85",
+        "922.4",
+        "920.65",
+        "918.55",
+        "917.5",
+        "917.5",
+        "917.45",
+        "917.45"
+      ],
+      "withTotal": "11062.50",
+      "withoutTotal": "11150.00",
+      "annualTaxNoRelief": "11150.00",
+      "annualTaxWithRelief": "11062.5000"
+    },
+    "10000_2026": {
+      "lpTotal": "350.00",
+      "with": [
+        "928.3",
+        "927.35",
+        "926.35",
+        "925.15",
+        "923.85",
+        "920.8",
+        "918.45",
+        "918.45",
+        "918.45",
+        "918.45",
+        "918.45",
+        "918.45"
+      ],
+      "withTotal": "11062.50",
+      "withoutTotal": "11150.00",
+      "annualTaxNoRelief": "11150.00",
+      "annualTaxWithRelief": "11062.5000"
+    },
+    "3000_2025": {
+      "lpTotal": "247.80",
+      "with": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "withTotal": "0",
+      "withoutTotal": "0",
+      "annualTaxNoRelief": "0",
+      "annualTaxWithRelief": "0"
+    },
+    "3000_2026": {
+      "lpTotal": "350.00",
+      "with": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "withTotal": "0",
+      "withoutTotal": "0",
+      "annualTaxNoRelief": "0",
+      "annualTaxWithRelief": "0"
+    },
+    "4010_2025": {
+      "lpTotal": "340.20",
+      "with": [
+        "50.45",
+        "50.3",
+        "50.15",
+        "49.95",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "withTotal": "200.85",
+      "withoutTotal": "607.2",
+      "annualTaxNoRelief": "607.20",
+      "annualTaxWithRelief": "193.3940"
+    },
+    "4010_2026": {
+      "lpTotal": "350.00",
+      "with": [
+        "50.45",
+        "50.3",
+        "50.15",
+        "49.95",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "withTotal": "200.85",
+      "withoutTotal": "607.2",
+      "annualTaxNoRelief": "607.20",
+      "annualTaxWithRelief": "193.1000"
+    },
+    "4029_2025": {
+      "lpTotal": "340.20",
+      "with": [
+        "51.6",
+        "51.45",
+        "51.3",
+        "51.1",
+        "50.9",
+        "50.65",
+        "50.35",
+        "50",
+        "49.55",
+        "49",
+        "48.15",
+        "46.45"
+      ],
+      "withTotal": "600.50",
+      "withoutTotal": "620.90",
+      "annualTaxNoRelief": "620.88",
+      "annualTaxWithRelief": "600.4680"
+    },
+    "4029_2026": {
+      "lpTotal": "350.00",
+      "with": [
+        "51.6",
+        "51.45",
+        "51.3",
+        "51.1",
+        "50.9",
+        "50.35",
+        "49.8",
+        "49.1",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "withTotal": "405.60",
+      "withoutTotal": "620.90",
+      "annualTaxNoRelief": "620.88",
+      "annualTaxWithRelief": "199.9400"
+    }
+  },
+  "ya2027ReliefReadings": {
+    "2000": {
+      "socsoEis": "163.80",
+      "skbbk": "175.80",
+      "readingA_separate": "313.80",
+      "readingB_pooled": "339.60"
+    },
+    "3000": {
+      "socsoEis": "247.80",
+      "skbbk": "265.80",
+      "readingA_separate": "397.80",
+      "readingB_pooled": "500"
+    },
+    "4000": {
+      "socsoEis": "331.80",
+      "skbbk": "355.80",
+      "readingA_separate": "481.80",
+      "readingB_pooled": "500"
+    },
+    "5000": {
+      "socsoEis": "415.80",
+      "skbbk": "445.80",
+      "readingA_separate": "500",
+      "readingB_pooled": "500"
+    },
+    "60plus_5000": {
+      "socsoEis": "0",
+      "skbbk": "445.80",
+      "readingA_separate": "150",
+      "readingB_pooled": "445.80"
+    }
+  },
+  "terminationExamples": {
+    "setup": "Single, Y1 8,000, EPF 880, paid in June, Kt 0, salary projection kept. Keys are Yt; 0 = no lump sum.",
+    "junePayable": {
+      "0": 514.15,
+      "100000": 24494.2,
+      "50000": 11994.2,
+      "150000": 36994.2,
+      "40000": 9494.2
+    }
+  },
+  "overtimeExamples": {
+    "setup": "Single, Category 1, no EPF on overtime. Y1 is the LHDN route. Computed, not LHDN output.",
+    "cases": {
+      "5000_jan_Y1": {
+        "months": [
+          152.5,
+          108.9,
+          108.9,
+          108.85,
+          108.85,
+          108.85,
+          108.85,
+          108.9,
+          108.85,
+          108.85,
+          108.85,
+          108.85
+        ],
+        "total": 1350.0
+      },
+      "5000_jan_Yt": {
+        "months": [
+          140.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0
+        ],
+        "total": 1350.0
+      },
+      "5000_jun_Y1": {
+        "months": [
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          143.6,
+          109.4,
+          109.4,
+          109.4,
+          109.4,
+          109.4,
+          109.4
+        ],
+        "total": 1350.0
+      },
+      "5000_jun_Yt": {
+        "months": [
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          140.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0
+        ],
+        "total": 1350.0
+      },
+      "5000_dec_Y1": {
+        "months": [
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          110.0,
+          140.0
+        ],
+        "total": 1350.0
+      },
+      "10000_jan_Y1": {
+        "months": [
+          1054.2,
+          929.2,
+          929.2,
+          929.15,
+          929.15,
+          929.15,
+          929.15,
+          929.2,
+          929.15,
+          929.15,
+          929.15,
+          929.15
+        ],
+        "total": 11275.0
+      },
+      "10000_jan_Yt": {
+        "months": [
+          1054.25,
+          929.15,
+          929.2,
+          929.15,
+          929.15,
+          929.15,
+          929.15,
+          929.2,
+          929.15,
+          929.15,
+          929.15,
+          929.15
+        ],
+        "total": 11275.0
+      },
+      "3700_jan_Y1": {
+        "months": [
+          62.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          11.25,
+          11.25,
+          11.25,
+          11.25
+        ],
+        "total": 107.0
+      },
+      "3700_jan_Yt": {
+        "months": [
+          107.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "total": 107.0
+      },
+      "3400_jan_Y1": {
+        "months": [
+          16.7,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "total": 16.7
+      },
+      "3400_jan_Yt": {
+        "months": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "total": 0.0
+      },
+      "4000_jan_Y1": {
+        "months": [
+          56.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0
+        ],
+        "total": 606.0
+      },
+      "4000_jan_Yt": {
+        "months": [
+          422.75,
+          16.65,
+          16.7,
+          16.65,
+          16.65,
+          16.65,
+          16.65,
+          16.7,
+          16.65,
+          16.65,
+          16.65,
+          16.65
+        ],
+        "total": 606.0
+      }
+    }
+  }
+}

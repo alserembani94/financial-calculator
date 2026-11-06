@@ -1,0 +1,5156 @@
+{
+ "id": "socso-act4-a1788",
+ "description": "Act 4 (SOCSO) Third Schedule as replaced by Act A1788 (Employees' Social Security (Amendment) Act 2026), in force from contribution month June 2026. Adds the employee-only Non-Employment Injury (NEI / SKBBK / LINDUNG 24 Jam) share in three phases. Employer shares (employment injury 1.25%, invalidity 0.5%) and employee invalidity share (0.5%) are unchanged from the 2024 table.",
+ "wageCeiling": 6000,
+ "lookup": "Band i applies when wageAbove < monthlyWage <= wageUpTo (wageUpTo null = open-ended top band). Band 1 is 'wages up to RM30'. All amounts in RM. Wage ceiling RM6,000: bands 64 and 65 carry identical amounts.",
+ "nonEmploymentInjuryParticipation": "Mandatory for everyone for contribution month June 2026. From 8 July 2026 (Cabinet decision, no gazetted instrument found as of 2026-11-05, partly on saved AGC portal listings, use pending owner decision) voluntary for LOCAL employees via opt-out (window 13 Jul - 31 Aug 2026; default = participating; opted-out employees may opt back in at any time, 'once in, always in'). Always mandatory for foreign workers. So NEI columns apply to participating employees only. Note the top amount starts ABOVE RM5,900: exactly RM5,900.00 is band 63. See docs/research/socso.md.",
+ "phases": [
+  {
+   "phase": 1,
+   "thirdSchedulePart": {
+    "firstCategory": "I",
+    "secondCategory": "IV"
+   },
+   "effectiveFrom": "2026-06-01",
+   "effectiveTo": "2028-05-31",
+   "nominalNEIRate": 0.0075,
+   "status": "in force; phase dates gazetted in P.U.(B) 196/2026 (dated 25 May 2026, published 29 May 2026)",
+   "bands": [
+    {
+     "no": 1,
+     "wageAbove": 0,
+     "wageUpTo": 30,
+     "assumedMonthlyWage": 20.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 0.3,
+      "employerInvalidity": 0.1,
+      "employer": 0.4,
+      "employeeInvalidity": 0.1,
+      "employeeNonEmploymentInjury": 0.2,
+      "employeeWithNEI": 0.3,
+      "employeeWithoutNEI": 0.1,
+      "totalWithNEI": 0.7,
+      "totalWithoutNEI": 0.5
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 0.3,
+      "employer": 0.3,
+      "employeeNonEmploymentInjury": 0.2,
+      "employeeWithNEI": 0.2,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 0.5,
+      "totalWithoutNEI": 0.3
+     }
+    },
+    {
+     "no": 2,
+     "wageAbove": 30,
+     "wageUpTo": 50,
+     "assumedMonthlyWage": 40.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 0.5,
+      "employerInvalidity": 0.2,
+      "employer": 0.7,
+      "employeeInvalidity": 0.2,
+      "employeeNonEmploymentInjury": 0.3,
+      "employeeWithNEI": 0.5,
+      "employeeWithoutNEI": 0.2,
+      "totalWithNEI": 1.2,
+      "totalWithoutNEI": 0.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 0.5,
+      "employer": 0.5,
+      "employeeNonEmploymentInjury": 0.3,
+      "employeeWithNEI": 0.3,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 0.8,
+      "totalWithoutNEI": 0.5
+     }
+    },
+    {
+     "no": 3,
+     "wageAbove": 50,
+     "wageUpTo": 70,
+     "assumedMonthlyWage": 60.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 0.8,
+      "employerInvalidity": 0.3,
+      "employer": 1.1,
+      "employeeInvalidity": 0.3,
+      "employeeNonEmploymentInjury": 0.5,
+      "employeeWithNEI": 0.8,
+      "employeeWithoutNEI": 0.3,
+      "totalWithNEI": 1.9,
+      "totalWithoutNEI": 1.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 0.8,
+      "employer": 0.8,
+      "employeeNonEmploymentInjury": 0.5,
+      "employeeWithNEI": 0.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 1.3,
+      "totalWithoutNEI": 0.8
+     }
+    },
+    {
+     "no": 4,
+     "wageAbove": 70,
+     "wageUpTo": 100,
+     "assumedMonthlyWage": 85.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 1.1,
+      "employerInvalidity": 0.4,
+      "employer": 1.5,
+      "employeeInvalidity": 0.4,
+      "employeeNonEmploymentInjury": 0.65,
+      "employeeWithNEI": 1.05,
+      "employeeWithoutNEI": 0.4,
+      "totalWithNEI": 2.55,
+      "totalWithoutNEI": 1.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 1.1,
+      "employer": 1.1,
+      "employeeNonEmploymentInjury": 0.65,
+      "employeeWithNEI": 0.65,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 1.75,
+      "totalWithoutNEI": 1.1
+     }
+    },
+    {
+     "no": 5,
+     "wageAbove": 100,
+     "wageUpTo": 140,
+     "assumedMonthlyWage": 120.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 1.5,
+      "employerInvalidity": 0.6,
+      "employer": 2.1,
+      "employeeInvalidity": 0.6,
+      "employeeNonEmploymentInjury": 0.9,
+      "employeeWithNEI": 1.5,
+      "employeeWithoutNEI": 0.6,
+      "totalWithNEI": 3.6,
+      "totalWithoutNEI": 2.7
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 1.5,
+      "employer": 1.5,
+      "employeeNonEmploymentInjury": 0.9,
+      "employeeWithNEI": 0.9,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 2.4,
+      "totalWithoutNEI": 1.5
+     }
+    },
+    {
+     "no": 6,
+     "wageAbove": 140,
+     "wageUpTo": 200,
+     "assumedMonthlyWage": 170.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 2.1,
+      "employerInvalidity": 0.85,
+      "employer": 2.95,
+      "employeeInvalidity": 0.85,
+      "employeeNonEmploymentInjury": 1.25,
+      "employeeWithNEI": 2.1,
+      "employeeWithoutNEI": 0.85,
+      "totalWithNEI": 5.05,
+      "totalWithoutNEI": 3.8
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 2.1,
+      "employer": 2.1,
+      "employeeNonEmploymentInjury": 1.25,
+      "employeeWithNEI": 1.25,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 3.35,
+      "totalWithoutNEI": 2.1
+     }
+    },
+    {
+     "no": 7,
+     "wageAbove": 200,
+     "wageUpTo": 300,
+     "assumedMonthlyWage": 250.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 3.1,
+      "employerInvalidity": 1.25,
+      "employer": 4.35,
+      "employeeInvalidity": 1.25,
+      "employeeNonEmploymentInjury": 1.85,
+      "employeeWithNEI": 3.1,
+      "employeeWithoutNEI": 1.25,
+      "totalWithNEI": 7.45,
+      "totalWithoutNEI": 5.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 3.1,
+      "employer": 3.1,
+      "employeeNonEmploymentInjury": 1.85,
+      "employeeWithNEI": 1.85,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 4.95,
+      "totalWithoutNEI": 3.1
+     }
+    },
+    {
+     "no": 8,
+     "wageAbove": 300,
+     "wageUpTo": 400,
+     "assumedMonthlyWage": 350.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 4.4,
+      "employerInvalidity": 1.75,
+      "employer": 6.15,
+      "employeeInvalidity": 1.75,
+      "employeeNonEmploymentInjury": 2.65,
+      "employeeWithNEI": 4.4,
+      "employeeWithoutNEI": 1.75,
+      "totalWithNEI": 10.55,
+      "totalWithoutNEI": 7.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 4.4,
+      "employer": 4.4,
+      "employeeNonEmploymentInjury": 2.65,
+      "employeeWithNEI": 2.65,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 7.05,
+      "totalWithoutNEI": 4.4
+     }
+    },
+    {
+     "no": 9,
+     "wageAbove": 400,
+     "wageUpTo": 500,
+     "assumedMonthlyWage": 450.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 5.6,
+      "employerInvalidity": 2.25,
+      "employer": 7.85,
+      "employeeInvalidity": 2.25,
+      "employeeNonEmploymentInjury": 3.35,
+      "employeeWithNEI": 5.6,
+      "employeeWithoutNEI": 2.25,
+      "totalWithNEI": 13.45,
+      "totalWithoutNEI": 10.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 5.6,
+      "employer": 5.6,
+      "employeeNonEmploymentInjury": 3.35,
+      "employeeWithNEI": 3.35,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 8.95,
+      "totalWithoutNEI": 5.6
+     }
+    },
+    {
+     "no": 10,
+     "wageAbove": 500,
+     "wageUpTo": 600,
+     "assumedMonthlyWage": 550.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 6.9,
+      "employerInvalidity": 2.75,
+      "employer": 9.65,
+      "employeeInvalidity": 2.75,
+      "employeeNonEmploymentInjury": 4.15,
+      "employeeWithNEI": 6.9,
+      "employeeWithoutNEI": 2.75,
+      "totalWithNEI": 16.55,
+      "totalWithoutNEI": 12.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 6.9,
+      "employer": 6.9,
+      "employeeNonEmploymentInjury": 4.15,
+      "employeeWithNEI": 4.15,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 11.05,
+      "totalWithoutNEI": 6.9
+     }
+    },
+    {
+     "no": 11,
+     "wageAbove": 600,
+     "wageUpTo": 700,
+     "assumedMonthlyWage": 650.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 8.1,
+      "employerInvalidity": 3.25,
+      "employer": 11.35,
+      "employeeInvalidity": 3.25,
+      "employeeNonEmploymentInjury": 4.85,
+      "employeeWithNEI": 8.1,
+      "employeeWithoutNEI": 3.25,
+      "totalWithNEI": 19.45,
+      "totalWithoutNEI": 14.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 8.1,
+      "employer": 8.1,
+      "employeeNonEmploymentInjury": 4.85,
+      "employeeWithNEI": 4.85,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 12.95,
+      "totalWithoutNEI": 8.1
+     }
+    },
+    {
+     "no": 12,
+     "wageAbove": 700,
+     "wageUpTo": 800,
+     "assumedMonthlyWage": 750.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 9.4,
+      "employerInvalidity": 3.75,
+      "employer": 13.15,
+      "employeeInvalidity": 3.75,
+      "employeeNonEmploymentInjury": 5.65,
+      "employeeWithNEI": 9.4,
+      "employeeWithoutNEI": 3.75,
+      "totalWithNEI": 22.55,
+      "totalWithoutNEI": 16.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 9.4,
+      "employer": 9.4,
+      "employeeNonEmploymentInjury": 5.65,
+      "employeeWithNEI": 5.65,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 15.05,
+      "totalWithoutNEI": 9.4
+     }
+    },
+    {
+     "no": 13,
+     "wageAbove": 800,
+     "wageUpTo": 900,
+     "assumedMonthlyWage": 850.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 10.6,
+      "employerInvalidity": 4.25,
+      "employer": 14.85,
+      "employeeInvalidity": 4.25,
+      "employeeNonEmploymentInjury": 6.35,
+      "employeeWithNEI": 10.6,
+      "employeeWithoutNEI": 4.25,
+      "totalWithNEI": 25.45,
+      "totalWithoutNEI": 19.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 10.6,
+      "employer": 10.6,
+      "employeeNonEmploymentInjury": 6.35,
+      "employeeWithNEI": 6.35,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 16.95,
+      "totalWithoutNEI": 10.6
+     }
+    },
+    {
+     "no": 14,
+     "wageAbove": 900,
+     "wageUpTo": 1000,
+     "assumedMonthlyWage": 950.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 11.9,
+      "employerInvalidity": 4.75,
+      "employer": 16.65,
+      "employeeInvalidity": 4.75,
+      "employeeNonEmploymentInjury": 7.15,
+      "employeeWithNEI": 11.9,
+      "employeeWithoutNEI": 4.75,
+      "totalWithNEI": 28.55,
+      "totalWithoutNEI": 21.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 11.9,
+      "employer": 11.9,
+      "employeeNonEmploymentInjury": 7.15,
+      "employeeWithNEI": 7.15,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 19.05,
+      "totalWithoutNEI": 11.9
+     }
+    },
+    {
+     "no": 15,
+     "wageAbove": 1000,
+     "wageUpTo": 1100,
+     "assumedMonthlyWage": 1050.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 13.1,
+      "employerInvalidity": 5.25,
+      "employer": 18.35,
+      "employeeInvalidity": 5.25,
+      "employeeNonEmploymentInjury": 7.85,
+      "employeeWithNEI": 13.1,
+      "employeeWithoutNEI": 5.25,
+      "totalWithNEI": 31.45,
+      "totalWithoutNEI": 23.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 13.1,
+      "employer": 13.1,
+      "employeeNonEmploymentInjury": 7.85,
+      "employeeWithNEI": 7.85,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 20.95,
+      "totalWithoutNEI": 13.1
+     }
+    },
+    {
+     "no": 16,
+     "wageAbove": 1100,
+     "wageUpTo": 1200,
+     "assumedMonthlyWage": 1150.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 14.4,
+      "employerInvalidity": 5.75,
+      "employer": 20.15,
+      "employeeInvalidity": 5.75,
+      "employeeNonEmploymentInjury": 8.65,
+      "employeeWithNEI": 14.4,
+      "employeeWithoutNEI": 5.75,
+      "totalWithNEI": 34.55,
+      "totalWithoutNEI": 25.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 14.4,
+      "employer": 14.4,
+      "employeeNonEmploymentInjury": 8.65,
+      "employeeWithNEI": 8.65,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 23.05,
+      "totalWithoutNEI": 14.4
+     }
+    },
+    {
+     "no": 17,
+     "wageAbove": 1200,
+     "wageUpTo": 1300,
+     "assumedMonthlyWage": 1250.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 15.6,
+      "employerInvalidity": 6.25,
+      "employer": 21.85,
+      "employeeInvalidity": 6.25,
+      "employeeNonEmploymentInjury": 9.35,
+      "employeeWithNEI": 15.6,
+      "employeeWithoutNEI": 6.25,
+      "totalWithNEI": 37.45,
+      "totalWithoutNEI": 28.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 15.6,
+      "employer": 15.6,
+      "employeeNonEmploymentInjury": 9.35,
+      "employeeWithNEI": 9.35,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 24.95,
+      "totalWithoutNEI": 15.6
+     }
+    },
+    {
+     "no": 18,
+     "wageAbove": 1300,
+     "wageUpTo": 1400,
+     "assumedMonthlyWage": 1350.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 16.9,
+      "employerInvalidity": 6.75,
+      "employer": 23.65,
+      "employeeInvalidity": 6.75,
+      "employeeNonEmploymentInjury": 10.15,
+      "employeeWithNEI": 16.9,
+      "employeeWithoutNEI": 6.75,
+      "totalWithNEI": 40.55,
+      "totalWithoutNEI": 30.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 16.9,
+      "employer": 16.9,
+      "employeeNonEmploymentInjury": 10.15,
+      "employeeWithNEI": 10.15,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 27.05,
+      "totalWithoutNEI": 16.9
+     }
+    },
+    {
+     "no": 19,
+     "wageAbove": 1400,
+     "wageUpTo": 1500,
+     "assumedMonthlyWage": 1450.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 18.1,
+      "employerInvalidity": 7.25,
+      "employer": 25.35,
+      "employeeInvalidity": 7.25,
+      "employeeNonEmploymentInjury": 10.85,
+      "employeeWithNEI": 18.1,
+      "employeeWithoutNEI": 7.25,
+      "totalWithNEI": 43.45,
+      "totalWithoutNEI": 32.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 18.1,
+      "employer": 18.1,
+      "employeeNonEmploymentInjury": 10.85,
+      "employeeWithNEI": 10.85,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 28.95,
+      "totalWithoutNEI": 18.1
+     }
+    },
+    {
+     "no": 20,
+     "wageAbove": 1500,
+     "wageUpTo": 1600,
+     "assumedMonthlyWage": 1550.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 19.4,
+      "employerInvalidity": 7.75,
+      "employer": 27.15,
+      "employeeInvalidity": 7.75,
+      "employeeNonEmploymentInjury": 11.65,
+      "employeeWithNEI": 19.4,
+      "employeeWithoutNEI": 7.75,
+      "totalWithNEI": 46.55,
+      "totalWithoutNEI": 34.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 19.4,
+      "employer": 19.4,
+      "employeeNonEmploymentInjury": 11.65,
+      "employeeWithNEI": 11.65,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 31.05,
+      "totalWithoutNEI": 19.4
+     }
+    },
+    {
+     "no": 21,
+     "wageAbove": 1600,
+     "wageUpTo": 1700,
+     "assumedMonthlyWage": 1650.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 20.6,
+      "employerInvalidity": 8.25,
+      "employer": 28.85,
+      "employeeInvalidity": 8.25,
+      "employeeNonEmploymentInjury": 12.35,
+      "employeeWithNEI": 20.6,
+      "employeeWithoutNEI": 8.25,
+      "totalWithNEI": 49.45,
+      "totalWithoutNEI": 37.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 20.6,
+      "employer": 20.6,
+      "employeeNonEmploymentInjury": 12.35,
+      "employeeWithNEI": 12.35,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 32.95,
+      "totalWithoutNEI": 20.6
+     }
+    },
+    {
+     "no": 22,
+     "wageAbove": 1700,
+     "wageUpTo": 1800,
+     "assumedMonthlyWage": 1750.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 21.9,
+      "employerInvalidity": 8.75,
+      "employer": 30.65,
+      "employeeInvalidity": 8.75,
+      "employeeNonEmploymentInjury": 13.15,
+      "employeeWithNEI": 21.9,
+      "employeeWithoutNEI": 8.75,
+      "totalWithNEI": 52.55,
+      "totalWithoutNEI": 39.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 21.9,
+      "employer": 21.9,
+      "employeeNonEmploymentInjury": 13.15,
+      "employeeWithNEI": 13.15,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 35.05,
+      "totalWithoutNEI": 21.9
+     }
+    },
+    {
+     "no": 23,
+     "wageAbove": 1800,
+     "wageUpTo": 1900,
+     "assumedMonthlyWage": 1850.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 23.1,
+      "employerInvalidity": 9.25,
+      "employer": 32.35,
+      "employeeInvalidity": 9.25,
+      "employeeNonEmploymentInjury": 13.85,
+      "employeeWithNEI": 23.1,
+      "employeeWithoutNEI": 9.25,
+      "totalWithNEI": 55.45,
+      "totalWithoutNEI": 41.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 23.1,
+      "employer": 23.1,
+      "employeeNonEmploymentInjury": 13.85,
+      "employeeWithNEI": 13.85,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 36.95,
+      "totalWithoutNEI": 23.1
+     }
+    },
+    {
+     "no": 24,
+     "wageAbove": 1900,
+     "wageUpTo": 2000,
+     "assumedMonthlyWage": 1950.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 24.4,
+      "employerInvalidity": 9.75,
+      "employer": 34.15,
+      "employeeInvalidity": 9.75,
+      "employeeNonEmploymentInjury": 14.65,
+      "employeeWithNEI": 24.4,
+      "employeeWithoutNEI": 9.75,
+      "totalWithNEI": 58.55,
+      "totalWithoutNEI": 43.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 24.4,
+      "employer": 24.4,
+      "employeeNonEmploymentInjury": 14.65,
+      "employeeWithNEI": 14.65,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 39.05,
+      "totalWithoutNEI": 24.4
+     }
+    },
+    {
+     "no": 25,
+     "wageAbove": 2000,
+     "wageUpTo": 2100,
+     "assumedMonthlyWage": 2050.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 25.6,
+      "employerInvalidity": 10.25,
+      "employer": 35.85,
+      "employeeInvalidity": 10.25,
+      "employeeNonEmploymentInjury": 15.35,
+      "employeeWithNEI": 25.6,
+      "employeeWithoutNEI": 10.25,
+      "totalWithNEI": 61.45,
+      "totalWithoutNEI": 46.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 25.6,
+      "employer": 25.6,
+      "employeeNonEmploymentInjury": 15.35,
+      "employeeWithNEI": 15.35,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 40.95,
+      "totalWithoutNEI": 25.6
+     }
+    },
+    {
+     "no": 26,
+     "wageAbove": 2100,
+     "wageUpTo": 2200,
+     "assumedMonthlyWage": 2150.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 26.9,
+      "employerInvalidity": 10.75,
+      "employer": 37.65,
+      "employeeInvalidity": 10.75,
+      "employeeNonEmploymentInjury": 16.15,
+      "employeeWithNEI": 26.9,
+      "employeeWithoutNEI": 10.75,
+      "totalWithNEI": 64.55,
+      "totalWithoutNEI": 48.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 26.9,
+      "employer": 26.9,
+      "employeeNonEmploymentInjury": 16.15,
+      "employeeWithNEI": 16.15,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 43.05,
+      "totalWithoutNEI": 26.9
+     }
+    },
+    {
+     "no": 27,
+     "wageAbove": 2200,
+     "wageUpTo": 2300,
+     "assumedMonthlyWage": 2250.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 28.1,
+      "employerInvalidity": 11.25,
+      "employer": 39.35,
+      "employeeInvalidity": 11.25,
+      "employeeNonEmploymentInjury": 16.85,
+      "employeeWithNEI": 28.1,
+      "employeeWithoutNEI": 11.25,
+      "totalWithNEI": 67.45,
+      "totalWithoutNEI": 50.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 28.1,
+      "employer": 28.1,
+      "employeeNonEmploymentInjury": 16.85,
+      "employeeWithNEI": 16.85,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 44.95,
+      "totalWithoutNEI": 28.1
+     }
+    },
+    {
+     "no": 28,
+     "wageAbove": 2300,
+     "wageUpTo": 2400,
+     "assumedMonthlyWage": 2350.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 29.4,
+      "employerInvalidity": 11.75,
+      "employer": 41.15,
+      "employeeInvalidity": 11.75,
+      "employeeNonEmploymentInjury": 17.65,
+      "employeeWithNEI": 29.4,
+      "employeeWithoutNEI": 11.75,
+      "totalWithNEI": 70.55,
+      "totalWithoutNEI": 52.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 29.4,
+      "employer": 29.4,
+      "employeeNonEmploymentInjury": 17.65,
+      "employeeWithNEI": 17.65,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 47.05,
+      "totalWithoutNEI": 29.4
+     }
+    },
+    {
+     "no": 29,
+     "wageAbove": 2400,
+     "wageUpTo": 2500,
+     "assumedMonthlyWage": 2450.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 30.6,
+      "employerInvalidity": 12.25,
+      "employer": 42.85,
+      "employeeInvalidity": 12.25,
+      "employeeNonEmploymentInjury": 18.35,
+      "employeeWithNEI": 30.6,
+      "employeeWithoutNEI": 12.25,
+      "totalWithNEI": 73.45,
+      "totalWithoutNEI": 55.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 30.6,
+      "employer": 30.6,
+      "employeeNonEmploymentInjury": 18.35,
+      "employeeWithNEI": 18.35,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 48.95,
+      "totalWithoutNEI": 30.6
+     }
+    },
+    {
+     "no": 30,
+     "wageAbove": 2500,
+     "wageUpTo": 2600,
+     "assumedMonthlyWage": 2550.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 31.9,
+      "employerInvalidity": 12.75,
+      "employer": 44.65,
+      "employeeInvalidity": 12.75,
+      "employeeNonEmploymentInjury": 19.15,
+      "employeeWithNEI": 31.9,
+      "employeeWithoutNEI": 12.75,
+      "totalWithNEI": 76.55,
+      "totalWithoutNEI": 57.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 31.9,
+      "employer": 31.9,
+      "employeeNonEmploymentInjury": 19.15,
+      "employeeWithNEI": 19.15,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 51.05,
+      "totalWithoutNEI": 31.9
+     }
+    },
+    {
+     "no": 31,
+     "wageAbove": 2600,
+     "wageUpTo": 2700,
+     "assumedMonthlyWage": 2650.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 33.1,
+      "employerInvalidity": 13.25,
+      "employer": 46.35,
+      "employeeInvalidity": 13.25,
+      "employeeNonEmploymentInjury": 19.85,
+      "employeeWithNEI": 33.1,
+      "employeeWithoutNEI": 13.25,
+      "totalWithNEI": 79.45,
+      "totalWithoutNEI": 59.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 33.1,
+      "employer": 33.1,
+      "employeeNonEmploymentInjury": 19.85,
+      "employeeWithNEI": 19.85,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 52.95,
+      "totalWithoutNEI": 33.1
+     }
+    },
+    {
+     "no": 32,
+     "wageAbove": 2700,
+     "wageUpTo": 2800,
+     "assumedMonthlyWage": 2750.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 34.4,
+      "employerInvalidity": 13.75,
+      "employer": 48.15,
+      "employeeInvalidity": 13.75,
+      "employeeNonEmploymentInjury": 20.65,
+      "employeeWithNEI": 34.4,
+      "employeeWithoutNEI": 13.75,
+      "totalWithNEI": 82.55,
+      "totalWithoutNEI": 61.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 34.4,
+      "employer": 34.4,
+      "employeeNonEmploymentInjury": 20.65,
+      "employeeWithNEI": 20.65,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 55.05,
+      "totalWithoutNEI": 34.4
+     }
+    },
+    {
+     "no": 33,
+     "wageAbove": 2800,
+     "wageUpTo": 2900,
+     "assumedMonthlyWage": 2850.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 35.6,
+      "employerInvalidity": 14.25,
+      "employer": 49.85,
+      "employeeInvalidity": 14.25,
+      "employeeNonEmploymentInjury": 21.35,
+      "employeeWithNEI": 35.6,
+      "employeeWithoutNEI": 14.25,
+      "totalWithNEI": 85.45,
+      "totalWithoutNEI": 64.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 35.6,
+      "employer": 35.6,
+      "employeeNonEmploymentInjury": 21.35,
+      "employeeWithNEI": 21.35,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 56.95,
+      "totalWithoutNEI": 35.6
+     }
+    },
+    {
+     "no": 34,
+     "wageAbove": 2900,
+     "wageUpTo": 3000,
+     "assumedMonthlyWage": 2950.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 36.9,
+      "employerInvalidity": 14.75,
+      "employer": 51.65,
+      "employeeInvalidity": 14.75,
+      "employeeNonEmploymentInjury": 22.15,
+      "employeeWithNEI": 36.9,
+      "employeeWithoutNEI": 14.75,
+      "totalWithNEI": 88.55,
+      "totalWithoutNEI": 66.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 36.9,
+      "employer": 36.9,
+      "employeeNonEmploymentInjury": 22.15,
+      "employeeWithNEI": 22.15,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 59.05,
+      "totalWithoutNEI": 36.9
+     }
+    },
+    {
+     "no": 35,
+     "wageAbove": 3000,
+     "wageUpTo": 3100,
+     "assumedMonthlyWage": 3050.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 38.1,
+      "employerInvalidity": 15.25,
+      "employer": 53.35,
+      "employeeInvalidity": 15.25,
+      "employeeNonEmploymentInjury": 22.85,
+      "employeeWithNEI": 38.1,
+      "employeeWithoutNEI": 15.25,
+      "totalWithNEI": 91.45,
+      "totalWithoutNEI": 68.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 38.1,
+      "employer": 38.1,
+      "employeeNonEmploymentInjury": 22.85,
+      "employeeWithNEI": 22.85,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 60.95,
+      "totalWithoutNEI": 38.1
+     }
+    },
+    {
+     "no": 36,
+     "wageAbove": 3100,
+     "wageUpTo": 3200,
+     "assumedMonthlyWage": 3150.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 39.4,
+      "employerInvalidity": 15.75,
+      "employer": 55.15,
+      "employeeInvalidity": 15.75,
+      "employeeNonEmploymentInjury": 23.65,
+      "employeeWithNEI": 39.4,
+      "employeeWithoutNEI": 15.75,
+      "totalWithNEI": 94.55,
+      "totalWithoutNEI": 70.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 39.4,
+      "employer": 39.4,
+      "employeeNonEmploymentInjury": 23.65,
+      "employeeWithNEI": 23.65,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 63.05,
+      "totalWithoutNEI": 39.4
+     }
+    },
+    {
+     "no": 37,
+     "wageAbove": 3200,
+     "wageUpTo": 3300,
+     "assumedMonthlyWage": 3250.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 40.6,
+      "employerInvalidity": 16.25,
+      "employer": 56.85,
+      "employeeInvalidity": 16.25,
+      "employeeNonEmploymentInjury": 24.35,
+      "employeeWithNEI": 40.6,
+      "employeeWithoutNEI": 16.25,
+      "totalWithNEI": 97.45,
+      "totalWithoutNEI": 73.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 40.6,
+      "employer": 40.6,
+      "employeeNonEmploymentInjury": 24.35,
+      "employeeWithNEI": 24.35,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 64.95,
+      "totalWithoutNEI": 40.6
+     }
+    },
+    {
+     "no": 38,
+     "wageAbove": 3300,
+     "wageUpTo": 3400,
+     "assumedMonthlyWage": 3350.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 41.9,
+      "employerInvalidity": 16.75,
+      "employer": 58.65,
+      "employeeInvalidity": 16.75,
+      "employeeNonEmploymentInjury": 25.15,
+      "employeeWithNEI": 41.9,
+      "employeeWithoutNEI": 16.75,
+      "totalWithNEI": 100.55,
+      "totalWithoutNEI": 75.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 41.9,
+      "employer": 41.9,
+      "employeeNonEmploymentInjury": 25.15,
+      "employeeWithNEI": 25.15,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 67.05,
+      "totalWithoutNEI": 41.9
+     }
+    },
+    {
+     "no": 39,
+     "wageAbove": 3400,
+     "wageUpTo": 3500,
+     "assumedMonthlyWage": 3450.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 43.1,
+      "employerInvalidity": 17.25,
+      "employer": 60.35,
+      "employeeInvalidity": 17.25,
+      "employeeNonEmploymentInjury": 25.85,
+      "employeeWithNEI": 43.1,
+      "employeeWithoutNEI": 17.25,
+      "totalWithNEI": 103.45,
+      "totalWithoutNEI": 77.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 43.1,
+      "employer": 43.1,
+      "employeeNonEmploymentInjury": 25.85,
+      "employeeWithNEI": 25.85,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 68.95,
+      "totalWithoutNEI": 43.1
+     }
+    },
+    {
+     "no": 40,
+     "wageAbove": 3500,
+     "wageUpTo": 3600,
+     "assumedMonthlyWage": 3550.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 44.4,
+      "employerInvalidity": 17.75,
+      "employer": 62.15,
+      "employeeInvalidity": 17.75,
+      "employeeNonEmploymentInjury": 26.65,
+      "employeeWithNEI": 44.4,
+      "employeeWithoutNEI": 17.75,
+      "totalWithNEI": 106.55,
+      "totalWithoutNEI": 79.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 44.4,
+      "employer": 44.4,
+      "employeeNonEmploymentInjury": 26.65,
+      "employeeWithNEI": 26.65,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 71.05,
+      "totalWithoutNEI": 44.4
+     }
+    },
+    {
+     "no": 41,
+     "wageAbove": 3600,
+     "wageUpTo": 3700,
+     "assumedMonthlyWage": 3650.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 45.6,
+      "employerInvalidity": 18.25,
+      "employer": 63.85,
+      "employeeInvalidity": 18.25,
+      "employeeNonEmploymentInjury": 27.35,
+      "employeeWithNEI": 45.6,
+      "employeeWithoutNEI": 18.25,
+      "totalWithNEI": 109.45,
+      "totalWithoutNEI": 82.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 45.6,
+      "employer": 45.6,
+      "employeeNonEmploymentInjury": 27.35,
+      "employeeWithNEI": 27.35,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 72.95,
+      "totalWithoutNEI": 45.6
+     }
+    },
+    {
+     "no": 42,
+     "wageAbove": 3700,
+     "wageUpTo": 3800,
+     "assumedMonthlyWage": 3750.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 46.9,
+      "employerInvalidity": 18.75,
+      "employer": 65.65,
+      "employeeInvalidity": 18.75,
+      "employeeNonEmploymentInjury": 28.15,
+      "employeeWithNEI": 46.9,
+      "employeeWithoutNEI": 18.75,
+      "totalWithNEI": 112.55,
+      "totalWithoutNEI": 84.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 46.9,
+      "employer": 46.9,
+      "employeeNonEmploymentInjury": 28.15,
+      "employeeWithNEI": 28.15,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 75.05,
+      "totalWithoutNEI": 46.9
+     }
+    },
+    {
+     "no": 43,
+     "wageAbove": 3800,
+     "wageUpTo": 3900,
+     "assumedMonthlyWage": 3850.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 48.1,
+      "employerInvalidity": 19.25,
+      "employer": 67.35,
+      "employeeInvalidity": 19.25,
+      "employeeNonEmploymentInjury": 28.85,
+      "employeeWithNEI": 48.1,
+      "employeeWithoutNEI": 19.25,
+      "totalWithNEI": 115.45,
+      "totalWithoutNEI": 86.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 48.1,
+      "employer": 48.1,
+      "employeeNonEmploymentInjury": 28.85,
+      "employeeWithNEI": 28.85,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 76.95,
+      "totalWithoutNEI": 48.1
+     }
+    },
+    {
+     "no": 44,
+     "wageAbove": 3900,
+     "wageUpTo": 4000,
+     "assumedMonthlyWage": 3950.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 49.4,
+      "employerInvalidity": 19.75,
+      "employer": 69.15,
+      "employeeInvalidity": 19.75,
+      "employeeNonEmploymentInjury": 29.65,
+      "employeeWithNEI": 49.4,
+      "employeeWithoutNEI": 19.75,
+      "totalWithNEI": 118.55,
+      "totalWithoutNEI": 88.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 49.4,
+      "employer": 49.4,
+      "employeeNonEmploymentInjury": 29.65,
+      "employeeWithNEI": 29.65,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 79.05,
+      "totalWithoutNEI": 49.4
+     }
+    },
+    {
+     "no": 45,
+     "wageAbove": 4000,
+     "wageUpTo": 4100,
+     "assumedMonthlyWage": 4050.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 50.6,
+      "employerInvalidity": 20.25,
+      "employer": 70.85,
+      "employeeInvalidity": 20.25,
+      "employeeNonEmploymentInjury": 30.35,
+      "employeeWithNEI": 50.6,
+      "employeeWithoutNEI": 20.25,
+      "totalWithNEI": 121.45,
+      "totalWithoutNEI": 91.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 50.6,
+      "employer": 50.6,
+      "employeeNonEmploymentInjury": 30.35,
+      "employeeWithNEI": 30.35,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 80.95,
+      "totalWithoutNEI": 50.6
+     }
+    },
+    {
+     "no": 46,
+     "wageAbove": 4100,
+     "wageUpTo": 4200,
+     "assumedMonthlyWage": 4150.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 51.9,
+      "employerInvalidity": 20.75,
+      "employer": 72.65,
+      "employeeInvalidity": 20.75,
+      "employeeNonEmploymentInjury": 31.15,
+      "employeeWithNEI": 51.9,
+      "employeeWithoutNEI": 20.75,
+      "totalWithNEI": 124.55,
+      "totalWithoutNEI": 93.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 51.9,
+      "employer": 51.9,
+      "employeeNonEmploymentInjury": 31.15,
+      "employeeWithNEI": 31.15,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 83.05,
+      "totalWithoutNEI": 51.9
+     }
+    },
+    {
+     "no": 47,
+     "wageAbove": 4200,
+     "wageUpTo": 4300,
+     "assumedMonthlyWage": 4250.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 53.1,
+      "employerInvalidity": 21.25,
+      "employer": 74.35,
+      "employeeInvalidity": 21.25,
+      "employeeNonEmploymentInjury": 31.85,
+      "employeeWithNEI": 53.1,
+      "employeeWithoutNEI": 21.25,
+      "totalWithNEI": 127.45,
+      "totalWithoutNEI": 95.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 53.1,
+      "employer": 53.1,
+      "employeeNonEmploymentInjury": 31.85,
+      "employeeWithNEI": 31.85,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 84.95,
+      "totalWithoutNEI": 53.1
+     }
+    },
+    {
+     "no": 48,
+     "wageAbove": 4300,
+     "wageUpTo": 4400,
+     "assumedMonthlyWage": 4350.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 54.4,
+      "employerInvalidity": 21.75,
+      "employer": 76.15,
+      "employeeInvalidity": 21.75,
+      "employeeNonEmploymentInjury": 32.65,
+      "employeeWithNEI": 54.4,
+      "employeeWithoutNEI": 21.75,
+      "totalWithNEI": 130.55,
+      "totalWithoutNEI": 97.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 54.4,
+      "employer": 54.4,
+      "employeeNonEmploymentInjury": 32.65,
+      "employeeWithNEI": 32.65,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 87.05,
+      "totalWithoutNEI": 54.4
+     }
+    },
+    {
+     "no": 49,
+     "wageAbove": 4400,
+     "wageUpTo": 4500,
+     "assumedMonthlyWage": 4450.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 55.6,
+      "employerInvalidity": 22.25,
+      "employer": 77.85,
+      "employeeInvalidity": 22.25,
+      "employeeNonEmploymentInjury": 33.35,
+      "employeeWithNEI": 55.6,
+      "employeeWithoutNEI": 22.25,
+      "totalWithNEI": 133.45,
+      "totalWithoutNEI": 100.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 55.6,
+      "employer": 55.6,
+      "employeeNonEmploymentInjury": 33.35,
+      "employeeWithNEI": 33.35,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 88.95,
+      "totalWithoutNEI": 55.6
+     }
+    },
+    {
+     "no": 50,
+     "wageAbove": 4500,
+     "wageUpTo": 4600,
+     "assumedMonthlyWage": 4550.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 56.9,
+      "employerInvalidity": 22.75,
+      "employer": 79.65,
+      "employeeInvalidity": 22.75,
+      "employeeNonEmploymentInjury": 34.15,
+      "employeeWithNEI": 56.9,
+      "employeeWithoutNEI": 22.75,
+      "totalWithNEI": 136.55,
+      "totalWithoutNEI": 102.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 56.9,
+      "employer": 56.9,
+      "employeeNonEmploymentInjury": 34.15,
+      "employeeWithNEI": 34.15,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 91.05,
+      "totalWithoutNEI": 56.9
+     }
+    },
+    {
+     "no": 51,
+     "wageAbove": 4600,
+     "wageUpTo": 4700,
+     "assumedMonthlyWage": 4650.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 58.1,
+      "employerInvalidity": 23.25,
+      "employer": 81.35,
+      "employeeInvalidity": 23.25,
+      "employeeNonEmploymentInjury": 34.85,
+      "employeeWithNEI": 58.1,
+      "employeeWithoutNEI": 23.25,
+      "totalWithNEI": 139.45,
+      "totalWithoutNEI": 104.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 58.1,
+      "employer": 58.1,
+      "employeeNonEmploymentInjury": 34.85,
+      "employeeWithNEI": 34.85,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 92.95,
+      "totalWithoutNEI": 58.1
+     }
+    },
+    {
+     "no": 52,
+     "wageAbove": 4700,
+     "wageUpTo": 4800,
+     "assumedMonthlyWage": 4750.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 59.4,
+      "employerInvalidity": 23.75,
+      "employer": 83.15,
+      "employeeInvalidity": 23.75,
+      "employeeNonEmploymentInjury": 35.65,
+      "employeeWithNEI": 59.4,
+      "employeeWithoutNEI": 23.75,
+      "totalWithNEI": 142.55,
+      "totalWithoutNEI": 106.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 59.4,
+      "employer": 59.4,
+      "employeeNonEmploymentInjury": 35.65,
+      "employeeWithNEI": 35.65,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 95.05,
+      "totalWithoutNEI": 59.4
+     }
+    },
+    {
+     "no": 53,
+     "wageAbove": 4800,
+     "wageUpTo": 4900,
+     "assumedMonthlyWage": 4850.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 60.6,
+      "employerInvalidity": 24.25,
+      "employer": 84.85,
+      "employeeInvalidity": 24.25,
+      "employeeNonEmploymentInjury": 36.35,
+      "employeeWithNEI": 60.6,
+      "employeeWithoutNEI": 24.25,
+      "totalWithNEI": 145.45,
+      "totalWithoutNEI": 109.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 60.6,
+      "employer": 60.6,
+      "employeeNonEmploymentInjury": 36.35,
+      "employeeWithNEI": 36.35,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 96.95,
+      "totalWithoutNEI": 60.6
+     }
+    },
+    {
+     "no": 54,
+     "wageAbove": 4900,
+     "wageUpTo": 5000,
+     "assumedMonthlyWage": 4950.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 61.9,
+      "employerInvalidity": 24.75,
+      "employer": 86.65,
+      "employeeInvalidity": 24.75,
+      "employeeNonEmploymentInjury": 37.15,
+      "employeeWithNEI": 61.9,
+      "employeeWithoutNEI": 24.75,
+      "totalWithNEI": 148.55,
+      "totalWithoutNEI": 111.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 61.9,
+      "employer": 61.9,
+      "employeeNonEmploymentInjury": 37.15,
+      "employeeWithNEI": 37.15,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 99.05,
+      "totalWithoutNEI": 61.9
+     }
+    },
+    {
+     "no": 55,
+     "wageAbove": 5000,
+     "wageUpTo": 5100,
+     "assumedMonthlyWage": 5050.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 63.1,
+      "employerInvalidity": 25.25,
+      "employer": 88.35,
+      "employeeInvalidity": 25.25,
+      "employeeNonEmploymentInjury": 37.85,
+      "employeeWithNEI": 63.1,
+      "employeeWithoutNEI": 25.25,
+      "totalWithNEI": 151.45,
+      "totalWithoutNEI": 113.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 63.1,
+      "employer": 63.1,
+      "employeeNonEmploymentInjury": 37.85,
+      "employeeWithNEI": 37.85,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 100.95,
+      "totalWithoutNEI": 63.1
+     }
+    },
+    {
+     "no": 56,
+     "wageAbove": 5100,
+     "wageUpTo": 5200,
+     "assumedMonthlyWage": 5150.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 64.4,
+      "employerInvalidity": 25.75,
+      "employer": 90.15,
+      "employeeInvalidity": 25.75,
+      "employeeNonEmploymentInjury": 38.65,
+      "employeeWithNEI": 64.4,
+      "employeeWithoutNEI": 25.75,
+      "totalWithNEI": 154.55,
+      "totalWithoutNEI": 115.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 64.4,
+      "employer": 64.4,
+      "employeeNonEmploymentInjury": 38.65,
+      "employeeWithNEI": 38.65,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 103.05,
+      "totalWithoutNEI": 64.4
+     }
+    },
+    {
+     "no": 57,
+     "wageAbove": 5200,
+     "wageUpTo": 5300,
+     "assumedMonthlyWage": 5250.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 65.6,
+      "employerInvalidity": 26.25,
+      "employer": 91.85,
+      "employeeInvalidity": 26.25,
+      "employeeNonEmploymentInjury": 39.35,
+      "employeeWithNEI": 65.6,
+      "employeeWithoutNEI": 26.25,
+      "totalWithNEI": 157.45,
+      "totalWithoutNEI": 118.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 65.6,
+      "employer": 65.6,
+      "employeeNonEmploymentInjury": 39.35,
+      "employeeWithNEI": 39.35,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 104.95,
+      "totalWithoutNEI": 65.6
+     }
+    },
+    {
+     "no": 58,
+     "wageAbove": 5300,
+     "wageUpTo": 5400,
+     "assumedMonthlyWage": 5350.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 66.9,
+      "employerInvalidity": 26.75,
+      "employer": 93.65,
+      "employeeInvalidity": 26.75,
+      "employeeNonEmploymentInjury": 40.15,
+      "employeeWithNEI": 66.9,
+      "employeeWithoutNEI": 26.75,
+      "totalWithNEI": 160.55,
+      "totalWithoutNEI": 120.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 66.9,
+      "employer": 66.9,
+      "employeeNonEmploymentInjury": 40.15,
+      "employeeWithNEI": 40.15,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 107.05,
+      "totalWithoutNEI": 66.9
+     }
+    },
+    {
+     "no": 59,
+     "wageAbove": 5400,
+     "wageUpTo": 5500,
+     "assumedMonthlyWage": 5450.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 68.1,
+      "employerInvalidity": 27.25,
+      "employer": 95.35,
+      "employeeInvalidity": 27.25,
+      "employeeNonEmploymentInjury": 40.85,
+      "employeeWithNEI": 68.1,
+      "employeeWithoutNEI": 27.25,
+      "totalWithNEI": 163.45,
+      "totalWithoutNEI": 122.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 68.1,
+      "employer": 68.1,
+      "employeeNonEmploymentInjury": 40.85,
+      "employeeWithNEI": 40.85,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 108.95,
+      "totalWithoutNEI": 68.1
+     }
+    },
+    {
+     "no": 60,
+     "wageAbove": 5500,
+     "wageUpTo": 5600,
+     "assumedMonthlyWage": 5550.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 69.4,
+      "employerInvalidity": 27.75,
+      "employer": 97.15,
+      "employeeInvalidity": 27.75,
+      "employeeNonEmploymentInjury": 41.65,
+      "employeeWithNEI": 69.4,
+      "employeeWithoutNEI": 27.75,
+      "totalWithNEI": 166.55,
+      "totalWithoutNEI": 124.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 69.4,
+      "employer": 69.4,
+      "employeeNonEmploymentInjury": 41.65,
+      "employeeWithNEI": 41.65,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 111.05,
+      "totalWithoutNEI": 69.4
+     }
+    },
+    {
+     "no": 61,
+     "wageAbove": 5600,
+     "wageUpTo": 5700,
+     "assumedMonthlyWage": 5650.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 70.6,
+      "employerInvalidity": 28.25,
+      "employer": 98.85,
+      "employeeInvalidity": 28.25,
+      "employeeNonEmploymentInjury": 42.35,
+      "employeeWithNEI": 70.6,
+      "employeeWithoutNEI": 28.25,
+      "totalWithNEI": 169.45,
+      "totalWithoutNEI": 127.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 70.6,
+      "employer": 70.6,
+      "employeeNonEmploymentInjury": 42.35,
+      "employeeWithNEI": 42.35,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 112.95,
+      "totalWithoutNEI": 70.6
+     }
+    },
+    {
+     "no": 62,
+     "wageAbove": 5700,
+     "wageUpTo": 5800,
+     "assumedMonthlyWage": 5750.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 71.9,
+      "employerInvalidity": 28.75,
+      "employer": 100.65,
+      "employeeInvalidity": 28.75,
+      "employeeNonEmploymentInjury": 43.15,
+      "employeeWithNEI": 71.9,
+      "employeeWithoutNEI": 28.75,
+      "totalWithNEI": 172.55,
+      "totalWithoutNEI": 129.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 71.9,
+      "employer": 71.9,
+      "employeeNonEmploymentInjury": 43.15,
+      "employeeWithNEI": 43.15,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 115.05,
+      "totalWithoutNEI": 71.9
+     }
+    },
+    {
+     "no": 63,
+     "wageAbove": 5800,
+     "wageUpTo": 5900,
+     "assumedMonthlyWage": 5850.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 73.1,
+      "employerInvalidity": 29.25,
+      "employer": 102.35,
+      "employeeInvalidity": 29.25,
+      "employeeNonEmploymentInjury": 43.85,
+      "employeeWithNEI": 73.1,
+      "employeeWithoutNEI": 29.25,
+      "totalWithNEI": 175.45,
+      "totalWithoutNEI": 131.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 73.1,
+      "employer": 73.1,
+      "employeeNonEmploymentInjury": 43.85,
+      "employeeWithNEI": 43.85,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 116.95,
+      "totalWithoutNEI": 73.1
+     }
+    },
+    {
+     "no": 64,
+     "wageAbove": 5900,
+     "wageUpTo": 6000,
+     "assumedMonthlyWage": 5950.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 74.4,
+      "employerInvalidity": 29.75,
+      "employer": 104.15,
+      "employeeInvalidity": 29.75,
+      "employeeNonEmploymentInjury": 44.65,
+      "employeeWithNEI": 74.4,
+      "employeeWithoutNEI": 29.75,
+      "totalWithNEI": 178.55,
+      "totalWithoutNEI": 133.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 74.4,
+      "employer": 74.4,
+      "employeeNonEmploymentInjury": 44.65,
+      "employeeWithNEI": 44.65,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 119.05,
+      "totalWithoutNEI": 74.4
+     }
+    },
+    {
+     "no": 65,
+     "wageAbove": 6000,
+     "wageUpTo": null,
+     "assumedMonthlyWage": 5950.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 74.4,
+      "employerInvalidity": 29.75,
+      "employer": 104.15,
+      "employeeInvalidity": 29.75,
+      "employeeNonEmploymentInjury": 44.65,
+      "employeeWithNEI": 74.4,
+      "employeeWithoutNEI": 29.75,
+      "totalWithNEI": 178.55,
+      "totalWithoutNEI": 133.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 74.4,
+      "employer": 74.4,
+      "employeeNonEmploymentInjury": 44.65,
+      "employeeWithNEI": 44.65,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 119.05,
+      "totalWithoutNEI": 74.4
+     }
+    }
+   ]
+  },
+  {
+   "phase": 2,
+   "thirdSchedulePart": {
+    "firstCategory": "II",
+    "secondCategory": "V"
+   },
+   "effectiveFrom": "2028-06-01",
+   "effectiveTo": "2031-05-31",
+   "nominalNEIRate": 0.01,
+   "status": "legislated (Act A1788); phase dates gazetted in P.U.(B) 196/2026 (dated 25 May 2026, published 29 May 2026)",
+   "bands": [
+    {
+     "no": 1,
+     "wageAbove": 0,
+     "wageUpTo": 30,
+     "assumedMonthlyWage": 20.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 0.3,
+      "employerInvalidity": 0.1,
+      "employer": 0.4,
+      "employeeInvalidity": 0.1,
+      "employeeNonEmploymentInjury": 0.25,
+      "employeeWithNEI": 0.35,
+      "employeeWithoutNEI": 0.1,
+      "totalWithNEI": 0.75,
+      "totalWithoutNEI": 0.5
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 0.3,
+      "employer": 0.3,
+      "employeeNonEmploymentInjury": 0.25,
+      "employeeWithNEI": 0.25,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 0.55,
+      "totalWithoutNEI": 0.3
+     }
+    },
+    {
+     "no": 2,
+     "wageAbove": 30,
+     "wageUpTo": 50,
+     "assumedMonthlyWage": 40.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 0.5,
+      "employerInvalidity": 0.2,
+      "employer": 0.7,
+      "employeeInvalidity": 0.2,
+      "employeeNonEmploymentInjury": 0.4,
+      "employeeWithNEI": 0.6,
+      "employeeWithoutNEI": 0.2,
+      "totalWithNEI": 1.3,
+      "totalWithoutNEI": 0.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 0.5,
+      "employer": 0.5,
+      "employeeNonEmploymentInjury": 0.4,
+      "employeeWithNEI": 0.4,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 0.9,
+      "totalWithoutNEI": 0.5
+     }
+    },
+    {
+     "no": 3,
+     "wageAbove": 50,
+     "wageUpTo": 70,
+     "assumedMonthlyWage": 60.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 0.8,
+      "employerInvalidity": 0.3,
+      "employer": 1.1,
+      "employeeInvalidity": 0.3,
+      "employeeNonEmploymentInjury": 0.65,
+      "employeeWithNEI": 0.95,
+      "employeeWithoutNEI": 0.3,
+      "totalWithNEI": 2.05,
+      "totalWithoutNEI": 1.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 0.8,
+      "employer": 0.8,
+      "employeeNonEmploymentInjury": 0.65,
+      "employeeWithNEI": 0.65,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 1.45,
+      "totalWithoutNEI": 0.8
+     }
+    },
+    {
+     "no": 4,
+     "wageAbove": 70,
+     "wageUpTo": 100,
+     "assumedMonthlyWage": 85.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 1.1,
+      "employerInvalidity": 0.4,
+      "employer": 1.5,
+      "employeeInvalidity": 0.4,
+      "employeeNonEmploymentInjury": 0.9,
+      "employeeWithNEI": 1.3,
+      "employeeWithoutNEI": 0.4,
+      "totalWithNEI": 2.8,
+      "totalWithoutNEI": 1.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 1.1,
+      "employer": 1.1,
+      "employeeNonEmploymentInjury": 0.9,
+      "employeeWithNEI": 0.9,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 2.0,
+      "totalWithoutNEI": 1.1
+     }
+    },
+    {
+     "no": 5,
+     "wageAbove": 100,
+     "wageUpTo": 140,
+     "assumedMonthlyWage": 120.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 1.5,
+      "employerInvalidity": 0.6,
+      "employer": 2.1,
+      "employeeInvalidity": 0.6,
+      "employeeNonEmploymentInjury": 1.2,
+      "employeeWithNEI": 1.8,
+      "employeeWithoutNEI": 0.6,
+      "totalWithNEI": 3.9,
+      "totalWithoutNEI": 2.7
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 1.5,
+      "employer": 1.5,
+      "employeeNonEmploymentInjury": 1.2,
+      "employeeWithNEI": 1.2,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 2.7,
+      "totalWithoutNEI": 1.5
+     }
+    },
+    {
+     "no": 6,
+     "wageAbove": 140,
+     "wageUpTo": 200,
+     "assumedMonthlyWage": 170.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 2.1,
+      "employerInvalidity": 0.85,
+      "employer": 2.95,
+      "employeeInvalidity": 0.85,
+      "employeeNonEmploymentInjury": 1.7,
+      "employeeWithNEI": 2.55,
+      "employeeWithoutNEI": 0.85,
+      "totalWithNEI": 5.5,
+      "totalWithoutNEI": 3.8
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 2.1,
+      "employer": 2.1,
+      "employeeNonEmploymentInjury": 1.7,
+      "employeeWithNEI": 1.7,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 3.8,
+      "totalWithoutNEI": 2.1
+     }
+    },
+    {
+     "no": 7,
+     "wageAbove": 200,
+     "wageUpTo": 300,
+     "assumedMonthlyWage": 250.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 3.1,
+      "employerInvalidity": 1.25,
+      "employer": 4.35,
+      "employeeInvalidity": 1.25,
+      "employeeNonEmploymentInjury": 2.5,
+      "employeeWithNEI": 3.75,
+      "employeeWithoutNEI": 1.25,
+      "totalWithNEI": 8.1,
+      "totalWithoutNEI": 5.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 3.1,
+      "employer": 3.1,
+      "employeeNonEmploymentInjury": 2.5,
+      "employeeWithNEI": 2.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 5.6,
+      "totalWithoutNEI": 3.1
+     }
+    },
+    {
+     "no": 8,
+     "wageAbove": 300,
+     "wageUpTo": 400,
+     "assumedMonthlyWage": 350.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 4.4,
+      "employerInvalidity": 1.75,
+      "employer": 6.15,
+      "employeeInvalidity": 1.75,
+      "employeeNonEmploymentInjury": 3.5,
+      "employeeWithNEI": 5.25,
+      "employeeWithoutNEI": 1.75,
+      "totalWithNEI": 11.4,
+      "totalWithoutNEI": 7.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 4.4,
+      "employer": 4.4,
+      "employeeNonEmploymentInjury": 3.5,
+      "employeeWithNEI": 3.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 7.9,
+      "totalWithoutNEI": 4.4
+     }
+    },
+    {
+     "no": 9,
+     "wageAbove": 400,
+     "wageUpTo": 500,
+     "assumedMonthlyWage": 450.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 5.6,
+      "employerInvalidity": 2.25,
+      "employer": 7.85,
+      "employeeInvalidity": 2.25,
+      "employeeNonEmploymentInjury": 4.5,
+      "employeeWithNEI": 6.75,
+      "employeeWithoutNEI": 2.25,
+      "totalWithNEI": 14.6,
+      "totalWithoutNEI": 10.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 5.6,
+      "employer": 5.6,
+      "employeeNonEmploymentInjury": 4.5,
+      "employeeWithNEI": 4.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 10.1,
+      "totalWithoutNEI": 5.6
+     }
+    },
+    {
+     "no": 10,
+     "wageAbove": 500,
+     "wageUpTo": 600,
+     "assumedMonthlyWage": 550.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 6.9,
+      "employerInvalidity": 2.75,
+      "employer": 9.65,
+      "employeeInvalidity": 2.75,
+      "employeeNonEmploymentInjury": 5.5,
+      "employeeWithNEI": 8.25,
+      "employeeWithoutNEI": 2.75,
+      "totalWithNEI": 17.9,
+      "totalWithoutNEI": 12.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 6.9,
+      "employer": 6.9,
+      "employeeNonEmploymentInjury": 5.5,
+      "employeeWithNEI": 5.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 12.4,
+      "totalWithoutNEI": 6.9
+     }
+    },
+    {
+     "no": 11,
+     "wageAbove": 600,
+     "wageUpTo": 700,
+     "assumedMonthlyWage": 650.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 8.1,
+      "employerInvalidity": 3.25,
+      "employer": 11.35,
+      "employeeInvalidity": 3.25,
+      "employeeNonEmploymentInjury": 6.5,
+      "employeeWithNEI": 9.75,
+      "employeeWithoutNEI": 3.25,
+      "totalWithNEI": 21.1,
+      "totalWithoutNEI": 14.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 8.1,
+      "employer": 8.1,
+      "employeeNonEmploymentInjury": 6.5,
+      "employeeWithNEI": 6.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 14.6,
+      "totalWithoutNEI": 8.1
+     }
+    },
+    {
+     "no": 12,
+     "wageAbove": 700,
+     "wageUpTo": 800,
+     "assumedMonthlyWage": 750.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 9.4,
+      "employerInvalidity": 3.75,
+      "employer": 13.15,
+      "employeeInvalidity": 3.75,
+      "employeeNonEmploymentInjury": 7.5,
+      "employeeWithNEI": 11.25,
+      "employeeWithoutNEI": 3.75,
+      "totalWithNEI": 24.4,
+      "totalWithoutNEI": 16.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 9.4,
+      "employer": 9.4,
+      "employeeNonEmploymentInjury": 7.5,
+      "employeeWithNEI": 7.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 16.9,
+      "totalWithoutNEI": 9.4
+     }
+    },
+    {
+     "no": 13,
+     "wageAbove": 800,
+     "wageUpTo": 900,
+     "assumedMonthlyWage": 850.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 10.6,
+      "employerInvalidity": 4.25,
+      "employer": 14.85,
+      "employeeInvalidity": 4.25,
+      "employeeNonEmploymentInjury": 8.5,
+      "employeeWithNEI": 12.75,
+      "employeeWithoutNEI": 4.25,
+      "totalWithNEI": 27.6,
+      "totalWithoutNEI": 19.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 10.6,
+      "employer": 10.6,
+      "employeeNonEmploymentInjury": 8.5,
+      "employeeWithNEI": 8.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 19.1,
+      "totalWithoutNEI": 10.6
+     }
+    },
+    {
+     "no": 14,
+     "wageAbove": 900,
+     "wageUpTo": 1000,
+     "assumedMonthlyWage": 950.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 11.9,
+      "employerInvalidity": 4.75,
+      "employer": 16.65,
+      "employeeInvalidity": 4.75,
+      "employeeNonEmploymentInjury": 9.5,
+      "employeeWithNEI": 14.25,
+      "employeeWithoutNEI": 4.75,
+      "totalWithNEI": 30.9,
+      "totalWithoutNEI": 21.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 11.9,
+      "employer": 11.9,
+      "employeeNonEmploymentInjury": 9.5,
+      "employeeWithNEI": 9.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 21.4,
+      "totalWithoutNEI": 11.9
+     }
+    },
+    {
+     "no": 15,
+     "wageAbove": 1000,
+     "wageUpTo": 1100,
+     "assumedMonthlyWage": 1050.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 13.1,
+      "employerInvalidity": 5.25,
+      "employer": 18.35,
+      "employeeInvalidity": 5.25,
+      "employeeNonEmploymentInjury": 10.5,
+      "employeeWithNEI": 15.75,
+      "employeeWithoutNEI": 5.25,
+      "totalWithNEI": 34.1,
+      "totalWithoutNEI": 23.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 13.1,
+      "employer": 13.1,
+      "employeeNonEmploymentInjury": 10.5,
+      "employeeWithNEI": 10.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 23.6,
+      "totalWithoutNEI": 13.1
+     }
+    },
+    {
+     "no": 16,
+     "wageAbove": 1100,
+     "wageUpTo": 1200,
+     "assumedMonthlyWage": 1150.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 14.4,
+      "employerInvalidity": 5.75,
+      "employer": 20.15,
+      "employeeInvalidity": 5.75,
+      "employeeNonEmploymentInjury": 11.5,
+      "employeeWithNEI": 17.25,
+      "employeeWithoutNEI": 5.75,
+      "totalWithNEI": 37.4,
+      "totalWithoutNEI": 25.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 14.4,
+      "employer": 14.4,
+      "employeeNonEmploymentInjury": 11.5,
+      "employeeWithNEI": 11.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 25.9,
+      "totalWithoutNEI": 14.4
+     }
+    },
+    {
+     "no": 17,
+     "wageAbove": 1200,
+     "wageUpTo": 1300,
+     "assumedMonthlyWage": 1250.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 15.6,
+      "employerInvalidity": 6.25,
+      "employer": 21.85,
+      "employeeInvalidity": 6.25,
+      "employeeNonEmploymentInjury": 12.5,
+      "employeeWithNEI": 18.75,
+      "employeeWithoutNEI": 6.25,
+      "totalWithNEI": 40.6,
+      "totalWithoutNEI": 28.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 15.6,
+      "employer": 15.6,
+      "employeeNonEmploymentInjury": 12.5,
+      "employeeWithNEI": 12.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 28.1,
+      "totalWithoutNEI": 15.6
+     }
+    },
+    {
+     "no": 18,
+     "wageAbove": 1300,
+     "wageUpTo": 1400,
+     "assumedMonthlyWage": 1350.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 16.9,
+      "employerInvalidity": 6.75,
+      "employer": 23.65,
+      "employeeInvalidity": 6.75,
+      "employeeNonEmploymentInjury": 13.5,
+      "employeeWithNEI": 20.25,
+      "employeeWithoutNEI": 6.75,
+      "totalWithNEI": 43.9,
+      "totalWithoutNEI": 30.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 16.9,
+      "employer": 16.9,
+      "employeeNonEmploymentInjury": 13.5,
+      "employeeWithNEI": 13.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 30.4,
+      "totalWithoutNEI": 16.9
+     }
+    },
+    {
+     "no": 19,
+     "wageAbove": 1400,
+     "wageUpTo": 1500,
+     "assumedMonthlyWage": 1450.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 18.1,
+      "employerInvalidity": 7.25,
+      "employer": 25.35,
+      "employeeInvalidity": 7.25,
+      "employeeNonEmploymentInjury": 14.5,
+      "employeeWithNEI": 21.75,
+      "employeeWithoutNEI": 7.25,
+      "totalWithNEI": 47.1,
+      "totalWithoutNEI": 32.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 18.1,
+      "employer": 18.1,
+      "employeeNonEmploymentInjury": 14.5,
+      "employeeWithNEI": 14.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 32.6,
+      "totalWithoutNEI": 18.1
+     }
+    },
+    {
+     "no": 20,
+     "wageAbove": 1500,
+     "wageUpTo": 1600,
+     "assumedMonthlyWage": 1550.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 19.4,
+      "employerInvalidity": 7.75,
+      "employer": 27.15,
+      "employeeInvalidity": 7.75,
+      "employeeNonEmploymentInjury": 15.5,
+      "employeeWithNEI": 23.25,
+      "employeeWithoutNEI": 7.75,
+      "totalWithNEI": 50.4,
+      "totalWithoutNEI": 34.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 19.4,
+      "employer": 19.4,
+      "employeeNonEmploymentInjury": 15.5,
+      "employeeWithNEI": 15.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 34.9,
+      "totalWithoutNEI": 19.4
+     }
+    },
+    {
+     "no": 21,
+     "wageAbove": 1600,
+     "wageUpTo": 1700,
+     "assumedMonthlyWage": 1650.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 20.6,
+      "employerInvalidity": 8.25,
+      "employer": 28.85,
+      "employeeInvalidity": 8.25,
+      "employeeNonEmploymentInjury": 16.5,
+      "employeeWithNEI": 24.75,
+      "employeeWithoutNEI": 8.25,
+      "totalWithNEI": 53.6,
+      "totalWithoutNEI": 37.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 20.6,
+      "employer": 20.6,
+      "employeeNonEmploymentInjury": 16.5,
+      "employeeWithNEI": 16.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 37.1,
+      "totalWithoutNEI": 20.6
+     }
+    },
+    {
+     "no": 22,
+     "wageAbove": 1700,
+     "wageUpTo": 1800,
+     "assumedMonthlyWage": 1750.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 21.9,
+      "employerInvalidity": 8.75,
+      "employer": 30.65,
+      "employeeInvalidity": 8.75,
+      "employeeNonEmploymentInjury": 17.5,
+      "employeeWithNEI": 26.25,
+      "employeeWithoutNEI": 8.75,
+      "totalWithNEI": 56.9,
+      "totalWithoutNEI": 39.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 21.9,
+      "employer": 21.9,
+      "employeeNonEmploymentInjury": 17.5,
+      "employeeWithNEI": 17.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 39.4,
+      "totalWithoutNEI": 21.9
+     }
+    },
+    {
+     "no": 23,
+     "wageAbove": 1800,
+     "wageUpTo": 1900,
+     "assumedMonthlyWage": 1850.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 23.1,
+      "employerInvalidity": 9.25,
+      "employer": 32.35,
+      "employeeInvalidity": 9.25,
+      "employeeNonEmploymentInjury": 18.5,
+      "employeeWithNEI": 27.75,
+      "employeeWithoutNEI": 9.25,
+      "totalWithNEI": 60.1,
+      "totalWithoutNEI": 41.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 23.1,
+      "employer": 23.1,
+      "employeeNonEmploymentInjury": 18.5,
+      "employeeWithNEI": 18.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 41.6,
+      "totalWithoutNEI": 23.1
+     }
+    },
+    {
+     "no": 24,
+     "wageAbove": 1900,
+     "wageUpTo": 2000,
+     "assumedMonthlyWage": 1950.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 24.4,
+      "employerInvalidity": 9.75,
+      "employer": 34.15,
+      "employeeInvalidity": 9.75,
+      "employeeNonEmploymentInjury": 19.5,
+      "employeeWithNEI": 29.25,
+      "employeeWithoutNEI": 9.75,
+      "totalWithNEI": 63.4,
+      "totalWithoutNEI": 43.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 24.4,
+      "employer": 24.4,
+      "employeeNonEmploymentInjury": 19.5,
+      "employeeWithNEI": 19.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 43.9,
+      "totalWithoutNEI": 24.4
+     }
+    },
+    {
+     "no": 25,
+     "wageAbove": 2000,
+     "wageUpTo": 2100,
+     "assumedMonthlyWage": 2050.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 25.6,
+      "employerInvalidity": 10.25,
+      "employer": 35.85,
+      "employeeInvalidity": 10.25,
+      "employeeNonEmploymentInjury": 20.5,
+      "employeeWithNEI": 30.75,
+      "employeeWithoutNEI": 10.25,
+      "totalWithNEI": 66.6,
+      "totalWithoutNEI": 46.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 25.6,
+      "employer": 25.6,
+      "employeeNonEmploymentInjury": 20.5,
+      "employeeWithNEI": 20.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 46.1,
+      "totalWithoutNEI": 25.6
+     }
+    },
+    {
+     "no": 26,
+     "wageAbove": 2100,
+     "wageUpTo": 2200,
+     "assumedMonthlyWage": 2150.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 26.9,
+      "employerInvalidity": 10.75,
+      "employer": 37.65,
+      "employeeInvalidity": 10.75,
+      "employeeNonEmploymentInjury": 21.5,
+      "employeeWithNEI": 32.25,
+      "employeeWithoutNEI": 10.75,
+      "totalWithNEI": 69.9,
+      "totalWithoutNEI": 48.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 26.9,
+      "employer": 26.9,
+      "employeeNonEmploymentInjury": 21.5,
+      "employeeWithNEI": 21.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 48.4,
+      "totalWithoutNEI": 26.9
+     }
+    },
+    {
+     "no": 27,
+     "wageAbove": 2200,
+     "wageUpTo": 2300,
+     "assumedMonthlyWage": 2250.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 28.1,
+      "employerInvalidity": 11.25,
+      "employer": 39.35,
+      "employeeInvalidity": 11.25,
+      "employeeNonEmploymentInjury": 22.5,
+      "employeeWithNEI": 33.75,
+      "employeeWithoutNEI": 11.25,
+      "totalWithNEI": 73.1,
+      "totalWithoutNEI": 50.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 28.1,
+      "employer": 28.1,
+      "employeeNonEmploymentInjury": 22.5,
+      "employeeWithNEI": 22.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 50.6,
+      "totalWithoutNEI": 28.1
+     }
+    },
+    {
+     "no": 28,
+     "wageAbove": 2300,
+     "wageUpTo": 2400,
+     "assumedMonthlyWage": 2350.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 29.4,
+      "employerInvalidity": 11.75,
+      "employer": 41.15,
+      "employeeInvalidity": 11.75,
+      "employeeNonEmploymentInjury": 23.5,
+      "employeeWithNEI": 35.25,
+      "employeeWithoutNEI": 11.75,
+      "totalWithNEI": 76.4,
+      "totalWithoutNEI": 52.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 29.4,
+      "employer": 29.4,
+      "employeeNonEmploymentInjury": 23.5,
+      "employeeWithNEI": 23.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 52.9,
+      "totalWithoutNEI": 29.4
+     }
+    },
+    {
+     "no": 29,
+     "wageAbove": 2400,
+     "wageUpTo": 2500,
+     "assumedMonthlyWage": 2450.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 30.6,
+      "employerInvalidity": 12.25,
+      "employer": 42.85,
+      "employeeInvalidity": 12.25,
+      "employeeNonEmploymentInjury": 24.5,
+      "employeeWithNEI": 36.75,
+      "employeeWithoutNEI": 12.25,
+      "totalWithNEI": 79.6,
+      "totalWithoutNEI": 55.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 30.6,
+      "employer": 30.6,
+      "employeeNonEmploymentInjury": 24.5,
+      "employeeWithNEI": 24.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 55.1,
+      "totalWithoutNEI": 30.6
+     }
+    },
+    {
+     "no": 30,
+     "wageAbove": 2500,
+     "wageUpTo": 2600,
+     "assumedMonthlyWage": 2550.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 31.9,
+      "employerInvalidity": 12.75,
+      "employer": 44.65,
+      "employeeInvalidity": 12.75,
+      "employeeNonEmploymentInjury": 25.5,
+      "employeeWithNEI": 38.25,
+      "employeeWithoutNEI": 12.75,
+      "totalWithNEI": 82.9,
+      "totalWithoutNEI": 57.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 31.9,
+      "employer": 31.9,
+      "employeeNonEmploymentInjury": 25.5,
+      "employeeWithNEI": 25.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 57.4,
+      "totalWithoutNEI": 31.9
+     }
+    },
+    {
+     "no": 31,
+     "wageAbove": 2600,
+     "wageUpTo": 2700,
+     "assumedMonthlyWage": 2650.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 33.1,
+      "employerInvalidity": 13.25,
+      "employer": 46.35,
+      "employeeInvalidity": 13.25,
+      "employeeNonEmploymentInjury": 26.5,
+      "employeeWithNEI": 39.75,
+      "employeeWithoutNEI": 13.25,
+      "totalWithNEI": 86.1,
+      "totalWithoutNEI": 59.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 33.1,
+      "employer": 33.1,
+      "employeeNonEmploymentInjury": 26.5,
+      "employeeWithNEI": 26.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 59.6,
+      "totalWithoutNEI": 33.1
+     }
+    },
+    {
+     "no": 32,
+     "wageAbove": 2700,
+     "wageUpTo": 2800,
+     "assumedMonthlyWage": 2750.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 34.4,
+      "employerInvalidity": 13.75,
+      "employer": 48.15,
+      "employeeInvalidity": 13.75,
+      "employeeNonEmploymentInjury": 27.5,
+      "employeeWithNEI": 41.25,
+      "employeeWithoutNEI": 13.75,
+      "totalWithNEI": 89.4,
+      "totalWithoutNEI": 61.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 34.4,
+      "employer": 34.4,
+      "employeeNonEmploymentInjury": 27.5,
+      "employeeWithNEI": 27.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 61.9,
+      "totalWithoutNEI": 34.4
+     }
+    },
+    {
+     "no": 33,
+     "wageAbove": 2800,
+     "wageUpTo": 2900,
+     "assumedMonthlyWage": 2850.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 35.6,
+      "employerInvalidity": 14.25,
+      "employer": 49.85,
+      "employeeInvalidity": 14.25,
+      "employeeNonEmploymentInjury": 28.5,
+      "employeeWithNEI": 42.75,
+      "employeeWithoutNEI": 14.25,
+      "totalWithNEI": 92.6,
+      "totalWithoutNEI": 64.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 35.6,
+      "employer": 35.6,
+      "employeeNonEmploymentInjury": 28.5,
+      "employeeWithNEI": 28.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 64.1,
+      "totalWithoutNEI": 35.6
+     }
+    },
+    {
+     "no": 34,
+     "wageAbove": 2900,
+     "wageUpTo": 3000,
+     "assumedMonthlyWage": 2950.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 36.9,
+      "employerInvalidity": 14.75,
+      "employer": 51.65,
+      "employeeInvalidity": 14.75,
+      "employeeNonEmploymentInjury": 29.5,
+      "employeeWithNEI": 44.25,
+      "employeeWithoutNEI": 14.75,
+      "totalWithNEI": 95.9,
+      "totalWithoutNEI": 66.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 36.9,
+      "employer": 36.9,
+      "employeeNonEmploymentInjury": 29.5,
+      "employeeWithNEI": 29.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 66.4,
+      "totalWithoutNEI": 36.9
+     }
+    },
+    {
+     "no": 35,
+     "wageAbove": 3000,
+     "wageUpTo": 3100,
+     "assumedMonthlyWage": 3050.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 38.1,
+      "employerInvalidity": 15.25,
+      "employer": 53.35,
+      "employeeInvalidity": 15.25,
+      "employeeNonEmploymentInjury": 30.5,
+      "employeeWithNEI": 45.75,
+      "employeeWithoutNEI": 15.25,
+      "totalWithNEI": 99.1,
+      "totalWithoutNEI": 68.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 38.1,
+      "employer": 38.1,
+      "employeeNonEmploymentInjury": 30.5,
+      "employeeWithNEI": 30.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 68.6,
+      "totalWithoutNEI": 38.1
+     }
+    },
+    {
+     "no": 36,
+     "wageAbove": 3100,
+     "wageUpTo": 3200,
+     "assumedMonthlyWage": 3150.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 39.4,
+      "employerInvalidity": 15.75,
+      "employer": 55.15,
+      "employeeInvalidity": 15.75,
+      "employeeNonEmploymentInjury": 31.5,
+      "employeeWithNEI": 47.25,
+      "employeeWithoutNEI": 15.75,
+      "totalWithNEI": 102.4,
+      "totalWithoutNEI": 70.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 39.4,
+      "employer": 39.4,
+      "employeeNonEmploymentInjury": 31.5,
+      "employeeWithNEI": 31.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 70.9,
+      "totalWithoutNEI": 39.4
+     }
+    },
+    {
+     "no": 37,
+     "wageAbove": 3200,
+     "wageUpTo": 3300,
+     "assumedMonthlyWage": 3250.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 40.6,
+      "employerInvalidity": 16.25,
+      "employer": 56.85,
+      "employeeInvalidity": 16.25,
+      "employeeNonEmploymentInjury": 32.5,
+      "employeeWithNEI": 48.75,
+      "employeeWithoutNEI": 16.25,
+      "totalWithNEI": 105.6,
+      "totalWithoutNEI": 73.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 40.6,
+      "employer": 40.6,
+      "employeeNonEmploymentInjury": 32.5,
+      "employeeWithNEI": 32.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 73.1,
+      "totalWithoutNEI": 40.6
+     }
+    },
+    {
+     "no": 38,
+     "wageAbove": 3300,
+     "wageUpTo": 3400,
+     "assumedMonthlyWage": 3350.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 41.9,
+      "employerInvalidity": 16.75,
+      "employer": 58.65,
+      "employeeInvalidity": 16.75,
+      "employeeNonEmploymentInjury": 33.5,
+      "employeeWithNEI": 50.25,
+      "employeeWithoutNEI": 16.75,
+      "totalWithNEI": 108.9,
+      "totalWithoutNEI": 75.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 41.9,
+      "employer": 41.9,
+      "employeeNonEmploymentInjury": 33.5,
+      "employeeWithNEI": 33.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 75.4,
+      "totalWithoutNEI": 41.9
+     }
+    },
+    {
+     "no": 39,
+     "wageAbove": 3400,
+     "wageUpTo": 3500,
+     "assumedMonthlyWage": 3450.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 43.1,
+      "employerInvalidity": 17.25,
+      "employer": 60.35,
+      "employeeInvalidity": 17.25,
+      "employeeNonEmploymentInjury": 34.5,
+      "employeeWithNEI": 51.75,
+      "employeeWithoutNEI": 17.25,
+      "totalWithNEI": 112.1,
+      "totalWithoutNEI": 77.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 43.1,
+      "employer": 43.1,
+      "employeeNonEmploymentInjury": 34.5,
+      "employeeWithNEI": 34.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 77.6,
+      "totalWithoutNEI": 43.1
+     }
+    },
+    {
+     "no": 40,
+     "wageAbove": 3500,
+     "wageUpTo": 3600,
+     "assumedMonthlyWage": 3550.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 44.4,
+      "employerInvalidity": 17.75,
+      "employer": 62.15,
+      "employeeInvalidity": 17.75,
+      "employeeNonEmploymentInjury": 35.5,
+      "employeeWithNEI": 53.25,
+      "employeeWithoutNEI": 17.75,
+      "totalWithNEI": 115.4,
+      "totalWithoutNEI": 79.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 44.4,
+      "employer": 44.4,
+      "employeeNonEmploymentInjury": 35.5,
+      "employeeWithNEI": 35.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 79.9,
+      "totalWithoutNEI": 44.4
+     }
+    },
+    {
+     "no": 41,
+     "wageAbove": 3600,
+     "wageUpTo": 3700,
+     "assumedMonthlyWage": 3650.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 45.6,
+      "employerInvalidity": 18.25,
+      "employer": 63.85,
+      "employeeInvalidity": 18.25,
+      "employeeNonEmploymentInjury": 36.5,
+      "employeeWithNEI": 54.75,
+      "employeeWithoutNEI": 18.25,
+      "totalWithNEI": 118.6,
+      "totalWithoutNEI": 82.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 45.6,
+      "employer": 45.6,
+      "employeeNonEmploymentInjury": 36.5,
+      "employeeWithNEI": 36.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 82.1,
+      "totalWithoutNEI": 45.6
+     }
+    },
+    {
+     "no": 42,
+     "wageAbove": 3700,
+     "wageUpTo": 3800,
+     "assumedMonthlyWage": 3750.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 46.9,
+      "employerInvalidity": 18.75,
+      "employer": 65.65,
+      "employeeInvalidity": 18.75,
+      "employeeNonEmploymentInjury": 37.5,
+      "employeeWithNEI": 56.25,
+      "employeeWithoutNEI": 18.75,
+      "totalWithNEI": 121.9,
+      "totalWithoutNEI": 84.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 46.9,
+      "employer": 46.9,
+      "employeeNonEmploymentInjury": 37.5,
+      "employeeWithNEI": 37.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 84.4,
+      "totalWithoutNEI": 46.9
+     }
+    },
+    {
+     "no": 43,
+     "wageAbove": 3800,
+     "wageUpTo": 3900,
+     "assumedMonthlyWage": 3850.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 48.1,
+      "employerInvalidity": 19.25,
+      "employer": 67.35,
+      "employeeInvalidity": 19.25,
+      "employeeNonEmploymentInjury": 38.5,
+      "employeeWithNEI": 57.75,
+      "employeeWithoutNEI": 19.25,
+      "totalWithNEI": 125.1,
+      "totalWithoutNEI": 86.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 48.1,
+      "employer": 48.1,
+      "employeeNonEmploymentInjury": 38.5,
+      "employeeWithNEI": 38.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 86.6,
+      "totalWithoutNEI": 48.1
+     }
+    },
+    {
+     "no": 44,
+     "wageAbove": 3900,
+     "wageUpTo": 4000,
+     "assumedMonthlyWage": 3950.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 49.4,
+      "employerInvalidity": 19.75,
+      "employer": 69.15,
+      "employeeInvalidity": 19.75,
+      "employeeNonEmploymentInjury": 39.5,
+      "employeeWithNEI": 59.25,
+      "employeeWithoutNEI": 19.75,
+      "totalWithNEI": 128.4,
+      "totalWithoutNEI": 88.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 49.4,
+      "employer": 49.4,
+      "employeeNonEmploymentInjury": 39.5,
+      "employeeWithNEI": 39.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 88.9,
+      "totalWithoutNEI": 49.4
+     }
+    },
+    {
+     "no": 45,
+     "wageAbove": 4000,
+     "wageUpTo": 4100,
+     "assumedMonthlyWage": 4050.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 50.6,
+      "employerInvalidity": 20.25,
+      "employer": 70.85,
+      "employeeInvalidity": 20.25,
+      "employeeNonEmploymentInjury": 40.5,
+      "employeeWithNEI": 60.75,
+      "employeeWithoutNEI": 20.25,
+      "totalWithNEI": 131.6,
+      "totalWithoutNEI": 91.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 50.6,
+      "employer": 50.6,
+      "employeeNonEmploymentInjury": 40.5,
+      "employeeWithNEI": 40.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 91.1,
+      "totalWithoutNEI": 50.6
+     }
+    },
+    {
+     "no": 46,
+     "wageAbove": 4100,
+     "wageUpTo": 4200,
+     "assumedMonthlyWage": 4150.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 51.9,
+      "employerInvalidity": 20.75,
+      "employer": 72.65,
+      "employeeInvalidity": 20.75,
+      "employeeNonEmploymentInjury": 41.5,
+      "employeeWithNEI": 62.25,
+      "employeeWithoutNEI": 20.75,
+      "totalWithNEI": 134.9,
+      "totalWithoutNEI": 93.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 51.9,
+      "employer": 51.9,
+      "employeeNonEmploymentInjury": 41.5,
+      "employeeWithNEI": 41.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 93.4,
+      "totalWithoutNEI": 51.9
+     }
+    },
+    {
+     "no": 47,
+     "wageAbove": 4200,
+     "wageUpTo": 4300,
+     "assumedMonthlyWage": 4250.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 53.1,
+      "employerInvalidity": 21.25,
+      "employer": 74.35,
+      "employeeInvalidity": 21.25,
+      "employeeNonEmploymentInjury": 42.5,
+      "employeeWithNEI": 63.75,
+      "employeeWithoutNEI": 21.25,
+      "totalWithNEI": 138.1,
+      "totalWithoutNEI": 95.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 53.1,
+      "employer": 53.1,
+      "employeeNonEmploymentInjury": 42.5,
+      "employeeWithNEI": 42.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 95.6,
+      "totalWithoutNEI": 53.1
+     }
+    },
+    {
+     "no": 48,
+     "wageAbove": 4300,
+     "wageUpTo": 4400,
+     "assumedMonthlyWage": 4350.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 54.4,
+      "employerInvalidity": 21.75,
+      "employer": 76.15,
+      "employeeInvalidity": 21.75,
+      "employeeNonEmploymentInjury": 43.5,
+      "employeeWithNEI": 65.25,
+      "employeeWithoutNEI": 21.75,
+      "totalWithNEI": 141.4,
+      "totalWithoutNEI": 97.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 54.4,
+      "employer": 54.4,
+      "employeeNonEmploymentInjury": 43.5,
+      "employeeWithNEI": 43.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 97.9,
+      "totalWithoutNEI": 54.4
+     }
+    },
+    {
+     "no": 49,
+     "wageAbove": 4400,
+     "wageUpTo": 4500,
+     "assumedMonthlyWage": 4450.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 55.6,
+      "employerInvalidity": 22.25,
+      "employer": 77.85,
+      "employeeInvalidity": 22.25,
+      "employeeNonEmploymentInjury": 44.5,
+      "employeeWithNEI": 66.75,
+      "employeeWithoutNEI": 22.25,
+      "totalWithNEI": 144.6,
+      "totalWithoutNEI": 100.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 55.6,
+      "employer": 55.6,
+      "employeeNonEmploymentInjury": 44.5,
+      "employeeWithNEI": 44.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 100.1,
+      "totalWithoutNEI": 55.6
+     }
+    },
+    {
+     "no": 50,
+     "wageAbove": 4500,
+     "wageUpTo": 4600,
+     "assumedMonthlyWage": 4550.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 56.9,
+      "employerInvalidity": 22.75,
+      "employer": 79.65,
+      "employeeInvalidity": 22.75,
+      "employeeNonEmploymentInjury": 45.5,
+      "employeeWithNEI": 68.25,
+      "employeeWithoutNEI": 22.75,
+      "totalWithNEI": 147.9,
+      "totalWithoutNEI": 102.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 56.9,
+      "employer": 56.9,
+      "employeeNonEmploymentInjury": 45.5,
+      "employeeWithNEI": 45.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 102.4,
+      "totalWithoutNEI": 56.9
+     }
+    },
+    {
+     "no": 51,
+     "wageAbove": 4600,
+     "wageUpTo": 4700,
+     "assumedMonthlyWage": 4650.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 58.1,
+      "employerInvalidity": 23.25,
+      "employer": 81.35,
+      "employeeInvalidity": 23.25,
+      "employeeNonEmploymentInjury": 46.5,
+      "employeeWithNEI": 69.75,
+      "employeeWithoutNEI": 23.25,
+      "totalWithNEI": 151.1,
+      "totalWithoutNEI": 104.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 58.1,
+      "employer": 58.1,
+      "employeeNonEmploymentInjury": 46.5,
+      "employeeWithNEI": 46.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 104.6,
+      "totalWithoutNEI": 58.1
+     }
+    },
+    {
+     "no": 52,
+     "wageAbove": 4700,
+     "wageUpTo": 4800,
+     "assumedMonthlyWage": 4750.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 59.4,
+      "employerInvalidity": 23.75,
+      "employer": 83.15,
+      "employeeInvalidity": 23.75,
+      "employeeNonEmploymentInjury": 47.5,
+      "employeeWithNEI": 71.25,
+      "employeeWithoutNEI": 23.75,
+      "totalWithNEI": 154.4,
+      "totalWithoutNEI": 106.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 59.4,
+      "employer": 59.4,
+      "employeeNonEmploymentInjury": 47.5,
+      "employeeWithNEI": 47.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 106.9,
+      "totalWithoutNEI": 59.4
+     }
+    },
+    {
+     "no": 53,
+     "wageAbove": 4800,
+     "wageUpTo": 4900,
+     "assumedMonthlyWage": 4850.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 60.6,
+      "employerInvalidity": 24.25,
+      "employer": 84.85,
+      "employeeInvalidity": 24.25,
+      "employeeNonEmploymentInjury": 48.5,
+      "employeeWithNEI": 72.75,
+      "employeeWithoutNEI": 24.25,
+      "totalWithNEI": 157.6,
+      "totalWithoutNEI": 109.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 60.6,
+      "employer": 60.6,
+      "employeeNonEmploymentInjury": 48.5,
+      "employeeWithNEI": 48.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 109.1,
+      "totalWithoutNEI": 60.6
+     }
+    },
+    {
+     "no": 54,
+     "wageAbove": 4900,
+     "wageUpTo": 5000,
+     "assumedMonthlyWage": 4950.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 61.9,
+      "employerInvalidity": 24.75,
+      "employer": 86.65,
+      "employeeInvalidity": 24.75,
+      "employeeNonEmploymentInjury": 49.5,
+      "employeeWithNEI": 74.25,
+      "employeeWithoutNEI": 24.75,
+      "totalWithNEI": 160.9,
+      "totalWithoutNEI": 111.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 61.9,
+      "employer": 61.9,
+      "employeeNonEmploymentInjury": 49.5,
+      "employeeWithNEI": 49.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 111.4,
+      "totalWithoutNEI": 61.9
+     }
+    },
+    {
+     "no": 55,
+     "wageAbove": 5000,
+     "wageUpTo": 5100,
+     "assumedMonthlyWage": 5050.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 63.1,
+      "employerInvalidity": 25.25,
+      "employer": 88.35,
+      "employeeInvalidity": 25.25,
+      "employeeNonEmploymentInjury": 50.5,
+      "employeeWithNEI": 75.75,
+      "employeeWithoutNEI": 25.25,
+      "totalWithNEI": 164.1,
+      "totalWithoutNEI": 113.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 63.1,
+      "employer": 63.1,
+      "employeeNonEmploymentInjury": 50.5,
+      "employeeWithNEI": 50.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 113.6,
+      "totalWithoutNEI": 63.1
+     }
+    },
+    {
+     "no": 56,
+     "wageAbove": 5100,
+     "wageUpTo": 5200,
+     "assumedMonthlyWage": 5150.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 64.4,
+      "employerInvalidity": 25.75,
+      "employer": 90.15,
+      "employeeInvalidity": 25.75,
+      "employeeNonEmploymentInjury": 51.5,
+      "employeeWithNEI": 77.25,
+      "employeeWithoutNEI": 25.75,
+      "totalWithNEI": 167.4,
+      "totalWithoutNEI": 115.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 64.4,
+      "employer": 64.4,
+      "employeeNonEmploymentInjury": 51.5,
+      "employeeWithNEI": 51.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 115.9,
+      "totalWithoutNEI": 64.4
+     }
+    },
+    {
+     "no": 57,
+     "wageAbove": 5200,
+     "wageUpTo": 5300,
+     "assumedMonthlyWage": 5250.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 65.6,
+      "employerInvalidity": 26.25,
+      "employer": 91.85,
+      "employeeInvalidity": 26.25,
+      "employeeNonEmploymentInjury": 52.5,
+      "employeeWithNEI": 78.75,
+      "employeeWithoutNEI": 26.25,
+      "totalWithNEI": 170.6,
+      "totalWithoutNEI": 118.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 65.6,
+      "employer": 65.6,
+      "employeeNonEmploymentInjury": 52.5,
+      "employeeWithNEI": 52.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 118.1,
+      "totalWithoutNEI": 65.6
+     }
+    },
+    {
+     "no": 58,
+     "wageAbove": 5300,
+     "wageUpTo": 5400,
+     "assumedMonthlyWage": 5350.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 66.9,
+      "employerInvalidity": 26.75,
+      "employer": 93.65,
+      "employeeInvalidity": 26.75,
+      "employeeNonEmploymentInjury": 53.5,
+      "employeeWithNEI": 80.25,
+      "employeeWithoutNEI": 26.75,
+      "totalWithNEI": 173.9,
+      "totalWithoutNEI": 120.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 66.9,
+      "employer": 66.9,
+      "employeeNonEmploymentInjury": 53.5,
+      "employeeWithNEI": 53.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 120.4,
+      "totalWithoutNEI": 66.9
+     }
+    },
+    {
+     "no": 59,
+     "wageAbove": 5400,
+     "wageUpTo": 5500,
+     "assumedMonthlyWage": 5450.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 68.1,
+      "employerInvalidity": 27.25,
+      "employer": 95.35,
+      "employeeInvalidity": 27.25,
+      "employeeNonEmploymentInjury": 54.5,
+      "employeeWithNEI": 81.75,
+      "employeeWithoutNEI": 27.25,
+      "totalWithNEI": 177.1,
+      "totalWithoutNEI": 122.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 68.1,
+      "employer": 68.1,
+      "employeeNonEmploymentInjury": 54.5,
+      "employeeWithNEI": 54.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 122.6,
+      "totalWithoutNEI": 68.1
+     }
+    },
+    {
+     "no": 60,
+     "wageAbove": 5500,
+     "wageUpTo": 5600,
+     "assumedMonthlyWage": 5550.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 69.4,
+      "employerInvalidity": 27.75,
+      "employer": 97.15,
+      "employeeInvalidity": 27.75,
+      "employeeNonEmploymentInjury": 55.5,
+      "employeeWithNEI": 83.25,
+      "employeeWithoutNEI": 27.75,
+      "totalWithNEI": 180.4,
+      "totalWithoutNEI": 124.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 69.4,
+      "employer": 69.4,
+      "employeeNonEmploymentInjury": 55.5,
+      "employeeWithNEI": 55.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 124.9,
+      "totalWithoutNEI": 69.4
+     }
+    },
+    {
+     "no": 61,
+     "wageAbove": 5600,
+     "wageUpTo": 5700,
+     "assumedMonthlyWage": 5650.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 70.6,
+      "employerInvalidity": 28.25,
+      "employer": 98.85,
+      "employeeInvalidity": 28.25,
+      "employeeNonEmploymentInjury": 56.5,
+      "employeeWithNEI": 84.75,
+      "employeeWithoutNEI": 28.25,
+      "totalWithNEI": 183.6,
+      "totalWithoutNEI": 127.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 70.6,
+      "employer": 70.6,
+      "employeeNonEmploymentInjury": 56.5,
+      "employeeWithNEI": 56.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 127.1,
+      "totalWithoutNEI": 70.6
+     }
+    },
+    {
+     "no": 62,
+     "wageAbove": 5700,
+     "wageUpTo": 5800,
+     "assumedMonthlyWage": 5750.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 71.9,
+      "employerInvalidity": 28.75,
+      "employer": 100.65,
+      "employeeInvalidity": 28.75,
+      "employeeNonEmploymentInjury": 57.5,
+      "employeeWithNEI": 86.25,
+      "employeeWithoutNEI": 28.75,
+      "totalWithNEI": 186.9,
+      "totalWithoutNEI": 129.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 71.9,
+      "employer": 71.9,
+      "employeeNonEmploymentInjury": 57.5,
+      "employeeWithNEI": 57.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 129.4,
+      "totalWithoutNEI": 71.9
+     }
+    },
+    {
+     "no": 63,
+     "wageAbove": 5800,
+     "wageUpTo": 5900,
+     "assumedMonthlyWage": 5850.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 73.1,
+      "employerInvalidity": 29.25,
+      "employer": 102.35,
+      "employeeInvalidity": 29.25,
+      "employeeNonEmploymentInjury": 58.5,
+      "employeeWithNEI": 87.75,
+      "employeeWithoutNEI": 29.25,
+      "totalWithNEI": 190.1,
+      "totalWithoutNEI": 131.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 73.1,
+      "employer": 73.1,
+      "employeeNonEmploymentInjury": 58.5,
+      "employeeWithNEI": 58.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 131.6,
+      "totalWithoutNEI": 73.1
+     }
+    },
+    {
+     "no": 64,
+     "wageAbove": 5900,
+     "wageUpTo": 6000,
+     "assumedMonthlyWage": 5950.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 74.4,
+      "employerInvalidity": 29.75,
+      "employer": 104.15,
+      "employeeInvalidity": 29.75,
+      "employeeNonEmploymentInjury": 59.5,
+      "employeeWithNEI": 89.25,
+      "employeeWithoutNEI": 29.75,
+      "totalWithNEI": 193.4,
+      "totalWithoutNEI": 133.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 74.4,
+      "employer": 74.4,
+      "employeeNonEmploymentInjury": 59.5,
+      "employeeWithNEI": 59.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 133.9,
+      "totalWithoutNEI": 74.4
+     }
+    },
+    {
+     "no": 65,
+     "wageAbove": 6000,
+     "wageUpTo": null,
+     "assumedMonthlyWage": 5950.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 74.4,
+      "employerInvalidity": 29.75,
+      "employer": 104.15,
+      "employeeInvalidity": 29.75,
+      "employeeNonEmploymentInjury": 59.5,
+      "employeeWithNEI": 89.25,
+      "employeeWithoutNEI": 29.75,
+      "totalWithNEI": 193.4,
+      "totalWithoutNEI": 133.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 74.4,
+      "employer": 74.4,
+      "employeeNonEmploymentInjury": 59.5,
+      "employeeWithNEI": 59.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 133.9,
+      "totalWithoutNEI": 74.4
+     }
+    }
+   ]
+  },
+  {
+   "phase": 3,
+   "thirdSchedulePart": {
+    "firstCategory": "III",
+    "secondCategory": "VI"
+   },
+   "effectiveFrom": "2031-06-01",
+   "effectiveTo": null,
+   "nominalNEIRate": 0.0125,
+   "status": "legislated (Act A1788); phase dates gazetted in P.U.(B) 196/2026 (dated 25 May 2026, published 29 May 2026)",
+   "bands": [
+    {
+     "no": 1,
+     "wageAbove": 0,
+     "wageUpTo": 30,
+     "assumedMonthlyWage": 20.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 0.3,
+      "employerInvalidity": 0.1,
+      "employer": 0.4,
+      "employeeInvalidity": 0.1,
+      "employeeNonEmploymentInjury": 0.3,
+      "employeeWithNEI": 0.4,
+      "employeeWithoutNEI": 0.1,
+      "totalWithNEI": 0.8,
+      "totalWithoutNEI": 0.5
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 0.3,
+      "employer": 0.3,
+      "employeeNonEmploymentInjury": 0.3,
+      "employeeWithNEI": 0.3,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 0.6,
+      "totalWithoutNEI": 0.3
+     }
+    },
+    {
+     "no": 2,
+     "wageAbove": 30,
+     "wageUpTo": 50,
+     "assumedMonthlyWage": 40.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 0.5,
+      "employerInvalidity": 0.2,
+      "employer": 0.7,
+      "employeeInvalidity": 0.2,
+      "employeeNonEmploymentInjury": 0.5,
+      "employeeWithNEI": 0.7,
+      "employeeWithoutNEI": 0.2,
+      "totalWithNEI": 1.4,
+      "totalWithoutNEI": 0.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 0.5,
+      "employer": 0.5,
+      "employeeNonEmploymentInjury": 0.5,
+      "employeeWithNEI": 0.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 1.0,
+      "totalWithoutNEI": 0.5
+     }
+    },
+    {
+     "no": 3,
+     "wageAbove": 50,
+     "wageUpTo": 70,
+     "assumedMonthlyWage": 60.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 0.8,
+      "employerInvalidity": 0.3,
+      "employer": 1.1,
+      "employeeInvalidity": 0.3,
+      "employeeNonEmploymentInjury": 0.8,
+      "employeeWithNEI": 1.1,
+      "employeeWithoutNEI": 0.3,
+      "totalWithNEI": 2.2,
+      "totalWithoutNEI": 1.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 0.8,
+      "employer": 0.8,
+      "employeeNonEmploymentInjury": 0.8,
+      "employeeWithNEI": 0.8,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 1.6,
+      "totalWithoutNEI": 0.8
+     }
+    },
+    {
+     "no": 4,
+     "wageAbove": 70,
+     "wageUpTo": 100,
+     "assumedMonthlyWage": 85.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 1.1,
+      "employerInvalidity": 0.4,
+      "employer": 1.5,
+      "employeeInvalidity": 0.4,
+      "employeeNonEmploymentInjury": 1.1,
+      "employeeWithNEI": 1.5,
+      "employeeWithoutNEI": 0.4,
+      "totalWithNEI": 3.0,
+      "totalWithoutNEI": 1.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 1.1,
+      "employer": 1.1,
+      "employeeNonEmploymentInjury": 1.1,
+      "employeeWithNEI": 1.1,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 2.2,
+      "totalWithoutNEI": 1.1
+     }
+    },
+    {
+     "no": 5,
+     "wageAbove": 100,
+     "wageUpTo": 140,
+     "assumedMonthlyWage": 120.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 1.5,
+      "employerInvalidity": 0.6,
+      "employer": 2.1,
+      "employeeInvalidity": 0.6,
+      "employeeNonEmploymentInjury": 1.5,
+      "employeeWithNEI": 2.1,
+      "employeeWithoutNEI": 0.6,
+      "totalWithNEI": 4.2,
+      "totalWithoutNEI": 2.7
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 1.5,
+      "employer": 1.5,
+      "employeeNonEmploymentInjury": 1.5,
+      "employeeWithNEI": 1.5,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 3.0,
+      "totalWithoutNEI": 1.5
+     }
+    },
+    {
+     "no": 6,
+     "wageAbove": 140,
+     "wageUpTo": 200,
+     "assumedMonthlyWage": 170.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 2.1,
+      "employerInvalidity": 0.85,
+      "employer": 2.95,
+      "employeeInvalidity": 0.85,
+      "employeeNonEmploymentInjury": 2.1,
+      "employeeWithNEI": 2.95,
+      "employeeWithoutNEI": 0.85,
+      "totalWithNEI": 5.9,
+      "totalWithoutNEI": 3.8
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 2.1,
+      "employer": 2.1,
+      "employeeNonEmploymentInjury": 2.1,
+      "employeeWithNEI": 2.1,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 4.2,
+      "totalWithoutNEI": 2.1
+     }
+    },
+    {
+     "no": 7,
+     "wageAbove": 200,
+     "wageUpTo": 300,
+     "assumedMonthlyWage": 250.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 3.1,
+      "employerInvalidity": 1.25,
+      "employer": 4.35,
+      "employeeInvalidity": 1.25,
+      "employeeNonEmploymentInjury": 3.1,
+      "employeeWithNEI": 4.35,
+      "employeeWithoutNEI": 1.25,
+      "totalWithNEI": 8.7,
+      "totalWithoutNEI": 5.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 3.1,
+      "employer": 3.1,
+      "employeeNonEmploymentInjury": 3.1,
+      "employeeWithNEI": 3.1,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 6.2,
+      "totalWithoutNEI": 3.1
+     }
+    },
+    {
+     "no": 8,
+     "wageAbove": 300,
+     "wageUpTo": 400,
+     "assumedMonthlyWage": 350.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 4.4,
+      "employerInvalidity": 1.75,
+      "employer": 6.15,
+      "employeeInvalidity": 1.75,
+      "employeeNonEmploymentInjury": 4.4,
+      "employeeWithNEI": 6.15,
+      "employeeWithoutNEI": 1.75,
+      "totalWithNEI": 12.3,
+      "totalWithoutNEI": 7.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 4.4,
+      "employer": 4.4,
+      "employeeNonEmploymentInjury": 4.4,
+      "employeeWithNEI": 4.4,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 8.8,
+      "totalWithoutNEI": 4.4
+     }
+    },
+    {
+     "no": 9,
+     "wageAbove": 400,
+     "wageUpTo": 500,
+     "assumedMonthlyWage": 450.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 5.6,
+      "employerInvalidity": 2.25,
+      "employer": 7.85,
+      "employeeInvalidity": 2.25,
+      "employeeNonEmploymentInjury": 5.6,
+      "employeeWithNEI": 7.85,
+      "employeeWithoutNEI": 2.25,
+      "totalWithNEI": 15.7,
+      "totalWithoutNEI": 10.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 5.6,
+      "employer": 5.6,
+      "employeeNonEmploymentInjury": 5.6,
+      "employeeWithNEI": 5.6,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 11.2,
+      "totalWithoutNEI": 5.6
+     }
+    },
+    {
+     "no": 10,
+     "wageAbove": 500,
+     "wageUpTo": 600,
+     "assumedMonthlyWage": 550.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 6.9,
+      "employerInvalidity": 2.75,
+      "employer": 9.65,
+      "employeeInvalidity": 2.75,
+      "employeeNonEmploymentInjury": 6.9,
+      "employeeWithNEI": 9.65,
+      "employeeWithoutNEI": 2.75,
+      "totalWithNEI": 19.3,
+      "totalWithoutNEI": 12.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 6.9,
+      "employer": 6.9,
+      "employeeNonEmploymentInjury": 6.9,
+      "employeeWithNEI": 6.9,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 13.8,
+      "totalWithoutNEI": 6.9
+     }
+    },
+    {
+     "no": 11,
+     "wageAbove": 600,
+     "wageUpTo": 700,
+     "assumedMonthlyWage": 650.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 8.1,
+      "employerInvalidity": 3.25,
+      "employer": 11.35,
+      "employeeInvalidity": 3.25,
+      "employeeNonEmploymentInjury": 8.1,
+      "employeeWithNEI": 11.35,
+      "employeeWithoutNEI": 3.25,
+      "totalWithNEI": 22.7,
+      "totalWithoutNEI": 14.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 8.1,
+      "employer": 8.1,
+      "employeeNonEmploymentInjury": 8.1,
+      "employeeWithNEI": 8.1,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 16.2,
+      "totalWithoutNEI": 8.1
+     }
+    },
+    {
+     "no": 12,
+     "wageAbove": 700,
+     "wageUpTo": 800,
+     "assumedMonthlyWage": 750.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 9.4,
+      "employerInvalidity": 3.75,
+      "employer": 13.15,
+      "employeeInvalidity": 3.75,
+      "employeeNonEmploymentInjury": 9.4,
+      "employeeWithNEI": 13.15,
+      "employeeWithoutNEI": 3.75,
+      "totalWithNEI": 26.3,
+      "totalWithoutNEI": 16.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 9.4,
+      "employer": 9.4,
+      "employeeNonEmploymentInjury": 9.4,
+      "employeeWithNEI": 9.4,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 18.8,
+      "totalWithoutNEI": 9.4
+     }
+    },
+    {
+     "no": 13,
+     "wageAbove": 800,
+     "wageUpTo": 900,
+     "assumedMonthlyWage": 850.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 10.6,
+      "employerInvalidity": 4.25,
+      "employer": 14.85,
+      "employeeInvalidity": 4.25,
+      "employeeNonEmploymentInjury": 10.6,
+      "employeeWithNEI": 14.85,
+      "employeeWithoutNEI": 4.25,
+      "totalWithNEI": 29.7,
+      "totalWithoutNEI": 19.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 10.6,
+      "employer": 10.6,
+      "employeeNonEmploymentInjury": 10.6,
+      "employeeWithNEI": 10.6,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 21.2,
+      "totalWithoutNEI": 10.6
+     }
+    },
+    {
+     "no": 14,
+     "wageAbove": 900,
+     "wageUpTo": 1000,
+     "assumedMonthlyWage": 950.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 11.9,
+      "employerInvalidity": 4.75,
+      "employer": 16.65,
+      "employeeInvalidity": 4.75,
+      "employeeNonEmploymentInjury": 11.9,
+      "employeeWithNEI": 16.65,
+      "employeeWithoutNEI": 4.75,
+      "totalWithNEI": 33.3,
+      "totalWithoutNEI": 21.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 11.9,
+      "employer": 11.9,
+      "employeeNonEmploymentInjury": 11.9,
+      "employeeWithNEI": 11.9,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 23.8,
+      "totalWithoutNEI": 11.9
+     }
+    },
+    {
+     "no": 15,
+     "wageAbove": 1000,
+     "wageUpTo": 1100,
+     "assumedMonthlyWage": 1050.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 13.1,
+      "employerInvalidity": 5.25,
+      "employer": 18.35,
+      "employeeInvalidity": 5.25,
+      "employeeNonEmploymentInjury": 13.1,
+      "employeeWithNEI": 18.35,
+      "employeeWithoutNEI": 5.25,
+      "totalWithNEI": 36.7,
+      "totalWithoutNEI": 23.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 13.1,
+      "employer": 13.1,
+      "employeeNonEmploymentInjury": 13.1,
+      "employeeWithNEI": 13.1,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 26.2,
+      "totalWithoutNEI": 13.1
+     }
+    },
+    {
+     "no": 16,
+     "wageAbove": 1100,
+     "wageUpTo": 1200,
+     "assumedMonthlyWage": 1150.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 14.4,
+      "employerInvalidity": 5.75,
+      "employer": 20.15,
+      "employeeInvalidity": 5.75,
+      "employeeNonEmploymentInjury": 14.4,
+      "employeeWithNEI": 20.15,
+      "employeeWithoutNEI": 5.75,
+      "totalWithNEI": 40.3,
+      "totalWithoutNEI": 25.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 14.4,
+      "employer": 14.4,
+      "employeeNonEmploymentInjury": 14.4,
+      "employeeWithNEI": 14.4,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 28.8,
+      "totalWithoutNEI": 14.4
+     }
+    },
+    {
+     "no": 17,
+     "wageAbove": 1200,
+     "wageUpTo": 1300,
+     "assumedMonthlyWage": 1250.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 15.6,
+      "employerInvalidity": 6.25,
+      "employer": 21.85,
+      "employeeInvalidity": 6.25,
+      "employeeNonEmploymentInjury": 15.6,
+      "employeeWithNEI": 21.85,
+      "employeeWithoutNEI": 6.25,
+      "totalWithNEI": 43.7,
+      "totalWithoutNEI": 28.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 15.6,
+      "employer": 15.6,
+      "employeeNonEmploymentInjury": 15.6,
+      "employeeWithNEI": 15.6,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 31.2,
+      "totalWithoutNEI": 15.6
+     }
+    },
+    {
+     "no": 18,
+     "wageAbove": 1300,
+     "wageUpTo": 1400,
+     "assumedMonthlyWage": 1350.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 16.9,
+      "employerInvalidity": 6.75,
+      "employer": 23.65,
+      "employeeInvalidity": 6.75,
+      "employeeNonEmploymentInjury": 16.9,
+      "employeeWithNEI": 23.65,
+      "employeeWithoutNEI": 6.75,
+      "totalWithNEI": 47.3,
+      "totalWithoutNEI": 30.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 16.9,
+      "employer": 16.9,
+      "employeeNonEmploymentInjury": 16.9,
+      "employeeWithNEI": 16.9,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 33.8,
+      "totalWithoutNEI": 16.9
+     }
+    },
+    {
+     "no": 19,
+     "wageAbove": 1400,
+     "wageUpTo": 1500,
+     "assumedMonthlyWage": 1450.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 18.1,
+      "employerInvalidity": 7.25,
+      "employer": 25.35,
+      "employeeInvalidity": 7.25,
+      "employeeNonEmploymentInjury": 18.1,
+      "employeeWithNEI": 25.35,
+      "employeeWithoutNEI": 7.25,
+      "totalWithNEI": 50.7,
+      "totalWithoutNEI": 32.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 18.1,
+      "employer": 18.1,
+      "employeeNonEmploymentInjury": 18.1,
+      "employeeWithNEI": 18.1,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 36.2,
+      "totalWithoutNEI": 18.1
+     }
+    },
+    {
+     "no": 20,
+     "wageAbove": 1500,
+     "wageUpTo": 1600,
+     "assumedMonthlyWage": 1550.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 19.4,
+      "employerInvalidity": 7.75,
+      "employer": 27.15,
+      "employeeInvalidity": 7.75,
+      "employeeNonEmploymentInjury": 19.4,
+      "employeeWithNEI": 27.15,
+      "employeeWithoutNEI": 7.75,
+      "totalWithNEI": 54.3,
+      "totalWithoutNEI": 34.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 19.4,
+      "employer": 19.4,
+      "employeeNonEmploymentInjury": 19.4,
+      "employeeWithNEI": 19.4,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 38.8,
+      "totalWithoutNEI": 19.4
+     }
+    },
+    {
+     "no": 21,
+     "wageAbove": 1600,
+     "wageUpTo": 1700,
+     "assumedMonthlyWage": 1650.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 20.6,
+      "employerInvalidity": 8.25,
+      "employer": 28.85,
+      "employeeInvalidity": 8.25,
+      "employeeNonEmploymentInjury": 20.6,
+      "employeeWithNEI": 28.85,
+      "employeeWithoutNEI": 8.25,
+      "totalWithNEI": 57.7,
+      "totalWithoutNEI": 37.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 20.6,
+      "employer": 20.6,
+      "employeeNonEmploymentInjury": 20.6,
+      "employeeWithNEI": 20.6,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 41.2,
+      "totalWithoutNEI": 20.6
+     }
+    },
+    {
+     "no": 22,
+     "wageAbove": 1700,
+     "wageUpTo": 1800,
+     "assumedMonthlyWage": 1750.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 21.9,
+      "employerInvalidity": 8.75,
+      "employer": 30.65,
+      "employeeInvalidity": 8.75,
+      "employeeNonEmploymentInjury": 21.9,
+      "employeeWithNEI": 30.65,
+      "employeeWithoutNEI": 8.75,
+      "totalWithNEI": 61.3,
+      "totalWithoutNEI": 39.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 21.9,
+      "employer": 21.9,
+      "employeeNonEmploymentInjury": 21.9,
+      "employeeWithNEI": 21.9,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 43.8,
+      "totalWithoutNEI": 21.9
+     }
+    },
+    {
+     "no": 23,
+     "wageAbove": 1800,
+     "wageUpTo": 1900,
+     "assumedMonthlyWage": 1850.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 23.1,
+      "employerInvalidity": 9.25,
+      "employer": 32.35,
+      "employeeInvalidity": 9.25,
+      "employeeNonEmploymentInjury": 23.1,
+      "employeeWithNEI": 32.35,
+      "employeeWithoutNEI": 9.25,
+      "totalWithNEI": 64.7,
+      "totalWithoutNEI": 41.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 23.1,
+      "employer": 23.1,
+      "employeeNonEmploymentInjury": 23.1,
+      "employeeWithNEI": 23.1,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 46.2,
+      "totalWithoutNEI": 23.1
+     }
+    },
+    {
+     "no": 24,
+     "wageAbove": 1900,
+     "wageUpTo": 2000,
+     "assumedMonthlyWage": 1950.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 24.4,
+      "employerInvalidity": 9.75,
+      "employer": 34.15,
+      "employeeInvalidity": 9.75,
+      "employeeNonEmploymentInjury": 24.4,
+      "employeeWithNEI": 34.15,
+      "employeeWithoutNEI": 9.75,
+      "totalWithNEI": 68.3,
+      "totalWithoutNEI": 43.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 24.4,
+      "employer": 24.4,
+      "employeeNonEmploymentInjury": 24.4,
+      "employeeWithNEI": 24.4,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 48.8,
+      "totalWithoutNEI": 24.4
+     }
+    },
+    {
+     "no": 25,
+     "wageAbove": 2000,
+     "wageUpTo": 2100,
+     "assumedMonthlyWage": 2050.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 25.6,
+      "employerInvalidity": 10.25,
+      "employer": 35.85,
+      "employeeInvalidity": 10.25,
+      "employeeNonEmploymentInjury": 25.6,
+      "employeeWithNEI": 35.85,
+      "employeeWithoutNEI": 10.25,
+      "totalWithNEI": 71.7,
+      "totalWithoutNEI": 46.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 25.6,
+      "employer": 25.6,
+      "employeeNonEmploymentInjury": 25.6,
+      "employeeWithNEI": 25.6,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 51.2,
+      "totalWithoutNEI": 25.6
+     }
+    },
+    {
+     "no": 26,
+     "wageAbove": 2100,
+     "wageUpTo": 2200,
+     "assumedMonthlyWage": 2150.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 26.9,
+      "employerInvalidity": 10.75,
+      "employer": 37.65,
+      "employeeInvalidity": 10.75,
+      "employeeNonEmploymentInjury": 26.9,
+      "employeeWithNEI": 37.65,
+      "employeeWithoutNEI": 10.75,
+      "totalWithNEI": 75.3,
+      "totalWithoutNEI": 48.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 26.9,
+      "employer": 26.9,
+      "employeeNonEmploymentInjury": 26.9,
+      "employeeWithNEI": 26.9,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 53.8,
+      "totalWithoutNEI": 26.9
+     }
+    },
+    {
+     "no": 27,
+     "wageAbove": 2200,
+     "wageUpTo": 2300,
+     "assumedMonthlyWage": 2250.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 28.1,
+      "employerInvalidity": 11.25,
+      "employer": 39.35,
+      "employeeInvalidity": 11.25,
+      "employeeNonEmploymentInjury": 28.1,
+      "employeeWithNEI": 39.35,
+      "employeeWithoutNEI": 11.25,
+      "totalWithNEI": 78.7,
+      "totalWithoutNEI": 50.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 28.1,
+      "employer": 28.1,
+      "employeeNonEmploymentInjury": 28.1,
+      "employeeWithNEI": 28.1,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 56.2,
+      "totalWithoutNEI": 28.1
+     }
+    },
+    {
+     "no": 28,
+     "wageAbove": 2300,
+     "wageUpTo": 2400,
+     "assumedMonthlyWage": 2350.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 29.4,
+      "employerInvalidity": 11.75,
+      "employer": 41.15,
+      "employeeInvalidity": 11.75,
+      "employeeNonEmploymentInjury": 29.4,
+      "employeeWithNEI": 41.15,
+      "employeeWithoutNEI": 11.75,
+      "totalWithNEI": 82.3,
+      "totalWithoutNEI": 52.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 29.4,
+      "employer": 29.4,
+      "employeeNonEmploymentInjury": 29.4,
+      "employeeWithNEI": 29.4,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 58.8,
+      "totalWithoutNEI": 29.4
+     }
+    },
+    {
+     "no": 29,
+     "wageAbove": 2400,
+     "wageUpTo": 2500,
+     "assumedMonthlyWage": 2450.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 30.6,
+      "employerInvalidity": 12.25,
+      "employer": 42.85,
+      "employeeInvalidity": 12.25,
+      "employeeNonEmploymentInjury": 30.6,
+      "employeeWithNEI": 42.85,
+      "employeeWithoutNEI": 12.25,
+      "totalWithNEI": 85.7,
+      "totalWithoutNEI": 55.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 30.6,
+      "employer": 30.6,
+      "employeeNonEmploymentInjury": 30.6,
+      "employeeWithNEI": 30.6,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 61.2,
+      "totalWithoutNEI": 30.6
+     }
+    },
+    {
+     "no": 30,
+     "wageAbove": 2500,
+     "wageUpTo": 2600,
+     "assumedMonthlyWage": 2550.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 31.9,
+      "employerInvalidity": 12.75,
+      "employer": 44.65,
+      "employeeInvalidity": 12.75,
+      "employeeNonEmploymentInjury": 31.9,
+      "employeeWithNEI": 44.65,
+      "employeeWithoutNEI": 12.75,
+      "totalWithNEI": 89.3,
+      "totalWithoutNEI": 57.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 31.9,
+      "employer": 31.9,
+      "employeeNonEmploymentInjury": 31.9,
+      "employeeWithNEI": 31.9,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 63.8,
+      "totalWithoutNEI": 31.9
+     }
+    },
+    {
+     "no": 31,
+     "wageAbove": 2600,
+     "wageUpTo": 2700,
+     "assumedMonthlyWage": 2650.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 33.1,
+      "employerInvalidity": 13.25,
+      "employer": 46.35,
+      "employeeInvalidity": 13.25,
+      "employeeNonEmploymentInjury": 33.1,
+      "employeeWithNEI": 46.35,
+      "employeeWithoutNEI": 13.25,
+      "totalWithNEI": 92.7,
+      "totalWithoutNEI": 59.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 33.1,
+      "employer": 33.1,
+      "employeeNonEmploymentInjury": 33.1,
+      "employeeWithNEI": 33.1,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 66.2,
+      "totalWithoutNEI": 33.1
+     }
+    },
+    {
+     "no": 32,
+     "wageAbove": 2700,
+     "wageUpTo": 2800,
+     "assumedMonthlyWage": 2750.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 34.4,
+      "employerInvalidity": 13.75,
+      "employer": 48.15,
+      "employeeInvalidity": 13.75,
+      "employeeNonEmploymentInjury": 34.4,
+      "employeeWithNEI": 48.15,
+      "employeeWithoutNEI": 13.75,
+      "totalWithNEI": 96.3,
+      "totalWithoutNEI": 61.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 34.4,
+      "employer": 34.4,
+      "employeeNonEmploymentInjury": 34.4,
+      "employeeWithNEI": 34.4,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 68.8,
+      "totalWithoutNEI": 34.4
+     }
+    },
+    {
+     "no": 33,
+     "wageAbove": 2800,
+     "wageUpTo": 2900,
+     "assumedMonthlyWage": 2850.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 35.6,
+      "employerInvalidity": 14.25,
+      "employer": 49.85,
+      "employeeInvalidity": 14.25,
+      "employeeNonEmploymentInjury": 35.6,
+      "employeeWithNEI": 49.85,
+      "employeeWithoutNEI": 14.25,
+      "totalWithNEI": 99.7,
+      "totalWithoutNEI": 64.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 35.6,
+      "employer": 35.6,
+      "employeeNonEmploymentInjury": 35.6,
+      "employeeWithNEI": 35.6,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 71.2,
+      "totalWithoutNEI": 35.6
+     }
+    },
+    {
+     "no": 34,
+     "wageAbove": 2900,
+     "wageUpTo": 3000,
+     "assumedMonthlyWage": 2950.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 36.9,
+      "employerInvalidity": 14.75,
+      "employer": 51.65,
+      "employeeInvalidity": 14.75,
+      "employeeNonEmploymentInjury": 36.9,
+      "employeeWithNEI": 51.65,
+      "employeeWithoutNEI": 14.75,
+      "totalWithNEI": 103.3,
+      "totalWithoutNEI": 66.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 36.9,
+      "employer": 36.9,
+      "employeeNonEmploymentInjury": 36.9,
+      "employeeWithNEI": 36.9,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 73.8,
+      "totalWithoutNEI": 36.9
+     }
+    },
+    {
+     "no": 35,
+     "wageAbove": 3000,
+     "wageUpTo": 3100,
+     "assumedMonthlyWage": 3050.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 38.1,
+      "employerInvalidity": 15.25,
+      "employer": 53.35,
+      "employeeInvalidity": 15.25,
+      "employeeNonEmploymentInjury": 38.1,
+      "employeeWithNEI": 53.35,
+      "employeeWithoutNEI": 15.25,
+      "totalWithNEI": 106.7,
+      "totalWithoutNEI": 68.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 38.1,
+      "employer": 38.1,
+      "employeeNonEmploymentInjury": 38.1,
+      "employeeWithNEI": 38.1,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 76.2,
+      "totalWithoutNEI": 38.1
+     }
+    },
+    {
+     "no": 36,
+     "wageAbove": 3100,
+     "wageUpTo": 3200,
+     "assumedMonthlyWage": 3150.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 39.4,
+      "employerInvalidity": 15.75,
+      "employer": 55.15,
+      "employeeInvalidity": 15.75,
+      "employeeNonEmploymentInjury": 39.4,
+      "employeeWithNEI": 55.15,
+      "employeeWithoutNEI": 15.75,
+      "totalWithNEI": 110.3,
+      "totalWithoutNEI": 70.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 39.4,
+      "employer": 39.4,
+      "employeeNonEmploymentInjury": 39.4,
+      "employeeWithNEI": 39.4,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 78.8,
+      "totalWithoutNEI": 39.4
+     }
+    },
+    {
+     "no": 37,
+     "wageAbove": 3200,
+     "wageUpTo": 3300,
+     "assumedMonthlyWage": 3250.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 40.6,
+      "employerInvalidity": 16.25,
+      "employer": 56.85,
+      "employeeInvalidity": 16.25,
+      "employeeNonEmploymentInjury": 40.6,
+      "employeeWithNEI": 56.85,
+      "employeeWithoutNEI": 16.25,
+      "totalWithNEI": 113.7,
+      "totalWithoutNEI": 73.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 40.6,
+      "employer": 40.6,
+      "employeeNonEmploymentInjury": 40.6,
+      "employeeWithNEI": 40.6,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 81.2,
+      "totalWithoutNEI": 40.6
+     }
+    },
+    {
+     "no": 38,
+     "wageAbove": 3300,
+     "wageUpTo": 3400,
+     "assumedMonthlyWage": 3350.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 41.9,
+      "employerInvalidity": 16.75,
+      "employer": 58.65,
+      "employeeInvalidity": 16.75,
+      "employeeNonEmploymentInjury": 41.9,
+      "employeeWithNEI": 58.65,
+      "employeeWithoutNEI": 16.75,
+      "totalWithNEI": 117.3,
+      "totalWithoutNEI": 75.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 41.9,
+      "employer": 41.9,
+      "employeeNonEmploymentInjury": 41.9,
+      "employeeWithNEI": 41.9,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 83.8,
+      "totalWithoutNEI": 41.9
+     }
+    },
+    {
+     "no": 39,
+     "wageAbove": 3400,
+     "wageUpTo": 3500,
+     "assumedMonthlyWage": 3450.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 43.1,
+      "employerInvalidity": 17.25,
+      "employer": 60.35,
+      "employeeInvalidity": 17.25,
+      "employeeNonEmploymentInjury": 43.1,
+      "employeeWithNEI": 60.35,
+      "employeeWithoutNEI": 17.25,
+      "totalWithNEI": 120.7,
+      "totalWithoutNEI": 77.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 43.1,
+      "employer": 43.1,
+      "employeeNonEmploymentInjury": 43.1,
+      "employeeWithNEI": 43.1,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 86.2,
+      "totalWithoutNEI": 43.1
+     }
+    },
+    {
+     "no": 40,
+     "wageAbove": 3500,
+     "wageUpTo": 3600,
+     "assumedMonthlyWage": 3550.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 44.4,
+      "employerInvalidity": 17.75,
+      "employer": 62.15,
+      "employeeInvalidity": 17.75,
+      "employeeNonEmploymentInjury": 44.4,
+      "employeeWithNEI": 62.15,
+      "employeeWithoutNEI": 17.75,
+      "totalWithNEI": 124.3,
+      "totalWithoutNEI": 79.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 44.4,
+      "employer": 44.4,
+      "employeeNonEmploymentInjury": 44.4,
+      "employeeWithNEI": 44.4,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 88.8,
+      "totalWithoutNEI": 44.4
+     }
+    },
+    {
+     "no": 41,
+     "wageAbove": 3600,
+     "wageUpTo": 3700,
+     "assumedMonthlyWage": 3650.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 45.6,
+      "employerInvalidity": 18.25,
+      "employer": 63.85,
+      "employeeInvalidity": 18.25,
+      "employeeNonEmploymentInjury": 45.6,
+      "employeeWithNEI": 63.85,
+      "employeeWithoutNEI": 18.25,
+      "totalWithNEI": 127.7,
+      "totalWithoutNEI": 82.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 45.6,
+      "employer": 45.6,
+      "employeeNonEmploymentInjury": 45.6,
+      "employeeWithNEI": 45.6,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 91.2,
+      "totalWithoutNEI": 45.6
+     }
+    },
+    {
+     "no": 42,
+     "wageAbove": 3700,
+     "wageUpTo": 3800,
+     "assumedMonthlyWage": 3750.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 46.9,
+      "employerInvalidity": 18.75,
+      "employer": 65.65,
+      "employeeInvalidity": 18.75,
+      "employeeNonEmploymentInjury": 46.9,
+      "employeeWithNEI": 65.65,
+      "employeeWithoutNEI": 18.75,
+      "totalWithNEI": 131.3,
+      "totalWithoutNEI": 84.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 46.9,
+      "employer": 46.9,
+      "employeeNonEmploymentInjury": 46.9,
+      "employeeWithNEI": 46.9,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 93.8,
+      "totalWithoutNEI": 46.9
+     }
+    },
+    {
+     "no": 43,
+     "wageAbove": 3800,
+     "wageUpTo": 3900,
+     "assumedMonthlyWage": 3850.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 48.1,
+      "employerInvalidity": 19.25,
+      "employer": 67.35,
+      "employeeInvalidity": 19.25,
+      "employeeNonEmploymentInjury": 48.1,
+      "employeeWithNEI": 67.35,
+      "employeeWithoutNEI": 19.25,
+      "totalWithNEI": 134.7,
+      "totalWithoutNEI": 86.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 48.1,
+      "employer": 48.1,
+      "employeeNonEmploymentInjury": 48.1,
+      "employeeWithNEI": 48.1,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 96.2,
+      "totalWithoutNEI": 48.1
+     }
+    },
+    {
+     "no": 44,
+     "wageAbove": 3900,
+     "wageUpTo": 4000,
+     "assumedMonthlyWage": 3950.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 49.4,
+      "employerInvalidity": 19.75,
+      "employer": 69.15,
+      "employeeInvalidity": 19.75,
+      "employeeNonEmploymentInjury": 49.4,
+      "employeeWithNEI": 69.15,
+      "employeeWithoutNEI": 19.75,
+      "totalWithNEI": 138.3,
+      "totalWithoutNEI": 88.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 49.4,
+      "employer": 49.4,
+      "employeeNonEmploymentInjury": 49.4,
+      "employeeWithNEI": 49.4,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 98.8,
+      "totalWithoutNEI": 49.4
+     }
+    },
+    {
+     "no": 45,
+     "wageAbove": 4000,
+     "wageUpTo": 4100,
+     "assumedMonthlyWage": 4050.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 50.6,
+      "employerInvalidity": 20.25,
+      "employer": 70.85,
+      "employeeInvalidity": 20.25,
+      "employeeNonEmploymentInjury": 50.6,
+      "employeeWithNEI": 70.85,
+      "employeeWithoutNEI": 20.25,
+      "totalWithNEI": 141.7,
+      "totalWithoutNEI": 91.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 50.6,
+      "employer": 50.6,
+      "employeeNonEmploymentInjury": 50.6,
+      "employeeWithNEI": 50.6,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 101.2,
+      "totalWithoutNEI": 50.6
+     }
+    },
+    {
+     "no": 46,
+     "wageAbove": 4100,
+     "wageUpTo": 4200,
+     "assumedMonthlyWage": 4150.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 51.9,
+      "employerInvalidity": 20.75,
+      "employer": 72.65,
+      "employeeInvalidity": 20.75,
+      "employeeNonEmploymentInjury": 51.9,
+      "employeeWithNEI": 72.65,
+      "employeeWithoutNEI": 20.75,
+      "totalWithNEI": 145.3,
+      "totalWithoutNEI": 93.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 51.9,
+      "employer": 51.9,
+      "employeeNonEmploymentInjury": 51.9,
+      "employeeWithNEI": 51.9,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 103.8,
+      "totalWithoutNEI": 51.9
+     }
+    },
+    {
+     "no": 47,
+     "wageAbove": 4200,
+     "wageUpTo": 4300,
+     "assumedMonthlyWage": 4250.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 53.1,
+      "employerInvalidity": 21.25,
+      "employer": 74.35,
+      "employeeInvalidity": 21.25,
+      "employeeNonEmploymentInjury": 53.1,
+      "employeeWithNEI": 74.35,
+      "employeeWithoutNEI": 21.25,
+      "totalWithNEI": 148.7,
+      "totalWithoutNEI": 95.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 53.1,
+      "employer": 53.1,
+      "employeeNonEmploymentInjury": 53.1,
+      "employeeWithNEI": 53.1,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 106.2,
+      "totalWithoutNEI": 53.1
+     }
+    },
+    {
+     "no": 48,
+     "wageAbove": 4300,
+     "wageUpTo": 4400,
+     "assumedMonthlyWage": 4350.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 54.4,
+      "employerInvalidity": 21.75,
+      "employer": 76.15,
+      "employeeInvalidity": 21.75,
+      "employeeNonEmploymentInjury": 54.4,
+      "employeeWithNEI": 76.15,
+      "employeeWithoutNEI": 21.75,
+      "totalWithNEI": 152.3,
+      "totalWithoutNEI": 97.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 54.4,
+      "employer": 54.4,
+      "employeeNonEmploymentInjury": 54.4,
+      "employeeWithNEI": 54.4,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 108.8,
+      "totalWithoutNEI": 54.4
+     }
+    },
+    {
+     "no": 49,
+     "wageAbove": 4400,
+     "wageUpTo": 4500,
+     "assumedMonthlyWage": 4450.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 55.6,
+      "employerInvalidity": 22.25,
+      "employer": 77.85,
+      "employeeInvalidity": 22.25,
+      "employeeNonEmploymentInjury": 55.6,
+      "employeeWithNEI": 77.85,
+      "employeeWithoutNEI": 22.25,
+      "totalWithNEI": 155.7,
+      "totalWithoutNEI": 100.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 55.6,
+      "employer": 55.6,
+      "employeeNonEmploymentInjury": 55.6,
+      "employeeWithNEI": 55.6,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 111.2,
+      "totalWithoutNEI": 55.6
+     }
+    },
+    {
+     "no": 50,
+     "wageAbove": 4500,
+     "wageUpTo": 4600,
+     "assumedMonthlyWage": 4550.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 56.9,
+      "employerInvalidity": 22.75,
+      "employer": 79.65,
+      "employeeInvalidity": 22.75,
+      "employeeNonEmploymentInjury": 56.9,
+      "employeeWithNEI": 79.65,
+      "employeeWithoutNEI": 22.75,
+      "totalWithNEI": 159.3,
+      "totalWithoutNEI": 102.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 56.9,
+      "employer": 56.9,
+      "employeeNonEmploymentInjury": 56.9,
+      "employeeWithNEI": 56.9,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 113.8,
+      "totalWithoutNEI": 56.9
+     }
+    },
+    {
+     "no": 51,
+     "wageAbove": 4600,
+     "wageUpTo": 4700,
+     "assumedMonthlyWage": 4650.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 58.1,
+      "employerInvalidity": 23.25,
+      "employer": 81.35,
+      "employeeInvalidity": 23.25,
+      "employeeNonEmploymentInjury": 58.1,
+      "employeeWithNEI": 81.35,
+      "employeeWithoutNEI": 23.25,
+      "totalWithNEI": 162.7,
+      "totalWithoutNEI": 104.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 58.1,
+      "employer": 58.1,
+      "employeeNonEmploymentInjury": 58.1,
+      "employeeWithNEI": 58.1,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 116.2,
+      "totalWithoutNEI": 58.1
+     }
+    },
+    {
+     "no": 52,
+     "wageAbove": 4700,
+     "wageUpTo": 4800,
+     "assumedMonthlyWage": 4750.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 59.4,
+      "employerInvalidity": 23.75,
+      "employer": 83.15,
+      "employeeInvalidity": 23.75,
+      "employeeNonEmploymentInjury": 59.4,
+      "employeeWithNEI": 83.15,
+      "employeeWithoutNEI": 23.75,
+      "totalWithNEI": 166.3,
+      "totalWithoutNEI": 106.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 59.4,
+      "employer": 59.4,
+      "employeeNonEmploymentInjury": 59.4,
+      "employeeWithNEI": 59.4,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 118.8,
+      "totalWithoutNEI": 59.4
+     }
+    },
+    {
+     "no": 53,
+     "wageAbove": 4800,
+     "wageUpTo": 4900,
+     "assumedMonthlyWage": 4850.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 60.6,
+      "employerInvalidity": 24.25,
+      "employer": 84.85,
+      "employeeInvalidity": 24.25,
+      "employeeNonEmploymentInjury": 60.6,
+      "employeeWithNEI": 84.85,
+      "employeeWithoutNEI": 24.25,
+      "totalWithNEI": 169.7,
+      "totalWithoutNEI": 109.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 60.6,
+      "employer": 60.6,
+      "employeeNonEmploymentInjury": 60.6,
+      "employeeWithNEI": 60.6,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 121.2,
+      "totalWithoutNEI": 60.6
+     }
+    },
+    {
+     "no": 54,
+     "wageAbove": 4900,
+     "wageUpTo": 5000,
+     "assumedMonthlyWage": 4950.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 61.9,
+      "employerInvalidity": 24.75,
+      "employer": 86.65,
+      "employeeInvalidity": 24.75,
+      "employeeNonEmploymentInjury": 61.9,
+      "employeeWithNEI": 86.65,
+      "employeeWithoutNEI": 24.75,
+      "totalWithNEI": 173.3,
+      "totalWithoutNEI": 111.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 61.9,
+      "employer": 61.9,
+      "employeeNonEmploymentInjury": 61.9,
+      "employeeWithNEI": 61.9,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 123.8,
+      "totalWithoutNEI": 61.9
+     }
+    },
+    {
+     "no": 55,
+     "wageAbove": 5000,
+     "wageUpTo": 5100,
+     "assumedMonthlyWage": 5050.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 63.1,
+      "employerInvalidity": 25.25,
+      "employer": 88.35,
+      "employeeInvalidity": 25.25,
+      "employeeNonEmploymentInjury": 63.1,
+      "employeeWithNEI": 88.35,
+      "employeeWithoutNEI": 25.25,
+      "totalWithNEI": 176.7,
+      "totalWithoutNEI": 113.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 63.1,
+      "employer": 63.1,
+      "employeeNonEmploymentInjury": 63.1,
+      "employeeWithNEI": 63.1,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 126.2,
+      "totalWithoutNEI": 63.1
+     }
+    },
+    {
+     "no": 56,
+     "wageAbove": 5100,
+     "wageUpTo": 5200,
+     "assumedMonthlyWage": 5150.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 64.4,
+      "employerInvalidity": 25.75,
+      "employer": 90.15,
+      "employeeInvalidity": 25.75,
+      "employeeNonEmploymentInjury": 64.4,
+      "employeeWithNEI": 90.15,
+      "employeeWithoutNEI": 25.75,
+      "totalWithNEI": 180.3,
+      "totalWithoutNEI": 115.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 64.4,
+      "employer": 64.4,
+      "employeeNonEmploymentInjury": 64.4,
+      "employeeWithNEI": 64.4,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 128.8,
+      "totalWithoutNEI": 64.4
+     }
+    },
+    {
+     "no": 57,
+     "wageAbove": 5200,
+     "wageUpTo": 5300,
+     "assumedMonthlyWage": 5250.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 65.6,
+      "employerInvalidity": 26.25,
+      "employer": 91.85,
+      "employeeInvalidity": 26.25,
+      "employeeNonEmploymentInjury": 65.6,
+      "employeeWithNEI": 91.85,
+      "employeeWithoutNEI": 26.25,
+      "totalWithNEI": 183.7,
+      "totalWithoutNEI": 118.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 65.6,
+      "employer": 65.6,
+      "employeeNonEmploymentInjury": 65.6,
+      "employeeWithNEI": 65.6,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 131.2,
+      "totalWithoutNEI": 65.6
+     }
+    },
+    {
+     "no": 58,
+     "wageAbove": 5300,
+     "wageUpTo": 5400,
+     "assumedMonthlyWage": 5350.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 66.9,
+      "employerInvalidity": 26.75,
+      "employer": 93.65,
+      "employeeInvalidity": 26.75,
+      "employeeNonEmploymentInjury": 66.9,
+      "employeeWithNEI": 93.65,
+      "employeeWithoutNEI": 26.75,
+      "totalWithNEI": 187.3,
+      "totalWithoutNEI": 120.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 66.9,
+      "employer": 66.9,
+      "employeeNonEmploymentInjury": 66.9,
+      "employeeWithNEI": 66.9,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 133.8,
+      "totalWithoutNEI": 66.9
+     }
+    },
+    {
+     "no": 59,
+     "wageAbove": 5400,
+     "wageUpTo": 5500,
+     "assumedMonthlyWage": 5450.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 68.1,
+      "employerInvalidity": 27.25,
+      "employer": 95.35,
+      "employeeInvalidity": 27.25,
+      "employeeNonEmploymentInjury": 68.1,
+      "employeeWithNEI": 95.35,
+      "employeeWithoutNEI": 27.25,
+      "totalWithNEI": 190.7,
+      "totalWithoutNEI": 122.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 68.1,
+      "employer": 68.1,
+      "employeeNonEmploymentInjury": 68.1,
+      "employeeWithNEI": 68.1,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 136.2,
+      "totalWithoutNEI": 68.1
+     }
+    },
+    {
+     "no": 60,
+     "wageAbove": 5500,
+     "wageUpTo": 5600,
+     "assumedMonthlyWage": 5550.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 69.4,
+      "employerInvalidity": 27.75,
+      "employer": 97.15,
+      "employeeInvalidity": 27.75,
+      "employeeNonEmploymentInjury": 69.4,
+      "employeeWithNEI": 97.15,
+      "employeeWithoutNEI": 27.75,
+      "totalWithNEI": 194.3,
+      "totalWithoutNEI": 124.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 69.4,
+      "employer": 69.4,
+      "employeeNonEmploymentInjury": 69.4,
+      "employeeWithNEI": 69.4,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 138.8,
+      "totalWithoutNEI": 69.4
+     }
+    },
+    {
+     "no": 61,
+     "wageAbove": 5600,
+     "wageUpTo": 5700,
+     "assumedMonthlyWage": 5650.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 70.6,
+      "employerInvalidity": 28.25,
+      "employer": 98.85,
+      "employeeInvalidity": 28.25,
+      "employeeNonEmploymentInjury": 70.6,
+      "employeeWithNEI": 98.85,
+      "employeeWithoutNEI": 28.25,
+      "totalWithNEI": 197.7,
+      "totalWithoutNEI": 127.1
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 70.6,
+      "employer": 70.6,
+      "employeeNonEmploymentInjury": 70.6,
+      "employeeWithNEI": 70.6,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 141.2,
+      "totalWithoutNEI": 70.6
+     }
+    },
+    {
+     "no": 62,
+     "wageAbove": 5700,
+     "wageUpTo": 5800,
+     "assumedMonthlyWage": 5750.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 71.9,
+      "employerInvalidity": 28.75,
+      "employer": 100.65,
+      "employeeInvalidity": 28.75,
+      "employeeNonEmploymentInjury": 71.9,
+      "employeeWithNEI": 100.65,
+      "employeeWithoutNEI": 28.75,
+      "totalWithNEI": 201.3,
+      "totalWithoutNEI": 129.4
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 71.9,
+      "employer": 71.9,
+      "employeeNonEmploymentInjury": 71.9,
+      "employeeWithNEI": 71.9,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 143.8,
+      "totalWithoutNEI": 71.9
+     }
+    },
+    {
+     "no": 63,
+     "wageAbove": 5800,
+     "wageUpTo": 5900,
+     "assumedMonthlyWage": 5850.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 73.1,
+      "employerInvalidity": 29.25,
+      "employer": 102.35,
+      "employeeInvalidity": 29.25,
+      "employeeNonEmploymentInjury": 73.1,
+      "employeeWithNEI": 102.35,
+      "employeeWithoutNEI": 29.25,
+      "totalWithNEI": 204.7,
+      "totalWithoutNEI": 131.6
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 73.1,
+      "employer": 73.1,
+      "employeeNonEmploymentInjury": 73.1,
+      "employeeWithNEI": 73.1,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 146.2,
+      "totalWithoutNEI": 73.1
+     }
+    },
+    {
+     "no": 64,
+     "wageAbove": 5900,
+     "wageUpTo": 6000,
+     "assumedMonthlyWage": 5950.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 74.4,
+      "employerInvalidity": 29.75,
+      "employer": 104.15,
+      "employeeInvalidity": 29.75,
+      "employeeNonEmploymentInjury": 74.4,
+      "employeeWithNEI": 104.15,
+      "employeeWithoutNEI": 29.75,
+      "totalWithNEI": 208.3,
+      "totalWithoutNEI": 133.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 74.4,
+      "employer": 74.4,
+      "employeeNonEmploymentInjury": 74.4,
+      "employeeWithNEI": 74.4,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 148.8,
+      "totalWithoutNEI": 74.4
+     }
+    },
+    {
+     "no": 65,
+     "wageAbove": 6000,
+     "wageUpTo": null,
+     "assumedMonthlyWage": 5950.0,
+     "firstCategory": {
+      "employerEmploymentInjury": 74.4,
+      "employerInvalidity": 29.75,
+      "employer": 104.15,
+      "employeeInvalidity": 29.75,
+      "employeeNonEmploymentInjury": 74.4,
+      "employeeWithNEI": 104.15,
+      "employeeWithoutNEI": 29.75,
+      "totalWithNEI": 208.3,
+      "totalWithoutNEI": 133.9
+     },
+     "secondCategory": {
+      "employerEmploymentInjury": 74.4,
+      "employer": 74.4,
+      "employeeNonEmploymentInjury": 74.4,
+      "employeeWithNEI": 74.4,
+      "employeeWithoutNEI": 0,
+      "totalWithNEI": 148.8,
+      "totalWithoutNEI": 74.4
+     }
+    }
+   ]
+  }
+ ],
+ "provenance": [
+  "Parsed from the text layer of Act A1788 (all 6 parts, 65 rows each, row sums verified).",
+  "Phase 1 (Parts I and IV) verified cell-by-cell against PERKESO 'New Contribution Rate Including SKBBK' PDF (English) and 'Jadual Caruman Baharu Termasuk SKBBK' (Malay): 0 mismatches; also visually checked against Pekeliling Majikan Bil. 2/2026 Lampiran 1 & 2 (scanned).",
+  "Deep pass 2026-11-05: independent re-parses of Act A1788 Parts I-VI gave 0 mismatches across 3 phases x 2 categories x 65 bands; PERKESO EN and BM PDFs again 0/455 mismatches each.",
+  "Limit: P.U.(B) 195/2026 makes the ENGLISH text of Act A1788 authoritative, but the Act parsed here is the Malay text. The English statutory text was not retrieved. PERKESO's English PDF matches the Malay schedule on Phase 1, so a difference is unlikely."
+ ],
+ "sources": [
+  {
+   "title": "Akta Keselamatan Sosial Pekerja (Pindaan) 2026 [Akta A1788], Jadual Ketiga (Third Schedule) Parts I-VI and Fourth Schedule para 4",
+   "url": "https://perkeso.gov.my/images/akta/ACT%204/Akta_A1788_-_AKTA_KESELAMATAN_SOSIAL_PEKERJA_PINDAAN_2026.pdf",
+   "accessed": "2026-11-04"
+  },
+  {
+   "title": "PERKESO - Employees' Social Security Act 1969 (Act 4): New Contribution Rate Including SKBBK (PDF created 2026-05-30)",
+   "url": "https://www.perkeso.gov.my/images/lindung/lindung-24-jam/NewContributionRateIncludingSKBBK.pdf",
+   "accessed": "2026-11-04"
+  },
+  {
+   "title": "PERKESO - Jadual Caruman Baharu Termasuk SKBBK (PDF created 2026-06-08)",
+   "url": "https://www.perkeso.gov.my/images/lindung/lindung-24-jam/JadualCarumanBaharuTermasukSKBBK.pdf",
+   "accessed": "2026-11-04"
+  },
+  {
+   "title": "PERKESO Pekeliling Majikan Bil. 2 Tahun 2026 (PERKESO.600-2/4/1(35)), 28 April 2026",
+   "url": "https://www.perkeso.gov.my/images/arahan/Bil_2_2026-PekelilingLindung24Jam.pdf",
+   "accessed": "2026-11-04"
+  },
+  {
+   "title": "P.U.(B) 196/2026, appointment of date of coming into operation of Act A1788 and of the three phases",
+   "url": "https://lom.agc.gov.my/act-view.php?type=pua&no=P.U.%20(B)%20196/2026&status=PRINCIPAL",
+   "accessed": "2026-11-05"
+  },
+  {
+   "title": "P.U.(B) 195/2026, English text of Act A1788 prescribed as authoritative",
+   "url": "https://lom.agc.gov.my/act-view.php?type=pua&no=P.U.%20(B)%20195/2026&status=PRINCIPAL",
+   "accessed": "2026-11-05"
+  }
+ ]
+}

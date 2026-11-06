@@ -1,0 +1,323 @@
+{
+  "$comment": "Per-financial-year SOCSO (PERKESO, Act 4) config. Tables are referenced by id: 'socso-act4-2024-10' lives in socso-act4-2025.json; 'socso-act4-a1788' phases live in socso-act4-2026.json. Periods are inclusive calendar dates on CONTRIBUTION MONTHS (SOCSO is assessed per calendar month of wages; a month's wages are those payable for wage periods ending in that month). See docs/research/socso.md. Researched 2026-11-04; revised 2026-11-05 after the deep verification pass. Fields with status 'owner-decision' are open questions listed in the report and must not be treated as decided.",
+  "years": {
+    "2025": {
+      "status": "confirmed",
+      "periods": [
+        {
+          "from": "2025-01-01",
+          "to": "2025-12-31",
+          "table": { "id": "socso-act4-2024-10" },
+          "wageCeiling": 6000,
+          "nonEmploymentInjury": { "exists": false },
+          "notes": [
+            "RM6,000 ceiling in force since contribution month Oct 2024 (Act A1724 s.2; P.U.(B) 381/2024; Employers' Circular 3/2024 para 3.3). PERKESO allowed a no-penalty transition for employers from 1 Oct 2024 to 31 Mar 2025. No separate transition table exists, so the calculator ignores it, but a real Jan-Mar 2025 payslip from a late employer may differ."
+          ]
+        }
+      ]
+    },
+    "2026": {
+      "status": "confirmed",
+      "periods": [
+        {
+          "from": "2026-01-01",
+          "to": "2026-05-31",
+          "table": { "id": "socso-act4-2024-10" },
+          "wageCeiling": 6000,
+          "nonEmploymentInjury": { "exists": false }
+        },
+        {
+          "from": "2026-06-01",
+          "to": "2026-06-30",
+          "table": { "id": "socso-act4-a1788", "phase": 1 },
+          "wageCeiling": 6000,
+          "nonEmploymentInjury": {
+            "exists": true,
+            "local": "mandatory",
+            "foreign": "mandatory",
+            "notes": [
+              "June 2026 NEI is mandatory and non-refundable even for people who later opted out (PERKESO FAQ v2.3 Q11, Q12, Q22). One narrow possible exception: Q13 allows a refund for a non-selected employer where someone has several employers.",
+              "Many payrolls (e.g. the government's iGFMAS) did not deduct NEI in June 2026 pay and recovered it later as arrears. Real June payslips may therefore differ from the legally due amount."
+            ]
+          }
+        },
+        {
+          "from": "2026-07-01",
+          "to": "2026-08-31",
+          "table": { "id": "socso-act4-a1788", "phase": 1 },
+          "wageCeiling": 6000,
+          "nonEmploymentInjury": {
+            "exists": true,
+            "local": "default-in-opt-out",
+            "foreign": "mandatory",
+            "keyDates": {
+              "cabinetDecisionVoluntary": "2026-07-08",
+              "optOutWindowOpens": "2026-07-13",
+              "optOutWindowCloses": "2026-08-31"
+            },
+            "notes": [
+              "An opt-out takes effect when PERKESO receives it, and cover ends then (FAQ v2.3 Q47, Q51). Refunds run from contribution month July 2026 depending on the opt-out period (Q14). PERKESO has published no month-by-month rule. July NEI for someone who filed in August is unconfirmed: see optOutEffect.",
+              "Refunds are claimed only by the employer through ASSIST (Q15, Q16), so a July or August payslip can show NEI that is later refunded."
+            ]
+          }
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-12-31",
+          "table": { "id": "socso-act4-a1788", "phase": 1 },
+          "wageCeiling": 6000,
+          "nonEmploymentInjury": {
+            "exists": true,
+            "local": "default-in-opt-out-closed",
+            "foreign": "mandatory",
+            "keyDates": {
+              "noFurtherOptOutFrom": "2026-09-01",
+              "onlineOptBackInFrom": "2026-09-02"
+            },
+            "notes": [
+              "Same amounts as Jul-Aug 2026; only the participation label changes.",
+              "Opting back in is allowed at any time, online from 2 Sep 2026 (PERKESO release 9 Sep 2026), not backdated, and costs NEI on the full month's wage for the month of opt-in (FAQ v2.3 Q6, Q7, Q45)."
+            ]
+          }
+        }
+      ]
+    },
+    "2027": {
+      "status": "template-unconfirmed",
+      "statusNote": "Nothing announced changes Act 4 rates or the RM6,000 ceiling for 2027 as of 2026-11-05 (MOF Budget 2027 speech and tax measures; PERKESO release 11 Oct 2026; Parliament bill list to D.R.27/2026; Federal Legislation listing to early Nov 2026, which is a saved AGC portal listing, unconfirmed: not relied on (D1) until a manual check at lom.agc.gov.my). NEI Phase 1 runs to 31 May 2028 under P.U.(B) 196/2026. PERKESO and KESUMA said they would review the LINDUNG 24 Jam mechanism by end-2026 and propose Act 4 amendments if needed; no outcome found. Re-verify in Jan 2027.",
+      "periods": [
+        {
+          "from": "2027-01-01",
+          "to": "2027-12-31",
+          "table": { "id": "socso-act4-a1788", "phase": 1 },
+          "wageCeiling": 6000,
+          "nonEmploymentInjury": {
+            "exists": true,
+            "local": "default-in-opt-out-closed",
+            "foreign": "mandatory",
+            "legalBasis": "Cabinet decision 8 Jul 2026, administered by PERKESO through a liability-release notice. No gazetted instrument found as of 2026-11-05. [Rests partly on saved AGC portal listings, unconfirmed: not relied on (D1) until a manual check at lom.agc.gov.my. See socso.md, AGC listing note.]",
+            "reVerify": "PERKESO/KESUMA year-end review may lead to an Act 4 amendment; re-check Jan 2027.",
+            "notes": [
+              "No opt-out window is open. Locals who opted out in 2026 stay out unless they opt back in.",
+              "First-time contributors must contribute per FAQ v2.3 Q26, Q27, Q29. Earlier PERKESO FAQs and a portal guide described a new-hire opt-out, so someone hired before v2.3 may hold a valid opt-out. Do not block the opt-out flag by join date. Medium confidence."
+            ]
+          },
+          "unconfirmed": true
+        }
+      ]
+    },
+    "future": {
+      "status": "legislated-not-yet-in-force",
+      "legalBasis": "P.U.(B) 196/2026 (dated 25 May 2026, published 29 May 2026) under Act A1788 s.1(2): First Phase 1 Jun 2026 to 31 May 2028; Second Phase 1 Jun 2028 to 31 May 2031; Third Phase 1 Jun 2031 onwards.",
+      "periods": [
+        {
+          "from": "2028-01-01",
+          "to": "2028-05-31",
+          "table": { "id": "socso-act4-a1788", "phase": 1 },
+          "wageCeiling": 6000,
+          "nonEmploymentInjury": { "exists": true, "local": "default-in-opt-out-closed", "foreign": "mandatory" },
+          "unconfirmed": true
+        },
+        {
+          "from": "2028-06-01",
+          "to": "2031-05-31",
+          "table": { "id": "socso-act4-a1788", "phase": 2 },
+          "wageCeiling": 6000,
+          "nonEmploymentInjury": { "exists": true, "local": "default-in-opt-out-closed", "foreign": "mandatory" },
+          "unconfirmed": true
+        },
+        {
+          "from": "2031-06-01",
+          "to": null,
+          "table": { "id": "socso-act4-a1788", "phase": 3 },
+          "wageCeiling": 6000,
+          "nonEmploymentInjury": { "exists": true, "local": "default-in-opt-out-closed", "foreign": "mandatory" },
+          "unconfirmed": true
+        }
+      ],
+      "notes": [
+        "Phase dates and tables are law. The ceiling and participation fields on these periods are carried forward from today's rules and are not legislated forecasts."
+      ]
+    }
+  },
+  "categoryRules": {
+    "$comment": "Same for 2025, 2026 and the 2027 template. Act 4 First Schedule para (12) with s.6(2); P.U.(A) 180/2024 deleted only limb (iv); Act A1788 does not touch the First Schedule.",
+    "secondCategoryIf": [
+      { "rule": "age >= 60", "source": "First Schedule para (12)(ii); Circular 2/2026 para 5.1", "confidence": "high" },
+      { "rule": "age >= 55 and no contributions payable before 55", "source": "First Schedule para (12)(i); Circular 2/2026 para 5.1", "confidence": "high" },
+      { "rule": "receiving a SOCSO invalidity pension, at any age", "source": "First Schedule para (12)(iii) with s.6(2)", "confidence": "medium", "note": "Statutory reading. No PERKESO document applies it to working pensioners. Whether a suspended pension (s.49) counts as 'in receipt' is open." }
+    ],
+    "foreignWorkerAge55Test": {
+      "rule": "Test first entry into the Invalidity Scheme, which started 1 Jul 2024, not first SOCSO contribution. A foreign worker aged 55 or over on 1 Jul 2024 is Second Category even with employment-injury contributions since 2019.",
+      "source": "PERKESO Guidelines 2025 (foreign-worker section); PERKESO contribution calculator note",
+      "confidence": "medium"
+    },
+    "ageTestDate": {
+      "value": "lastDayOfContributionMonth",
+      "status": "owner-decision",
+      "confidence": "medium",
+      "basis": "Inferred from s.6(7)-(8) (month is the unit; contributions fall due on the last day of the month, or the last day of employment for a part-month). No PERKESO statement. Payroll vendors split between the birthday month and the month after.",
+      "maxOneMonthDifference": { "employee": 29.75, "employer": 29.75 }
+    }
+  },
+  "coverage": {
+    "$comment": "Same for 2025, 2026 and the 2027 template unless noted. 'applicable: false' means 0/0. unverified: true means inferred from statute with no PERKESO statement found.",
+    "rules": [
+      { "group": "privateEmployee", "applicable": true, "basis": "s.2(5), s.5(1)", "confidence": "high" },
+      { "group": "partTimeContractTemporary", "applicable": true, "basis": "PERKESO Guidelines 2025 p.8; FAQ v2.3 Q20", "confidence": "high" },
+      { "group": "govFederalStatePermanent", "applicable": false, "basis": "P.U.(B) 240/2013 para 2(1). Applies whether pensionable or not.", "confidence": "high" },
+      { "group": "govFederalStateTemporaryOrContract", "applicable": true, "basis": "P.U.(B) 240/2013 para 2(2); FAQ 1 Oct 2024 Q9", "confidence": "high", "watch": "Federal interim-contract hires since 1 Feb 2024 are covered today. First contracts reportedly end 31 Jan 2027 and move to a contributory permanent scheme. Unless P.U.(B) 240/2013 is amended, permanent status would exempt them. Open for 2027." },
+      { "group": "statutoryBodyOrLocalAuthorityNewScheme", "applicable": false, "basis": "P.U.(B) 239/2013 para 2(1); 'New Scheme' as defined in Act 239 s.2 (definition not read)", "confidence": "medium" },
+      { "group": "statutoryBodyOrLocalAuthorityOther", "applicable": true, "basis": "P.U.(B) 239/2013 para 2(2) keeps temporary and contract staff in; others are not exempted", "confidence": "medium" },
+      { "group": "armedForcesOrPolice", "applicable": false, "basis": "First Schedule paras (6), (7), whatever the contract type", "confidence": "high" },
+      { "group": "foreignWorkerWithValidPass", "applicable": true, "basis": "Employment injury 1 Jan 2019 (P.U.(A) 351/2018); invalidity 1 Jul 2024 (P.U.(A) 180/2024); NEI 1 Jun 2026, no opt-out", "confidence": "high" },
+      { "group": "foreignWorkerWithoutValidPass", "applicable": false, "basis": "First Schedule para (12A); P.U.(B) 738/2018 for the period before a pass is issued", "confidence": "high" },
+      { "group": "domesticWorker", "applicable": true, "from": "2021-06-01", "basis": "P.U.(A) 247/2021 deleted First Schedule para (3)", "confidence": "high" },
+      { "group": "domesticWorkerCloseRelativeEmployer", "applicable": false, "basis": "P.U.(B) 312/2021 para 2(1)(a), 2(3)(c)", "confidence": "high" },
+      { "group": "foreignDomesticWorkerForeignEmployer", "applicable": false, "basis": "P.U.(B) 312/2021 para 2(1)(b)", "confidence": "high" },
+      { "group": "foreignDomesticWorkerBeforeValidPass", "applicable": false, "basis": "P.U.(B) 312/2021 para 2(1)(c), 2(2)", "confidence": "high" },
+      { "group": "spouseOrRelativeOnPayroll", "applicable": true, "from": "2018-07-01", "basis": "P.U.(A) 144/2018 deleted the spouse exclusion. Other relatives were never excluded (reading).", "confidence": "high" },
+      { "group": "soleProprietorOrPartner", "applicable": false, "route": "selfEmployed", "basis": "PERKESO Guidelines 2025 p.8; Employers' Circular 6/2020", "confidence": "high" },
+      { "group": "contractForService", "applicable": false, "basis": "PERKESO Guidelines 2025 p.8", "confidence": "high" },
+      { "group": "directorSalaried", "applicable": true, "unverified": true, "basis": "s.2(5). Only salary counts as wages; director fees do not.", "confidence": "medium", "status": "owner-decision" },
+      { "group": "directorFeesOnly", "applicable": false, "unverified": true, "basis": "No contract of service", "confidence": "medium" },
+      { "group": "internOnEmploymentContract", "applicable": true, "unverified": true, "basis": "s.2(5), s.5(1). No wage floor.", "confidence": "medium" },
+      { "group": "industrialTrainingStudentAllowanceOnly", "applicable": null, "unverified": true, "basis": "No PERKESO ruling. FAQ Bil. 1/2026 lists such students under Act 789 KENDIRI Didik.", "confidence": "low", "status": "owner-decision" },
+      { "group": "malaysianPostedOverseasOnMalaysianContract", "applicable": true, "unverified": true, "basis": "s.2(5)(i). NEI pays no benefit for accidents abroad (s.44A) but nothing reduces the contribution.", "confidence": "medium", "status": "owner-decision" },
+      { "group": "employedAbroadByForeignEmployer", "applicable": false, "unverified": true, "basis": "No Malaysian principal employer", "confidence": "medium" },
+      { "group": "expatriateParentPaidSecondee", "applicable": true, "unverified": true, "basis": "s.2(5)(iii), s.2(19), s.7(1)", "confidence": "medium", "status": "owner-decision" },
+      { "group": "casualNotForEmployersIndustry", "applicable": false, "basis": "First Schedule para (2). Both limbs must apply. No menu option proposed; note only.", "confidence": "medium" }
+    ]
+  },
+  "optOutEffect": {
+    "$comment": "PERKESO has published no month-by-month rule. Calculator default is an owner decision (see report).",
+    "june2026": "always payable",
+    "filedJuly": { "2026-07": 0, "2026-08": 0, "confidence": "medium-high" },
+    "filedAugust": { "2026-07": "unconfirmed", "2026-08": 0, "confidence": "medium" },
+    "from2026-09": 0,
+    "maxUnconfirmedAmount": 44.65,
+    "calculatorDefault": { "status": "owner-decision", "recommended": "NEI 0 from July 2026 for anyone flagged opted out, labelled net of any refund, with a caveat for August filers" }
+  },
+  "wageRules": {
+    "$comment": "Year-independent. Act 4 s.2(24) untouched by A1724 and A1788. monthlyWage = counted components for wage periods ending in that month, BEFORE employee EPF, SOCSO and EIS deductions. Third Schedule para 1A up to May 2026; para 2 from June 2026.",
+    "wageComponents": {
+      "counted": [
+        { "item": "basic salary, overtime, leave and holiday pay, extra work on holidays", "confidence": "high" },
+        { "item": "commission, service charge", "confidence": "high" },
+        { "item": "allowances fixed or variable: incentive, shift, meal, cost of living, housing", "confidence": "high" },
+        { "item": "fixed phone allowance not reimbursing work costs", "confidence": "medium" },
+        { "item": "bonus or incentive paid more often than yearly", "confidence": "medium-high" },
+        { "item": "leave encashment on resignation, in the final wage month", "confidence": "medium" },
+        { "item": "sign-on bonus", "confidence": "low" }
+      ],
+      "excluded": [
+        { "item": "annual bonus", "confidence": "high" },
+        { "item": "13th-month or AWS paid once a year", "confidence": "medium-low" },
+        { "item": "festive bonus paid once a year", "confidence": "low-medium" },
+        { "item": "travel or mileage claims; toll or parking claims against receipts; expense reimbursements", "confidence": "high" },
+        { "item": "gratuity on discharge or retirement; retrenchment or dismissal payments", "confidence": "high" },
+        { "item": "payment in lieu of notice", "confidence": "medium" },
+        { "item": "employer EPF, SOCSO and EIS shares", "confidence": "high" }
+      ],
+      "ownerDecision": [
+        { "item": "fixed monthly travel, transport, petrol, toll or parking allowance", "status": "owner-decision", "recommended": "exclude per s.2(24)(b), with a 'my payslip counts this' toggle", "conflict": "Statute says 'any travelling allowance'; PERKESO booklets exclude only claims; PERKESO Threads post 7 Feb 2026 counts transport allowance." },
+        { "item": "ex-gratia payment", "status": "unresolved", "confidence": "low" },
+        { "item": "incentive paid once a year", "status": "unresolved", "confidence": "low" }
+      ]
+    },
+    "arrears": {
+      "rule": "Arrears and backdated increments belong to the month earned, not the month paid. Re-run each earned month with its corrected wage, using that month's table, category and NEI status. Never add arrears to the current month's wage for band lookup.",
+      "basis": "Third Schedule para 1A and A1788 para 2; s.9(1); s.7(2) proviso; ASSIST arrears function",
+      "confidence": "medium-high",
+      "outOfConfig": "Earned months before 2024-10 need the older RM5,000-ceiling table, which is not in this config: warn instead of computing."
+    },
+    "zeroWages": "No contribution for a month in which no wages are payable (s.9(1): 'and not otherwise'). The test is wages payable, not paid."
+  },
+  "multipleEmployers": {
+    "rule": "Employment injury and invalidity are computed per employer on that employer's wage; the RM6,000 ceiling applies per job. NEI goes through at most one employer: zero times for an opted-out local, once otherwise, on the chosen employer's band.",
+    "basis": "s.6(9)-(10), s.7, s.9(1), s.9(3)-(4); P.U.(A) 206/2026 reg 12B; Circular 3/2026 paras 4.3-4.10",
+    "selectionWindow": "30 days from the date PERKESO's written notice is furnished. Applies whenever someone has two or more employers, not only on 1 Jun 2026. If no choice, PERKESO notifies the employer within 14 days.",
+    "perkesoDefaultOrder": [
+      "employer named in a non-employment-injury benefit application",
+      "employer with the latest contribution",
+      "highest contribution amount",
+      "most contribution months"
+    ],
+    "changeGrounds": ["left the selected employer", "employer closed", "dormant no-wage period", "another employer pays more"]
+  },
+  "selfEmployedActs789": {
+    "$comment": "LINDUNG Kendiri / SKSPS (Act 789). Store RM amounts, never compute them: 1.25% of insured earnings fits only at nearest 10 sen (each value is a tie at 5 sen), and 'matching percentages' are nominal.",
+    "plans": [
+      { "plan": 1, "insuredMonthlyEarning": 1050, "monthly": 13.10, "yearly": 157.20 },
+      { "plan": 2, "insuredMonthlyEarning": 1550, "monthly": 19.40, "yearly": 232.80 },
+      { "plan": 3, "insuredMonthlyEarning": 2950, "monthly": 36.90, "yearly": 442.80 },
+      { "plan": 4, "insuredMonthlyEarning": 3950, "monthly": 49.40, "yearly": 592.80 }
+    ],
+    "planStatus": {
+      "2025": "confirmed: FAQ Bil. 1/2025 Jadual 1; P.U.(A) 229/2024 Schedule (hawkers, 12-month amounts)",
+      "2026": "confirmed: FAQ Bil. 1/2026 Jadual 1; FAQ Bil. 2/2026 Q9",
+      "2027": "carried-forward: no change instrument found as of 2026-11-05 [Rests partly on saved AGC portal listings, unconfirmed: not relied on (D1) until a manual check at lom.agc.gov.my. See socso.md, AGC listing note.] Recheck after PERKESO publishes."
+    },
+    "mandatorySectors": [
+      { "sector": "passengerTransport", "fromYear": 2017, "note": "PERKESO release 2 Oct 2024 says 'mulai 2017'; exact date not established. Act 789 itself not read." },
+      { "sector": "goodsOrFoodTransport", "from": "2021-10-01", "note": "P.U.(A) 372/2021. PERKESO's Oct 2024 release says mandatory in 2022." },
+      { "sector": "hawkers", "from": "2025-01-01", "note": "P.U.(A) 229/2024 in force 1 Sep 2024; four-month transition per PERKESO release 2 Oct 2024." }
+    ],
+    "voluntarySectors": 17,
+    "platformGigWorkersAct872": {
+      "from": "2026-03-31",
+      "basis": "Gig Workers Act 2025 [Act 872]; P.U.(A) 143/2026 reg 2; PERKESO FAQ Bil. 2/2026",
+      "mandatory": true,
+      "appliesTo": "All workers paid through a platform, including e-hailing, p-hailing, childminders and helpers, maintenance and domestic services, even where the Act 789 sector is otherwise voluntary. Non-platform gig workers stay voluntary.",
+      "deduction": "1.25% of each completed job, collected in a wallet; not based on insured earnings",
+      "defaultPlan": 1,
+      "continuesUpToMonths": 24,
+      "shortfall": "Worker tops up",
+      "calculatorModel": { "status": "owner-decision" },
+      "caveat": "Rollout was uneven (about 2% of gig workers on-boarded per PERKESO release 25 Apr 2026). Compliance enforcement reported from 1 Oct 2026 (minister, via Bernama). Act 872 text and P.U.(B) 122/2026 not read."
+    },
+    "governmentMatching": {
+      "2025": {
+        "status": "confirmed",
+        "source": "PERKESO FAQ Bil. 1/2025 (13 Mar 2025)",
+        "applicationWindow": { "from": "2025-03-13", "to": "2025-12-31" },
+        "plan": 2,
+        "spsPadananCaruman30": { "contributor": 70.00, "government": 162.80, "targetCategories": 13, "note": "Includes hawkers (SPS Jaja 4.0) and platform workers (SPS Gig 5.0), so not limited to non-mandatory sectors." },
+        "spsMadani30": { "contributor": 0, "government": 232.80, "targetCategories": 3 }
+      },
+      "2026": {
+        "status": "confirmed",
+        "source": "PERKESO FAQ Bil. 1/2026 (6 Apr 2026)",
+        "applicationWindow": { "from": "2026-04-06", "to": "2026-12-31", "note": "End date subject to Government decision. Nothing found for 1 Jan to 5 Apr 2026." },
+        "plan": 2,
+        "coverMonths": 12,
+        "onePerPerson": true,
+        "targetCategories": 11,
+        "padanan70": { "contributor": 70.00, "government": 162.80, "for": "First-time contributor in a non-mandatory sector" },
+        "padanan50": { "contributor": 116.40, "government": 116.40, "for": "Renewal in a non-mandatory sector, or earlier mandatory contributions and now contributing in a non-mandatory sector" },
+        "notEligible": "Mandatory-sector contributors, first-time or renewal"
+      },
+      "2027": {
+        "status": "announced-amounts-unpublished",
+        "source": "MOF Budget 2027 speech; PERKESO release 11 Oct 2026",
+        "nonMandatoryRate": 0.70,
+        "platformEhailingPhailingRate": 0.35,
+        "platformEhailingPhailingRateWithPlatformCofunding": 0.50,
+        "incomeCap": { "value": 3000, "confidence": "medium", "note": "Ministerial statement via Bernama only; not in the speech or PERKESO release." },
+        "rmAmounts": null,
+        "plan": null,
+        "renewalTier": null,
+        "eligibility": null,
+        "applicationWindow": null,
+        "note": "Do not compute a 2027 net payment or copy the 2026 RM70.00. Display treatment is an owner decision."
+      }
+    },
+    "watch": [
+      "Act 789 amendment for Malaysians working abroad (Traveller Scheme, starting with Johor-Singapore commuters): untabled as of 5 Nov 2026 per the bills lists and Hansard of 20 Oct 2026. No config values. 'Less than RM1 per day' is an early press estimate and must not be used."
+    ]
+  },
+  "housewivesAct838": {
+    "$comment": "Note only. Not part of the take-home calculation.",
+    "yearlyContribution": 120
+  }
+}

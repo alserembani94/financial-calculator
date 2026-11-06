@@ -1,0 +1,399 @@
+{
+  "$comment": "LHDN MTD computerised calculation parameters for 2026. Status: confirmed. From the official 2026 specification (updated 1 Jan 2026). Rounding details follow LHDN's calculator (see rounding.provenance).",
+  "specYear": 2026,
+  "status": "confirmed",
+  "formula": {
+    "normal": "stepC = trunc2([ trunc2((P - M) * R) + B - (Z + X) ] / (n + 1)); stepC = 0 if below RM10 or negative; netMTD = stepC - zakat_current - levy_current; payable = 0 if netMTD <= 0, else round up to next 5 sen",
+    "P": "P = [ sum(Y - K) + (Y1 - K1) + (Y2 - K2) * n + (Yt - Kt)** ] - [ D + S + Du + Su + Q*C + (sumLP + LP1) ]   (** only in additional-remuneration step 2)",
+    "K2": "K2 = min( [4000 - (K + K1 + Kt)] / n , K1 )   (K + K1 + K2*n + Kt <= 4000)",
+    "additional": [
+      "Step 1: P and stepC WITHOUT current-month additional remuneration (Yt = Kt = 0). stepC = trunc2(((P - M)*R + B - (Z + X)) / (n + 1)); stepC = 0 if it is below RM10 or negative. netMTD = stepC - zakat_current (NOT floored at 0). totalMtdYear = X + stepC * (n + 1), using the unrounded stepC.",
+      "Step 2: recompute P INCLUDING (Yt - Kt); K2 recomputed with Kt",
+      "Step 3: annualTax = trunc2((P - M) * R) + B, with M, R, B from the row chosen on floor(P)",
+      "Step 4: MTD_additional = trunc2(annualTax - (totalMtdYear + Z)); 0 if below RM10 (tested before rounding) or negative",
+      "Step 5: MTD payable = netMTD + MTD_additional. 0 if the sum is <= 0, otherwise round up to the next 5 sen, once, on the sum"
+    ],
+    "specialRegimes15pct": {
+      "returningExpert": "MTD = [ (P*15% - T) - (Z + X) ] / (n + 1); T = 400 (cat 1&3) / 800 (cat 2) if P <= 35,000 else 0",
+      "knowledgeWorkerSpecifiedRegion": "same as returningExpert",
+      "nonCitizenCSuite": "MTD = [ P*15% - (Z + X) ] / (n + 1)  (no rebate)"
+    }
+  },
+  "categories": {
+    "1": {
+      "label": "Single",
+      "S": 0,
+      "C": "0 (forced)",
+      "SuAllowed": false
+    },
+    "2": {
+      "label": "Married, spouse not working (spouse relief claimed)",
+      "S": 4000,
+      "C": "qualifying children",
+      "SuAllowed": true
+    },
+    "3": {
+      "label": "Married & spouse working, divorced, widowed, or single with adopted child",
+      "S": 0,
+      "C": "qualifying children",
+      "SuAllowed": false
+    }
+  },
+  "table1": [
+    {
+      "floorPFromExclusive": 5000,
+      "floorPTo": 20000,
+      "M": 5000,
+      "R": 0.01,
+      "B": {
+        "category1": -400,
+        "category2": -800,
+        "category3": -400
+      }
+    },
+    {
+      "floorPFromExclusive": 20000,
+      "floorPTo": 35000,
+      "M": 20000,
+      "R": 0.03,
+      "B": {
+        "category1": -250,
+        "category2": -650,
+        "category3": -250
+      }
+    },
+    {
+      "floorPFromExclusive": 35000,
+      "floorPTo": 50000,
+      "M": 35000,
+      "R": 0.06,
+      "B": {
+        "category1": 600,
+        "category2": 600,
+        "category3": 600
+      }
+    },
+    {
+      "floorPFromExclusive": 50000,
+      "floorPTo": 70000,
+      "M": 50000,
+      "R": 0.11,
+      "B": {
+        "category1": 1500,
+        "category2": 1500,
+        "category3": 1500
+      }
+    },
+    {
+      "floorPFromExclusive": 70000,
+      "floorPTo": 100000,
+      "M": 70000,
+      "R": 0.19,
+      "B": {
+        "category1": 3700,
+        "category2": 3700,
+        "category3": 3700
+      }
+    },
+    {
+      "floorPFromExclusive": 100000,
+      "floorPTo": 400000,
+      "M": 100000,
+      "R": 0.25,
+      "B": {
+        "category1": 9400,
+        "category2": 9400,
+        "category3": 9400
+      }
+    },
+    {
+      "floorPFromExclusive": 400000,
+      "floorPTo": 600000,
+      "M": 400000,
+      "R": 0.26,
+      "B": {
+        "category1": 84400,
+        "category2": 84400,
+        "category3": 84400
+      }
+    },
+    {
+      "floorPFromExclusive": 600000,
+      "floorPTo": 2000000,
+      "M": 600000,
+      "R": 0.28,
+      "B": {
+        "category1": 136400,
+        "category2": 136400,
+        "category3": 136400
+      }
+    },
+    {
+      "floorPFromExclusive": 2000000,
+      "floorPTo": null,
+      "M": 2000000,
+      "R": 0.3,
+      "B": {
+        "category1": 528400,
+        "category2": 528400,
+        "category3": 528400
+      }
+    }
+  ],
+  "pAtOrBelowWithNoTaxRm": 5000,
+  "deductions": {
+    "D": 9000,
+    "S": 4000,
+    "Du": 7000,
+    "Su": 6000,
+    "Q": 2000,
+    "SuNote": "Su applies only where the spouse deduction applies: Category 2. 0 in Category 3."
+  },
+  "childUnits": {
+    "Q_rmPerUnit": 2000,
+    "under18": {
+      "units": 1,
+      "annualRm": 2000
+    },
+    "age18PlusPreTertiary": {
+      "units": 1,
+      "annualRm": 2000,
+      "note": "A-Level, certificate, matriculation or preparatory courses"
+    },
+    "age18PlusDiplomaOrDegree": {
+      "units": 4,
+      "annualRm": 8000,
+      "note": "diploma+ in Malaysia, degree+ outside Malaysia, or serving under articles or indentures; approved institution"
+    },
+    "disabled": {
+      "units": 4,
+      "annualRm": 8000
+    },
+    "disabledAge18PlusStudyingDiplomaOrDegree": {
+      "units": 8,
+      "annualRm": 16000
+    },
+    "halfShareNote": "s.48(4): two or more people entitled to the same child get 50% each, so C can be fractional. Calculator tested at under-18 only."
+  },
+  "epf": {
+    "annualCapRm": 4000,
+    "voluntaryEpfViaTp1": "LP1. Mandatory + voluntary under s.49(1)(b) <= 4,000. With no mandatory EPF, the 7,000 total needs voluntary EPF of at least 4,000; life insurance alone stays at 3,000.",
+    "K1": "Third Schedule amount from the EPF module, chosen by citizenship, age and wage month. Never Y1 x rate.",
+    "Kt": "eeTable(Y1 + Yt) - eeTable(Y1), never 11% of the bonus. 0 on gratuity, retrenchment, termination and pay in lieu of notice.",
+    "engineCap": "Cap K1 and Kt before computing; the calculator rejects a single EPF entry above 4,000."
+  },
+  "rounding": {
+    "intermediate": "truncate to 2 decimal places (omit subsequent figures)",
+    "final": "round UP to the next 5 sen (x.x1-x.x4 -> x.x5; x.x6-x.x9 -> next 10 sen), once, on the final payable amount after zakat",
+    "minimumMtdBeforeZakatRm": 10,
+    "rules": [
+      "MTD for current month: test on the truncated value BEFORE rounding; below RM10 or negative -> 0 (raw 9.97 -> 0, raw 10.00 -> 10.00)",
+      "Zakat and departure levy are deducted before the 5-sen round-up (110.00 - 50.33 = 59.67 -> 59.70)",
+      "Net MTD after zakat below RM10 and above 0 -> still deducted",
+      "No additional remuneration: net = max(0, MTD - zakat). Additional remuneration: net is not floored and offsets MTD_additional; only the final total is floored at 0 (spec E.5(ii): -5 + 32.55 = 27.55)",
+      "MTD for additional remuneration: test on the truncated value before rounding; below RM10 -> 0",
+      "Z takes the full zakat and levy of each month, in the same year only"
+    ],
+    "provenance": "Truncation, round-up direction, RM10 rules and the unfloored bonus-month net are printed in the 2025 and 2026 specs section E. Testing RM10 before rounding, rounding once and the unrounded Step 1[E] come from LHDN's Kalkulator PCB (2024 page only) and GPO 1/2024 Contoh 4; they carry to 2025/2026 by proxy (same wording and Table 1). Confidence medium-high."
+  },
+  "nonResident": {
+    "rate": 0.3,
+    "base": "remuneration + BIK + VOLA + additional remuneration, exempt allowances excluded",
+    "rules": "truncate to 2 dp; below RM10 -> 0 (before rounding); round up to next 5 sen. No reliefs, rebates or categories.",
+    "examples": {
+      "5000": 1500.0,
+      "1234.56": 370.4,
+      "33.00": 0.0,
+      "5000 + bonus 1234.56": 1870.4
+    },
+    "shortStayExemption": "Sch.6 para 21 (subject to para 22): 60 days or less",
+    "zakat": "No zakat or levy rebate and no MTD offset: s.6A(1) rebates tax only for a resident individual, and the spec puts zakat terms only in the resident formulas. Take-home falls by the full zakat. A foreign employee on a contract of 182 days or more runs the resident MTD path, so netting happens during the year."
+  },
+  "foreignWorkersContract182Days": "From Aug 2017, foreign employees with a contract of 182 days or more are treated as resident for MTD.",
+  "tp1Items": [
+    {
+      "item": "C1",
+      "relief": "parentsMedical"
+    },
+    {
+      "item": "C2",
+      "relief": "supportingEquipment"
+    },
+    {
+      "item": "C3",
+      "relief": "educationSelf"
+    },
+    {
+      "item": "C4",
+      "relief": "medical"
+    },
+    {
+      "item": "C5",
+      "relief": "lifestyle"
+    },
+    {
+      "item": "C6",
+      "relief": "sports"
+    },
+    {
+      "item": "C7",
+      "relief": "breastfeeding"
+    },
+    {
+      "item": "C8",
+      "relief": "childcare"
+    },
+    {
+      "item": "C9",
+      "relief": "sspn"
+    },
+    {
+      "item": "C10",
+      "relief": "alimony (spouse relief id)"
+    },
+    {
+      "item": "C11(a)",
+      "relief": "epf (voluntary EPF, within 4,000 incl. mandatory)"
+    },
+    {
+      "item": "C11(b)",
+      "relief": "lifeInsurance"
+    },
+    {
+      "item": "C12",
+      "relief": "prsDeferredAnnuity"
+    },
+    {
+      "item": "C13",
+      "relief": "educationMedicalInsurance"
+    },
+    {
+      "item": "C14",
+      "relief": "socsoEis"
+    },
+    {
+      "item": "C15",
+      "relief": "evChargingCompost"
+    },
+    {
+      "item": "C16",
+      "relief": "firstHomeLoanInterest"
+    },
+    {
+      "item": "C17",
+      "relief": "tourismAdmission"
+    },
+    {
+      "item": "D1(a)",
+      "relief": "zakat paid other than by salary deduction (rebate)"
+    },
+    {
+      "item": "D1(b)",
+      "relief": "departure levy for umrah / religious travel (rebate)"
+    }
+  ],
+  "sources": [
+    "https://www.hasil.gov.my/wp-content/uploads/spesifikasi-kaedah-pengiraan-berkomputer-pcb-2026.pdf",
+    "http://calcpcb.hasil.gov.my/pcb_calc_2024.php (rounding behaviour; 2024 page only)"
+  ],
+  "table1RowRule": "Choose the row on floor(P), the whole-ringgit part of P: M < floor(P) <= next M. (P - M) * R still uses the fractional P. So P = 35,000.99 uses M 20,000 and P = 35,001.00 uses M 35,000. floorPFromExclusive and floorPTo must never be compared with raw P. Source: spec integer ranges; LHDN Kalkulator PCB 2024 page at 20,000.50, 35,000.50, 35,000.99, 35,001.00, 50,000.50, 70,000.50, 100,000.50.",
+  "remunerationClassification": {
+    "$comment": "Test is the payment pattern, not whether the amount is fixed. Exempt items are removed first (spec section E.9). Y2 is always equal to Y1; no override.",
+    "normalY1": [
+      "basic",
+      "wages",
+      "overtime",
+      "tips",
+      "monthlyAllowance",
+      "monthlyCommission",
+      "commissionOnly",
+      "monthlyDirectorFee",
+      "monthlyPerquisite",
+      "BIK",
+      "VOLA"
+    ],
+    "additionalYt": [
+      "bonus",
+      "incentive",
+      "arrears",
+      "ESOS if the employee opts for MTD",
+      "employerBorneTax",
+      "gratuity (taxable part)",
+      "compensation (taxable part)",
+      "exGratia",
+      "nonMonthlyCommission",
+      "nonMonthlyAllowance",
+      "nonMonthlyDirectorFee",
+      "nonMonthlyPerquisite",
+      "other"
+    ],
+    "lowerConfidence": [
+      "tips (slide p13 only)",
+      "serviceCharge (inferred, named nowhere)",
+      "one-off overtime (medium-high)"
+    ],
+    "overtimeSource": "Kalkulator PCB form note: 'Effective from 1 January 2013, overtime is categorised as current month remuneration'; P.U.(A) 314/2013; LHDN 2024 slides p13"
+  },
+  "workerPcbPaths": {
+    "$comment": "PCB path by worker type. The same for 2025 and 2026; carried forward in the 2027 template. K comes from the EPF module.",
+    "private": {
+      "mtd": "normal",
+      "K": "actual EPF"
+    },
+    "govNonPensionable": {
+      "mtd": "normal",
+      "K": "actual EPF"
+    },
+    "govContract": {
+      "mtd": "normal",
+      "K": "actual EPF"
+    },
+    "statutoryEpf": {
+      "mtd": "normal",
+      "K": "actual payslip EPF, including the combined pension and EPF scheme"
+    },
+    "govPensionable": {
+      "mtd": "normal",
+      "K": 0,
+      "note": "Voluntary EPF and life insurance through TP1 only"
+    },
+    "statutoryPensionable": {
+      "mtd": "normal",
+      "K": 0,
+      "confidence": "medium: s.49(1)(b) names Act 227 officers only"
+    },
+    "domesticWorker": {
+      "mtd": "normal",
+      "K": "0 unless EPF elected or the employer is a registered business",
+      "note": "Usually RM0 from the formula. No exemption found, but household-employer practice is unverified.",
+      "foreign": "resident MTD if contract >= 182 days, otherwise 30%"
+    },
+    "selfEmployed": {
+      "mtd": "none",
+      "note": "Annual estimate on net business income, Form B, CP500. No K, K2, TP1 or s.77C election. LINDUNG KENDIRI gets no s.46(1)(n) relief before YA2027."
+    },
+    "otherApprovedScheme": {
+      "mtd": "normal",
+      "K": "advanced input",
+      "confidence": "unverified (LTAT s.150 approval not confirmed)"
+    }
+  },
+  "specUpdated": "2026-01-01",
+  "tp1Form": "PCB/TP1 (1/2026)",
+  "tp1ChangesFrom2025": [
+    "B4 removed",
+    "C4(d) \"dan\" becomes \"atau\"",
+    "C4(e) COVID-19 test and kit wording removed (spec section E still lists them; keep the sub-cap scope)",
+    "C4(f) 6,000 becomes 10,000",
+    "C8 age 12 and under plus day-care and transit centres (wider than the Act: see tax-ya2026.json childcare)",
+    "C15 adds grinder and CCTV, once per 2 YAs",
+    "new C17 tourism/culture 1,000",
+    "no C-numbers change"
+  ],
+  "table1LegalRef": "Rules 1994 Sch. para 4(1), Table 1, substituted by P.U.(A) 230/2023 from 1 Aug 2023",
+  "minimumMtdLegalRef": "Rules 1994 Sch. para 5(4), inserted by P.U.(A) 123/2021 from 1 Jan 2021",
+  "eJadualOnly": {
+    "monthlyEpfCapRm": 333,
+    "note": "e-Jadual schedule method only; not in the computerised spec text. Do not use in this engine."
+  }
+}

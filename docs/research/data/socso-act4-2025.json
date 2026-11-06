@@ -1,0 +1,1368 @@
+{
+ "id": "socso-act4-2024-10",
+ "description": "Act 4 (SOCSO) Third Schedule contribution table with RM6,000 wage ceiling, BEFORE the Non-Employment Injury (SKBBK / LINDUNG 24 Jam) employee share was added. In force for contribution months October 2024 to May 2026 inclusive. Covers financial year 2025 fully and 2026 January-May.",
+ "effectiveFrom": "2024-10-01",
+ "effectiveTo": "2026-05-31",
+ "wageCeiling": 6000,
+ "rates": {
+  "employmentInjury": {
+   "employer": 0.0125,
+   "employee": 0
+  },
+  "invalidity": {
+   "employer": 0.005,
+   "employee": 0.005
+  }
+ },
+ "lookup": "Band i applies when wageAbove < monthlyWage <= wageUpTo (wageUpTo null = open-ended top band). Band 1 is 'wages up to RM30'. All amounts in RM. Wage ceiling RM6,000: bands 64 and 65 carry identical amounts.",
+ "provenance": [
+  "Employment-injury and invalidity amounts per band are identical in the pre- and post-June-2026 Third Schedules. Values here are the EI and invalidity columns of Act A1788 Third Schedule Part I/IV, which replaced the schedule but did not change those columns.",
+  "Cross-checked: PERKESO Employers' Circular No. 2/2022 Appendix 1 (bands 1-54 identical); Bill D.R. 11/2024 (Employees' Social Security (Amendment) 2024, bands 55-65 identical); PERKESO FAQ on RM6,000 ceiling dated 1 Oct 2024 (top band First Category total RM133.90, Second Category RM74.40); old app table (all 64 rows identical).",
+  "Enacted law (deep pass, 2026-11-05): Act A1724, Employees' Social Security (Amendment) Act 2024 (royal assent 11 Sep 2024, gazetted 25 Sep 2024), s.2 sets the RM6,000 limit in s.5(2) and s.3-4 enact items 55-65 of the Third and Fourth Schedules: 0 mismatches against this file. Commencement 1 Oct 2024 per P.U.(B) 381/2024 (listing row only; notice not opened; saved AGC portal listing, unconfirmed: not relied on (D1) until a manual check at lom.agc.gov.my; Circular 3/2024 and the FAQ give the same date). Employers' Circular 3/2024 para 3.3 applies the rates to contributions for the month of October 2024. PERKESO Guidelines 2025 full table: 0 mismatches.",
+  "Monthly wages for this table are defined in Third Schedule para 1A (wages payable for all wage periods ending in the month). Para 2 is the A1788 wording, in force only from June 2026."
+ ],
+ "sources": [
+  {
+   "title": "Akta Keselamatan Sosial Pekerja (Pindaan) 2026 [Akta A1788], Jadual Ketiga (Third Schedule) Parts I-VI and Fourth Schedule para 4",
+   "url": "https://perkeso.gov.my/images/akta/ACT%204/Akta_A1788_-_AKTA_KESELAMATAN_SOSIAL_PEKERJA_PINDAAN_2026.pdf",
+   "accessed": "2026-11-04"
+  },
+  {
+   "title": "PERKESO FAQ - Peningkatan had siling gaji RM5,000 ke RM6,000 (updated 1 Oct 2024)",
+   "url": "https://www.perkeso.gov.my/images/dokumen/011024%20-%20FAQ%20PENINGKATAN%20HAD%20SILING%20GAJI%20DARI%20RM5K%20KEPADA%20RM6K%20DI%20BAWAH%20AKSP%20969%20AKTA%204%20%20ASIP%202017%20AKTA%20800.pdf",
+   "accessed": "2026-11-04"
+  },
+  {
+   "title": "PERKESO Employers' Circular No. 2 Year 2022 (RM4,000 to RM5,000 ceiling, Appendix 1)",
+   "url": "https://www.perkeso.gov.my/images/arahan/Employers_Circular_No_2_Year_2022_-_Increment_Of_The_Wage_Ceiling_For_Monthly_Contributions_From_RM4000_to_RM5000.pdf",
+   "accessed": "2026-11-04"
+  },
+  {
+   "title": "Rang Undang-Undang D.R. 11/2024 Keselamatan Sosial Pekerja (Pindaan) 2024",
+   "url": "https://repositori.parlimen.gov.my/bitstream/123456789/1605/16/DR%2011/2024",
+   "accessed": "2026-11-04"
+  },
+  {
+   "title": "Act A1724, Employees' Social Security (Amendment) Act 2024 (copy hosted by a law firm, formatted as the Percetakan Nasional print)",
+   "url": "https://zulrafique.com.my/ckfinder/userfiles/files/legislation%20update/ActA1724-Employees_SocialSecurity_Amendment_Act2024.pdf",
+   "accessed": "2026-11-05"
+  },
+  {
+   "title": "P.U.(B) 381/2024, appointment of date of coming into operation of Act A1724 (saved AGC portal listing row, unconfirmed: not relied on (D1) until a manual check at lom.agc.gov.my)",
+   "url": "https://lom.agc.gov.my/act-view.php?type=pua&no=P.U.%20(B)%20381/2024&status=PRINCIPAL",
+   "accessed": "2026-11-05"
+  },
+  {
+   "title": "PERKESO Employers' Circular No. 3 Year 2024 (RM5,000 to RM6,000 ceiling), archived copy",
+   "url": "http://web.archive.org/web/20260308142436id_/https://perkeso.gov.my/images/arahan/011024%20-%20EMPLOYERS%20CIRCULAR%20NO.%203%20YEAR%202024%20-%20INCREMENT%20OF%20THE%20WAGE%20CEILING%20FOR%20MONTHLY%20CONTRIBUTIONS%20FROM%20RM5K%20TO%20RM6K.pdf",
+   "accessed": "2026-11-05"
+  },
+  {
+   "title": "PERKESO Guidelines on Social Security Protection (2025 edition)",
+   "url": "https://perkeso.gov.my/images/dokumen/risalah/2025-BOOKLET_PERKESO_BI.pdf",
+   "accessed": "2026-11-05"
+  }
+ ],
+ "bands": [
+  {
+   "no": 1,
+   "wageAbove": 0,
+   "wageUpTo": 30,
+   "assumedMonthlyWage": 20.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 0.3,
+    "employerInvalidity": 0.1,
+    "employer": 0.4,
+    "employeeInvalidity": 0.1,
+    "employee": 0.1,
+    "total": 0.5
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 0.3,
+    "employer": 0.3,
+    "employee": 0,
+    "total": 0.3
+   }
+  },
+  {
+   "no": 2,
+   "wageAbove": 30,
+   "wageUpTo": 50,
+   "assumedMonthlyWage": 40.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 0.5,
+    "employerInvalidity": 0.2,
+    "employer": 0.7,
+    "employeeInvalidity": 0.2,
+    "employee": 0.2,
+    "total": 0.9
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 0.5,
+    "employer": 0.5,
+    "employee": 0,
+    "total": 0.5
+   }
+  },
+  {
+   "no": 3,
+   "wageAbove": 50,
+   "wageUpTo": 70,
+   "assumedMonthlyWage": 60.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 0.8,
+    "employerInvalidity": 0.3,
+    "employer": 1.1,
+    "employeeInvalidity": 0.3,
+    "employee": 0.3,
+    "total": 1.4
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 0.8,
+    "employer": 0.8,
+    "employee": 0,
+    "total": 0.8
+   }
+  },
+  {
+   "no": 4,
+   "wageAbove": 70,
+   "wageUpTo": 100,
+   "assumedMonthlyWage": 85.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 1.1,
+    "employerInvalidity": 0.4,
+    "employer": 1.5,
+    "employeeInvalidity": 0.4,
+    "employee": 0.4,
+    "total": 1.9
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 1.1,
+    "employer": 1.1,
+    "employee": 0,
+    "total": 1.1
+   }
+  },
+  {
+   "no": 5,
+   "wageAbove": 100,
+   "wageUpTo": 140,
+   "assumedMonthlyWage": 120.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 1.5,
+    "employerInvalidity": 0.6,
+    "employer": 2.1,
+    "employeeInvalidity": 0.6,
+    "employee": 0.6,
+    "total": 2.7
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 1.5,
+    "employer": 1.5,
+    "employee": 0,
+    "total": 1.5
+   }
+  },
+  {
+   "no": 6,
+   "wageAbove": 140,
+   "wageUpTo": 200,
+   "assumedMonthlyWage": 170.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 2.1,
+    "employerInvalidity": 0.85,
+    "employer": 2.95,
+    "employeeInvalidity": 0.85,
+    "employee": 0.85,
+    "total": 3.8
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 2.1,
+    "employer": 2.1,
+    "employee": 0,
+    "total": 2.1
+   }
+  },
+  {
+   "no": 7,
+   "wageAbove": 200,
+   "wageUpTo": 300,
+   "assumedMonthlyWage": 250.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 3.1,
+    "employerInvalidity": 1.25,
+    "employer": 4.35,
+    "employeeInvalidity": 1.25,
+    "employee": 1.25,
+    "total": 5.6
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 3.1,
+    "employer": 3.1,
+    "employee": 0,
+    "total": 3.1
+   }
+  },
+  {
+   "no": 8,
+   "wageAbove": 300,
+   "wageUpTo": 400,
+   "assumedMonthlyWage": 350.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 4.4,
+    "employerInvalidity": 1.75,
+    "employer": 6.15,
+    "employeeInvalidity": 1.75,
+    "employee": 1.75,
+    "total": 7.9
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 4.4,
+    "employer": 4.4,
+    "employee": 0,
+    "total": 4.4
+   }
+  },
+  {
+   "no": 9,
+   "wageAbove": 400,
+   "wageUpTo": 500,
+   "assumedMonthlyWage": 450.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 5.6,
+    "employerInvalidity": 2.25,
+    "employer": 7.85,
+    "employeeInvalidity": 2.25,
+    "employee": 2.25,
+    "total": 10.1
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 5.6,
+    "employer": 5.6,
+    "employee": 0,
+    "total": 5.6
+   }
+  },
+  {
+   "no": 10,
+   "wageAbove": 500,
+   "wageUpTo": 600,
+   "assumedMonthlyWage": 550.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 6.9,
+    "employerInvalidity": 2.75,
+    "employer": 9.65,
+    "employeeInvalidity": 2.75,
+    "employee": 2.75,
+    "total": 12.4
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 6.9,
+    "employer": 6.9,
+    "employee": 0,
+    "total": 6.9
+   }
+  },
+  {
+   "no": 11,
+   "wageAbove": 600,
+   "wageUpTo": 700,
+   "assumedMonthlyWage": 650.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 8.1,
+    "employerInvalidity": 3.25,
+    "employer": 11.35,
+    "employeeInvalidity": 3.25,
+    "employee": 3.25,
+    "total": 14.6
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 8.1,
+    "employer": 8.1,
+    "employee": 0,
+    "total": 8.1
+   }
+  },
+  {
+   "no": 12,
+   "wageAbove": 700,
+   "wageUpTo": 800,
+   "assumedMonthlyWage": 750.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 9.4,
+    "employerInvalidity": 3.75,
+    "employer": 13.15,
+    "employeeInvalidity": 3.75,
+    "employee": 3.75,
+    "total": 16.9
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 9.4,
+    "employer": 9.4,
+    "employee": 0,
+    "total": 9.4
+   }
+  },
+  {
+   "no": 13,
+   "wageAbove": 800,
+   "wageUpTo": 900,
+   "assumedMonthlyWage": 850.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 10.6,
+    "employerInvalidity": 4.25,
+    "employer": 14.85,
+    "employeeInvalidity": 4.25,
+    "employee": 4.25,
+    "total": 19.1
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 10.6,
+    "employer": 10.6,
+    "employee": 0,
+    "total": 10.6
+   }
+  },
+  {
+   "no": 14,
+   "wageAbove": 900,
+   "wageUpTo": 1000,
+   "assumedMonthlyWage": 950.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 11.9,
+    "employerInvalidity": 4.75,
+    "employer": 16.65,
+    "employeeInvalidity": 4.75,
+    "employee": 4.75,
+    "total": 21.4
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 11.9,
+    "employer": 11.9,
+    "employee": 0,
+    "total": 11.9
+   }
+  },
+  {
+   "no": 15,
+   "wageAbove": 1000,
+   "wageUpTo": 1100,
+   "assumedMonthlyWage": 1050.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 13.1,
+    "employerInvalidity": 5.25,
+    "employer": 18.35,
+    "employeeInvalidity": 5.25,
+    "employee": 5.25,
+    "total": 23.6
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 13.1,
+    "employer": 13.1,
+    "employee": 0,
+    "total": 13.1
+   }
+  },
+  {
+   "no": 16,
+   "wageAbove": 1100,
+   "wageUpTo": 1200,
+   "assumedMonthlyWage": 1150.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 14.4,
+    "employerInvalidity": 5.75,
+    "employer": 20.15,
+    "employeeInvalidity": 5.75,
+    "employee": 5.75,
+    "total": 25.9
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 14.4,
+    "employer": 14.4,
+    "employee": 0,
+    "total": 14.4
+   }
+  },
+  {
+   "no": 17,
+   "wageAbove": 1200,
+   "wageUpTo": 1300,
+   "assumedMonthlyWage": 1250.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 15.6,
+    "employerInvalidity": 6.25,
+    "employer": 21.85,
+    "employeeInvalidity": 6.25,
+    "employee": 6.25,
+    "total": 28.1
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 15.6,
+    "employer": 15.6,
+    "employee": 0,
+    "total": 15.6
+   }
+  },
+  {
+   "no": 18,
+   "wageAbove": 1300,
+   "wageUpTo": 1400,
+   "assumedMonthlyWage": 1350.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 16.9,
+    "employerInvalidity": 6.75,
+    "employer": 23.65,
+    "employeeInvalidity": 6.75,
+    "employee": 6.75,
+    "total": 30.4
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 16.9,
+    "employer": 16.9,
+    "employee": 0,
+    "total": 16.9
+   }
+  },
+  {
+   "no": 19,
+   "wageAbove": 1400,
+   "wageUpTo": 1500,
+   "assumedMonthlyWage": 1450.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 18.1,
+    "employerInvalidity": 7.25,
+    "employer": 25.35,
+    "employeeInvalidity": 7.25,
+    "employee": 7.25,
+    "total": 32.6
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 18.1,
+    "employer": 18.1,
+    "employee": 0,
+    "total": 18.1
+   }
+  },
+  {
+   "no": 20,
+   "wageAbove": 1500,
+   "wageUpTo": 1600,
+   "assumedMonthlyWage": 1550.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 19.4,
+    "employerInvalidity": 7.75,
+    "employer": 27.15,
+    "employeeInvalidity": 7.75,
+    "employee": 7.75,
+    "total": 34.9
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 19.4,
+    "employer": 19.4,
+    "employee": 0,
+    "total": 19.4
+   }
+  },
+  {
+   "no": 21,
+   "wageAbove": 1600,
+   "wageUpTo": 1700,
+   "assumedMonthlyWage": 1650.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 20.6,
+    "employerInvalidity": 8.25,
+    "employer": 28.85,
+    "employeeInvalidity": 8.25,
+    "employee": 8.25,
+    "total": 37.1
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 20.6,
+    "employer": 20.6,
+    "employee": 0,
+    "total": 20.6
+   }
+  },
+  {
+   "no": 22,
+   "wageAbove": 1700,
+   "wageUpTo": 1800,
+   "assumedMonthlyWage": 1750.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 21.9,
+    "employerInvalidity": 8.75,
+    "employer": 30.65,
+    "employeeInvalidity": 8.75,
+    "employee": 8.75,
+    "total": 39.4
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 21.9,
+    "employer": 21.9,
+    "employee": 0,
+    "total": 21.9
+   }
+  },
+  {
+   "no": 23,
+   "wageAbove": 1800,
+   "wageUpTo": 1900,
+   "assumedMonthlyWage": 1850.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 23.1,
+    "employerInvalidity": 9.25,
+    "employer": 32.35,
+    "employeeInvalidity": 9.25,
+    "employee": 9.25,
+    "total": 41.6
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 23.1,
+    "employer": 23.1,
+    "employee": 0,
+    "total": 23.1
+   }
+  },
+  {
+   "no": 24,
+   "wageAbove": 1900,
+   "wageUpTo": 2000,
+   "assumedMonthlyWage": 1950.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 24.4,
+    "employerInvalidity": 9.75,
+    "employer": 34.15,
+    "employeeInvalidity": 9.75,
+    "employee": 9.75,
+    "total": 43.9
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 24.4,
+    "employer": 24.4,
+    "employee": 0,
+    "total": 24.4
+   }
+  },
+  {
+   "no": 25,
+   "wageAbove": 2000,
+   "wageUpTo": 2100,
+   "assumedMonthlyWage": 2050.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 25.6,
+    "employerInvalidity": 10.25,
+    "employer": 35.85,
+    "employeeInvalidity": 10.25,
+    "employee": 10.25,
+    "total": 46.1
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 25.6,
+    "employer": 25.6,
+    "employee": 0,
+    "total": 25.6
+   }
+  },
+  {
+   "no": 26,
+   "wageAbove": 2100,
+   "wageUpTo": 2200,
+   "assumedMonthlyWage": 2150.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 26.9,
+    "employerInvalidity": 10.75,
+    "employer": 37.65,
+    "employeeInvalidity": 10.75,
+    "employee": 10.75,
+    "total": 48.4
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 26.9,
+    "employer": 26.9,
+    "employee": 0,
+    "total": 26.9
+   }
+  },
+  {
+   "no": 27,
+   "wageAbove": 2200,
+   "wageUpTo": 2300,
+   "assumedMonthlyWage": 2250.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 28.1,
+    "employerInvalidity": 11.25,
+    "employer": 39.35,
+    "employeeInvalidity": 11.25,
+    "employee": 11.25,
+    "total": 50.6
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 28.1,
+    "employer": 28.1,
+    "employee": 0,
+    "total": 28.1
+   }
+  },
+  {
+   "no": 28,
+   "wageAbove": 2300,
+   "wageUpTo": 2400,
+   "assumedMonthlyWage": 2350.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 29.4,
+    "employerInvalidity": 11.75,
+    "employer": 41.15,
+    "employeeInvalidity": 11.75,
+    "employee": 11.75,
+    "total": 52.9
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 29.4,
+    "employer": 29.4,
+    "employee": 0,
+    "total": 29.4
+   }
+  },
+  {
+   "no": 29,
+   "wageAbove": 2400,
+   "wageUpTo": 2500,
+   "assumedMonthlyWage": 2450.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 30.6,
+    "employerInvalidity": 12.25,
+    "employer": 42.85,
+    "employeeInvalidity": 12.25,
+    "employee": 12.25,
+    "total": 55.1
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 30.6,
+    "employer": 30.6,
+    "employee": 0,
+    "total": 30.6
+   }
+  },
+  {
+   "no": 30,
+   "wageAbove": 2500,
+   "wageUpTo": 2600,
+   "assumedMonthlyWage": 2550.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 31.9,
+    "employerInvalidity": 12.75,
+    "employer": 44.65,
+    "employeeInvalidity": 12.75,
+    "employee": 12.75,
+    "total": 57.4
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 31.9,
+    "employer": 31.9,
+    "employee": 0,
+    "total": 31.9
+   }
+  },
+  {
+   "no": 31,
+   "wageAbove": 2600,
+   "wageUpTo": 2700,
+   "assumedMonthlyWage": 2650.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 33.1,
+    "employerInvalidity": 13.25,
+    "employer": 46.35,
+    "employeeInvalidity": 13.25,
+    "employee": 13.25,
+    "total": 59.6
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 33.1,
+    "employer": 33.1,
+    "employee": 0,
+    "total": 33.1
+   }
+  },
+  {
+   "no": 32,
+   "wageAbove": 2700,
+   "wageUpTo": 2800,
+   "assumedMonthlyWage": 2750.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 34.4,
+    "employerInvalidity": 13.75,
+    "employer": 48.15,
+    "employeeInvalidity": 13.75,
+    "employee": 13.75,
+    "total": 61.9
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 34.4,
+    "employer": 34.4,
+    "employee": 0,
+    "total": 34.4
+   }
+  },
+  {
+   "no": 33,
+   "wageAbove": 2800,
+   "wageUpTo": 2900,
+   "assumedMonthlyWage": 2850.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 35.6,
+    "employerInvalidity": 14.25,
+    "employer": 49.85,
+    "employeeInvalidity": 14.25,
+    "employee": 14.25,
+    "total": 64.1
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 35.6,
+    "employer": 35.6,
+    "employee": 0,
+    "total": 35.6
+   }
+  },
+  {
+   "no": 34,
+   "wageAbove": 2900,
+   "wageUpTo": 3000,
+   "assumedMonthlyWage": 2950.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 36.9,
+    "employerInvalidity": 14.75,
+    "employer": 51.65,
+    "employeeInvalidity": 14.75,
+    "employee": 14.75,
+    "total": 66.4
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 36.9,
+    "employer": 36.9,
+    "employee": 0,
+    "total": 36.9
+   }
+  },
+  {
+   "no": 35,
+   "wageAbove": 3000,
+   "wageUpTo": 3100,
+   "assumedMonthlyWage": 3050.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 38.1,
+    "employerInvalidity": 15.25,
+    "employer": 53.35,
+    "employeeInvalidity": 15.25,
+    "employee": 15.25,
+    "total": 68.6
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 38.1,
+    "employer": 38.1,
+    "employee": 0,
+    "total": 38.1
+   }
+  },
+  {
+   "no": 36,
+   "wageAbove": 3100,
+   "wageUpTo": 3200,
+   "assumedMonthlyWage": 3150.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 39.4,
+    "employerInvalidity": 15.75,
+    "employer": 55.15,
+    "employeeInvalidity": 15.75,
+    "employee": 15.75,
+    "total": 70.9
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 39.4,
+    "employer": 39.4,
+    "employee": 0,
+    "total": 39.4
+   }
+  },
+  {
+   "no": 37,
+   "wageAbove": 3200,
+   "wageUpTo": 3300,
+   "assumedMonthlyWage": 3250.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 40.6,
+    "employerInvalidity": 16.25,
+    "employer": 56.85,
+    "employeeInvalidity": 16.25,
+    "employee": 16.25,
+    "total": 73.1
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 40.6,
+    "employer": 40.6,
+    "employee": 0,
+    "total": 40.6
+   }
+  },
+  {
+   "no": 38,
+   "wageAbove": 3300,
+   "wageUpTo": 3400,
+   "assumedMonthlyWage": 3350.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 41.9,
+    "employerInvalidity": 16.75,
+    "employer": 58.65,
+    "employeeInvalidity": 16.75,
+    "employee": 16.75,
+    "total": 75.4
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 41.9,
+    "employer": 41.9,
+    "employee": 0,
+    "total": 41.9
+   }
+  },
+  {
+   "no": 39,
+   "wageAbove": 3400,
+   "wageUpTo": 3500,
+   "assumedMonthlyWage": 3450.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 43.1,
+    "employerInvalidity": 17.25,
+    "employer": 60.35,
+    "employeeInvalidity": 17.25,
+    "employee": 17.25,
+    "total": 77.6
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 43.1,
+    "employer": 43.1,
+    "employee": 0,
+    "total": 43.1
+   }
+  },
+  {
+   "no": 40,
+   "wageAbove": 3500,
+   "wageUpTo": 3600,
+   "assumedMonthlyWage": 3550.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 44.4,
+    "employerInvalidity": 17.75,
+    "employer": 62.15,
+    "employeeInvalidity": 17.75,
+    "employee": 17.75,
+    "total": 79.9
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 44.4,
+    "employer": 44.4,
+    "employee": 0,
+    "total": 44.4
+   }
+  },
+  {
+   "no": 41,
+   "wageAbove": 3600,
+   "wageUpTo": 3700,
+   "assumedMonthlyWage": 3650.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 45.6,
+    "employerInvalidity": 18.25,
+    "employer": 63.85,
+    "employeeInvalidity": 18.25,
+    "employee": 18.25,
+    "total": 82.1
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 45.6,
+    "employer": 45.6,
+    "employee": 0,
+    "total": 45.6
+   }
+  },
+  {
+   "no": 42,
+   "wageAbove": 3700,
+   "wageUpTo": 3800,
+   "assumedMonthlyWage": 3750.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 46.9,
+    "employerInvalidity": 18.75,
+    "employer": 65.65,
+    "employeeInvalidity": 18.75,
+    "employee": 18.75,
+    "total": 84.4
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 46.9,
+    "employer": 46.9,
+    "employee": 0,
+    "total": 46.9
+   }
+  },
+  {
+   "no": 43,
+   "wageAbove": 3800,
+   "wageUpTo": 3900,
+   "assumedMonthlyWage": 3850.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 48.1,
+    "employerInvalidity": 19.25,
+    "employer": 67.35,
+    "employeeInvalidity": 19.25,
+    "employee": 19.25,
+    "total": 86.6
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 48.1,
+    "employer": 48.1,
+    "employee": 0,
+    "total": 48.1
+   }
+  },
+  {
+   "no": 44,
+   "wageAbove": 3900,
+   "wageUpTo": 4000,
+   "assumedMonthlyWage": 3950.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 49.4,
+    "employerInvalidity": 19.75,
+    "employer": 69.15,
+    "employeeInvalidity": 19.75,
+    "employee": 19.75,
+    "total": 88.9
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 49.4,
+    "employer": 49.4,
+    "employee": 0,
+    "total": 49.4
+   }
+  },
+  {
+   "no": 45,
+   "wageAbove": 4000,
+   "wageUpTo": 4100,
+   "assumedMonthlyWage": 4050.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 50.6,
+    "employerInvalidity": 20.25,
+    "employer": 70.85,
+    "employeeInvalidity": 20.25,
+    "employee": 20.25,
+    "total": 91.1
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 50.6,
+    "employer": 50.6,
+    "employee": 0,
+    "total": 50.6
+   }
+  },
+  {
+   "no": 46,
+   "wageAbove": 4100,
+   "wageUpTo": 4200,
+   "assumedMonthlyWage": 4150.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 51.9,
+    "employerInvalidity": 20.75,
+    "employer": 72.65,
+    "employeeInvalidity": 20.75,
+    "employee": 20.75,
+    "total": 93.4
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 51.9,
+    "employer": 51.9,
+    "employee": 0,
+    "total": 51.9
+   }
+  },
+  {
+   "no": 47,
+   "wageAbove": 4200,
+   "wageUpTo": 4300,
+   "assumedMonthlyWage": 4250.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 53.1,
+    "employerInvalidity": 21.25,
+    "employer": 74.35,
+    "employeeInvalidity": 21.25,
+    "employee": 21.25,
+    "total": 95.6
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 53.1,
+    "employer": 53.1,
+    "employee": 0,
+    "total": 53.1
+   }
+  },
+  {
+   "no": 48,
+   "wageAbove": 4300,
+   "wageUpTo": 4400,
+   "assumedMonthlyWage": 4350.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 54.4,
+    "employerInvalidity": 21.75,
+    "employer": 76.15,
+    "employeeInvalidity": 21.75,
+    "employee": 21.75,
+    "total": 97.9
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 54.4,
+    "employer": 54.4,
+    "employee": 0,
+    "total": 54.4
+   }
+  },
+  {
+   "no": 49,
+   "wageAbove": 4400,
+   "wageUpTo": 4500,
+   "assumedMonthlyWage": 4450.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 55.6,
+    "employerInvalidity": 22.25,
+    "employer": 77.85,
+    "employeeInvalidity": 22.25,
+    "employee": 22.25,
+    "total": 100.1
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 55.6,
+    "employer": 55.6,
+    "employee": 0,
+    "total": 55.6
+   }
+  },
+  {
+   "no": 50,
+   "wageAbove": 4500,
+   "wageUpTo": 4600,
+   "assumedMonthlyWage": 4550.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 56.9,
+    "employerInvalidity": 22.75,
+    "employer": 79.65,
+    "employeeInvalidity": 22.75,
+    "employee": 22.75,
+    "total": 102.4
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 56.9,
+    "employer": 56.9,
+    "employee": 0,
+    "total": 56.9
+   }
+  },
+  {
+   "no": 51,
+   "wageAbove": 4600,
+   "wageUpTo": 4700,
+   "assumedMonthlyWage": 4650.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 58.1,
+    "employerInvalidity": 23.25,
+    "employer": 81.35,
+    "employeeInvalidity": 23.25,
+    "employee": 23.25,
+    "total": 104.6
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 58.1,
+    "employer": 58.1,
+    "employee": 0,
+    "total": 58.1
+   }
+  },
+  {
+   "no": 52,
+   "wageAbove": 4700,
+   "wageUpTo": 4800,
+   "assumedMonthlyWage": 4750.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 59.4,
+    "employerInvalidity": 23.75,
+    "employer": 83.15,
+    "employeeInvalidity": 23.75,
+    "employee": 23.75,
+    "total": 106.9
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 59.4,
+    "employer": 59.4,
+    "employee": 0,
+    "total": 59.4
+   }
+  },
+  {
+   "no": 53,
+   "wageAbove": 4800,
+   "wageUpTo": 4900,
+   "assumedMonthlyWage": 4850.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 60.6,
+    "employerInvalidity": 24.25,
+    "employer": 84.85,
+    "employeeInvalidity": 24.25,
+    "employee": 24.25,
+    "total": 109.1
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 60.6,
+    "employer": 60.6,
+    "employee": 0,
+    "total": 60.6
+   }
+  },
+  {
+   "no": 54,
+   "wageAbove": 4900,
+   "wageUpTo": 5000,
+   "assumedMonthlyWage": 4950.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 61.9,
+    "employerInvalidity": 24.75,
+    "employer": 86.65,
+    "employeeInvalidity": 24.75,
+    "employee": 24.75,
+    "total": 111.4
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 61.9,
+    "employer": 61.9,
+    "employee": 0,
+    "total": 61.9
+   }
+  },
+  {
+   "no": 55,
+   "wageAbove": 5000,
+   "wageUpTo": 5100,
+   "assumedMonthlyWage": 5050.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 63.1,
+    "employerInvalidity": 25.25,
+    "employer": 88.35,
+    "employeeInvalidity": 25.25,
+    "employee": 25.25,
+    "total": 113.6
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 63.1,
+    "employer": 63.1,
+    "employee": 0,
+    "total": 63.1
+   }
+  },
+  {
+   "no": 56,
+   "wageAbove": 5100,
+   "wageUpTo": 5200,
+   "assumedMonthlyWage": 5150.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 64.4,
+    "employerInvalidity": 25.75,
+    "employer": 90.15,
+    "employeeInvalidity": 25.75,
+    "employee": 25.75,
+    "total": 115.9
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 64.4,
+    "employer": 64.4,
+    "employee": 0,
+    "total": 64.4
+   }
+  },
+  {
+   "no": 57,
+   "wageAbove": 5200,
+   "wageUpTo": 5300,
+   "assumedMonthlyWage": 5250.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 65.6,
+    "employerInvalidity": 26.25,
+    "employer": 91.85,
+    "employeeInvalidity": 26.25,
+    "employee": 26.25,
+    "total": 118.1
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 65.6,
+    "employer": 65.6,
+    "employee": 0,
+    "total": 65.6
+   }
+  },
+  {
+   "no": 58,
+   "wageAbove": 5300,
+   "wageUpTo": 5400,
+   "assumedMonthlyWage": 5350.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 66.9,
+    "employerInvalidity": 26.75,
+    "employer": 93.65,
+    "employeeInvalidity": 26.75,
+    "employee": 26.75,
+    "total": 120.4
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 66.9,
+    "employer": 66.9,
+    "employee": 0,
+    "total": 66.9
+   }
+  },
+  {
+   "no": 59,
+   "wageAbove": 5400,
+   "wageUpTo": 5500,
+   "assumedMonthlyWage": 5450.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 68.1,
+    "employerInvalidity": 27.25,
+    "employer": 95.35,
+    "employeeInvalidity": 27.25,
+    "employee": 27.25,
+    "total": 122.6
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 68.1,
+    "employer": 68.1,
+    "employee": 0,
+    "total": 68.1
+   }
+  },
+  {
+   "no": 60,
+   "wageAbove": 5500,
+   "wageUpTo": 5600,
+   "assumedMonthlyWage": 5550.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 69.4,
+    "employerInvalidity": 27.75,
+    "employer": 97.15,
+    "employeeInvalidity": 27.75,
+    "employee": 27.75,
+    "total": 124.9
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 69.4,
+    "employer": 69.4,
+    "employee": 0,
+    "total": 69.4
+   }
+  },
+  {
+   "no": 61,
+   "wageAbove": 5600,
+   "wageUpTo": 5700,
+   "assumedMonthlyWage": 5650.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 70.6,
+    "employerInvalidity": 28.25,
+    "employer": 98.85,
+    "employeeInvalidity": 28.25,
+    "employee": 28.25,
+    "total": 127.1
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 70.6,
+    "employer": 70.6,
+    "employee": 0,
+    "total": 70.6
+   }
+  },
+  {
+   "no": 62,
+   "wageAbove": 5700,
+   "wageUpTo": 5800,
+   "assumedMonthlyWage": 5750.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 71.9,
+    "employerInvalidity": 28.75,
+    "employer": 100.65,
+    "employeeInvalidity": 28.75,
+    "employee": 28.75,
+    "total": 129.4
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 71.9,
+    "employer": 71.9,
+    "employee": 0,
+    "total": 71.9
+   }
+  },
+  {
+   "no": 63,
+   "wageAbove": 5800,
+   "wageUpTo": 5900,
+   "assumedMonthlyWage": 5850.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 73.1,
+    "employerInvalidity": 29.25,
+    "employer": 102.35,
+    "employeeInvalidity": 29.25,
+    "employee": 29.25,
+    "total": 131.6
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 73.1,
+    "employer": 73.1,
+    "employee": 0,
+    "total": 73.1
+   }
+  },
+  {
+   "no": 64,
+   "wageAbove": 5900,
+   "wageUpTo": 6000,
+   "assumedMonthlyWage": 5950.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 74.4,
+    "employerInvalidity": 29.75,
+    "employer": 104.15,
+    "employeeInvalidity": 29.75,
+    "employee": 29.75,
+    "total": 133.9
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 74.4,
+    "employer": 74.4,
+    "employee": 0,
+    "total": 74.4
+   }
+  },
+  {
+   "no": 65,
+   "wageAbove": 6000,
+   "wageUpTo": null,
+   "assumedMonthlyWage": 5950.0,
+   "firstCategory": {
+    "employerEmploymentInjury": 74.4,
+    "employerInvalidity": 29.75,
+    "employer": 104.15,
+    "employeeInvalidity": 29.75,
+    "employee": 29.75,
+    "total": 133.9
+   },
+   "secondCategory": {
+    "employerEmploymentInjury": 74.4,
+    "employer": 74.4,
+    "employee": 0,
+    "total": 74.4
+   }
+  }
+ ]
+}

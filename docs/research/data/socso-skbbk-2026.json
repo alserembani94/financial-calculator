@@ -1,0 +1,661 @@
+{
+ "id": "socso-skbbk",
+ "description": "Non-Employment Injury Scheme (Skim Kemalangan Bukan Bencana Kerja, SKBBK, branded 'LINDUNG 24 Jam') employee-only contribution per wage band and phase. Same amount for First and Second Category. Employer pays nothing for this scheme. Wage ceiling RM6,000.",
+ "legalBasis": "Employees' Social Security Act 1969 [Act 4] as amended by Act A1788 (royal assent 23 Feb 2026, gazetted 5 Mar 2026); s.6(2),(4),(5),(11) and Third Schedule Parts I-VI; s.9(3)-(4) (one employer only); commencement and phase dates by P.U.(B) 196/2026; employer-selection procedure by P.U.(A) 206/2026 reg 12B. Voluntary status for locals rests on the Cabinet decision of 8 Jul 2026 and a signed liability release; no gazetted instrument found as of 2026-11-05, partly on saved AGC portal listings, use pending owner decision.",
+ "effectiveFrom": "2026-06-01",
+ "lookup": "Band i applies when wageAbove < monthlyWage <= wageUpTo (wageUpTo null = open-ended top band). Band 1 is 'wages up to RM30'. All amounts in RM. Wage ceiling RM6,000: bands 64 and 65 carry identical amounts. Top NEI amount starts ABOVE RM5,900 in phase 1: exactly RM5,900.00 is band 63 = RM43.85; RM5,900.01 and up = RM44.65.",
+ "phases": [
+  {
+   "phase": 1,
+   "effectiveFrom": "2026-06-01",
+   "effectiveTo": "2028-05-31",
+   "nominalRate": 0.0075
+  },
+  {
+   "phase": 2,
+   "effectiveFrom": "2028-06-01",
+   "effectiveTo": "2031-05-31",
+   "nominalRate": 0.01
+  },
+  {
+   "phase": 3,
+   "effectiveFrom": "2031-06-01",
+   "effectiveTo": null,
+   "nominalRate": 0.0125
+  }
+ ],
+ "participation": {
+  "2026-06": "mandatory for all Act 4 employees (local and foreign), no refund",
+  "from2026-07-08": "voluntary for local employees (opt-out model); mandatory for foreign workers",
+  "optOutWindow": {
+   "from": "2026-07-13",
+   "to": "2026-08-31"
+  },
+  "afterWindow": "no further opt-out; locals who did not opt out are permanently in ('once in, always in'); opted-out locals may opt in at any time, online from 2 Sep 2026 (contribution due on the full month's wage for the month of opt-in, not backdated); first-time contributors must contribute per PERKESO FAQ v2.3 Q26, Q27, Q29, though earlier PERKESO documents described a new-hire opt-out, so existing new-hire opt-outs may be valid (medium confidence)",
+  "multipleEmployers": "NEI contribution is paid through at most ONE employer (s.9(3) Act 4 as amended): zero if an opted-out local, otherwise one, on that employer's band. The employee chooses within 30 days from the date PERKESO furnishes written notice, whenever they have two or more employers (P.U.(A) 206/2026 reg 12B; Circular 3/2026 paras 4.5, 4.7, 4.9). Failing that, PERKESO notifies the employer within 14 days."
+ },
+ "bands": [
+  {
+   "no": 1,
+   "wageAbove": 0,
+   "wageUpTo": 30,
+   "assumedMonthlyWage": 20.0,
+   "phase1": 0.2,
+   "phase2": 0.25,
+   "phase3": 0.3
+  },
+  {
+   "no": 2,
+   "wageAbove": 30,
+   "wageUpTo": 50,
+   "assumedMonthlyWage": 40.0,
+   "phase1": 0.3,
+   "phase2": 0.4,
+   "phase3": 0.5
+  },
+  {
+   "no": 3,
+   "wageAbove": 50,
+   "wageUpTo": 70,
+   "assumedMonthlyWage": 60.0,
+   "phase1": 0.5,
+   "phase2": 0.65,
+   "phase3": 0.8
+  },
+  {
+   "no": 4,
+   "wageAbove": 70,
+   "wageUpTo": 100,
+   "assumedMonthlyWage": 85.0,
+   "phase1": 0.65,
+   "phase2": 0.9,
+   "phase3": 1.1
+  },
+  {
+   "no": 5,
+   "wageAbove": 100,
+   "wageUpTo": 140,
+   "assumedMonthlyWage": 120.0,
+   "phase1": 0.9,
+   "phase2": 1.2,
+   "phase3": 1.5
+  },
+  {
+   "no": 6,
+   "wageAbove": 140,
+   "wageUpTo": 200,
+   "assumedMonthlyWage": 170.0,
+   "phase1": 1.25,
+   "phase2": 1.7,
+   "phase3": 2.1
+  },
+  {
+   "no": 7,
+   "wageAbove": 200,
+   "wageUpTo": 300,
+   "assumedMonthlyWage": 250.0,
+   "phase1": 1.85,
+   "phase2": 2.5,
+   "phase3": 3.1
+  },
+  {
+   "no": 8,
+   "wageAbove": 300,
+   "wageUpTo": 400,
+   "assumedMonthlyWage": 350.0,
+   "phase1": 2.65,
+   "phase2": 3.5,
+   "phase3": 4.4
+  },
+  {
+   "no": 9,
+   "wageAbove": 400,
+   "wageUpTo": 500,
+   "assumedMonthlyWage": 450.0,
+   "phase1": 3.35,
+   "phase2": 4.5,
+   "phase3": 5.6
+  },
+  {
+   "no": 10,
+   "wageAbove": 500,
+   "wageUpTo": 600,
+   "assumedMonthlyWage": 550.0,
+   "phase1": 4.15,
+   "phase2": 5.5,
+   "phase3": 6.9
+  },
+  {
+   "no": 11,
+   "wageAbove": 600,
+   "wageUpTo": 700,
+   "assumedMonthlyWage": 650.0,
+   "phase1": 4.85,
+   "phase2": 6.5,
+   "phase3": 8.1
+  },
+  {
+   "no": 12,
+   "wageAbove": 700,
+   "wageUpTo": 800,
+   "assumedMonthlyWage": 750.0,
+   "phase1": 5.65,
+   "phase2": 7.5,
+   "phase3": 9.4
+  },
+  {
+   "no": 13,
+   "wageAbove": 800,
+   "wageUpTo": 900,
+   "assumedMonthlyWage": 850.0,
+   "phase1": 6.35,
+   "phase2": 8.5,
+   "phase3": 10.6
+  },
+  {
+   "no": 14,
+   "wageAbove": 900,
+   "wageUpTo": 1000,
+   "assumedMonthlyWage": 950.0,
+   "phase1": 7.15,
+   "phase2": 9.5,
+   "phase3": 11.9
+  },
+  {
+   "no": 15,
+   "wageAbove": 1000,
+   "wageUpTo": 1100,
+   "assumedMonthlyWage": 1050.0,
+   "phase1": 7.85,
+   "phase2": 10.5,
+   "phase3": 13.1
+  },
+  {
+   "no": 16,
+   "wageAbove": 1100,
+   "wageUpTo": 1200,
+   "assumedMonthlyWage": 1150.0,
+   "phase1": 8.65,
+   "phase2": 11.5,
+   "phase3": 14.4
+  },
+  {
+   "no": 17,
+   "wageAbove": 1200,
+   "wageUpTo": 1300,
+   "assumedMonthlyWage": 1250.0,
+   "phase1": 9.35,
+   "phase2": 12.5,
+   "phase3": 15.6
+  },
+  {
+   "no": 18,
+   "wageAbove": 1300,
+   "wageUpTo": 1400,
+   "assumedMonthlyWage": 1350.0,
+   "phase1": 10.15,
+   "phase2": 13.5,
+   "phase3": 16.9
+  },
+  {
+   "no": 19,
+   "wageAbove": 1400,
+   "wageUpTo": 1500,
+   "assumedMonthlyWage": 1450.0,
+   "phase1": 10.85,
+   "phase2": 14.5,
+   "phase3": 18.1
+  },
+  {
+   "no": 20,
+   "wageAbove": 1500,
+   "wageUpTo": 1600,
+   "assumedMonthlyWage": 1550.0,
+   "phase1": 11.65,
+   "phase2": 15.5,
+   "phase3": 19.4
+  },
+  {
+   "no": 21,
+   "wageAbove": 1600,
+   "wageUpTo": 1700,
+   "assumedMonthlyWage": 1650.0,
+   "phase1": 12.35,
+   "phase2": 16.5,
+   "phase3": 20.6
+  },
+  {
+   "no": 22,
+   "wageAbove": 1700,
+   "wageUpTo": 1800,
+   "assumedMonthlyWage": 1750.0,
+   "phase1": 13.15,
+   "phase2": 17.5,
+   "phase3": 21.9
+  },
+  {
+   "no": 23,
+   "wageAbove": 1800,
+   "wageUpTo": 1900,
+   "assumedMonthlyWage": 1850.0,
+   "phase1": 13.85,
+   "phase2": 18.5,
+   "phase3": 23.1
+  },
+  {
+   "no": 24,
+   "wageAbove": 1900,
+   "wageUpTo": 2000,
+   "assumedMonthlyWage": 1950.0,
+   "phase1": 14.65,
+   "phase2": 19.5,
+   "phase3": 24.4
+  },
+  {
+   "no": 25,
+   "wageAbove": 2000,
+   "wageUpTo": 2100,
+   "assumedMonthlyWage": 2050.0,
+   "phase1": 15.35,
+   "phase2": 20.5,
+   "phase3": 25.6
+  },
+  {
+   "no": 26,
+   "wageAbove": 2100,
+   "wageUpTo": 2200,
+   "assumedMonthlyWage": 2150.0,
+   "phase1": 16.15,
+   "phase2": 21.5,
+   "phase3": 26.9
+  },
+  {
+   "no": 27,
+   "wageAbove": 2200,
+   "wageUpTo": 2300,
+   "assumedMonthlyWage": 2250.0,
+   "phase1": 16.85,
+   "phase2": 22.5,
+   "phase3": 28.1
+  },
+  {
+   "no": 28,
+   "wageAbove": 2300,
+   "wageUpTo": 2400,
+   "assumedMonthlyWage": 2350.0,
+   "phase1": 17.65,
+   "phase2": 23.5,
+   "phase3": 29.4
+  },
+  {
+   "no": 29,
+   "wageAbove": 2400,
+   "wageUpTo": 2500,
+   "assumedMonthlyWage": 2450.0,
+   "phase1": 18.35,
+   "phase2": 24.5,
+   "phase3": 30.6
+  },
+  {
+   "no": 30,
+   "wageAbove": 2500,
+   "wageUpTo": 2600,
+   "assumedMonthlyWage": 2550.0,
+   "phase1": 19.15,
+   "phase2": 25.5,
+   "phase3": 31.9
+  },
+  {
+   "no": 31,
+   "wageAbove": 2600,
+   "wageUpTo": 2700,
+   "assumedMonthlyWage": 2650.0,
+   "phase1": 19.85,
+   "phase2": 26.5,
+   "phase3": 33.1
+  },
+  {
+   "no": 32,
+   "wageAbove": 2700,
+   "wageUpTo": 2800,
+   "assumedMonthlyWage": 2750.0,
+   "phase1": 20.65,
+   "phase2": 27.5,
+   "phase3": 34.4
+  },
+  {
+   "no": 33,
+   "wageAbove": 2800,
+   "wageUpTo": 2900,
+   "assumedMonthlyWage": 2850.0,
+   "phase1": 21.35,
+   "phase2": 28.5,
+   "phase3": 35.6
+  },
+  {
+   "no": 34,
+   "wageAbove": 2900,
+   "wageUpTo": 3000,
+   "assumedMonthlyWage": 2950.0,
+   "phase1": 22.15,
+   "phase2": 29.5,
+   "phase3": 36.9
+  },
+  {
+   "no": 35,
+   "wageAbove": 3000,
+   "wageUpTo": 3100,
+   "assumedMonthlyWage": 3050.0,
+   "phase1": 22.85,
+   "phase2": 30.5,
+   "phase3": 38.1
+  },
+  {
+   "no": 36,
+   "wageAbove": 3100,
+   "wageUpTo": 3200,
+   "assumedMonthlyWage": 3150.0,
+   "phase1": 23.65,
+   "phase2": 31.5,
+   "phase3": 39.4
+  },
+  {
+   "no": 37,
+   "wageAbove": 3200,
+   "wageUpTo": 3300,
+   "assumedMonthlyWage": 3250.0,
+   "phase1": 24.35,
+   "phase2": 32.5,
+   "phase3": 40.6
+  },
+  {
+   "no": 38,
+   "wageAbove": 3300,
+   "wageUpTo": 3400,
+   "assumedMonthlyWage": 3350.0,
+   "phase1": 25.15,
+   "phase2": 33.5,
+   "phase3": 41.9
+  },
+  {
+   "no": 39,
+   "wageAbove": 3400,
+   "wageUpTo": 3500,
+   "assumedMonthlyWage": 3450.0,
+   "phase1": 25.85,
+   "phase2": 34.5,
+   "phase3": 43.1
+  },
+  {
+   "no": 40,
+   "wageAbove": 3500,
+   "wageUpTo": 3600,
+   "assumedMonthlyWage": 3550.0,
+   "phase1": 26.65,
+   "phase2": 35.5,
+   "phase3": 44.4
+  },
+  {
+   "no": 41,
+   "wageAbove": 3600,
+   "wageUpTo": 3700,
+   "assumedMonthlyWage": 3650.0,
+   "phase1": 27.35,
+   "phase2": 36.5,
+   "phase3": 45.6
+  },
+  {
+   "no": 42,
+   "wageAbove": 3700,
+   "wageUpTo": 3800,
+   "assumedMonthlyWage": 3750.0,
+   "phase1": 28.15,
+   "phase2": 37.5,
+   "phase3": 46.9
+  },
+  {
+   "no": 43,
+   "wageAbove": 3800,
+   "wageUpTo": 3900,
+   "assumedMonthlyWage": 3850.0,
+   "phase1": 28.85,
+   "phase2": 38.5,
+   "phase3": 48.1
+  },
+  {
+   "no": 44,
+   "wageAbove": 3900,
+   "wageUpTo": 4000,
+   "assumedMonthlyWage": 3950.0,
+   "phase1": 29.65,
+   "phase2": 39.5,
+   "phase3": 49.4
+  },
+  {
+   "no": 45,
+   "wageAbove": 4000,
+   "wageUpTo": 4100,
+   "assumedMonthlyWage": 4050.0,
+   "phase1": 30.35,
+   "phase2": 40.5,
+   "phase3": 50.6
+  },
+  {
+   "no": 46,
+   "wageAbove": 4100,
+   "wageUpTo": 4200,
+   "assumedMonthlyWage": 4150.0,
+   "phase1": 31.15,
+   "phase2": 41.5,
+   "phase3": 51.9
+  },
+  {
+   "no": 47,
+   "wageAbove": 4200,
+   "wageUpTo": 4300,
+   "assumedMonthlyWage": 4250.0,
+   "phase1": 31.85,
+   "phase2": 42.5,
+   "phase3": 53.1
+  },
+  {
+   "no": 48,
+   "wageAbove": 4300,
+   "wageUpTo": 4400,
+   "assumedMonthlyWage": 4350.0,
+   "phase1": 32.65,
+   "phase2": 43.5,
+   "phase3": 54.4
+  },
+  {
+   "no": 49,
+   "wageAbove": 4400,
+   "wageUpTo": 4500,
+   "assumedMonthlyWage": 4450.0,
+   "phase1": 33.35,
+   "phase2": 44.5,
+   "phase3": 55.6
+  },
+  {
+   "no": 50,
+   "wageAbove": 4500,
+   "wageUpTo": 4600,
+   "assumedMonthlyWage": 4550.0,
+   "phase1": 34.15,
+   "phase2": 45.5,
+   "phase3": 56.9
+  },
+  {
+   "no": 51,
+   "wageAbove": 4600,
+   "wageUpTo": 4700,
+   "assumedMonthlyWage": 4650.0,
+   "phase1": 34.85,
+   "phase2": 46.5,
+   "phase3": 58.1
+  },
+  {
+   "no": 52,
+   "wageAbove": 4700,
+   "wageUpTo": 4800,
+   "assumedMonthlyWage": 4750.0,
+   "phase1": 35.65,
+   "phase2": 47.5,
+   "phase3": 59.4
+  },
+  {
+   "no": 53,
+   "wageAbove": 4800,
+   "wageUpTo": 4900,
+   "assumedMonthlyWage": 4850.0,
+   "phase1": 36.35,
+   "phase2": 48.5,
+   "phase3": 60.6
+  },
+  {
+   "no": 54,
+   "wageAbove": 4900,
+   "wageUpTo": 5000,
+   "assumedMonthlyWage": 4950.0,
+   "phase1": 37.15,
+   "phase2": 49.5,
+   "phase3": 61.9
+  },
+  {
+   "no": 55,
+   "wageAbove": 5000,
+   "wageUpTo": 5100,
+   "assumedMonthlyWage": 5050.0,
+   "phase1": 37.85,
+   "phase2": 50.5,
+   "phase3": 63.1
+  },
+  {
+   "no": 56,
+   "wageAbove": 5100,
+   "wageUpTo": 5200,
+   "assumedMonthlyWage": 5150.0,
+   "phase1": 38.65,
+   "phase2": 51.5,
+   "phase3": 64.4
+  },
+  {
+   "no": 57,
+   "wageAbove": 5200,
+   "wageUpTo": 5300,
+   "assumedMonthlyWage": 5250.0,
+   "phase1": 39.35,
+   "phase2": 52.5,
+   "phase3": 65.6
+  },
+  {
+   "no": 58,
+   "wageAbove": 5300,
+   "wageUpTo": 5400,
+   "assumedMonthlyWage": 5350.0,
+   "phase1": 40.15,
+   "phase2": 53.5,
+   "phase3": 66.9
+  },
+  {
+   "no": 59,
+   "wageAbove": 5400,
+   "wageUpTo": 5500,
+   "assumedMonthlyWage": 5450.0,
+   "phase1": 40.85,
+   "phase2": 54.5,
+   "phase3": 68.1
+  },
+  {
+   "no": 60,
+   "wageAbove": 5500,
+   "wageUpTo": 5600,
+   "assumedMonthlyWage": 5550.0,
+   "phase1": 41.65,
+   "phase2": 55.5,
+   "phase3": 69.4
+  },
+  {
+   "no": 61,
+   "wageAbove": 5600,
+   "wageUpTo": 5700,
+   "assumedMonthlyWage": 5650.0,
+   "phase1": 42.35,
+   "phase2": 56.5,
+   "phase3": 70.6
+  },
+  {
+   "no": 62,
+   "wageAbove": 5700,
+   "wageUpTo": 5800,
+   "assumedMonthlyWage": 5750.0,
+   "phase1": 43.15,
+   "phase2": 57.5,
+   "phase3": 71.9
+  },
+  {
+   "no": 63,
+   "wageAbove": 5800,
+   "wageUpTo": 5900,
+   "assumedMonthlyWage": 5850.0,
+   "phase1": 43.85,
+   "phase2": 58.5,
+   "phase3": 73.1
+  },
+  {
+   "no": 64,
+   "wageAbove": 5900,
+   "wageUpTo": 6000,
+   "assumedMonthlyWage": 5950.0,
+   "phase1": 44.65,
+   "phase2": 59.5,
+   "phase3": 74.4
+  },
+  {
+   "no": 65,
+   "wageAbove": 6000,
+   "wageUpTo": null,
+   "assumedMonthlyWage": 5950.0,
+   "phase1": 44.65,
+   "phase2": 59.5,
+   "phase3": 74.4
+  }
+ ],
+ "sources": [
+  {
+   "title": "Akta Keselamatan Sosial Pekerja (Pindaan) 2026 [Akta A1788], Jadual Ketiga (Third Schedule) Parts I-VI and Fourth Schedule para 4",
+   "url": "https://perkeso.gov.my/images/akta/ACT%204/Akta_A1788_-_AKTA_KESELAMATAN_SOSIAL_PEKERJA_PINDAAN_2026.pdf",
+   "accessed": "2026-11-04"
+  },
+  {
+   "title": "PERKESO - Employees' Social Security Act 1969 (Act 4): New Contribution Rate Including SKBBK (PDF created 2026-05-30)",
+   "url": "https://www.perkeso.gov.my/images/lindung/lindung-24-jam/NewContributionRateIncludingSKBBK.pdf",
+   "accessed": "2026-11-04"
+  },
+  {
+   "title": "PERKESO Soalan Lazim LINDUNG 24 Jam v2.3 (file generated 2026-10-13)",
+   "url": "https://www.perkeso.gov.my/images/lindung/lindung-24-jam/FAQ_LINDUNG24Jam_v_2.3%20.pdf",
+   "accessed": "2026-11-04"
+  },
+  {
+   "title": "PERKESO LINDUNG 24 Jam page",
+   "url": "https://www.perkeso.gov.my/skim-kemalangan-bukan-bencana-kerja-lindung-24-jam.html",
+   "accessed": "2026-11-04"
+  },
+  {
+   "title": "P.U.(B) 196/2026, appointment of date of coming into operation of Act A1788 and of the three phases",
+   "url": "https://lom.agc.gov.my/act-view.php?type=pua&no=P.U.%20(B)%20196/2026&status=PRINCIPAL",
+   "accessed": "2026-11-05"
+  },
+  {
+   "title": "P.U.(A) 206/2026, Employees' Social Security (General) (Amendment) Regulations 2026, reg 12B",
+   "url": "https://lom.agc.gov.my/act-view.php?type=pua&no=P.U.%20(A)%20206/2026&status=AMENDMENT",
+   "accessed": "2026-11-05"
+  },
+  {
+   "title": "PERKESO Pekeliling Majikan Bil. 3 Tahun 2026, paras 4.3-4.10",
+   "url": "https://www.perkeso.gov.my/images/arahan/PEKELILING%20MAJIKAN%20BILANGAN%203_%202026_PELAKSANAAN%20SKIM%20LINDUNG%2024%20JAM%20DAN%20PEMILIHAN%20MAJIKAN%20BAGI%20MAKSUD%20PEMBAYARAN%20CARUMAN.pdf",
+   "accessed": "2026-11-05"
+  }
+ ]
+}
