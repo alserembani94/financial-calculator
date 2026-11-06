@@ -219,7 +219,7 @@ LHDN has said nothing that I could find. Payroll vendors and HR blogs uniformly 
 - Panda HRMS (15 Oct 2026): higher reliefs and lower rates "can nudge monthly PCB (MTD) down once LHDN updates the schedule". It gives no specific month — [Panda HRMS](https://pandahrms.com/budget-2027-individual-income-tax-relief-changes-ya2027/)
 - A search summary of several Malaysian HR and payroll guides (DataOn, Omni HR, Links International) reports advice that employers should not adjust employee PCB until LHDN publishes the updated 2027 MTD schedules — [DataOn](https://dataon.com/en-my/blog/malaysia-payroll-guide/); [Omni HR](https://www.omnihr.co/blog/malaysia-tax); [Links International](https://linksinternational.com/blog/malaysia-budget-2027-employers-hr-updates/) **[search summary only; individual pages not fetched; lower confidence]**
 - LHDN's position on how PCB is set: MTD is determined using the computerised calculation method or the e-PCB schedule via e-CP39 — [HASiL, Pembayaran PCB](https://www.hasil.gov.my/en/majikan/pembayaran-pcb/) (search snippet). LHDN-approved payroll software must comply with the published specification — [HASiL approved software list](https://www.hasil.gov.my/wp-content/uploads/List-of-Software-Provider-Payroll-System-approved-as-at-25-May-2026.pdf)
-- I found no statements from Kakitangan, Payroll Panda (payrollpanda.my), Talenox or SQL Payroll specific to Budget 2027 PCB timing in this research.
+- I found no statements from the other main payroll vendors specific to Budget 2027 PCB timing in this research.
 
 ### Inferences
 - In practice, employers and approved software will apply the YA2027 figures from the first payroll after LHDN releases the 2027 specification and updates e-PCB. If precedent holds (spec dated 1 Jan), that is January 2027 payroll. If LHDN releases later, PCB under-reductions early in the year are self-correcting: the MTD formula computes a cumulative annual liability (it uses the accumulated remuneration and MTD paid to date), so later months absorb the difference and final liability is settled on the YA2027 return (filed 2028).
@@ -227,7 +227,7 @@ LHDN has said nothing that I could find. Payroll vendors and HR blogs uniformly 
 
 ### Gaps
 - I found no LHDN statement or FAQ on Budget 2027 PCB effective timing.
-- I did not find vendor-specific announcements (Kakitangan, Talenox, SQL Payroll, PayrollPanda) for 2027.
+- I did not find announcements from the main payroll vendors for 2027.
 
 ---
 

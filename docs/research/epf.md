@@ -114,7 +114,7 @@ In this table, ee means employee share and er means employer share.
 
 **Applicability notes**
 - **Part E** covers citizens who have attained 60. P.U.(A) 370/2018, in force 1 Jan 2019, deleted the old Part C(a), per the Act's amendment table and the schedule's own "Deleted by" marker. The parliamentary reply confirms the January 2019 start, with the employer rate falling from 6% to 4% and the employee rate from 5.5% to 0%, but it doesn't name Part E. The gazetted order itself was not read.
-- **Age 75 stop: high confidence, all categories including Part F.** Act 452 First Schedule para (13) says a person "who has attained the age of seventy-five years" is not an employee, and s.50(2B)(a) bars crediting contributions after that age. Act A1760 s.9 deleted only paras (6) and (7), so para (13) stands. KWSP's employer page says "maximum age of contribution is 75 years old", and its non-Malaysian FAQ Q20, Q21 and Q27 say the same. A vendor's 0%/4% at 60+ for foreign workers (QNE) contradicts KWSP's FAQ Q22 and is disregarded.
+- **Age 75 stop: high confidence, all categories including Part F.** Act 452 First Schedule para (13) says a person "who has attained the age of seventy-five years" is not an employee, and s.50(2B)(a) bars crediting contributions after that age. Act A1760 s.9 deleted only paras (6) and (7), so para (13) stands. KWSP's employer page says "maximum age of contribution is 75 years old", and its non-Malaysian FAQ Q20, Q21 and Q27 say the same. One payroll vendor's 0%/4% at 60+ for foreign workers contradicts KWSP's FAQ Q22 and is disregarded.
 - **Which wage month the switch takes effect.** See §3.1. Medium for 60, low for 75.
 - **Directors who draw a salary, and part-time, contract, temporary and probationary staff, are all liable.** There is no minimum number of employees (FAQ Q22, Q26, Q28). "Contract" means a contract *of* service; a genuine contract *for* service is outside (Q10).
 - **Liability:** wages above RM10.00 in a month or part of one (Q18, Q25).
@@ -296,9 +296,9 @@ Act 452 s.43(1A), as quoted on KWSP's pages: the monthly contribution of everyon
 
 **Bonus note (Parts A and C only).** Verbatim, Part A: "Where the employer pays bonus to an employee who receives monthly wages of RM5,000.00 and below, and upon receiving the said bonus renders the wages received for that month to exceed RM5,000.00, the employer's contribution shall be calculated at the rate of 13% of the amount of wages for the month. The total contribution which includes cents shall be rounded to the next ringgit." Part C says 6.5%. Part E and Part F have no note. A bonus therefore does **not** push the employer from 13% down to 12%.
 
-- **Employer share:** exact rate on actual wages, rounded up. High. One vendor (QNE) applies 13% to the band top instead: RM1,053 against RM1,042 at RM8,010. The statutory wording supports actual wages.
-- **Employee share:** table lookup on total wages, or exact 11% above RM20,000. Medium-high: consistent text and vendors (Talenox, HReasily, QNE, Worksy), no official example.
-- **Commission, incentive or allowance doesn't trigger the note.** Medium. The note says "bonus", and s.2 and FAQ Q8 list these separately. KWSP's calculator has only "Wages without Bonus" and "Bonus only" fields. Worksy disagrees, with no citation.
+- **Employer share:** exact rate on actual wages, rounded up. High. One payroll vendor applies 13% to the band top instead: RM1,053 against RM1,042 at RM8,010. The statutory wording supports actual wages.
+- **Employee share:** table lookup on total wages, or exact 11% above RM20,000. Medium-high: consistent text and four payroll vendors, no official example.
+- **Commission, incentive or allowance doesn't trigger the note.** Medium. The note says "bonus", and s.2 and FAQ Q8 list these separately. KWSP's calculator has only "Wages without Bonus" and "Bonus only" fields. One payroll vendor disagrees, with no citation.
 - **The RM5,000 test** runs each month on that month's EPF wages excluding bonus. No averaging or look-back rule was found. A commission earner's employer rate can move month to month. Inference, medium.
 - **Above RM20,000 the note has no ceiling**, while the Part's closing sentence says 12%. Recommended reading: the specific note wins, which also avoids a cliff at RM20,000. Low-medium. RM4,000 + RM20,000 gives employer 3,120 against 2,880, a RM240 gap.
 
@@ -449,7 +449,7 @@ Misapplying RM1,700 to case 23 would give 187/221, overcharging 99/117 a month. 
 | # | Case | Total | Employee | Employer | Note |
 |---|---|---|---|---|---|
 | 29 | 4,000 + 3,950 bonus | 7,950 | 880 | 1,034 | Separates the readings: exact 11% would give 875; the table employer is 960 |
-| 30 | 2,800 + 5,210 bonus | 8,010 | 891 | 1,042 | QNE gives 1,053 |
+| 30 | 2,800 + 5,210 bonus | 8,010 | 891 | 1,042 | One vendor gives 1,053 |
 | 31 | 3,000 + 2,500 bonus | 5,500 | 605 | 715 | |
 | 32 | 3,000 + 1,500 bonus | 4,500 | 495 | 585 | Total ≤ 5,000, note not engaged |
 | 33 | 4,000 + 1,500 commission | 5,500 | 605 | 660 | Commission: table |
@@ -505,7 +505,7 @@ Misapplying RM1,700 to case 23 would give 187/221, overcharging 99/117 a month. 
   - 2025 (KWSP capture Sep 2025): Self Contribution, i-Saraan, i-Suri, Akaun Persaraan Top-Up.
   - 2026 product pages (latest 23 Oct 2026): i-Simpan, i-Saraan, i-Saraan Plus, i-Suri, Akaun Persaraan Top-Up.
   - 2026 Terms & Conditions s.3.2 (latest Mar 2026): i-Simpan, **i-TopUp**, i-Saraan, i-Suri, Akaun Persaraan Top-Up.
-- **Does i-Topup count? KWSP conflicts with itself.** The T&C is the only KWSP text addressing it directly, but it omits i-Saraan Plus, so it isn't fully maintained. Product pages omit i-Topup. StashAway's "no" rests on those product pages. AJobThing doesn't directly address i-Topup. A refund of excess is documented only for i-Simpan. Practical impact is tiny: a 5% top-up reaches RM100k only at about RM2m a year in wages. Warn, don't truncate.
+- **Does i-Topup count? KWSP conflicts with itself.** The T&C is the only KWSP text addressing it directly, but it omits i-Saraan Plus, so it isn't fully maintained. Product pages omit i-Topup. An investment platform's "no" rests on those product pages, and a jobs site's guide doesn't directly address i-Topup. A refund of excess is documented only for i-Simpan. Practical impact is tiny: a 5% top-up reaches RM100k only at about RM2m a year in wages. Warn, don't truncate.
 - **i-Saraan** (self-employed and others): 20% match (from 1 Jan 2025, up from 15%), capped at RM500 a year and RM5k lifetime or age 60. Lifetime room counts incentives since 2024. Citizens only; also open to pensionable civil servants and serving military.
 - **i-Saraan Plus** (e-hailing and p-hailing, through the service provider, from 1 Jan 2026): 20%, capped at RM600 a year and RM6k lifetime, also below 60. RM3,000 contributed earns the full RM600.
 - **A member gets only one of i-Saraan or i-Saraan Plus in a year**, and the Plus lifetime limit isn't a fresh pool: it counts incentives since 2024. Separate counters would be wrong.

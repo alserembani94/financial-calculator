@@ -154,8 +154,8 @@ These are separate rules under separate Acts, and none is a written month rule. 
 | Scheme | Month used | Basis | How sure | Lines |
 |---|---|---|---|---|
 | **EPF** rate switch at 60 | **Month after the birth month** | KWSP calculator client code `getAge`, 2022 and 2026 captures, plus two uncited blogs. Server logic unseen; could be an off-by-one | **Medium** (age 75 stop: **low**) | `epf.md` 224–227; `epf-config.json` 62–65 |
-| **SOCSO** Category 2 at 60 | **Contribution month containing the 60th birthday** | Inference from s.6(7)–(8). No PERKESO statement. Vendors split: PayrollPanda and brioHR month after; Mynd and Smartouch birthday month | **Medium** | `socso.md` 108, 111; `socso-config.json` 155–156 |
-| **EIS** stop at 60 | **None stated** | Event-based cut-off in s.20(2) and First Sched. para 8, monthly contributions in s.20(1), and no linking rule. brioHR stops the month after | **Low** | `eis.md` 667; `eis-2025.json` 108–109 |
+| **SOCSO** Category 2 at 60 | **Contribution month containing the 60th birthday** | Inference from s.6(7)–(8). No PERKESO statement. Vendors split: two say month after, two say birthday month | **Medium** | `socso.md` 108, 111; `socso-config.json` 155–156 |
+| **EIS** stop at 60 | **None stated** | Event-based cut-off in s.20(2) and First Sched. para 8, monthly contributions in s.20(1), and no linking rule. One payroll vendor stops the month after | **Low** | `eis.md` 667; `eis-2025.json` 108–109 |
 
 **Inputs also disagree.** `epf.md` line 165 needs birth month for a wage month, and line 228 says whole-year input needs no timing logic. `socso.md` line 111 labels its input "age at the end of this month". `eis.md` line 188 uses completed years with no test date. A single `age` field gives a different answer depending on when it's read.
 

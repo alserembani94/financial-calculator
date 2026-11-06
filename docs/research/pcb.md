@@ -405,7 +405,7 @@ The rule is the same in the 2025 and 2026 specs.
 Monthly service charge in Y1 is our inference; it isn't named anywhere. Tips received directly from customers weren't researched.
 
 - **Y2 always equals the full Y1**, including the variable part. The spec says "Estimated remuneration as Y1 for the subsequent months", and the calculator has no Y2 input. Don't add an override. The spec adds that reclassifying pay needs LHDN approval, though the scope of that sentence is unclear.
-- **K1 isn't scaled with Y1.** The SOCSO and EIS wage bases include overtime; EPF wages don't (from each module). Vendors disagree: SQL Payroll treats overtime as normal; Talenox and HReasily list it as additional; BrioHR lets employers choose. So real payslips can differ (question 8).
+- **K1 isn't scaled with Y1.** The SOCSO and EIS wage bases include overtime; EPF wages don't (from each module). Payroll vendors disagree: one treats overtime as normal, two list it as additional, and one lets employers choose. So real payslips can differ (question 8).
 
 **Worked comparison** (single, EPF on base pay only; computed with the current model, not run on LHDN's calculator):
 
@@ -1045,11 +1045,11 @@ At RM10,000 the saving is RM87.50. So the effect is normally 350 × marginal rat
 **Not by law.** Spec §E.14(ii) lists it under "Optional deductions", claimed "by submitting Form TP1", subject to employer approval. LHDN's 2026 testing questions (Q1, Q3) include a monthly SOCSO input. In practice it is a per-system setting, with thin evidence:
 
 - AutoCount: per-employee "Claim Employee's SOCSO & EIS Tax Relief" setting (vendor page, seen by one checker; a later fetch returned 404).
-- Worksy: "Auto-Include SOCSO/EIS in TP1". StaffAny: a Yes/No field per employee. Defaults aren't stated.
+- Payroll vendors offer it as a setting: one has an "auto-include SOCSO/EIS in TP1" option, another a yes/no field per employee. Defaults aren't stated.
 - Access EasyPay and Access UBS: seen only in search excerpts. JustLogin (excerpt) tells users to enter year-to-date SOCSO + EIS at point 14.
 - CountServa calculator: off by default. Smartlink calculator: an optional TP1 field.
 
-Not determined: SQL Payroll, UBS's defaults, Talenox, Swingvy, PayrollPanda, Kakitangan, or what most employers do.
+Not determined: the defaults of the main payroll packages, or what most employers do.
 
 ---
 

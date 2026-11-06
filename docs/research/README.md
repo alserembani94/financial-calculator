@@ -11,6 +11,8 @@ Last updated: 2026-11-06. **Research only: the owner has asked not to start buil
 3. **[cross-check.md](cross-check.md):** how the schemes fit together, conflicts between reports, and worked examples from gross salary to take-home pay.
 4. **[formulas.md](formulas.md):** each line of the breakdown as a formula, which numbers change by year, and how each kind of policy change is handled.
 5. **[config-schema.md](config-schema.md):** the proposed year-keyed config, with effective-date periods and a blank 2027 template.
+6. **[design-reference-summary.md](design-reference-summary.md):** the general design lessons from studying a fintech design system as a reference: how colours, money, mobile and dark mode are handled, and what can and can't be reused.
+7. **[reports/Malaysia personal finance and advice line.md](reports/Malaysia%20personal%20finance%20and%20advice%20line.md):** the Malaysian personal-finance landscape, public benchmarks and their reuse terms, where education ends and regulated advice begins, and how to present indicators and projections. Product decisions that follow from it are in `../brief.md` and `../adr/`.
 
 ## Next research (requested 2026-11-06)
 

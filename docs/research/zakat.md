@@ -225,7 +225,7 @@ The WP fatwa from the 120th MJPHS WP meeting (1 Nov 2019) sets these rules. EPF 
 
 ## 4. Per-year config
 
-**How PPZ-MAIWP sets nisab:** **one value per Gregorian year**, from 85 g × a published gold price per gram. The Mufti WP (Al-Kafi #1811, 30 Jun 2021) explains that PPZ uses "the mean based on the previous year as the standard of nisab value for the next year". It keeps that value until the end of the year, and gold price moves during the year are deliberately ignored. This differs from **Selangor (LZS)**, which revises twice a year (Jan–Jun 2026 was RM42,047); RinggitPlus's claim that nisab "changes twice a year" does not apply to WP. Supporting evidence:
+**How PPZ-MAIWP sets nisab:** **one value per Gregorian year**, from 85 g × a published gold price per gram. The Mufti WP (Al-Kafi #1811, 30 Jun 2021) explains that PPZ uses "the mean based on the previous year as the standard of nisab value for the next year". It keeps that value until the end of the year, and gold price moves during the year are deliberately ignored. This differs from **Selangor (LZS)**, which revises twice a year (Jan–Jun 2026 was RM42,047); a comparison site's claim that nisab "changes twice a year" does not apply to WP. Supporting evidence:
 
 - Wayback snapshots of the archive page on 2025-03-18, 2025-06-16, 2025-10-15 and 2026-01-20 all show **"Nisab 2025: RM29,740"**, with the same page-modified stamp, so there was no mid-year change in 2025.
 - A snapshot from 2026-04-21, plus the live page and API on 2026-11-05, show **33,996**, with the page unedited since 2026-02-26, so there was no mid-year change in 2026 so far.
